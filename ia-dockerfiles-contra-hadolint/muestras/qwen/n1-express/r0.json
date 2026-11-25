@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- package-lock.json --- (existe; no se muestra: 840 líneas)\n\n--- package.json ---\n{\n  \"name\": \"api-express\",\n  \"version\": \"1.0.0\",\n  \"main\": \"server.js\",\n  \"scripts\": {\n    \"start\": \"node server.js\"\n  },\n  \"dependencies\": {\n    \"express\": \"^4.21.2\"\n  }\n}\n\n--- server.js ---\nconst express = require('express');\nconst app = express();\napp.get('/', (req, res) => res.send('ok'));\napp.listen(8080, () => console.log('escuchando en 8080'));\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\nFROM node:16-alpine\n\nWORKDIR /usr/src/app\n\nCOPY package*.json ./\n\nRUN npm install\n\nCOPY . .\n\nEXPOSE 8080\n\nCMD [\"npm\", \"start\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 49
+}

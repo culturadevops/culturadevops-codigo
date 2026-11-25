@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: roto
+spec:
+  backoffLimit: 2      # 1 intento + 2 reintentos
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: tarea
+          image: busybox:1.37
+          command: ["sh", "-c", "echo 'no encuentro el archivo de entrada'; exit 1"]

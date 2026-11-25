@@ -1,0 +1,56 @@
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 1 | tail -1
+46 hosts · 45 ok · 1 con código distinto de 0 · 0 sin respuesta · 49.7s en total
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 1 | tail -1
+46 hosts · 45 ok · 1 con código distinto de 0 · 0 sin respuesta · 49.4s en total
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 10 | tail -1
+46 hosts · 45 ok · 1 con código distinto de 0 · 0 sin respuesta · 5.4s en total
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 10 | tail -1
+46 hosts · 45 ok · 1 con código distinto de 0 · 0 sin respuesta · 5.4s en total
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 50 | tail -1
+46 hosts · 45 ok · 1 con código distinto de 0 · 0 sin respuesta · 1.2s en total
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 50 | tail -1
+46 hosts · 45 ok · 1 con código distinto de 0 · 0 sin respuesta · 1.2s en total
+$ time cd /root && ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 5 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+$ time cd /root && ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 5 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+$ time cd /root && ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 10 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+$ time cd /root && ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 10 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+$ time cd /root && ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 50 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+$ time cd /root && ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 50 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+$ cd /root && python flota.py -hosts hosts-50.txt -p 50 | tail -1
+50 hosts · 45 ok · 1 con código distinto de 0 · 4 sin respuesta · 10.2s en total
+$ time cd /root && ansible-playbook revisar.yml -f 50 -T 3 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s
+$ cd /root && python flota.py -hosts hosts-50.txt -p 50 | tail -1
+50 hosts · 45 ok · 1 con código distinto de 0 · 4 sin respuesta · 10.2s en total
+$ time cd /root && ansible-playbook revisar.yml -f 50 -T 3 > /dev/null
+
+real	0m0.000s
+user	0m0.000s
+sys	0m0.000s

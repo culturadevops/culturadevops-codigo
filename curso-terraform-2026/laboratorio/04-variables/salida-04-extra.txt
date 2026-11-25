@@ -1,0 +1,29 @@
+### output NO sensible que usa la clave sensible
+Error: Output refers to sensitive values
+  on main.tf line 60:
+  60: output "cadena_conexion" {
+To reduce the risk of accidentally exporting sensitive data that was intended
+to be only internal, Terraform requires that any root module output
+containing sensitive data be explicitly marked as sensitive, to confirm your
+intent.
+If you do intend to export this data, annotate the output value as sensitive
+by adding the following argument:
+    sensitive = true
+### -var-file y -var: gana el ultimo en la linea?
+-var-file=pro.tfvars -var puerto=8093 :   + url   = "http://localhost:8093"
+-var puerto=8093 -var-file=pro.tfvars :   + url   = "http://localhost:8095"
+### terraform console
+(sensitive value)
+### terraform console (una expresion por vez)
+> var.puerto
+8090
+> local.nombre
+"web-pre"
+> "http://localhost:${var.puerto}"
+"http://localhost:8090"
+> var.clave_bd
+(sensitive value)
+> nonsensitive(var.clave_bd)
+"Sup3rS3creta-2026"
+> upper(var.entorno)
+"PRE"

@@ -1,0 +1,19 @@
+groups:
+  - name: tienda
+    rules:
+      # Sin `for`: se enciende en cuanto un punto pasa del umbral. Ruidosa a propósito.
+      - alert: ErroresAltosSinFor
+        expr: sum(rate(tienda_peticiones_total{codigo="500"}[2m])) / sum(rate(tienda_peticiones_total[2m])) * 100 > 5
+        labels:
+          gravedad: aviso
+        annotations:
+          resumen: "Mas del 5% de las peticiones fallan"
+
+      # Con `for`: tiene que aguantar 2 minutos por encima para disparar.
+      - alert: ErroresAltos
+        expr: sum(rate(tienda_peticiones_total{codigo="500"}[2m])) / sum(rate(tienda_peticiones_total[2m])) * 100 > 5
+        for: 2m
+        labels:
+          gravedad: critica
+        annotations:
+          resumen: "Mas del 5% de las peticiones fallan desde hace 2 minutos"

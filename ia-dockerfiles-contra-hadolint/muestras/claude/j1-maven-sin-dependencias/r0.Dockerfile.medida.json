@@ -1,0 +1,19 @@
+{
+ "app": "j1-maven-sin-dependencias",
+ "dockerfile": "muestras/claude/j1-maven-sin-dependencias/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "maven:3.9-eclipse-temurin-21",
+  "eclipse-temurin:21-jre"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 71.0,
+ "error_build": "",
+ "bytes": 115392358,
+ "disco_mb": 456.0,
+ "usuario": "10001:10001",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

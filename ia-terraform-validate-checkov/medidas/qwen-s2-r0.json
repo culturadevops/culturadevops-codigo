@@ -1,0 +1,1702 @@
+{
+ "lote": "qwen-s2",
+ "ronda": "r0",
+ "versiones": {
+  "checkov": "3.3.30",
+  "trivy": "Version: 0.76.1",
+  "terraform": "Terraform v1.16.7"
+ },
+ "modulos": {
+  "alb": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Unsupported block type",
+    "Reference to \"count\" in non-counted context"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_382",
+     "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+     "aws_security_group.alb_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_23",
+     "Ensure every security group and rule has a description",
+     "aws_security_group.alb_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_260",
+     "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+     "aws_security_group.alb_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_150",
+     "Ensure that Load Balancer has deletion protection enabled",
+     "aws_alb.example",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_131",
+     "Ensure that ALB drops HTTP headers",
+     "aws_alb.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_91",
+     "Ensure the ELBv2 (Application/Network) has access logging enabled",
+     "aws_alb.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_79",
+     "Ensure Instance Metadata Service Version 1 is not enabled",
+     "aws_instance.web[0]",
+     "IAM y permisos"
+    ],
+    [
+     "CKV_AWS_135",
+     "Ensure that EC2 is EBS optimized",
+     "aws_instance.web[0]",
+     "otras"
+    ],
+    [
+     "CKV_AWS_8",
+     "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+     "aws_instance.web[0]",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_126",
+     "Ensure that detailed monitoring is enabled for EC2 instances",
+     "aws_instance.web[0]",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_79",
+     "Ensure Instance Metadata Service Version 1 is not enabled",
+     "aws_instance.web[1]",
+     "IAM y permisos"
+    ],
+    [
+     "CKV_AWS_135",
+     "Ensure that EC2 is EBS optimized",
+     "aws_instance.web[1]",
+     "otras"
+    ],
+    [
+     "CKV_AWS_8",
+     "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+     "aws_instance.web[1]",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_126",
+     "Ensure that detailed monitoring is enabled for EC2 instances",
+     "aws_instance.web[1]",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_41",
+     "Ensure an IAM role is attached to EC2 instance",
+     "aws_instance.web[0]",
+     "IAM y permisos"
+    ],
+    [
+     "CKV2_AWS_41",
+     "Ensure an IAM role is attached to EC2 instance",
+     "aws_instance.web[1]",
+     "IAM y permisos"
+    ],
+    [
+     "CKV2_AWS_28",
+     "Ensure public facing ALB are protected by WAF",
+     "aws_alb.example",
+     "acceso público"
+    ],
+    [
+     "CKV_AWS_378",
+     "Ensure AWS Load Balancer doesn't use HTTP protocol",
+     "aws_lb_target_group.example",
+     "otras"
+    ]
+   ],
+   "ck_pass": 13,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0028",
+     "HIGH",
+     "aws_instance should activate session tokens for Instance Metadata Service."
+    ],
+    [
+     "AWS-0028",
+     "HIGH",
+     "aws_instance should activate session tokens for Instance Metadata Service."
+    ],
+    [
+     "AWS-0052",
+     "HIGH",
+     "Load balancers should drop invalid headers"
+    ],
+    [
+     "AWS-0053",
+     "HIGH",
+     "Load balancer is exposed to the internet."
+    ],
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0131",
+     "HIGH",
+     "Instance with unencrypted block device."
+    ],
+    [
+     "AWS-0131",
+     "HIGH",
+     "Instance with unencrypted block device."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "apigw-lambda": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Invalid reference",
+    "Invalid reference"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_115",
+     "Ensure that AWS Lambda function is configured for function-level concurrent execution limit",
+     "aws_lambda_function.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_173",
+     "Check encryption settings for Lambda environmental variable",
+     "aws_lambda_function.example",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_50",
+     "X-Ray tracing is enabled for Lambda",
+     "aws_lambda_function.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_116",
+     "Ensure that AWS Lambda function is configured for a Dead Letter Queue(DLQ)",
+     "aws_lambda_function.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_117",
+     "Ensure that AWS Lambda function is configured inside a VPC",
+     "aws_lambda_function.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_272",
+     "Ensure AWS Lambda function is configured to validate code-signing",
+     "aws_lambda_function.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_237",
+     "Ensure Create before destroy for API Gateway",
+     "aws_api_gateway_rest_api.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_59",
+     "Ensure there is no open access to back-end resources through API",
+     "aws_api_gateway_method.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_217",
+     "Ensure Create before destroy for API deployments",
+     "aws_api_gateway_deployment.example",
+     "otras"
+    ],
+    [
+     "CKV2_AWS_53",
+     "Ensure AWS API gateway request is validated",
+     "aws_api_gateway_method.example",
+     "otras"
+    ]
+   ],
+   "ck_pass": 10,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0004",
+     "LOW",
+     "No unauthorized access to API Gateway methods"
+    ],
+    [
+     "AWS-0066",
+     "LOW",
+     "Lambda functions should have X-Ray tracing enabled"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "bastion": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_382",
+     "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+     "aws_security_group.bastion_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_23",
+     "Ensure every security group and rule has a description",
+     "aws_security_group.bastion_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_24",
+     "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+     "aws_security_group.bastion_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_79",
+     "Ensure Instance Metadata Service Version 1 is not enabled",
+     "aws_instance.bastion_host",
+     "IAM y permisos"
+    ],
+    [
+     "CKV_AWS_135",
+     "Ensure that EC2 is EBS optimized",
+     "aws_instance.bastion_host",
+     "otras"
+    ],
+    [
+     "CKV_AWS_8",
+     "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+     "aws_instance.bastion_host",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_126",
+     "Ensure that detailed monitoring is enabled for EC2 instances",
+     "aws_instance.bastion_host",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_41",
+     "Ensure an IAM role is attached to EC2 instance",
+     "aws_instance.bastion_host",
+     "IAM y permisos"
+    ],
+    [
+     "CKV2_AWS_12",
+     "Ensure the default security group of every VPC restricts all traffic",
+     "aws_vpc.bastion_vpc",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_11",
+     "Ensure VPC flow logging is enabled in all VPCs",
+     "aws_vpc.bastion_vpc",
+     "registro y monitoreo"
+    ]
+   ],
+   "ck_pass": 8,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0028",
+     "HIGH",
+     "aws_instance should activate session tokens for Instance Metadata Service."
+    ],
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0107",
+     "HIGH",
+     "Security groups should not allow unrestricted ingress to SSH or RDP from any IP address."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0131",
+     "HIGH",
+     "Instance with unencrypted block device."
+    ],
+    [
+     "AWS-0178",
+     "MEDIUM",
+     "VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs. It is recommended that VPC Flow Logs be enabled for packet \"Rejects\" for VPCs."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "cloudfront-s3": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Reference to undeclared resource"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_310",
+     "Ensure CloudFront distributions should have origin failover configured",
+     "aws_cloudfront_distribution.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_374",
+     "Ensure AWS CloudFront web distribution has geo restriction enabled",
+     "aws_cloudfront_distribution.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_174",
+     "Verify CloudFront Distribution Viewer Certificate is using TLS v1.2 or higher",
+     "aws_cloudfront_distribution.example",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_86",
+     "Ensure CloudFront distribution has Access Logging enabled",
+     "aws_cloudfront_distribution.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_68",
+     "CloudFront Distribution should have WAF enabled",
+     "aws_cloudfront_distribution.example",
+     "otras"
+    ],
+    [
+     "CKV2_AWS_47",
+     "Ensure AWS CloudFront attached WAFv2 WebACL is configured with AMR for Log4j Vulnerability",
+     "aws_cloudfront_distribution.example",
+     "acceso público"
+    ],
+    [
+     "CKV2_AWS_6",
+     "Ensure that S3 bucket has a Public Access block",
+     "aws_s3_bucket.example",
+     "acceso público"
+    ],
+    [
+     "CKV_AWS_145",
+     "Ensure that S3 buckets are encrypted with KMS by default",
+     "aws_s3_bucket.example",
+     "cifrado"
+    ],
+    [
+     "CKV2_AWS_62",
+     "Ensure S3 buckets should have event notifications enabled",
+     "aws_s3_bucket.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_32",
+     "Ensure CloudFront distribution has a response headers policy attached",
+     "aws_cloudfront_distribution.example",
+     "IAM y permisos"
+    ],
+    [
+     "CKV_AWS_18",
+     "Ensure the S3 bucket has access logging enabled",
+     "aws_s3_bucket.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_61",
+     "Ensure that an S3 bucket has a lifecycle configuration",
+     "aws_s3_bucket.example",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_21",
+     "Ensure all data stored in the S3 bucket have versioning enabled",
+     "aws_s3_bucket.example",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV2_AWS_46",
+     "Ensure AWS CloudFront Distribution with S3 have Origin Access set to enabled",
+     "aws_cloudfront_distribution.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_144",
+     "Ensure that S3 bucket has cross-region replication enabled",
+     "aws_s3_bucket.example",
+     "respaldo y borrado"
+    ]
+   ],
+   "ck_pass": 11,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0010",
+     "MEDIUM",
+     "Cloudfront distribution should have Access Logging configured"
+    ],
+    [
+     "AWS-0011",
+     "HIGH",
+     "CloudFront distribution does not have a WAF in front."
+    ],
+    [
+     "AWS-0013",
+     "HIGH",
+     "CloudFront distribution uses outdated SSL/TLS protocols."
+    ],
+    [
+     "AWS-0086",
+     "HIGH",
+     "S3 Access block should block public ACL"
+    ],
+    [
+     "AWS-0087",
+     "HIGH",
+     "S3 Access block should block public policy"
+    ],
+    [
+     "AWS-0089",
+     "LOW",
+     "S3 Bucket Logging"
+    ],
+    [
+     "AWS-0090",
+     "MEDIUM",
+     "S3 Data should be versioned"
+    ],
+    [
+     "AWS-0091",
+     "HIGH",
+     "S3 Access Block should Ignore Public ACL"
+    ],
+    [
+     "AWS-0093",
+     "HIGH",
+     "S3 Access block should restrict public bucket to limit access"
+    ],
+    [
+     "AWS-0094",
+     "LOW",
+     "S3 buckets should each define an aws_s3_bucket_public_access_block"
+    ],
+    [
+     "AWS-0132",
+     "HIGH",
+     "S3 encryption should use Customer Managed Keys"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "cloudtrail": {
+   "vacio": false,
+   "init_ok": false,
+   "validate_ok": false,
+   "validate_errores": [
+    "Invalid block definition"
+   ],
+   "init_error": "Error: Terraform encountered problems during initialisation, including problems Error: Invalid block definition",
+   "aws_provider": "-",
+   "ck_fail": [],
+   "ck_pass": 0,
+   "ck_skip": 0,
+   "tv_fail": [],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "cloudwatch-logs": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_158",
+     "Ensure that CloudWatch Log Group is encrypted by KMS",
+     "aws_cloudwatch_log_group.app_logs",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_338",
+     "Ensure CloudWatch log groups retains logs for at least 1 year",
+     "aws_cloudwatch_log_group.app_logs",
+     "registro y monitoreo"
+    ]
+   ],
+   "ck_pass": 2,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0017",
+     "LOW",
+     "CloudWatch log groups should be encrypted using CMK"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "dynamodb": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Unsupported block type"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_28",
+     "Ensure DynamoDB point in time recovery (backup) is enabled",
+     "aws_dynamodb_table.user_sessions",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_119",
+     "Ensure DynamoDB Tables are encrypted using a KMS Customer Managed CMK",
+     "aws_dynamodb_table.user_sessions",
+     "cifrado"
+    ]
+   ],
+   "ck_pass": 2,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0024",
+     "MEDIUM",
+     "Point in time recovery should be enabled to protect DynamoDB table"
+    ],
+    [
+     "AWS-0025",
+     "LOW",
+     "DynamoDB tables should use at rest encryption with a Customer Managed Key"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "ec2-ubuntu": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_79",
+     "Ensure Instance Metadata Service Version 1 is not enabled",
+     "aws_instance.example",
+     "IAM y permisos"
+    ],
+    [
+     "CKV_AWS_135",
+     "Ensure that EC2 is EBS optimized",
+     "aws_instance.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_8",
+     "Ensure all data stored in the Launch configuration or instance Elastic Blocks Store is securely encrypted",
+     "aws_instance.example",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_126",
+     "Ensure that detailed monitoring is enabled for EC2 instances",
+     "aws_instance.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_41",
+     "Ensure an IAM role is attached to EC2 instance",
+     "aws_instance.example",
+     "IAM y permisos"
+    ]
+   ],
+   "ck_pass": 3,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0028",
+     "HIGH",
+     "aws_instance should activate session tokens for Instance Metadata Service."
+    ],
+    [
+     "AWS-0131",
+     "HIGH",
+     "Instance with unencrypted block device."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "ecr": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_51",
+     "Ensure ECR Image Tags are immutable",
+     "aws_ecr_repository.docker_images",
+     "otras"
+    ],
+    [
+     "CKV_AWS_136",
+     "Ensure that ECR repositories are encrypted using KMS",
+     "aws_ecr_repository.docker_images",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_163",
+     "Ensure ECR image scanning on push is enabled",
+     "aws_ecr_repository.docker_images",
+     "otras"
+    ]
+   ],
+   "ck_pass": 1,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0030",
+     "HIGH",
+     "ECR repository has image scans disabled."
+    ],
+    [
+     "AWS-0031",
+     "HIGH",
+     "ECR images tags shouldn't be mutable."
+    ],
+    [
+     "AWS-0033",
+     "LOW",
+     "ECR Repository should use customer managed keys to allow more control"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "ecs-fargate": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Incorrect attribute value type",
+    "Unsupported attribute",
+    "Unsupported attribute",
+    "Unsupported attribute",
+    "Unsupported attribute"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_65",
+     "Ensure container insights are enabled on ECS cluster",
+     "aws_ecs_cluster.ecs_cluster",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_336",
+     "Ensure ECS containers are limited to read-only access to root filesystems",
+     "aws_ecs_task_definition.web_task",
+     "otras"
+    ],
+    [
+     "CKV_AWS_382",
+     "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+     "aws_security_group.example",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_23",
+     "Ensure every security group and rule has a description",
+     "aws_security_group.example",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_260",
+     "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+     "aws_security_group.example",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_12",
+     "Ensure the default security group of every VPC restricts all traffic",
+     "aws_vpc.main",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_11",
+     "Ensure VPC flow logging is enabled in all VPCs",
+     "aws_vpc.main",
+     "registro y monitoreo"
+    ]
+   ],
+   "ck_pass": 18,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0034",
+     "LOW",
+     "ECS clusters should have container insights enabled"
+    ],
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0178",
+     "MEDIUM",
+     "VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs. It is recommended that VPC Flow Logs be enabled for packet \"Rejects\" for VPCs."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "efs": {
+   "vacio": false,
+   "init_ok": false,
+   "validate_ok": false,
+   "validate_errores": [
+    "Missing key/value separator"
+   ],
+   "init_error": "Error: Terraform encountered problems during initialisation, including problems Error: Missing key/value separator",
+   "aws_provider": "-",
+   "ck_fail": [
+    [
+     "CKV_AWS_184",
+     "Ensure resource is encrypted by KMS using a customer managed Key (CMK)",
+     "aws_efs_file_system.shared_efs",
+     "cifrado"
+    ],
+    [
+     "CKV_AWS_42",
+     "Ensure EFS is securely encrypted",
+     "aws_efs_file_system.shared_efs",
+     "cifrado"
+    ]
+   ],
+   "ck_pass": 16,
+   "ck_skip": 0,
+   "tv_fail": [],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "eks": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Unsupported block type",
+    "Insufficient vpc_config blocks"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_39",
+     "Ensure Amazon EKS public endpoint disabled",
+     "aws_eks_cluster.example",
+     "acceso público"
+    ],
+    [
+     "CKV_AWS_37",
+     "Ensure Amazon EKS control plane logging is enabled for all log types",
+     "aws_eks_cluster.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_339",
+     "Ensure EKS clusters run on a supported Kubernetes version",
+     "aws_eks_cluster.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_58",
+     "Ensure EKS Cluster has Secrets Encryption Enabled",
+     "aws_eks_cluster.example",
+     "cifrado"
+    ],
+    [
+     "CKV2_AWS_12",
+     "Ensure the default security group of every VPC restricts all traffic",
+     "aws_vpc.example",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_11",
+     "Ensure VPC flow logging is enabled in all VPCs",
+     "aws_vpc.example",
+     "registro y monitoreo"
+    ]
+   ],
+   "ck_pass": 8,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0038",
+     "MEDIUM",
+     "EKS Clusters should have cluster control plane logging turned on"
+    ],
+    [
+     "AWS-0038",
+     "MEDIUM",
+     "EKS Clusters should have cluster control plane logging turned on"
+    ],
+    [
+     "AWS-0038",
+     "MEDIUM",
+     "EKS Clusters should have cluster control plane logging turned on"
+    ],
+    [
+     "AWS-0038",
+     "MEDIUM",
+     "EKS Clusters should have cluster control plane logging turned on"
+    ],
+    [
+     "AWS-0038",
+     "MEDIUM",
+     "EKS Clusters should have cluster control plane logging turned on"
+    ],
+    [
+     "AWS-0039",
+     "HIGH",
+     "EKS should have the encryption of secrets enabled"
+    ],
+    [
+     "AWS-0040",
+     "CRITICAL",
+     "EKS Clusters should have the public access disabled"
+    ],
+    [
+     "AWS-0178",
+     "MEDIUM",
+     "VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs. It is recommended that VPC Flow Logs be enabled for packet \"Rejects\" for VPCs."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "iam-ci": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_70",
+     "Ensure S3 bucket does not allow an action with any Principal",
+     "aws_s3_bucket_policy.example_bucket_policy",
+     "otras"
+    ],
+    [
+     "CKV2_AWS_6",
+     "Ensure that S3 bucket has a Public Access block",
+     "aws_s3_bucket.example_bucket",
+     "acceso público"
+    ],
+    [
+     "CKV_AWS_145",
+     "Ensure that S3 buckets are encrypted with KMS by default",
+     "aws_s3_bucket.example_bucket",
+     "cifrado"
+    ],
+    [
+     "CKV2_AWS_62",
+     "Ensure S3 buckets should have event notifications enabled",
+     "aws_s3_bucket.example_bucket",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_18",
+     "Ensure the S3 bucket has access logging enabled",
+     "aws_s3_bucket.example_bucket",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_61",
+     "Ensure that an S3 bucket has a lifecycle configuration",
+     "aws_s3_bucket.example_bucket",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_21",
+     "Ensure all data stored in the S3 bucket have versioning enabled",
+     "aws_s3_bucket.example_bucket",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_144",
+     "Ensure that S3 bucket has cross-region replication enabled",
+     "aws_s3_bucket.example_bucket",
+     "respaldo y borrado"
+    ]
+   ],
+   "ck_pass": 20,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0086",
+     "HIGH",
+     "S3 Access block should block public ACL"
+    ],
+    [
+     "AWS-0087",
+     "HIGH",
+     "S3 Access block should block public policy"
+    ],
+    [
+     "AWS-0089",
+     "LOW",
+     "S3 Bucket Logging"
+    ],
+    [
+     "AWS-0090",
+     "MEDIUM",
+     "S3 Data should be versioned"
+    ],
+    [
+     "AWS-0091",
+     "HIGH",
+     "S3 Access Block should Ignore Public ACL"
+    ],
+    [
+     "AWS-0093",
+     "HIGH",
+     "S3 Access block should restrict public bucket to limit access"
+    ],
+    [
+     "AWS-0094",
+     "LOW",
+     "S3 buckets should each define an aws_s3_bucket_public_access_block"
+    ],
+    [
+     "AWS-0132",
+     "HIGH",
+     "S3 encryption should use Customer Managed Keys"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "kms": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_7",
+     "Ensure rotation for customer created CMKs is enabled",
+     "aws_kms_key.data_encryption_key",
+     "cifrado"
+    ],
+    [
+     "CKV2_AWS_64",
+     "Ensure KMS key Policy is defined",
+     "aws_kms_key.data_encryption_key",
+     "cifrado"
+    ]
+   ],
+   "ck_pass": 3,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0065",
+     "MEDIUM",
+     "A KMS key is not configured to auto-rotate."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "lambda": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_115",
+     "Ensure that AWS Lambda function is configured for function-level concurrent execution limit",
+     "aws_lambda_function.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_50",
+     "X-Ray tracing is enabled for Lambda",
+     "aws_lambda_function.example",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_116",
+     "Ensure that AWS Lambda function is configured for a Dead Letter Queue(DLQ)",
+     "aws_lambda_function.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_117",
+     "Ensure that AWS Lambda function is configured inside a VPC",
+     "aws_lambda_function.example",
+     "otras"
+    ],
+    [
+     "CKV_AWS_272",
+     "Ensure AWS Lambda function is configured to validate code-signing",
+     "aws_lambda_function.example",
+     "otras"
+    ]
+   ],
+   "ck_pass": 11,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0066",
+     "LOW",
+     "Lambda functions should have X-Ray tracing enabled"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "rds-mysql": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Invalid resource type"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_382",
+     "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+     "aws_security_group.db_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_23",
+     "Ensure every security group and rule has a description",
+     "aws_security_group.db_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_5",
+     "Ensure that Security Groups are attached to another resource",
+     "aws_security_group.db_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ]
+   ],
+   "ck_pass": 5,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "rds-postgres": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Invalid resource type"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_382",
+     "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+     "aws_security_group.my_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_23",
+     "Ensure every security group and rule has a description",
+     "aws_security_group.my_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_5",
+     "Ensure that Security Groups are attached to another resource",
+     "aws_security_group.my_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ]
+   ],
+   "ck_pass": 5,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "redis": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Unsupported argument"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_323",
+     "Ensure ElastiCache clusters do not use the default subnet group",
+     "aws_elasticache_cluster.redis_cluster",
+     "otras"
+    ],
+    [
+     "CKV_AWS_134",
+     "Ensure that Amazon ElastiCache Redis clusters have automatic backup turned on",
+     "aws_elasticache_cluster.redis_cluster",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_382",
+     "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+     "aws_security_group.redis_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_23",
+     "Ensure every security group and rule has a description",
+     "aws_security_group.redis_sg",
+     "red abierta (0.0.0.0/0, puertos)"
+    ]
+   ],
+   "ck_pass": 7,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0050",
+     "MEDIUM",
+     "Redis cluster should have backup retention turned on"
+    ],
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "s3-backups": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Reference to undeclared input variable"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_70",
+     "Ensure S3 bucket does not allow an action with any Principal",
+     "aws_s3_bucket_policy.app_backups",
+     "otras"
+    ],
+    [
+     "CKV2_AWS_6",
+     "Ensure that S3 bucket has a Public Access block",
+     "aws_s3_bucket.app_backups",
+     "acceso público"
+    ],
+    [
+     "CKV_AWS_145",
+     "Ensure that S3 buckets are encrypted with KMS by default",
+     "aws_s3_bucket.app_backups",
+     "cifrado"
+    ],
+    [
+     "CKV2_AWS_62",
+     "Ensure S3 buckets should have event notifications enabled",
+     "aws_s3_bucket.app_backups",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_18",
+     "Ensure the S3 bucket has access logging enabled",
+     "aws_s3_bucket.app_backups",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_61",
+     "Ensure that an S3 bucket has a lifecycle configuration",
+     "aws_s3_bucket.app_backups",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_21",
+     "Ensure all data stored in the S3 bucket have versioning enabled",
+     "aws_s3_bucket.app_backups",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_144",
+     "Ensure that S3 bucket has cross-region replication enabled",
+     "aws_s3_bucket.app_backups",
+     "respaldo y borrado"
+    ]
+   ],
+   "ck_pass": 6,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0086",
+     "HIGH",
+     "S3 Access block should block public ACL"
+    ],
+    [
+     "AWS-0087",
+     "HIGH",
+     "S3 Access block should block public policy"
+    ],
+    [
+     "AWS-0089",
+     "LOW",
+     "S3 Bucket Logging"
+    ],
+    [
+     "AWS-0090",
+     "MEDIUM",
+     "S3 Data should be versioned"
+    ],
+    [
+     "AWS-0091",
+     "HIGH",
+     "S3 Access Block should Ignore Public ACL"
+    ],
+    [
+     "AWS-0093",
+     "HIGH",
+     "S3 Access block should restrict public bucket to limit access"
+    ],
+    [
+     "AWS-0094",
+     "LOW",
+     "S3 buckets should each define an aws_s3_bucket_public_access_block"
+    ],
+    [
+     "AWS-0132",
+     "HIGH",
+     "S3 encryption should use Customer Managed Keys"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "s3-web": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Invalid resource type"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV2_AWS_6",
+     "Ensure that S3 bucket has a Public Access block",
+     "aws_s3_bucket.static_website",
+     "acceso público"
+    ],
+    [
+     "CKV_AWS_145",
+     "Ensure that S3 buckets are encrypted with KMS by default",
+     "aws_s3_bucket.static_website",
+     "cifrado"
+    ],
+    [
+     "CKV2_AWS_62",
+     "Ensure S3 buckets should have event notifications enabled",
+     "aws_s3_bucket.static_website",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV_AWS_18",
+     "Ensure the S3 bucket has access logging enabled",
+     "aws_s3_bucket.static_website",
+     "registro y monitoreo"
+    ],
+    [
+     "CKV2_AWS_61",
+     "Ensure that an S3 bucket has a lifecycle configuration",
+     "aws_s3_bucket.static_website",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_21",
+     "Ensure all data stored in the S3 bucket have versioning enabled",
+     "aws_s3_bucket.static_website",
+     "respaldo y borrado"
+    ],
+    [
+     "CKV_AWS_144",
+     "Ensure that S3 bucket has cross-region replication enabled",
+     "aws_s3_bucket.static_website",
+     "respaldo y borrado"
+    ]
+   ],
+   "ck_pass": 5,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0086",
+     "HIGH",
+     "S3 Access block should block public ACL"
+    ],
+    [
+     "AWS-0087",
+     "HIGH",
+     "S3 Access block should block public policy"
+    ],
+    [
+     "AWS-0089",
+     "LOW",
+     "S3 Bucket Logging"
+    ],
+    [
+     "AWS-0090",
+     "MEDIUM",
+     "S3 Data should be versioned"
+    ],
+    [
+     "AWS-0091",
+     "HIGH",
+     "S3 Access Block should Ignore Public ACL"
+    ],
+    [
+     "AWS-0093",
+     "HIGH",
+     "S3 Access block should restrict public bucket to limit access"
+    ],
+    [
+     "AWS-0094",
+     "LOW",
+     "S3 buckets should each define an aws_s3_bucket_public_access_block"
+    ],
+    [
+     "AWS-0132",
+     "HIGH",
+     "S3 encryption should use Customer Managed Keys"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "secrets": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_149",
+     "Ensure that Secrets Manager secret is encrypted using KMS CMK",
+     "aws_secretsmanager_secret.database_password",
+     "cifrado"
+    ],
+    [
+     "CKV2_AWS_57",
+     "Ensure Secrets Manager secrets should have automatic rotation enabled",
+     "aws_secretsmanager_secret.database_password",
+     "otras"
+    ]
+   ],
+   "ck_pass": 1,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0098",
+     "LOW",
+     "Secrets Manager should use customer managed keys"
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "sg-web": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV_AWS_382",
+     "Ensure no security groups allow egress from 0.0.0.0:0 to port -1",
+     "aws_security_group.web_server",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_23",
+     "Ensure every security group and rule has a description",
+     "aws_security_group.web_server",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_24",
+     "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22",
+     "aws_security_group.web_server",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV_AWS_260",
+     "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80",
+     "aws_security_group.web_server",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_5",
+     "Ensure that Security Groups are attached to another resource",
+     "aws_security_group.web_server",
+     "red abierta (0.0.0.0/0, puertos)"
+    ]
+   ],
+   "ck_pass": 3,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0107",
+     "HIGH",
+     "Security groups should not allow unrestricted ingress to SSH or RDP from any IP address."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ],
+    [
+     "AWS-0124",
+     "LOW",
+     "Missing description for security group rule."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "sns": {
+   "vacio": false,
+   "init_ok": false,
+   "validate_ok": false,
+   "validate_errores": [
+    "Invalid resource type name"
+   ],
+   "init_error": "Error: Terraform encountered problems during initialisation, including problems Error: Invalid resource type name",
+   "aws_provider": "-",
+   "ck_fail": [
+    [
+     "CKV_AWS_26",
+     "Ensure all data stored in the SNS topic is encrypted",
+     "aws_sns_topic.alerts",
+     "cifrado"
+    ]
+   ],
+   "ck_pass": 1,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0095",
+     "HIGH",
+     "Unencrypted SNS topic."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "sqs": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": false,
+   "validate_errores": [
+    "Invalid resource type",
+    "Invalid resource type",
+    "Invalid resource type"
+   ],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [],
+   "ck_pass": 1,
+   "ck_skip": 0,
+   "tv_fail": [],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "vpc": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "4.67.0",
+   "ck_fail": [
+    [
+     "CKV2_AWS_12",
+     "Ensure the default security group of every VPC restricts all traffic",
+     "aws_vpc.main",
+     "red abierta (0.0.0.0/0, puertos)"
+    ],
+    [
+     "CKV2_AWS_11",
+     "Ensure VPC flow logging is enabled in all VPCs",
+     "aws_vpc.main",
+     "registro y monitoreo"
+    ]
+   ],
+   "ck_pass": 10,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0178",
+     "MEDIUM",
+     "VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC. After you've created a flow log, you can view and retrieve its data in Amazon CloudWatch Logs. It is recommended that VPC Flow Logs be enabled for packet \"Rejects\" for VPCs."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  }
+ },
+ "ck_stderr": "",
+ "tv_stderr": ""
+}

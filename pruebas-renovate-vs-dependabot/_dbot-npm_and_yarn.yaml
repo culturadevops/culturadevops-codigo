@@ -1,0 +1,317 @@
+input:
+    job:
+        command: update
+        package-manager: npm_and_yarn
+        allowed-updates:
+            - update-type: all
+        ignore-conditions:
+            - dependency-name: express
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn.yaml
+              version-requirement: '>5.3.0'
+            - dependency-name: lodash
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn.yaml
+              version-requirement: '>4.18.1'
+            - dependency-name: axios
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn.yaml
+              version-requirement: '>1.20.0'
+            - dependency-name: jest
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn.yaml
+              version-requirement: '>30.5.2'
+            - dependency-name: eslint
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn.yaml
+              version-requirement: '>10.12.0'
+        source:
+            provider: github
+            repo: lab/app
+            directories:
+                - /
+            commit: 5b32fba5ca75eddd810e9be636f57786667b94ee
+            hostname: github.com
+            api-endpoint: https://api.github.com
+output:
+    - type: update_dependency_list
+      expect:
+        data:
+            dependencies:
+                - name: express
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.1
+                      source: null
+                  version: 4.17.1
+                - name: lodash
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.15
+                      source: null
+                  version: 4.17.15
+                - name: axios
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 0.21.1
+                      source: null
+                  version: 0.21.1
+                - name: jest
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 26.6.3
+                      source: null
+                  version: 26.6.3
+                - name: eslint
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 7.32.0
+                      source: null
+                  version: 7.32.0
+            dependency_files:
+                - /package.json
+    - type: create_pull_request
+      expect:
+        data:
+            base-commit-sha: 5b32fba5ca75eddd810e9be636f57786667b94ee
+            dependencies:
+                - name: express
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.1
+                      source: null
+                  previous-version: 4.17.1
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 5.3.0
+                      source: null
+                  version: 5.3.0
+                  directory: /
+            updated-dependency-files:
+                - content: |
+                    {
+                      "name": "app",
+                      "version": "1.0.0",
+                      "dependencies": {
+                        "express": "5.3.0",
+                        "lodash": "4.17.15",
+                        "axios": "0.21.1"
+                      },
+                      "devDependencies": {
+                        "jest": "26.6.3",
+                        "eslint": "7.32.0"
+                      }
+                    }
+                  content_encoding: utf-8
+                  deleted: false
+                  directory: /
+                  name: package.json
+                  operation: update
+                  support_file: false
+                  type: file
+            pr-title: Bump express from 4.17.1 to 5.3.0
+            pr-body: Bumps [express](https://github.com/expressjs/express) from 4.17.1 to 5.3.0.
+            commit-message: |-
+                Bump express from 4.17.1 to 5.3.0
+
+                Bumps [express](https://github.com/expressjs/express) from 4.17.1 to 5.3.0.
+                - [Release notes](https://github.com/expressjs/express/releases)
+                - [Changelog](https://github.com/expressjs/express/blob/master/History.md)
+                - [Commits](https://github.com/expressjs/express/compare/4.17.1...v5.3.0)
+    - type: create_pull_request
+      expect:
+        data:
+            base-commit-sha: 5b32fba5ca75eddd810e9be636f57786667b94ee
+            dependencies:
+                - name: lodash
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.15
+                      source: null
+                  previous-version: 4.17.15
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.18.1
+                      source: null
+                  version: 4.18.1
+                  directory: /
+            updated-dependency-files:
+                - content: |
+                    {
+                      "name": "app",
+                      "version": "1.0.0",
+                      "dependencies": {
+                        "express": "4.17.1",
+                        "lodash": "4.18.1",
+                        "axios": "0.21.1"
+                      },
+                      "devDependencies": {
+                        "jest": "26.6.3",
+                        "eslint": "7.32.0"
+                      }
+                    }
+                  content_encoding: utf-8
+                  deleted: false
+                  directory: /
+                  name: package.json
+                  operation: update
+                  support_file: false
+                  type: file
+            pr-title: Bump lodash from 4.17.15 to 4.18.1
+            pr-body: Bumps [lodash](https://github.com/lodash/lodash) from 4.17.15 to 4.18.1.
+            commit-message: Bump lodash from 4.17.15 to 4.18.1
+    - type: create_pull_request
+      expect:
+        data:
+            base-commit-sha: 5b32fba5ca75eddd810e9be636f57786667b94ee
+            dependencies:
+                - name: axios
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 0.21.1
+                      source: null
+                  previous-version: 0.21.1
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 1.20.0
+                      source: null
+                  version: 1.20.0
+                  directory: /
+            updated-dependency-files:
+                - content: |
+                    {
+                      "name": "app",
+                      "version": "1.0.0",
+                      "dependencies": {
+                        "express": "4.17.1",
+                        "lodash": "4.17.15",
+                        "axios": "1.20.0"
+                      },
+                      "devDependencies": {
+                        "jest": "26.6.3",
+                        "eslint": "7.32.0"
+                      }
+                    }
+                  content_encoding: utf-8
+                  deleted: false
+                  directory: /
+                  name: package.json
+                  operation: update
+                  support_file: false
+                  type: file
+            pr-title: Bump axios from 0.21.1 to 1.20.0
+            pr-body: Bumps [axios](https://github.com/axios/axios) from 0.21.1 to 1.20.0.
+            commit-message: Bump axios from 0.21.1 to 1.20.0
+    - type: create_pull_request
+      expect:
+        data:
+            base-commit-sha: 5b32fba5ca75eddd810e9be636f57786667b94ee
+            dependencies:
+                - name: jest
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 26.6.3
+                      source: null
+                  previous-version: 26.6.3
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 30.5.2
+                      source: null
+                  version: 30.5.2
+                  directory: /
+            updated-dependency-files:
+                - content: |
+                    {
+                      "name": "app",
+                      "version": "1.0.0",
+                      "dependencies": {
+                        "express": "4.17.1",
+                        "lodash": "4.17.15",
+                        "axios": "0.21.1"
+                      },
+                      "devDependencies": {
+                        "jest": "30.5.2",
+                        "eslint": "7.32.0"
+                      }
+                    }
+                  content_encoding: utf-8
+                  deleted: false
+                  directory: /
+                  name: package.json
+                  operation: update
+                  support_file: false
+                  type: file
+            pr-title: Bump jest from 26.6.3 to 30.5.2
+            pr-body: Bumps [jest](https://github.com/jestjs/jest/tree/HEAD/packages/jest) from 26.6.3 to 30.5.2.
+            commit-message: Bump jest from 26.6.3 to 30.5.2
+    - type: create_pull_request
+      expect:
+        data:
+            base-commit-sha: 5b32fba5ca75eddd810e9be636f57786667b94ee
+            dependencies:
+                - name: eslint
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 7.32.0
+                      source: null
+                  previous-version: 7.32.0
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 10.12.0
+                      source: null
+                  version: 10.12.0
+                  directory: /
+            updated-dependency-files:
+                - content: |
+                    {
+                      "name": "app",
+                      "version": "1.0.0",
+                      "dependencies": {
+                        "express": "4.17.1",
+                        "lodash": "4.17.15",
+                        "axios": "0.21.1"
+                      },
+                      "devDependencies": {
+                        "jest": "26.6.3",
+                        "eslint": "10.12.0"
+                      }
+                    }
+                  content_encoding: utf-8
+                  deleted: false
+                  directory: /
+                  name: package.json
+                  operation: update
+                  support_file: false
+                  type: file
+            pr-title: Bump eslint from 7.32.0 to 10.12.0
+            pr-body: Bumps [eslint](https://github.com/eslint/eslint) from 7.32.0 to 10.12.0.
+            commit-message: Bump eslint from 7.32.0 to 10.12.0
+    - type: mark_as_processed
+      expect:
+        data:
+            base-commit-sha: 5b32fba5ca75eddd810e9be636f57786667b94ee

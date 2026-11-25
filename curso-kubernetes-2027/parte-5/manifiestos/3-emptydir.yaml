@@ -1,0 +1,19 @@
+# Dos contenedores del mismo pod comparten un emptyDir.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: compartido
+spec:
+  containers:
+    - name: escritor
+      image: busybox:1.37
+      # cada vez que ARRANCA añade una línea; con SIGTERM termina (kill 1 desde dentro)
+      command: ["sh", "-c", "echo \"escrito $(date +%T)\" >> /datos/registro.txt; trap 'exit 0' TERM; while true; do sleep 1; done"]
+      volumeMounts: [{name: datos, mountPath: /datos}]
+    - name: lector
+      image: busybox:1.37
+      command: ["sh", "-c", "sleep 3600"]
+      volumeMounts: [{name: datos, mountPath: /datos}]
+  volumes:
+    - name: datos
+      emptyDir: {}

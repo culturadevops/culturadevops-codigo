@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Espera hasta que exista el archivo FILE, revisando cada segundo, durante un máximo de SEGUNDOS; termina con código 0 si apareció y con 1 si no.\nUso: script.sh FILE SEGUNDOS\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nFILE=$1\nSEGUNDOS=$2\n\nfor ((i=0; i<${SEGUNDOS}; i++)); do\n  if [ -e \"$FILE\" ]; then\n    exit 0\n  fi\n  sleep 1\ndone\n\nexit 1\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 67
+}

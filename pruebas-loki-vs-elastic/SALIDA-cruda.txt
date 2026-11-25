@@ -1,0 +1,47 @@
+== 0 · EL CORPUS, el mismo para los dos ==
+   lineas: 200000
+   tamano: 32M
+   la aguja («pago rechazado por el banco emisor») sale 10 veces
+
+== 1 · LEVANTO LOS DOS ==
+   esperando a Elasticsearch..
+"number":"8.15.0",
+"tagline":"YouKnow,forSearch"
+loki listo
+
+== 2 · MEMORIA EN REPOSO, antes de meter un solo registro ==
+loki: 35.31MiB / 15.36GiB
+elastic: 1.584GiB / 15.36GiB
+
+== 3 · INGERIR LAS MISMAS 200.000 LINEAS ==
+   fechas desplazadas: base=1788784745 (últimas 55 h)
+   Elasticsearch: 200000 documentos en 3.3 s
+   Loki:          200000 lineas en 1.9 s
+   
+      ingesta: Elasticsearch 3.3 s  ·  Loki 1.9 s
+
+== 4 · LO QUE OCUPA EN DISCO ==
+   (esperando a que Loki vuelque sus trozos...)
+   Elasticsearch (indice registros): 13.4mb 200000
+   Loki (todo su directorio de datos): 38.7M
+   Loki, solo los trozos (los datos de verdad): 5.1M
+
+== 5 · MEMORIA DESPUES DE INGERIR ==
+loki: 114.1MiB / 15.36GiB
+elastic: 1.76GiB / 15.36GiB
+
+== 6 · LAS DOS BUSQUEDAS ==
+   A · POR ETIQUETA — servicio=pagos, nivel=ERROR
+      Elasticsearch       2.9 ms   1153 coincidencias
+      Loki               49.1 ms   1153 coincidencias (tope 5000)
+   
+   B · POR CONTENIDO — la frase «pago rechazado por el banco emisor» (sale 10 veces)
+      Elasticsearch       3.1 ms   10 coincidencias
+      Loki               83.9 ms   10 coincidencias
+   
+   C · ¿TIENEN LOS DOS EL MISMO CORPUS?
+      Elasticsearch: 200000 documentos
+      Loki:          200000 lineas
+      ✅ los dos tienen lo mismo: la comparación vale
+
+== limpio ==

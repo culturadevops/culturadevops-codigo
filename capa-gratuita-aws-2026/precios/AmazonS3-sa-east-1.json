@@ -1,0 +1,31 @@
+{
+"fuente": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/sa-east-1/index.csv",
+"publicacion": "2026-10-15T17:35:40Z",
+"filas_leidas": 399,
+"filas": [
+{
+"SKU": "ZNX83R5ZU4NXKACG",
+"OfferTermCode": "JRTCKXETXF",
+"RateCode": "ZNX83R5ZU4NXKACG.JRTCKXETXF.PGHJ3S3EYE",
+"TermType": "OnDemand",
+"PriceDescription": "$0.0405 per GB - first 50 TB / month of storage used",
+"EffectiveDate": "2026-10-01",
+"StartingRange": "0",
+"EndingRange": "51200",
+"Unit": "GB-Mo",
+"PricePerUnit": "0.0405000000",
+"Currency": "USD",
+"Product Family": "Storage",
+"serviceCode": "AmazonS3",
+"Location": "South America (Sao Paulo)",
+"Location Type": "AWS Region",
+"Availability": "99.99%",
+"Storage Class": "General Purpose",
+"Volume Type": "Standard",
+"usageType": "SAE1-TimedStorage-ByteHrs",
+"Durability": "99.999999999%",
+"Region Code": "sa-east-1",
+"serviceName": "Amazon Simple Storage Service"
+}
+]
+}

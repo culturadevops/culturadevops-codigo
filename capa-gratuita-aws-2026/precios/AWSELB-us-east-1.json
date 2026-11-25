@@ -1,0 +1,53 @@
+{
+"fuente": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSELB/current/us-east-1/index.csv",
+"publicacion": "2026-09-11T12:45:44Z",
+"filas_leidas": 14,
+"filas": [
+{
+"SKU": "37CUWUT8GSNQEPUV",
+"OfferTermCode": "JRTCKXETXF",
+"RateCode": "37CUWUT8GSNQEPUV.JRTCKXETXF.6YS6EN2CT7",
+"TermType": "OnDemand",
+"PriceDescription": "$0.0225 per Application LoadBalancer-hour (or partial hour)",
+"EffectiveDate": "2026-08-01",
+"StartingRange": "0",
+"EndingRange": "Inf",
+"Unit": "Hrs",
+"PricePerUnit": "0.0225000000",
+"Currency": "USD",
+"Product Family": "Load Balancer-Application",
+"serviceCode": "AWSELB",
+"Location": "US East (N. Virginia)",
+"Location Type": "AWS Region",
+"Group": "ELB:Balancing",
+"Group Description": "LoadBalancer hourly usage by Application Load Balancer",
+"usageType": "LoadBalancerUsage",
+"operation": "LoadBalancing:Application",
+"Region Code": "us-east-1",
+"serviceName": "Elastic Load Balancing"
+},
+{
+"SKU": "P2XGEJ8N3KU52WA8",
+"OfferTermCode": "JRTCKXETXF",
+"RateCode": "P2XGEJ8N3KU52WA8.JRTCKXETXF.6YS6EN2CT7",
+"TermType": "OnDemand",
+"PriceDescription": "$0.008 per used Application load balancer capacity unit-hour (or partial hour)",
+"EffectiveDate": "2026-08-01",
+"StartingRange": "0",
+"EndingRange": "Inf",
+"Unit": "LCU-Hrs",
+"PricePerUnit": "0.0080000000",
+"Currency": "USD",
+"Product Family": "Load Balancer-Application",
+"serviceCode": "AWSELB",
+"Location": "US East (N. Virginia)",
+"Location Type": "AWS Region",
+"Group": "ELB:Balancing",
+"Group Description": "Used Application Load Balancer capacity units-hr",
+"usageType": "LCUUsage",
+"operation": "LoadBalancing:Application",
+"Region Code": "us-east-1",
+"serviceName": "Elastic Load Balancing"
+}
+]
+}

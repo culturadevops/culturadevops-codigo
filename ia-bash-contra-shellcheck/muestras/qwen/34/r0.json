@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Revisa con df el porcentaje de uso del sistema de archivos donde está DIR e imprime 'ALERTA' si pasa de UMBRAL por ciento, u 'OK' si no.\nUso: script.sh DIR UMBRAL\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\nUMBRAL=$2\n\nUSO=$(df -P $DIR | tail -n 1 | awk '{print $5}' | sed 's/%://' )\n\nif [ $USO -ge $UMBRAL ]; then\n    echo \"ALERTA\"\nelse\n    echo \"OK\"\nfi\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 75
+}

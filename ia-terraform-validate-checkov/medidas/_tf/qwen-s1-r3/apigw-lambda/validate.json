@@ -1,0 +1,86 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 3,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Duplicate resource \"aws_security_group\" configuration",
+      "detail": "A aws_security_group resource named \"example\" was already declared at main.tf:59,1-40. Resource names must be unique per type in each module.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 141,
+          "column": 1,
+          "byte": 4308
+        },
+        "end": {
+          "line": 141,
+          "column": 40,
+          "byte": 4347
+        }
+      },
+      "snippet": {
+        "context": null,
+        "code": "resource \"aws_security_group\" \"example\" {",
+        "start_line": 141,
+        "highlight_start_offset": 0,
+        "highlight_end_offset": 39,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Duplicate resource \"aws_security_group_rule\" configuration",
+      "detail": "A aws_security_group_rule resource named \"example\" was already declared at main.tf:79,1-45. Resource names must be unique per type in each module.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 161,
+          "column": 1,
+          "byte": 4818
+        },
+        "end": {
+          "line": 161,
+          "column": 45,
+          "byte": 4862
+        }
+      },
+      "snippet": {
+        "context": null,
+        "code": "resource \"aws_security_group_rule\" \"example\" {",
+        "start_line": 161,
+        "highlight_start_offset": 0,
+        "highlight_end_offset": 44,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Duplicate resource \"aws_security_group\" configuration",
+      "detail": "A aws_security_group resource named \"example\" was already declared at main.tf:59,1-40. Resource names must be unique per type in each module.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 172,
+          "column": 1,
+          "byte": 5186
+        },
+        "end": {
+          "line": 172,
+          "column": 40,
+          "byte": 5225
+        }
+      },
+      "snippet": {
+        "context": null,
+        "code": "resource \"aws_security_group\" \"example\" {",
+        "start_line": 172,
+        "highlight_start_offset": 0,
+        "highlight_end_offset": 39,
+        "values": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# Laboratorio del curso «Restaurar, no copiar».
+#   db        Postgres 17 con el WAL archivado en el volumen `archivo` (lección 4: punto en el tiempo)
+#   operador  la máquina desde la que se hacen y se restauran las copias (cliente de Postgres,
+#             git, age, gzip). Las lecciones son scripts de bash que corren aquí dentro.
+name: curso-restaurar
+
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: tienda
+    # El volumen /archivo nace de root y Postgres corre como «postgres»: sin este chown el
+    # archive_command falla en SILENCIO (pasó al montar este laboratorio; lo cuenta la lección 4).
+    entrypoint: ["sh", "-c", "chown postgres /archivo && exec docker-entrypoint.sh \"$$@\"", "--"]
+    command:
+      - postgres
+      - -c
+      - wal_level=replica
+      - -c
+      - archive_mode=on
+      - -c
+      - archive_command=test ! -f /archivo/%f && cp %p /archivo/%f
+      - -c
+      - archive_timeout=1
+    volumes:
+      - datos:/var/lib/postgresql/data
+      - archivo:/archivo
+      - ./db-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "admin", "-d", "tienda"]
+      interval: 1s
+      retries: 60
+
+  operador:
+    build: ./operador
+    environment:
+      PGHOST: db
+      PGUSER: admin
+      PGPASSWORD: admin
+      PGDATABASE: tienda
+    volumes:
+      - ./lecciones:/curso:ro
+      - archivo:/archivo
+      - copias:/copias
+    depends_on:
+      db:
+        condition: service_healthy
+    command: sleep infinity
+
+volumes:
+  datos:
+  archivo:
+  copias:

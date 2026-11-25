@@ -1,0 +1,1048 @@
+{
+  "T01-A": {
+    "tarea": "T01",
+    "lang": "go",
+    "cond": "A",
+    "segundos": 13,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Write",
+      "Bash: cd go && gofmt -l . ; go vet ./..."
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0672793,
+    "turnos": 4,
+    "final": "Agregué `Mediana` en `go/calc.go`, que ordena una copia del slice y devuelve `ok=false` si está vacío. También reformateé el archivo con gofmt (solo espacios, sin cambiar lo que hacen `Suma` y `Maximo`) para que `gofmt -l` y `go vet` salgan sin avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-aoq72fh2"
+  },
+  "T01-B": {
+    "tarea": "T01",
+    "lang": "go",
+    "cond": "B",
+    "segundos": 32,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 1,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Bash: cd go && cat >> calc.go <<'EOF'\n\n// Mediana devuelve la mediana; ok es false si el slice está vacío.\nfunc Mediana(xs []f",
+      "Write",
+      "PowerShell: Set-Location go; gofmt -l .; go vet ./..."
+    ],
+    "verif_por_claude": 2,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.07621779999999999,
+    "turnos": 5,
+    "final": "Agregué `Mediana` en `go/calc.go` (copia y ordena el slice, y promedia los dos centrales si la longitud es par). También reformateé el archivo al estilo gofmt, sin cambiar lo que hacen `Suma` y `Maximo`. No pude ejecutar `gofmt -l` ni `go vet`, porque el sistema denegó los comandos, así que el código no está verificado.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-a5qlx0uk"
+  },
+  "T02-A": {
+    "tarea": "T02",
+    "lang": "go",
+    "cond": "A",
+    "segundos": 20,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Bash: cd C:/Users/tu-usuario/AppData/Local/Temp/v708-sktdcjdc/go && cat > calc.go <<'EOF'\npackage demo\n\nimport \"errors\"\n\n// Suma dev",
+      "Write",
+      "PowerShell: Set-Location go; gofmt -l .; go vet ./..."
+    ],
+    "verif_por_claude": 2,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.07671410000000001,
+    "turnos": 5,
+    "final": "Agregué `Promedio` en `go/calc.go`; devuelve error si el slice está vacío. También reformateé el archivo al estilo gofmt (tabs), porque `Suma` y `Maximo` no lo cumplían. No pude correr `gofmt -l go/` ni `go vet ./...`: el entorno denegó los comandos y no hay quien apruebe, así que quedan sin verificar.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-sktdcjdc"
+  },
+  "T02-B": {
+    "tarea": "T02",
+    "lang": "go",
+    "cond": "B",
+    "segundos": 18,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 1,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Write",
+      "Bash: cd go && gofmt -l . ; go vet ./..."
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0648634,
+    "turnos": 4,
+    "final": "Agregué `Promedio` en `go/calc.go`, que devuelve un error si el slice está vacío, y reformateé el archivo con gofmt porque no pasaba `gofmt -l`; `gofmt -l` y `go vet ./...` salen sin avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-mvpj0nqv"
+  },
+  "T03-A": {
+    "tarea": "T03",
+    "lang": "go",
+    "cond": "A",
+    "segundos": 10,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Bash: cd go && gofmt -w calc.go && gofmt -l . ; go vet ./... && echo vet-ok"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.065464,
+    "turnos": 4,
+    "final": "Agregué `Acotar(v, lo, hi int) int` en `go/calc.go` (si `lo > hi`, devuelve `hi`) y apliqué `gofmt` al archivo, así que también cambió la indentación de `Suma` y `Maximo`; `gofmt -l` no lista nada y `go vet` pasa sin avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-k2rl0cu0"
+  },
+  "T03-B": {
+    "tarea": "T03",
+    "lang": "go",
+    "cond": "B",
+    "segundos": 10,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 1,
+    "hook_bloqueos": 1,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Bash: cd C:/Users/tu-usuario/AppData/Local/Temp/v708-qw22mk63/go && gofmt -w calc.go && gofmt -l . ; go vet ./... && echo vet-ok"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0689986,
+    "turnos": 4,
+    "final": "Agregué `Acotar(v, lo, hi int) int` en `go/calc.go`, que devuelve `v` limitado a `[lo, hi]`. También formateé el archivo con `gofmt`, así que cambió la indentación de `Suma` y `Maximo`. `gofmt -l` no lista nada y `go vet` pasa sin avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-qw22mk63"
+  },
+  "T04-A": {
+    "tarea": "T04",
+    "lang": "go",
+    "cond": "A",
+    "segundos": 6,
+    "tocados": [
+      "go/texto.go"
+    ],
+    "archivos": {
+      "go/texto.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Write",
+      "Bash: cd go && head -1 go.mod && ls *.go | head && gofmt -l . ; go vet ./..."
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0557039,
+    "turnos": 3,
+    "final": "Creé `go/texto.go` con `Invertir(s string) string`, que invierte la cadena por runas; `gofmt -l` y `go vet ./...` no dieron avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-k1tf72oo"
+  },
+  "T04-B": {
+    "tarea": "T04",
+    "lang": "go",
+    "cond": "B",
+    "segundos": 7,
+    "tocados": [
+      "go/texto.go"
+    ],
+    "archivos": {
+      "go/texto.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 1,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Write",
+      "Bash: cd go && gofmt -l . ; go vet ./..."
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0579799,
+    "turnos": 3,
+    "final": "Creé `go/texto.go` con `Invertir(s string) string`, que invierte por runas. `go vet` no da avisos, pero `gofmt -l go/` sigue listando `go/calc.go`. Ese archivo ya venía sin formatear y no lo toqué, así que no corrí `gofmt -w` sobre él.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-t74lq_rr"
+  },
+  "T05-A": {
+    "tarea": "T05",
+    "lang": "py",
+    "cond": "A",
+    "segundos": 11,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Edit",
+      "Bash: cd py && ruff check inventario.py"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.06376290000000001,
+    "turnos": 5,
+    "final": "Agregué `valor_total(items)` en `py/inventario.py`, que suma cantidad por precio de todos los artículos. También quité el `import os` sin uso para que `ruff check` pase sin avisos, y ya lo pasa.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-1nkh8fpf"
+  },
+  "T05-B": {
+    "tarea": "T05",
+    "lang": "py",
+    "cond": "B",
+    "segundos": 17,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 2,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Edit",
+      "Bash: cd py && ruff check inventario.py"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.063842,
+    "turnos": 5,
+    "final": "Agregué `valor_total(items)` en `py/inventario.py`, que suma cantidad por precio de cada artículo. También quité el `import os`, que no se usaba, para que `ruff check` pase sin avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-_3_u8efg"
+  },
+  "T06-A": {
+    "tarea": "T06",
+    "lang": "py",
+    "cond": "A",
+    "segundos": 10,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Edit",
+      "Bash: cd py && ruff check inventario.py"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.06376789999999999,
+    "turnos": 5,
+    "final": "Agregué `buscar(items, nombre)` en `py/inventario.py`, que devuelve el `Articulo` con ese nombre o `None`, y quité el `import os` sin uso para que `ruff check` quede sin avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-l5yot9do"
+  },
+  "T06-B": {
+    "tarea": "T06",
+    "lang": "py",
+    "cond": "B",
+    "segundos": 9,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 2,
+    "hook_bloqueos": 1,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Bash: cd py && ruff check inventario.py",
+      "Edit",
+      "Bash: cd py && ruff check inventario.py"
+    ],
+    "verif_por_claude": 2,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.07248,
+    "turnos": 6,
+    "final": "Agregué `buscar(items, nombre)` en `py/inventario.py`, que devuelve el `Articulo` con ese nombre o `None`, y quité el import `os` sin usar para que `ruff check` quede sin avisos.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-6elss_n7"
+  },
+  "T07-A": {
+    "tarea": "T07",
+    "lang": "py",
+    "cond": "A",
+    "segundos": 13,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Edit",
+      "Bash: cd py && ruff check inventario.py && python -I -c \"import inventario as i; print(i.desde_csv('nombre,cantidad,precio\\na,",
+      "Bash: ruff check py/inventario.py"
+    ],
+    "verif_por_claude": 2,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0718584,
+    "turnos": 6,
+    "final": "Agregué `desde_csv(texto: str) -> list[Articulo]` en `py/inventario.py`, que usa `csv.DictReader`, y quité el `import os` sin usar para que `ruff check` quedara limpio. `ruff check` pasa sin avisos, pero no pude probar la función en ejecución: el sistema denegó el comando de Python.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-cb6bpg62"
+  },
+  "T07-B": {
+    "tarea": "T07",
+    "lang": "py",
+    "cond": "B",
+    "segundos": 16,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 2,
+    "hook_bloqueos": 1,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Edit",
+      "Bash: cd py && ruff check inventario.py && python -c \"import inventario as i; print(i.desde_csv('nombre,cantidad,precio\\na,2,1",
+      "Bash: cd py && ruff check inventario.py"
+    ],
+    "verif_por_claude": 2,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0735866,
+    "turnos": 6,
+    "final": "En `py/inventario.py` agregué `desde_csv(texto: str) -> list[Articulo]` con `csv.DictReader`, y quité el `import os` que no se usaba para que `ruff check` quedara sin avisos. `ruff check` pasa; no pude probar la función con un CSV de ejemplo porque se denegó el permiso para ejecutar Python.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-7q43glvh"
+  },
+  "T08-A": {
+    "tarea": "T08",
+    "lang": "sh",
+    "cond": "A",
+    "segundos": 12,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read",
+      "Write",
+      "Bash: cd sh && shellcheck respaldo.sh && echo ok"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0682443,
+    "turnos": 4,
+    "final": "En `sh/respaldo.sh` agregué la opción `-z`, que crea `DESTINO/respaldo-AAAAMMDD.tar.gz` con `tar` en lugar de copiar. También entrecomillé las variables que antes iban sin comillas, y `shellcheck` pasa sin avisos. No ejecuté el script.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-qvw1v5hu"
+  },
+  "T08-B": {
+    "tarea": "T08",
+    "lang": "sh",
+    "cond": "B",
+    "segundos": 12,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 1,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read",
+      "Write",
+      "Bash: shellcheck sh/respaldo.sh && echo ok"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.06850429999999999,
+    "turnos": 4,
+    "final": "`sh/respaldo.sh` ahora acepta `-z`, que crea `DESTINO/respaldo-AAAAMMDD.tar.gz` con `tar -czf` en vez de copiar. También entrecomillé las variables que antes iban sin comillas, y `shellcheck` no da avisos. No ejecuté el script.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-hd7sjjaj"
+  },
+  "T09-A": {
+    "tarea": "T09",
+    "lang": "sh",
+    "cond": "A",
+    "segundos": 9,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Bash: cd sh && shellcheck respaldo.sh"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.062583,
+    "turnos": 4,
+    "final": "En `sh/respaldo.sh` agregué una validación que termina con `exit 1` y un mensaje a stderr si ORIGEN no existe o no es un directorio. También entrecomillé las variables en `mkdir`, `cd` y `cp`. `shellcheck` no dio avisos y no ejecuté el script.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-8gebp4v0"
+  },
+  "T09-B": {
+    "tarea": "T09",
+    "lang": "sh",
+    "cond": "B",
+    "segundos": 33,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 1,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Bash: shellcheck sh/respaldo.sh"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.06247899999999999,
+    "turnos": 4,
+    "final": "`sh/respaldo.sh` ahora sale con código 1 y un mensaje de error en stderr si ORIGEN no existe o no es un directorio. También entrecomillé las variables de `mkdir`, `cd` y `cp`, y `shellcheck` no da avisos. No ejecuté el script.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-4nuaf8py"
+  },
+  "T10-A": {
+    "tarea": "T10",
+    "lang": "sh",
+    "cond": "A",
+    "segundos": 10,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Bash: cd sh && shellcheck respaldo.sh && bash -n respaldo.sh && echo ok"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.06603099999999999,
+    "turnos": 4,
+    "final": "En `sh/respaldo.sh` ahora se añade al final una línea con fecha y hora (`%Y-%m-%d %H:%M:%S`) en `DESTINO/respaldos.log`. También quité el `cd` y entrecomillé las variables para que `shellcheck` quedara sin avisos, y no ejecuté el script.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-bnxds6j7"
+  },
+  "T10-B": {
+    "tarea": "T10",
+    "lang": "sh",
+    "cond": "B",
+    "segundos": 19,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 1,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read",
+      "Edit",
+      "Bash: cd sh && shellcheck respaldo.sh"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.065899,
+    "turnos": 4,
+    "final": "En `sh/respaldo.sh` agregué al final una línea con fecha, hora y nombre del respaldo en `DESTINO/respaldos.log`. También entrecomillé las variables que estaban sin comillas. `shellcheck` pasa sin avisos y no ejecuté el script.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-khdqpjc3"
+  },
+  "T01-C": {
+    "tarea": "T01",
+    "lang": "go",
+    "cond": "C",
+    "segundos": 15,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": false,
+        "compila": true,
+        "salida": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-gynkkidg\\go\\calc.go"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": false,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read(calc.go)",
+      "Bash: cat >> /c/Users/tu-usuario/AppData/Local/Temp/v708-gynkkidg/go/calc.go <<'EOF'\n\n// Mediana devuelve la mediana de los valores;",
+      "Edit(calc.go)",
+      "Edit(calc.go)"
+    ],
+    "verif_por_claude": 0,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0710143,
+    "turnos": 5,
+    "final": "Agregué `Mediana(xs []float64) (float64, bool)` a `go/calc.go` (ordena una copia, devuelve `false` si el slice está vacío) y el import de `sort`; no compilé ni probé el código, y `Suma` y `Maximo` quedaron igual.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-gynkkidg"
+  },
+  "T01-D": {
+    "tarea": "T01",
+    "lang": "go",
+    "cond": "D",
+    "segundos": 13,
+    "tocados": [
+      "go/calc.go"
+    ],
+    "archivos": {
+      "go/calc.go": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 2,
+    "hook_bloqueos": 2,
+    "deuda_en_no_tocados": [
+      "py/inventario.py",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read(calc.go)",
+      "Edit(calc.go)",
+      "Edit(calc.go)",
+      "Bash: gofmt -w \"C:/Users/tu-usuario/AppData/Local/Temp/v708-uad05q8t/go/calc.go\" && gofmt -l \"C:/Users/tu-usuario/AppData/Local/Temp/v708-"
+    ],
+    "verif_por_claude": 1,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.07479330000000001,
+    "turnos": 5,
+    "final": "Agregué `Mediana` en `go/calc.go` (copia y ordena el slice, sin modificar el original) y el import de `sort`. También apliqué `gofmt` porque el verificador lo exigía, así que cambió la indentación de `Suma` y `Maximo`, pero su comportamiento es el mismo.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-uad05q8t"
+  },
+  "T05-C": {
+    "tarea": "T05",
+    "lang": "py",
+    "cond": "C",
+    "segundos": 13,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": false,
+        "compila": true,
+        "salida": "I001 [*] Import block is un-sorted or un-formatted\n --> py\\inventario.py:2:1\n  |\n1 |   \"\"\"Inventario sencillo de artículos en memoria.\"\"\"\n2 | / import os\n3 | | import json\n4 | | from dataclasses import dataclass\n  | |_________________________________^\nhelp: Organize imports\n  |\n1 | \"\"\"Inventario sencillo de artículos en memoria.\"\"\"\n2 + import json\n3 | import os\n  - import json\n4 | from dataclasses import dataclass\n  |\n\nF401 [*] `os` imported but unused\n --> py\\inventario.py:2:8\n  |\n1 | \"\"\"Inventario sencillo de artículos en memoria.\"\"\"\n2 | import os\n  |        ^^\n3 | import json\n4 | from datac"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": false,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read(inventario.py)",
+      "Edit(inventario.py)"
+    ],
+    "verif_por_claude": 0,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0579981,
+    "turnos": 3,
+    "final": "Agregué `valor_total(items)` en `py/inventario.py`, que devuelve la suma de `cantidad * precio` de todos los artículos. No la ejecuté ni la probé.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-_qdxm6j8"
+  },
+  "T05-D": {
+    "tarea": "T05",
+    "lang": "py",
+    "cond": "D",
+    "segundos": 14,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 2,
+    "hook_bloqueos": 1,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read(inventario.py)",
+      "Edit(inventario.py)",
+      "Edit(inventario.py)"
+    ],
+    "verif_por_claude": 0,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0649618,
+    "turnos": 4,
+    "final": "Agregué `valor_total(items)` en `py/inventario.py`, que suma cantidad por precio de cada artículo, y quité el `import os` sin usar que ruff marcaba. El verificador no volvió a correr tras esa última edición, así que no sé si ya pasa.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-fbci7otp"
+  },
+  "T06-C": {
+    "tarea": "T06",
+    "lang": "py",
+    "cond": "C",
+    "segundos": 10,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": false,
+        "compila": true,
+        "salida": "I001 [*] Import block is un-sorted or un-formatted\n --> py\\inventario.py:2:1\n  |\n1 |   \"\"\"Inventario sencillo de artículos en memoria.\"\"\"\n2 | / import os\n3 | | import json\n4 | | from dataclasses import dataclass\n  | |_________________________________^\nhelp: Organize imports\n  |\n1 | \"\"\"Inventario sencillo de artículos en memoria.\"\"\"\n2 + import json\n3 | import os\n  - import json\n4 | from dataclasses import dataclass\n  |\n\nF401 [*] `os` imported but unused\n --> py\\inventario.py:2:8\n  |\n1 | \"\"\"Inventario sencillo de artículos en memoria.\"\"\"\n2 | import os\n  |        ^^\n3 | import json\n4 | from datac"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": false,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read(inventario.py)",
+      "Edit(inventario.py)"
+    ],
+    "verif_por_claude": 0,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0571956,
+    "turnos": 3,
+    "final": "Agregué `buscar(items, nombre)` en `py/inventario.py`; devuelve el primer `Articulo` con ese nombre o `None` si no hay ninguno. No la ejecuté ni la probé.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-9izzta1_"
+  },
+  "T06-D": {
+    "tarea": "T06",
+    "lang": "py",
+    "cond": "D",
+    "segundos": 19,
+    "tocados": [
+      "py/inventario.py"
+    ],
+    "archivos": {
+      "py/inventario.py": {
+        "pasa": true,
+        "compila": true,
+        "salida": "All checks passed!"
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 2,
+    "hook_bloqueos": 1,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "sh/respaldo.sh"
+    ],
+    "llamadas": [
+      "Read(inventario.py)",
+      "Edit(inventario.py)",
+      "Edit(inventario.py)"
+    ],
+    "verif_por_claude": 0,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0650505,
+    "turnos": 4,
+    "final": "En `py/inventario.py` agregué `buscar(items, nombre)`, que devuelve el `Articulo` con ese nombre o `None`, y quité el `import os` sin usar que el verificador (ruff) marcó. No volví a ejecutar el verificador después de ese último cambio.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-7lwsaeqi"
+  },
+  "T09-C": {
+    "tarea": "T09",
+    "lang": "sh",
+    "cond": "C",
+    "segundos": 9,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": false,
+        "compila": true,
+        "salida": "In C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-apjypdgk\\sh\\respaldo.sh line 15:\nmkdir -p $DESTINO\n         ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.\n\nDid you mean:\nmkdir -p \"$DESTINO\"\n\n\nIn C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-apjypdgk\\sh\\respaldo.sh line 16:\ncd $DESTINO\n   ^------^ SC2086 (info): Double quote to prevent globbing and word splitting.\n\nDid you mean:\ncd \"$DESTINO\"\n\n\nIn C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-apjypdgk\\sh\\respaldo.sh line 17:\ncp -r $ORIGEN respaldo-$FECHA\n      ^-----^ SC2086 (info): Double quote to prevent globbing and word splitting.\n  "
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": false,
+    "hook_disparos": 0,
+    "hook_bloqueos": 0,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read(respaldo.sh)",
+      "Edit(respaldo.sh)"
+    ],
+    "verif_por_claude": 0,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.0579994,
+    "turnos": 3,
+    "final": "En `sh/respaldo.sh` añadí, antes del `mkdir`, una comprobación que imprime \"error: ORIGEN '…' no existe o no es un directorio\" por stderr y sale con código 1 si ORIGEN no es un directorio. No ejecuté el script.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-apjypdgk"
+  },
+  "T09-D": {
+    "tarea": "T09",
+    "lang": "sh",
+    "cond": "D",
+    "segundos": 17,
+    "tocados": [
+      "sh/respaldo.sh"
+    ],
+    "archivos": {
+      "sh/respaldo.sh": {
+        "pasa": true,
+        "compila": true,
+        "salida": ""
+      }
+    },
+    "tarea_hecha": true,
+    "supresiones_nuevas": 0,
+    "exito": true,
+    "hook_disparos": 2,
+    "hook_bloqueos": 1,
+    "deuda_en_no_tocados": [
+      "go/calc.go",
+      "py/inventario.py"
+    ],
+    "llamadas": [
+      "Read(respaldo.sh)",
+      "Edit(respaldo.sh)",
+      "Edit(respaldo.sh)"
+    ],
+    "verif_por_claude": 0,
+    "modelo": "claude-sonnet-5-5",
+    "costo": 0.068797,
+    "turnos": 4,
+    "final": "En `sh/respaldo.sh` agregué una validación que termina con `exit 1` y un mensaje de error en stderr si ORIGEN no existe o no es un directorio, y entrecomillé las variables de `mkdir`, `cd` y `cp` para pasar el verificador de shellcheck (SC2086). No ejecuté el script ni volví a correr el verificador tras el segundo cambio.",
+    "avisos_hook_en_stream": 0,
+    "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-1gtpz0mv"
+  }
+}

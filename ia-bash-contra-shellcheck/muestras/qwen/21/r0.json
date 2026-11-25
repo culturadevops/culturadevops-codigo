@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Ejecuta el comando que recibe después de LOGFILE (con sus argumentos) y añade su salida a LOGFILE, con cada línea precedida de la fecha y hora en formato [AAAA-MM-DD HH:MM:SS].\nUso: script.sh LOGFILE COMANDO [ARGUMENTOS...]\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nLOGFILE=$1\nCOMMAND=$2\nshift 2\n\nif [ -z \"$LOGFILE\" ] || [ -z \"$COMMAND\" ]; then\n    echo \"Uso: script.sh LOGFILE COMANDO [ARGUMENTOS...]\"\n    exit 1\nfi\n\nexec > >(tee -a \"$LOGFILE\") 2>&1\nexec 3>&1\n\n$COMMAND \"$@\"\n\nexec 1>&3\ndate +\"[%Y-%m-%d %H:%M:%S]\" | tee -a \"$LOGFILE\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 122
+}

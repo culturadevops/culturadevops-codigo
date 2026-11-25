@@ -1,0 +1,25 @@
+# web.k8s.yaml — EL MISMO servicio, en Kubernetes: 2 réplicas de un servidor web.
+# ⛔ Ni una pieza de más ni de menos que el fichero de Nomad.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: servidor
+          image: nginx:alpine
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi

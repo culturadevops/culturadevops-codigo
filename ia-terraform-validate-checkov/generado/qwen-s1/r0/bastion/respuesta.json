@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_security_group\" \"bastion_host_sg\" {\n  name        = \"bastion_host_sg\"\n  description = \"Security group for the bastion host\"\n  vpc_id      = \"vpc-12345678\"  # Replace with your VPC ID\n\n  ingress {\n    from_port   = 22\n    to_port     = 22\n    protocol    = \"tcp\"\n    cidr_blocks = [\"0.0.0.0/0\"]\n  }\n\n  egress {\n    from_port   = 0\n    to_port     = 0\n    protocol    = \"-1\"\n    cidr_blocks = [\"0.0.0.0/0\"]\n  }\n}\n\nresource \"aws_instance\" \"bastion_host\" {\n  ami           = \"ami-0c55b159cbfafe1f0\"  # Replace with your AMI ID\n  instance_type = \"t2.micro\"\n  key_name      = \"your-key-pair\"          # Replace with your key pair name\n  security_groups = [aws_security_group.bastion_host_sg.id]\n  associate_public_ip_address = true\n\n  tags = {\n    Name = \"BastionHost\"\n  }\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 1,
+ "s": 7.5,
+ "tokens": 322,
+ "prompt": "Escribe el código de Terraform para un bastion host con IP elástica para entrar a la red privada en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

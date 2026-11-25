@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_rds_instance\" \"mysql_wordpress\" {\n  engine                 = \"mysql\"\n  engine_version         = \"5.7\"\n  instance_class         = \"db.t2.micro\"\n  name                   = \"wordpress-db\"\n  username               = \"admin\"\n  password               = \"StrongPassword123!\"\n  allocated_storage      = 20\n  storage_encrypted      = true\n  vpc_security_group_ids = [aws_security_group.db_sg.id]\n  parameter_group_name   = \"default.mysql5.7\"\n}\n\nresource \"aws_security_group\" \"db_sg\" {\n  name        = \"db-sg\"\n  description = \"Security group for the database\"\n\n  ingress {\n    from_port   = 3306\n    to_port     = 3306\n    protocol    = \"tcp\"\n    cidr_blocks = [\"0.0.0.0/0\"]\n  }\n\n  egress {\n    from_port   = 0\n    to_port     = 0\n    protocol    = \"-1\"\n    cidr_blocks = [\"0.0.0.0/0\"]\n  }\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 7.3,
+ "tokens": 296,
+ "prompt": "Escribe el código de Terraform para una base de datos RDS MySQL pequeña para un WordPress en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

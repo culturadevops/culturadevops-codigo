@@ -1,0 +1,18 @@
+{
+ "app": "p4-pyproject",
+ "dockerfile": "muestras/qwen/p4-pyproject/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.11-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 8.3,
+ "error_build": "",
+ "bytes": 52641339,
+ "disco_mb": 215.0,
+ "usuario": "",
+ "root": true,
+ "arranca": false,
+ "error_arranque": "Error response from daemon: No such container: v711-run\n"
+}

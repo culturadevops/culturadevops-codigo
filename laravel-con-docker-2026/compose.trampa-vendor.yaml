@@ -1,0 +1,6 @@
+# TRAMPA 4: montar TODO el proyecto para desarrollar. Tu carpeta no tiene vendor (está en .gitignore),
+# y el montaje tapa el vendor que la imagen ya traía.
+services:
+  app:
+    volumes:
+      - .:/var/www/html

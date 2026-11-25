@@ -1,0 +1,39 @@
+### deriva 1: docker stop curso-web (fuera de terraform)
+  # docker_container.web will be created
+      + must_run                                    = true
+Plan: 1 to add, 0 to change, 0 to destroy.
+### deriva 2: docker rm -f curso-web
+Error response from daemon: No such container: curso-web
+  # docker_container.web will be created
+Plan: 1 to add, 0 to change, 0 to destroy.
+### plan -refresh-only
+docker_image.web: Refreshing state... [id=sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830denginx:1.29-alpine]
+docker_container.web: Refreshing state... [id=9fd7b572a85c409b5cc1ca5e1496cc476b0c98e99b73aa427d96bf9ce7199cf5]
+Note: Objects have changed outside of Terraform
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+  # docker_container.web has been deleted
+  - resource "docker_container" "web" {
+      - attach                                      = false -> null
+      - command                                     = [
+          - "nginx",
+          - "-g",
+          - "daemon off;",
+        ] -> null
+      - container_read_refresh_timeout_milliseconds = 15000 -> null
+      - cpu_shares                                  = 0 -> null
+      - entrypoint                                  = [
+          - "/docker-entrypoint.sh",
+        ] -> null
+      - env                                         = [] -> null
+      - hostname                                    = "9fd7b572a85c" -> null
+      - id                                          = "9fd7b572a85c409b5cc1ca5e1496cc476b0c98e99b73aa427d96bf9ce7199cf5" -> null
+      - image                                       = "sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de" -> null
+      - init                                        = false -> null
+      - ipc_mode                                    = "private" -> null
+      - log_driver                                  = "json-file" -> null
+      - logs                                        = false -> null
+      - max_retry_count                             = 0 -> null
+      - memory                                      = 0 -> null
+      - memory_reservation                          = 0 -> null
+      - memory_swap                                 = 0 -> null

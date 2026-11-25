@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Ejecuta el comando que recibe después de LOGFILE (con sus argumentos) y añade su salida a LOGFILE, con cada línea precedida de la fecha y hora en formato [AAAA-MM-DD HH:MM:SS].\nUso: script.sh LOGFILE COMANDO [ARGUMENTOS...]\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\n#\n# Uso: script.sh LOGFILE COMANDO [ARGUMENTOS...]\n# Ejecuta COMANDO con sus argumentos y añade su salida (stdout y stderr)\n# a LOGFILE, con cada línea precedida de [AAAA-MM-DD HH:MM:SS].\n# El script termina con el mismo código de salida que COMANDO.\n\nset -u\nset -o pipefail\n\nusage() {\n    printf 'Uso: %s LOGFILE COMANDO [ARGUMENTOS...]\\n' \"${0##*/}\" >&2\n    exit 2\n}\n\n[[ $# -ge 2 ]] || usage\n\nlogfile=$1\nshift\n\nif [[ -z \"$logfile\" ]]; then\n    printf 'Error: LOGFILE no puede estar vacío\\n' >&2\n    exit 2\nfi\n\nlogdir=$(dirname -- \"$logfile\")\nif [[ ! -d \"$logdir\" ]]; then\n    printf 'Error: el directorio \"%s\" no existe\\n' \"$logdir\" >&2\n    exit 2\nfi\n\nif ! { : >> \"$logfile\"; } 2>/dev/null; then\n    printf 'Error: no se puede escribir en \"%s\"\\n' \"$logfile\" >&2\n    exit 2\nfi\n\nif ! command -v -- \"$1\" >/dev/null 2>&1; then\n    printf '[%(%Y-%m-%d %H:%M:%S)T] Error: comando no encontrado: %s\\n' -1 \"$1\" >> \"$logfile\"\n    printf 'Error: comando no encontrado: %s\\n' \"$1\" >&2\n    exit 127\nfi\n\ntimestamp_lines() {\n    local line\n    while IFS= read -r line || [[ -n \"$line\" ]]; do\n        printf '[%(%Y-%m-%d %H:%M:%S)T] %s\\n' -1 \"$line\"\n    done\n}\n\n\"$@\" 2>&1 | timestamp_lines >> \"$logfile\"\nstatus=(\"${PIPESTATUS[@]}\")\n\nif [[ ${status[1]} -ne 0 ]]; then\n    printf 'Error: fallo al escribir en \"%s\"\\n' \"$logfile\" >&2\nfi\n\nexit \"${status[0]}\"\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0319941,
+ "segundos": 10.1,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-pgwil4zx"
+}

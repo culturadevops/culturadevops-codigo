@@ -1,0 +1,112 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 4,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Attribute redefined",
+      "detail": "The argument \"default_root_object\" was already set at main.tf:65,3-22. Each argument may be set only once.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 84,
+          "column": 3,
+          "byte": 1893
+        },
+        "end": {
+          "line": 84,
+          "column": 22,
+          "byte": 1912
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudfront_distribution\" \"example_distribution\"",
+        "code": "  default_root_object = \"index.html\"",
+        "start_line": 84,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 21,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 5,
+          "byte": 639
+        },
+        "end": {
+          "line": 33,
+          "column": 12,
+          "byte": 646
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example_bucket\"",
+        "code": "    enabled = true",
+        "start_line": 33,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"rule\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 34,
+          "column": 5,
+          "byte": 659
+        },
+        "end": {
+          "line": 34,
+          "column": 9,
+          "byte": 663
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example_bucket\"",
+        "code": "    rule {",
+        "start_line": 34,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 8,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"rule\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 45,
+          "column": 5,
+          "byte": 923
+        },
+        "end": {
+          "line": 45,
+          "column": 9,
+          "byte": 927
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example_bucket\"",
+        "code": "    rule {",
+        "start_line": 45,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 8,
+        "values": []
+      }
+    }
+  ]
+}

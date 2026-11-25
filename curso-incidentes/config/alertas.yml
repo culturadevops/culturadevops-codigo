@@ -1,0 +1,37 @@
+groups:
+  - name: tienda
+    rules:
+      - alert: ErroresAltos
+        expr: |
+          sum(rate(tienda_peticiones_total{codigo=~"5.."}[30s]))
+            / sum(rate(tienda_peticiones_total[30s])) > 0.05
+        for: 15s
+        annotations:
+          resumen: "Más del 5% de las peticiones fallan"
+
+      # No espera a que se acabe la memoria: avisa si, al ritmo de los últimos 30 s, se va a
+      # acabar en los próximos 2 minutos. El límite del contenedor es de 160 MiB.
+      - alert: MemoriaSeAgota
+        expr: predict_linear(tienda_memoria_bytes[30s], 120) > 160 * 1024 * 1024
+        for: 10s
+        annotations:
+          resumen: "Al ritmo actual, la memoria se acaba en menos de 2 minutos"
+
+      - alert: HistorialLento
+        expr: |
+          rate(tienda_latencia_suma_segundos{ruta="/historial"}[30s])
+            / rate(tienda_latencia_cuenta{ruta="/historial"}[30s]) > 0.3
+        for: 15s
+        annotations:
+          resumen: "El historial tarda de media más de 300 ms"
+
+      - alert: CertificadoCaducaPronto
+        expr: probe_ssl_earliest_cert_expiry - time() < 14 * 86400
+        annotations:
+          resumen: "El certificado caduca en menos de 14 días"
+
+      - alert: CertificadoFalla
+        expr: probe_success{job="certificado"} == 0
+        for: 10s
+        annotations:
+          resumen: "La comprobación HTTPS falla"

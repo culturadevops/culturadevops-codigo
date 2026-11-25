@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Cambia a minúsculas la extensión de todos los archivos de DIR (por ejemplo, FOTO.JPG pasa a FOTO.jpg; el resto del nombre no cambia).\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR no es un directorio válido.\"\n    exit 1\nfi\n\nfind \"$DIR\" -type f -exec bash -c '\n    for file; do\n        ext=\"${file##*.}\"\n        base=\"${file%.*}\"\n        mv \"$file\" \"${base,,}.${ext}\"\n    done' bash {} +\n\necho \"Se han cambiado las extensiones a minúsculas en todos los archivos del directorio.\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 145
+}

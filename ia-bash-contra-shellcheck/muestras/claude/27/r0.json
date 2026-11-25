@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lee FILE, que tiene una ruta por línea, e imprime 'FALTA: RUTA' por cada ruta que no exista. Termina con código 1 si falta alguna.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\nset -u\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 FILE\" >&2\n    exit 2\nfi\n\nfile=\"$1\"\n\nif [ ! -f \"$file\" ] || [ ! -r \"$file\" ]; then\n    echo \"Error: no se puede leer '$file'\" >&2\n    exit 2\nfi\n\nfalta=0\n\nwhile IFS= read -r ruta || [ -n \"$ruta\" ]; do\n    ruta=\"${ruta%$'\\r'}\"\n    [ -z \"$ruta\" ] && continue\n    if [ ! -e \"$ruta\" ] && [ ! -L \"$ruta\" ]; then\n        printf 'FALTA: %s\\n' \"$ruta\"\n        falta=1\n    fi\ndone < \"$file\"\n\nexit \"$falta\"\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0180099,
+ "segundos": 5.5,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-uet84jnb"
+}

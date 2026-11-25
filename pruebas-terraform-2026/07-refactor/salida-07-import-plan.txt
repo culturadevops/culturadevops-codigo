@@ -1,0 +1,31 @@
+### quito provider del import (ya hay config generada) y plan:
+  # docker_container.a_mano must be replaced
+  # (imported from "d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee")
+  # Warning: this will destroy the imported resource
+      + env                                         = (known after apply) # forces replacement
+Plan: 1 to import, 1 to add, 0 to change, 1 to destroy.
+### añado env = ["MODO=produccion"] a generado.tf
+  # docker_container.a_mano must be replaced
+  # (imported from "d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee")
+  # Warning: this will destroy the imported resource
+      + env                                         = [ # forces replacement
+      ~ id                                          = "d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee" -> (known after apply)
+      ~ network_data                                = [
+      ~ security_opts                               = [] -> (known after apply)
+      ~ healthcheck (known after apply)
+      ~ labels (known after apply)
+Plan: 1 to import, 1 to add, 0 to change, 1 to destroy.
+### con lifecycle { ignore_changes = [env] }
+  # docker_container.a_mano will be updated in-place
+  # (imported from "d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee")
+Plan: 1 to import, 0 to add, 1 to change, 0 to destroy.
+### apply
+docker_container.a_mano: Preparing import... [id=d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee]
+  # (imported from "d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee")
+Plan: 1 to import, 0 to add, 1 to change, 0 to destroy.
+docker_container.a_mano: Importing... [id=d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee]
+docker_container.a_mano: Import complete [id=d34135838117c66dcc0f562873860bc60bb6569c30a8c265d2ab8b4bd99270ee]
+Apply complete! Resources: 1 imported, 0 added, 1 changed, 0 destroyed.
+contenedor tras apply: d34135838117 (antes d34135838117)
+MODO=produccion
+No changes. Your infrastructure matches the configuration.

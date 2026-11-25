@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "source": "custom",
+  "id": "despliegue-pagos-42",
+  "content": {
+    "textType": "client-markdown",
+    "title": ":rotating_light: pagos no responde",
+    "description": "El servicio *pagos* devuelve 5xx desde las 12:03.",
+    "nextSteps": [
+      "Revisar el runbook de pagos",
+      "Si sigue en 30 min, escalar a guardia"
+    ],
+    "keywords": [
+      "pagos",
+      "critico",
+      "SRE"
+    ]
+  },
+  "metadata": {
+    "threadId": "incidente-pagos-42",
+    "summary": "Incidente de pagos",
+    "additionalContext": {
+      "prioridad": "alta"
+    },
+    "enableCustomActions": true
+  }
+}

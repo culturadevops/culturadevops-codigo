@@ -1,0 +1,18 @@
+{
+ "app": "p3-sin-dependencias",
+ "dockerfile": "referencia/p3-sin-dependencias.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.12.8-slim-bookworm"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 4.4,
+ "error_build": "",
+ "bytes": 45384714,
+ "disco_mb": 186.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

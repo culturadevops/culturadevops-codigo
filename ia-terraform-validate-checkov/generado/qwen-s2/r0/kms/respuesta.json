@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_kms_key\" \"data_encryption_key\" {\n  description = \"KMS key for data encryption\"\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 0.9,
+ "tokens": 83,
+ "prompt": "Escribe el código de Terraform para una clave de KMS para cifrar datos en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

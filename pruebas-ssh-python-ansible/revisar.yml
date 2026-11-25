@@ -1,0 +1,7 @@
+- name: revisar la flota
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: revisar
+      ansible.builtin.raw: revisar
+      timeout: 10

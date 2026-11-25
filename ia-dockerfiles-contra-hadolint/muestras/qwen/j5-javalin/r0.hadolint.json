@@ -1,0 +1,1 @@
+[{"code": "DL3045", "column": 1, "file": "-", "level": "warning", "line": 3, "message": "`COPY` to a relative destination without `WORKDIR` set."}]

@@ -1,0 +1,20 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+
+# Terraform / OpenTofu
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+*.tfvars
+!ejemplo.tfvars
+# El .terraform.lock.hcl SÍ se sube (lección 6 del curso de Terraform).
+
+# De este curso
+*.tfstate.backup

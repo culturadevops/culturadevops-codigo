@@ -1,0 +1,10 @@
+# Lo que copian casi todos los tutoriales: el volumen en /var/lib/postgresql/data.
+services:
+  db:
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: clave1
+    volumes:
+      - datos:/var/lib/postgresql/data
+volumes:
+  datos:

@@ -1,0 +1,53 @@
+==============================================================================
+1 · LA MISMA MÁQUINA, EN DISTINTAS REGIONES  (B2s, Linux, bajo demanda)
+==============================================================================
+  Europa Occidental       0.0480 USD/hora   ->    35.04 USD al mes (730 h)
+  Este de EE. UU.         0.0416 USD/hora   ->    30.37 USD al mes (730 h)
+  Brasil Sur              0.0672 USD/hora   ->    49.06 USD al mes (730 h)
+  Sudeste Asiático        0.0528 USD/hora   ->    38.54 USD al mes (730 h)
+  Japón Este              0.0544 USD/hora   ->    39.71 USD al mes (730 h)
+
+  de la más barata a la más cara: 62 % más
+
+==============================================================================
+2 · LA MISMA MÁQUINA, LINUX CONTRA WINDOWS  (B2s, Europa Occidental)
+==============================================================================
+  Linux       0.0480 USD/hora  ->    35.04 USD al mes
+  Windows     0.0560 USD/hora  ->    40.88 USD al mes
+
+  la licencia de Windows: +5.84 USD al mes (+17 %)
+
+==============================================================================
+3 · ENCENDIDA SIEMPRE CONTRA 8 HORAS AL DÍA  (B2s Linux, Europa Occidental)
+==============================================================================
+  24 h x 30 días (730 h)     35.04 USD al mes
+  8 h x 22 días laborables (176 h)      8.45 USD al mes
+
+  apagarla fuera de horario: 26.59 USD menos al mes (76 % menos)
+
+==============================================================================
+4 · ALMACENAMIENTO: LO QUE CUESTA GUARDAR 1 TB UN MES
+==============================================================================
+  Archive LRS Data Stored                      0.0018 USD/GB  ->     1.84 USD por TB
+  Archive RA-GRS Data Stored                   0.0028 USD/GB  ->     2.86 USD por TB
+  Archive GRS Data Stored                      0.0028 USD/GB  ->     2.86 USD por TB
+  Archive ZRS Data Stored                      0.0028 USD/GB  ->     2.87 USD por TB
+  Cold LRS Data Stored                         0.0045 USD/GB  ->     4.61 USD por TB
+  Cold ZRS Data Stored                         0.0050 USD/GB  ->     5.12 USD por TB
+  Cold GRS Data Stored                         0.0081 USD/GB  ->     8.29 USD por TB
+  Cold GZRS Data Stored                        0.0086 USD/GB  ->     8.81 USD por TB
+
+Consultado el 2026-08-22 en https://prices.azure.com/api/retail/prices
+⚠️ Esa API es PÚBLICA: no pide cuenta ni clave. Por eso el bloque 1 puede dar cifras
+medidas en vez de teoría. Los precios cambian: el vídeo dice la fecha de consulta.
+
+Y lo comprobado con Azurite el mismo día:
+  arranca en 12 s · 83,5 MiB en reposo · imagen de 532 MB
+  ⛔ TROPIEZO: la CLI de Azure habla la API 2026-04-06 y Azurite la rechaza con
+     InvalidHeaderValue. Se arregla arrancándolo con --skipApiVersionCheck.
+     Con eso, crear contenedor + subir fichero + listar funciona entero.
+
+⛔ NO existe un LocalStack para Azure: LocalStack es solo de AWS (su README no
+   menciona Azure ni una vez). Microsoft publica emuladores SUELTOS: Azurite
+   (blobs/colas/tablas), Cosmos DB Emulator y Azure SQL Edge. Los tres existen.
+   Nadie emula máquinas, redes, Entra ID, roles ni costes.

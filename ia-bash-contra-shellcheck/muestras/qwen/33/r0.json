@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Junta en un solo archivo DEST/todo.log el contenido de todos los .log de DIR (incluidas las subcarpetas), ordenados por nombre de archivo.\nUso: script.sh DIR DEST\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\nDEST=$2\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\nif [ ! -d \"$DEST\" ]; then\n    echo \"El destino especificado no es un directorio.\"\n    exit 1\nfi\n\nfind \"$DIR\" -type f -name \"*.log\" -print0 | while IFS= read -r -d $'\\0' file; do\n    if [ -f \"$file\" ]; then\n        filename=$(basename \"$file\")\n        cat \"$file\" >> \"$DEST/todo.log\"\n    fi\ndone\n\necho \"Archivos de log combinados en $DEST/todo.log\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 158
+}

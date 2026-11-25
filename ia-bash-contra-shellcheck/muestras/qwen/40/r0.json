@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Elimina los espacios en blanco al final de cada línea en todos los archivos .txt de DIR (sin subcarpetas).\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ -z \"$1\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR is not a valid directory\"\n    exit 1\nfi\n\nfind \"$DIR\" -maxdepth 1 -type f -name \"*.txt\" -exec sed -i 's/[ \\t]*$//' {} \\;\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 103
+}

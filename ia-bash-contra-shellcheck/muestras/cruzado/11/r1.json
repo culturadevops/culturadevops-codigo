@@ -1,0 +1,11 @@
+{
+ "prompt": "Este es tu script:\n```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR is not a directory\"\n    exit 1\nfi\n\ncd \"$DIR\"\n\nfor file in *; do\n    if [ -f \"$file\" ]; then\n        ext=\"${file##*.}\"\n        mkdir -p \"$ext/\"\n        mv \"$file\" \"$ext/\"\n    fi\ndone\n```\nShellCheck 0.11.0 da estos avisos:\nscript.sh:15:1: warning: Use 'cd ... || exit' or 'cd ... || return' in case cd fails. [SC2164]\nCorrige el script para que ShellCheck no dé avisos. Responde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR is not a directory\"\n    exit 1\nfi\n\ncd \"$DIR\" || exit 1\n\nfor file in *; do\n    if [ -f \"$file\" ]; then\n        ext=\"${file##*.}\"\n        mkdir -p \"$ext/\"\n        mv \"$file\" \"$ext/\"\n    fi\ndone\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0171224,
+ "segundos": 3.8,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-bm7c2xcx"
+}

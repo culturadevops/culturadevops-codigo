@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_cloudwatch_log_group\" \"app_logs\" {\n  name                  = \"/app/application_logs\"\n  retention_in_days     = 30\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 1.5,
+ "tokens": 90,
+ "prompt": "Escribe el código de Terraform para un grupo de logs de CloudWatch para mi aplicación en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

@@ -1,0 +1,28 @@
+# Dos réplicas que contestan con su propio nombre, y un Service delante (80 -> 8080).
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels: { app: web }
+  template:
+    metadata:
+      labels: { app: web }
+    spec:
+      containers:
+        - name: web
+          image: busybox:1.37
+          command: ["sh", "-c", "mkdir -p /www && echo \"hola desde $(hostname)\" > /www/index.html && httpd -f -p 8080 -h /www"]
+          ports: [{ containerPort: 8080 }]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  selector: { app: web }
+  ports:
+    - port: 80
+      targetPort: 8080

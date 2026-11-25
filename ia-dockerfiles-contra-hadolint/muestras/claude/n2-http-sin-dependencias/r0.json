@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- index.js ---\nconst http = require('http');\nhttp.createServer((req, res) => { res.end('ok'); }).listen(8080, () => console.log('escuchando en 8080'));\n\n--- package.json ---\n{\n  \"name\": \"http-simple\",\n  \"version\": \"1.0.0\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"start\": \"node index.js\"\n  }\n}\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\nFROM node:22-alpine\n\nENV NODE_ENV=production\n\nRUN apk add --no-cache tini\n\nWORKDIR /app\n\nCOPY --chown=node:node package.json ./\nCOPY --chown=node:node index.js ./\n\nUSER node\n\nEXPOSE 8080\n\nHEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \\\n  CMD wget -qO- http://127.0.0.1:8080/ || exit 1\n\nENTRYPOINT [\"/sbin/tini\", \"--\"]\nCMD [\"node\", \"index.js\"]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0198878,
+ "segundos": 5.4,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v711-04mtr26l"
+}

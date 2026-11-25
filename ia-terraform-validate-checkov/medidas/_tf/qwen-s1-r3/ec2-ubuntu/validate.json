@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"http_api_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 25,
+          "column": 5,
+          "byte": 532
+        },
+        "end": {
+          "line": 25,
+          "column": 21,
+          "byte": 548
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"ubuntu\"",
+        "code": "    http_api_enabled = false",
+        "start_line": 25,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"http_endpoint_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 26,
+          "column": 5,
+          "byte": 562
+        },
+        "end": {
+          "line": 26,
+          "column": 26,
+          "byte": 583
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"ubuntu\"",
+        "code": "    http_endpoint_enabled = true",
+        "start_line": 26,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 25,
+        "values": []
+      }
+    }
+  ]
+}

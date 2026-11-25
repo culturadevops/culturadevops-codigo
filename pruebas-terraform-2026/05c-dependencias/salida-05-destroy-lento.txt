@@ -1,0 +1,4 @@
+### destroy con TEXTO y un contenedor que tarda en pararse
+  vez 1: bien (4 s)
+  vez 2: bien (5 s)
+  vez 3: bien (5 s)

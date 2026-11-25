@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "njsscan_version": "1.0.1",
+  "nodejs": {
+    "generic_os_command_exec": {
+      "files": [
+        {
+          "file_path": "node/app.js",
+          "match_lines": [
+            18,
+            19
+          ],
+          "match_position": [
+            3,
+            64
+          ],
+          "match_string": "  const host = req.query.host;\n  exec(\"ping -c 1 \" + host, (err, salida) => res.send(salida));"
+        }
+      ],
+      "metadata": {
+        "cwe": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')",
+        "description": "User controlled data in 'child_process.exec()' can result in Remote OS Command Execution.",
+        "owasp-web": "A1: Injection",
+        "severity": "ERROR"
+      }
+    }
+  },
+  "templates": {}
+}

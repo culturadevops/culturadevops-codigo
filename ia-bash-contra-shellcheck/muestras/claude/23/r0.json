@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Evita que dos copias del script se ejecuten a la vez usando flock sobre el archivo de bloqueo LOCKFILE; con el bloqueo tomado, escribe la línea 'trabajando' en LOGFILE.\nUso: script.sh LOCKFILE LOGFILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nif [ \"$#\" -ne 2 ]; then\n    echo \"Uso: $0 LOCKFILE LOGFILE\" >&2\n    exit 2\nfi\n\nLOCKFILE=\"$1\"\nLOGFILE=\"$2\"\n\nexec 9>>\"$LOCKFILE\" || {\n    echo \"Error: no se puede abrir el archivo de bloqueo '$LOCKFILE'\" >&2\n    exit 1\n}\n\nif ! flock -n 9; then\n    echo \"Otra instancia ya se está ejecutando (bloqueo: $LOCKFILE)\" >&2\n    exit 1\nfi\n\necho 'trabajando' >> \"$LOGFILE\"\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0176855,
+ "segundos": 6.4,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-0nz92g0k"
+}

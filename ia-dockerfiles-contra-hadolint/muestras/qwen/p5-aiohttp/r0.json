@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- app.py ---\nfrom aiohttp import web\n\n\nasync def inicio(request):\n    return web.Response(text='ok')\n\n\napp = web.Application()\napp.add_routes([web.get('/', inicio)])\n\nif __name__ == '__main__':\n    web.run_app(app, host='0.0.0.0', port=8080)\n\n--- requirements.txt ---\naiohttp==3.11.11\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# Use una imagen base de Python\nFROM python:3.9-slim\n\n# Establece el trabajo actual como directorio de trabajo\nWORKDIR /app\n\n# Copia los archivos requirements.txt y app.py al directorio de trabajo\nCOPY requirements.txt .\nCOPY app.py .\n\n# Instala las dependencias\nRUN pip install --no-cache-dir -r requirements.txt\n\n# Exponga el puerto 8080\nEXPOSE 8080\n\n# Ejecuta la aplicación\nCMD [\"python\", \"app.py\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 119
+}

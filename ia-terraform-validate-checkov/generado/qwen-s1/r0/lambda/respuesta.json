@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_iam_role\" \"lambda_role\" {\n  name = \"lambdaRole\"\n\n  assume_role_policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Action = \"sts:AssumeRole\"\n        Effect = \"Allow\"\n        Principal = {\n          Service = \"lambda.amazonaws.com\"\n        }\n      }\n    ]\n  })\n}\n\nresource \"aws_iam_role_policy_attachment\" \"lambda_policy\" {\n  policy_arn = \"arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole\"\n  role       = aws_iam_role.lambda_role.name\n}\n\nresource \"aws_lambda_function\" \"example\" {\n  filename      = \"lambda_function.zip\"\n  function_name = \"example_lambda_function\"\n  handler       = \"lambda_function.handler\"\n  role          = aws_iam_role.lambda_role.arn\n  runtime       = \"python3.8\"\n\n  source_code_hash = filebase64sha256(\"lambda_function.zip\")\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 1,
+ "s": 25.2,
+ "tokens": 272,
+ "prompt": "Escribe el código de Terraform para una función Lambda en Python con su rol de IAM en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

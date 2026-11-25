@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_queue\" \"main_queue\" {\n  name = \"main-queue\"\n}\n\nresource \"aws_queue\" \"dead_letter_queue\" {\n  name           = \"dead-letter-queue\"\n  redrive_policy = jsonencode({\n    deadLetterDeliveryDelaySeconds = 0\n    redrivePolicy                  = jsonencode({\n      maxDeliveryCount              = 5\n      deadLetterTargetArn           = aws_queue.main_queue.arn\n    })\n  })\n}\n\nresource \"aws_queue_policy\" \"dead_letter_queue_policy\" {\n  queue_url = aws_queue.dead_letter_queue.url\n\n  policy = jsonencode({\n    Statement = [\n      {\n        Sid          = \"AllowSendToDeadLetterQueue\"\n        Effect      = \"Allow\"\n        Principal   = \"*\"\n        Action      = \"sqs:SendMessage\"\n        Resource    = aws_queue.main_queue.arn\n        Condition   = {\n          StringEquals = {\n            \"aws:SourceArn\" = aws_queue.main_queue.arn\n          }\n        }\n      }\n    ]\n  })\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 7.7,
+ "tokens": 270,
+ "prompt": "Escribe el código de Terraform para una cola SQS con su dead-letter queue en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

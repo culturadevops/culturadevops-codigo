@@ -1,0 +1,106 @@
+{
+ "lote": "claude",
+ "ronda": "r3",
+ "versiones": {
+  "checkov": "3.3.30",
+  "trivy": "Version: 0.76.1",
+  "terraform": "Terraform v1.16.7"
+ },
+ "modulos": {
+  "ec2-ubuntu": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "5.100.0",
+   "ck_fail": [],
+   "ck_pass": 41,
+   "ck_skip": 0,
+   "tv_fail": [],
+   "supresiones": 0,
+   "abre_0000": false
+  },
+  "eks": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "6.71.0",
+   "ck_fail": [],
+   "ck_pass": 53,
+   "ck_skip": 0,
+   "tv_fail": [],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "rds-postgres": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "6.71.0",
+   "ck_fail": [],
+   "ck_pass": 58,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  },
+  "s3-backups": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "5.100.0",
+   "ck_fail": [],
+   "ck_pass": 109,
+   "ck_skip": 7,
+   "tv_fail": [
+    [
+     "AWS-0089",
+     "LOW",
+     "S3 Bucket Logging"
+    ]
+   ],
+   "supresiones": 7,
+   "abre_0000": false
+  },
+  "sg-web": {
+   "vacio": false,
+   "init_ok": true,
+   "validate_ok": true,
+   "validate_errores": [],
+   "init_error": "",
+   "aws_provider": "5.100.0",
+   "ck_fail": [],
+   "ck_pass": 27,
+   "ck_skip": 0,
+   "tv_fail": [
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ],
+    [
+     "AWS-0104",
+     "CRITICAL",
+     "A security group rule should not allow unrestricted egress to any IP address."
+    ]
+   ],
+   "supresiones": 0,
+   "abre_0000": true
+  }
+ },
+ "ck_stderr": "",
+ "tv_stderr": ""
+}

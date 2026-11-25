@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: agente-nodo
+spec:
+  selector:
+    matchLabels: {app: agente-nodo}
+  template:
+    metadata:
+      labels: {app: agente-nodo}
+    spec:
+      tolerations:                       # también en el control-plane
+        - key: node-role.kubernetes.io/control-plane
+          operator: Exists
+          effect: NoSchedule
+      containers:
+        - name: agente
+          image: busybox:1.37
+          command: ["sh", "-c", "echo \"vigilo el nodo $NODO\"; sleep 3600"]
+          env:
+            - name: NODO
+              valueFrom:
+                fieldRef: {fieldPath: spec.nodeName}

@@ -1,0 +1,18 @@
+# Igual, pero con startupProbe: hasta 12 x 5 s = 60 s para arrancar. La liveness espera a que pase.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: con-startup
+spec:
+  containers:
+    - name: api
+      image: k8s-b-api:1
+      env: [{name: ARRANQUE_SEGUNDOS, value: "30"}]
+      startupProbe:
+        httpGet: {path: /salud, port: 8080}
+        periodSeconds: 5
+        failureThreshold: 12
+      livenessProbe:
+        httpGet: {path: /salud, port: 8080}
+        periodSeconds: 5
+        failureThreshold: 3

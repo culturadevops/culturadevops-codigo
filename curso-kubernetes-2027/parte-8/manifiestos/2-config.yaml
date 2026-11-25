@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Secret
+metadata: {name: postgres-cred, namespace: tienda}
+type: Opaque
+stringData:
+  POSTGRES_PASSWORD: "clave-del-banco-8"
+  DATABASE_URL: "postgres://postgres:clave-del-banco-8@postgres-0.postgres:5432/postgres?sslmode=disable"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: {name: api-config, namespace: tienda}
+data:
+  MENSAJE: "tienda del curso, parte 8"

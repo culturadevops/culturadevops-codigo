@@ -1,0 +1,13 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 1,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Cycle:\n  aws_s3_bucket.backup_bucket\n  aws_s3_bucket.access_logs_bucket",
+      "detail": ""
+    }
+  ]
+}

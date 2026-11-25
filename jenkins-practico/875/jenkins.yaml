@@ -1,0 +1,89 @@
+jenkins:
+  systemMessage: "Jenkins configurado con JCasC: no lo toques a mano"
+  numExecutors: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          name: Administrador
+          password: ${ADMIN_PASS}
+        - id: dev
+          name: Desarrollo
+          password: ${DEV_PASS}
+  authorizationStrategy:
+    globalMatrix:
+      entries:
+        - user:
+            name: admin
+            permissions:
+              - Overall/Administer
+        - user:
+            name: dev
+            permissions:
+              - Overall/Read
+              - Job/Read
+              - Job/Build
+  clouds:
+    - docker:
+        name: docker
+        dockerApi:
+          dockerHost:
+            uri: unix:///var/run/docker.sock
+        templates:
+          - name: efimero
+            labelString: efimero
+            dockerTemplateBase:
+              image: jenkins/agent:3395.v6e5377b_0fb_3c-5-jdk21
+            connector:
+              attach:
+                user: jenkins
+            remoteFs: /home/jenkins/agent
+            instanceCapStr: "4"
+            pullStrategy: PULL_NEVER
+            removeVolumes: true
+            retentionStrategy:
+              idleMinutes: 1
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: registro
+              description: Usuario del registro de imágenes
+              username: ci-bot
+              password: ${REGISTRO_PASS}
+          - string:
+              scope: GLOBAL
+              id: token-api
+              description: Token de la API de despliegue
+              secret: ${TOKEN_API}
+unclassified:
+  location:
+    url: http://jk-a-jenkins:8080/
+jobs:
+  - script: |
+      pipelineJob('desplegar') {
+        description('Creado por Job DSL desde jenkins.yaml')
+        definition {
+          cps {
+            sandbox(true)
+            script('''
+              pipeline {
+                agent { label 'efimero' }
+                stages {
+                  stage('Desplegar') {
+                    steps {
+                      withCredentials([string(credentialsId: 'token-api', variable: 'TOKEN'),
+                                       usernamePassword(credentialsId: 'registro', usernameVariable: 'USUARIO', passwordVariable: 'CLAVE')]) {
+                        sh 'echo "usuario: $USUARIO · clave: $CLAVE · token: $TOKEN"'
+                      }
+                    }
+                  }
+                }
+              }
+            '''.stripIndent())
+          }
+        }
+      }

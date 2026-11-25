@@ -1,0 +1,14 @@
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 50 -llegada > llegada.txt; head -6 llegada.txt
+s43      0    1.2s  s43 disco 41%
+s17      0    1.2s  s17 disco 41%
+s05      0    1.2s  s05 disco 41%
+s13      2    1.2s  s13 disco 97%
+s13    stderr        revisar: disco casi lleno
+s28      0    1.2s  s28 disco 41%
+$ cd /root && python flota.py -hosts hosts-sanos.txt -p 50 | head -6
+s01      0    1.2s  s01 disco 41%
+s02      0    1.2s  s02 disco 41%
+s03      0    1.2s  s03 disco 41%
+s04      0    1.2s  s04 disco 41%
+s05      0    1.2s  s05 disco 41%
+s06      0    1.2s  s06 disco 41%

@@ -1,0 +1,16 @@
+### terraform test (dos ficheros)
+tests\simulado.tftest.hcl... in progress
+  run "sin_docker_el_nombre_sigue_bien"... pass
+tests\simulado.tftest.hcl... tearing down
+tests\simulado.tftest.hcl... pass
+tests\web.tftest.hcl... in progress
+  run "el_puerto_por_omision_es_8120"... pass
+  run "crea_el_contenedor_de_verdad"... pass
+tests\web.tftest.hcl... tearing down
+tests\web.tftest.hcl... pass
+Success! 3 passed, 0 failed.
+### ⚠️ mi primera medicion salio mal: -filter=tests/simulado.tftest.hcl (barra /) en Windows NO encuentra el fichero,
+###    no ejecuta nada y tarda 91 ms. Con barra invertida si:
+  test simulado (mock)          197    193    192    194    193   media 193 ms
+  test con docker real         2031   2062   2120   2090   2080   media 2076 ms
+contenedores sobrantes: (vacio)

@@ -1,0 +1,34 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 1,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing key/value separator",
+      "detail": "Expected an equals sign (\"=\") to mark the beginning of the attribute value.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 39,
+          "column": 19,
+          "byte": 921
+        },
+        "end": {
+          "line": 39,
+          "column": 20,
+          "byte": 922
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kms_key_policy\" \"app_logs_kms_policy\"",
+        "code": "      {\n        Sid    = \"EnableLogging\"\n        Effect = \"Allow\"\n        Principal {",
+        "start_line": 36,
+        "highlight_start_offset": 85,
+        "highlight_end_offset": 85,
+        "values": []
+      }
+    }
+  ]
+}

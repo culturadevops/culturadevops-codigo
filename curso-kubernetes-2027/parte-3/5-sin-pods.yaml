@@ -1,0 +1,10 @@
+# Un Service cuyo selector no casa con ningún pod (error de dedo: «wbe»).
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-mal
+spec:
+  selector:
+    app: wbe
+  ports:
+    - port: 80

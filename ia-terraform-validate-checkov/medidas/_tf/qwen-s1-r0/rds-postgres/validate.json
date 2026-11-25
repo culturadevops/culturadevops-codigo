@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_rds_cluster_parameter\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 38,
+          "column": 10,
+          "byte": 1113
+        },
+        "end": {
+          "line": 38,
+          "column": 37,
+          "byte": 1140
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster_parameter\" \"postgres\"",
+        "code": "resource \"aws_rds_cluster_parameter\" \"postgres\" {",
+        "start_line": 38,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 36,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_rds_instance\". Did you mean \"aws_db_instance\"?",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 14,
+          "column": 10,
+          "byte": 182
+        },
+        "end": {
+          "line": 14,
+          "column": 28,
+          "byte": 200
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_instance\" \"postgres\"",
+        "code": "resource \"aws_rds_instance\" \"postgres\" {",
+        "start_line": 14,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 27,
+        "values": []
+      }
+    }
+  ]
+}

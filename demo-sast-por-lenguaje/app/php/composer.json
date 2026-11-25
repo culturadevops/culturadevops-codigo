@@ -1,0 +1,12 @@
+{
+    "name": "demo/tienda-vulnerable",
+    "description": "VULNERABLE A PROPÓSITO: demo de escáneres. No desplegar.",
+    "require": {
+        "guzzlehttp/guzzle": "7.4.0"
+    },
+    "config": {
+        "audit": {
+            "abandoned": "ignore"
+        }
+    }
+}

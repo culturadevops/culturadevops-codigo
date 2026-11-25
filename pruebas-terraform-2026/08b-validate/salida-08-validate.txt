@@ -1,0 +1,13 @@
+### validate con una referencia mal escrita (wbe en vez de web), Docker apagado da igual
+Error: Reference to undeclared resource
+  on main.tf line 10, in resource "docker_container" "web":
+  10:   image = docker_image.wbe.image_id
+A managed resource "docker_image" "wbe" has not been declared in the root
+module.
+codigo: 1
+tardo 1601 ms
+### atributo que no existe
+Error: Unsupported argument
+  on main.tf line 11, in resource "docker_container" "web":
+  11:   puertos = 8080
+An argument named "puertos" is not expected here.

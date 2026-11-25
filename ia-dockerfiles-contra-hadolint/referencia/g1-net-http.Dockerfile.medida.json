@@ -1,0 +1,19 @@
+{
+ "app": "g1-net-http",
+ "dockerfile": "referencia/g1-net-http.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24.11",
+  "gcr.io/distroless/static-debian12:nonroot"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 1.6,
+ "error_build": "",
+ "bytes": 5337656,
+ "disco_mb": 18.9,
+ "usuario": "65532",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

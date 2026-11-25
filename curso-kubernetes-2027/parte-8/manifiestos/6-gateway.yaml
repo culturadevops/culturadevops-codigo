@@ -1,0 +1,40 @@
+# Gateway API con Envoy Gateway v1.10.0 (la misma implementación que la parte 4).
+# El Envoy se publica con un Service ClusterIP (EnvoyProxy): en kind no hay balanceador propio, y así el
+# Gateway recibe una dirección y queda Programmed sin depender de nada externo.
+apiVersion: gateway.envoyproxy.io/v1alpha1
+kind: EnvoyProxy
+metadata: {name: clusterip, namespace: envoy-gateway-system}
+spec:
+  provider:
+    type: Kubernetes
+    kubernetes:
+      envoyService:
+        type: ClusterIP
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: GatewayClass
+metadata: {name: envoy-tienda}
+spec:
+  controllerName: gateway.envoyproxy.io/gatewayclass-controller
+  parametersRef:
+    group: gateway.envoyproxy.io
+    kind: EnvoyProxy
+    name: clusterip
+    namespace: envoy-gateway-system
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata: {name: entrada, namespace: tienda}
+spec:
+  gatewayClassName: envoy-tienda
+  listeners:
+    - {name: http, protocol: HTTP, port: 80}
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata: {name: api, namespace: tienda}
+spec:
+  parentRefs: [{name: entrada}]
+  hostnames: [tienda.curso.test]
+  rules:
+    - backendRefs: [{name: api, port: 80}]

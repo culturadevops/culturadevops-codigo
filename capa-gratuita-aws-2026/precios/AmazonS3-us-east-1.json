@@ -1,0 +1,31 @@
+{
+"fuente": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonS3/current/us-east-1/index.csv",
+"publicacion": "2026-10-15T17:35:40Z",
+"filas_leidas": 366,
+"filas": [
+{
+"SKU": "WP9ANXZGBYYSGJEA",
+"OfferTermCode": "JRTCKXETXF",
+"RateCode": "WP9ANXZGBYYSGJEA.JRTCKXETXF.PGHJ3S3EYE",
+"TermType": "OnDemand",
+"PriceDescription": "$0.023 per GB - first 50 TB / month of storage used",
+"EffectiveDate": "2026-10-01",
+"StartingRange": "0",
+"EndingRange": "51200",
+"Unit": "GB-Mo",
+"PricePerUnit": "0.0230000000",
+"Currency": "USD",
+"Product Family": "Storage",
+"serviceCode": "AmazonS3",
+"Location": "US East (N. Virginia)",
+"Location Type": "AWS Region",
+"Availability": "99.99%",
+"Storage Class": "General Purpose",
+"Volume Type": "Standard",
+"usageType": "TimedStorage-ByteHrs",
+"Durability": "99.999999999%",
+"Region Code": "us-east-1",
+"serviceName": "Amazon Simple Storage Service"
+}
+]
+}

@@ -1,0 +1,21 @@
+### terraform plan normal, sin contenedor (la web no existe aun)
+  # (config will be reloaded to verify a check block)
+      + healthcheck (known after apply)
+Plan: 2 to add, 0 to change, 0 to destroy.
+Warning: Error making request
+  on main.tf line 31, in check "la_web_responde":
+Error making request: GET http://localhost:8120 giving up after 1 attempt(s):
+exit=0
+### terraform apply normal
+  # (config will be reloaded to verify a check block)
+      + healthcheck (known after apply)
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+### plan con la web levantada
+  # (config will be reloaded to verify a check block)
+Plan: 0 to add, 0 to change, 0 to destroy.
+### paro nginx por fuera (docker exec nginx -s stop no; docker pause)
+  # (config will be reloaded to verify a check block)
+      ~ healthcheck (known after apply)
+Plan: 1 to add, 0 to change, 1 to destroy.
+Warning: Plugin did not respond
+  on main.tf line 31, in check "la_web_responde":

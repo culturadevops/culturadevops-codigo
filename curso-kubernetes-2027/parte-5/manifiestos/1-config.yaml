@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  MENSAJE: "hola-v1"
+  app.conf: |
+    nivel_log=info
+    color=azul
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-cred
+type: Opaque
+stringData:
+  CLAVE: "s3cr3to-v1"

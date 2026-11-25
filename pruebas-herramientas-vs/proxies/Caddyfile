@@ -1,0 +1,30 @@
+# Caddy 2.11 — lo mismo que nginx.conf: estático en /static/, proxy a backend:9000 en /api, HTTP en 8080 y HTTPS en 8443
+# con el MISMO certificado (aquí no hay Let's Encrypt: es una red privada de Docker). GOMAXPROCS=2 en el contenedor.
+{
+	auto_https off
+	admin off
+}
+
+(comun) {
+	handle /static/* {
+		root * /srv/www
+		file_server
+	}
+	handle /api {
+		reverse_proxy backend:9000 {
+			# igualado con los demás: pool de 1024 conexiones ociosas al backend (de fábrica, 32: ver Caddyfile-fabrica)
+			transport http {
+				keepalive_idle_conns_per_host 1024
+			}
+		}
+	}
+}
+
+http://:8080 {
+	import comun
+}
+
+https://:8443 {
+	tls /etc/certs/cert.pem /etc/certs/key.pem
+	import comun
+}

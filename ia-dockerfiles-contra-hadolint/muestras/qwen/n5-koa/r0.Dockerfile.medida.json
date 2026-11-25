@@ -1,0 +1,18 @@
+{
+ "app": "n5-koa",
+ "dockerfile": "muestras/qwen/n5-koa/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:14"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 29.6,
+ "error_build": "",
+ "bytes": 350665302,
+ "disco_mb": 1360.0,
+ "usuario": "",
+ "root": true,
+ "arranca": true,
+ "error_arranque": ""
+}

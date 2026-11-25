@@ -1,0 +1,34 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 1,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Attribute redefined",
+      "detail": "The argument \"description\" was already set at main.tf:74,3-14. Each argument may be set only once.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 91,
+          "column": 3,
+          "byte": 1850
+        },
+        "end": {
+          "line": 91,
+          "column": 14,
+          "byte": 1861
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_security_group\" \"example\"",
+        "code": "  description = \"Allow HTTP traffic\"",
+        "start_line": 91,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 13,
+        "values": []
+      }
+    }
+  ]
+}

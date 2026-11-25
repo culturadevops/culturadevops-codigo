@@ -1,0 +1,86 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 3,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Attribute redefined",
+      "detail": "The argument \"default_root_object\" was already set at main.tf:54,3-22. Each argument may be set only once.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 73,
+          "column": 3,
+          "byte": 1636
+        },
+        "end": {
+          "line": 73,
+          "column": 22,
+          "byte": 1655
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudfront_distribution\" \"example_distribution\"",
+        "code": "  default_root_object = \"index.html\"",
+        "start_line": 73,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 21,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 5,
+          "byte": 639
+        },
+        "end": {
+          "line": 33,
+          "column": 12,
+          "byte": 646
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example_bucket\"",
+        "code": "    enabled = true",
+        "start_line": 33,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"rule\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 34,
+          "column": 5,
+          "byte": 659
+        },
+        "end": {
+          "line": 34,
+          "column": 9,
+          "byte": 663
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example_bucket\"",
+        "code": "    rule {",
+        "start_line": 34,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 8,
+        "values": []
+      }
+    }
+  ]
+}

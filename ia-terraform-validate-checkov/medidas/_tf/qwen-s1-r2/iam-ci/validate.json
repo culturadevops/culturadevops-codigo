@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing key/value separator",
+      "detail": "Expected an equals sign (\"=\") to mark the beginning of the attribute value.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 74,
+          "column": 39,
+          "byte": 1451
+        },
+        "end": {
+          "line": 74,
+          "column": 40,
+          "byte": 1452
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example\"",
+        "code": "      {\n        id      = \"DeleteOldObjects\"\n        status  = \"Enabled\"\n        noncurrent_version_expiration {",
+        "start_line": 71,
+        "highlight_start_offset": 112,
+        "highlight_end_offset": 112,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"rules\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 70,
+          "column": 5,
+          "byte": 1326
+        },
+        "end": {
+          "line": 70,
+          "column": 10,
+          "byte": 1331
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example\"",
+        "code": "    rules = [",
+        "start_line": 70,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 9,
+        "values": []
+      }
+    }
+  ]
+}

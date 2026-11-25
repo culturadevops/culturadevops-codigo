@@ -1,0 +1,26 @@
+# Ingress clásico (ingressClassName nginx = ingress-nginx v1.15.1, retirado en marzo de 2026).
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: entrada
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts: [tienda.ejemplo.test, blog.ejemplo.test]
+      secretName: tls-ejemplo
+  rules:
+    - host: tienda.ejemplo.test          # por host
+      http:
+        paths:
+          - path: /api                   # y por ruta
+            pathType: Prefix
+            backend: {service: {name: api, port: {number: 80}}}
+          - path: /
+            pathType: Prefix
+            backend: {service: {name: tienda, port: {number: 80}}}
+    - host: blog.ejemplo.test
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend: {service: {name: blog, port: {number: 80}}}

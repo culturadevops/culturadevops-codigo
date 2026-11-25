@@ -1,0 +1,13 @@
+# Genera los certificados que las tres piezas necesitan para hablarse.
+#
+# ⚠️ Este paso NO es opcional y es el primer tropiezo real del montaje: sin el, el dashboard
+# muere con `ENOENT: dashboard-key.pem` y el indexer no levanta. Comprobado el 2026-08-19.
+#
+#   docker compose -f generar-certificados.yml run --rm generador
+services:
+  generador:
+    image: wazuh/wazuh-certs-generator:0.0.2
+    hostname: wazuh-certs-generator
+    volumes:
+      - ./config/wazuh_indexer_ssl_certs/:/certificates/
+      - ./config/certs.yml:/config/certs.yml

@@ -1,0 +1,28 @@
+{
+ "app": "p4-pyproject",
+ "dockerfile": "muestras/claude/p4-pyproject/r0.Dockerfile",
+ "hadolint": [
+  {
+   "code": "DL3013",
+   "column": 1,
+   "file": "-",
+   "level": "warning",
+   "line": 19,
+   "message": "Pin versions in pip. Instead of `pip install <package>` use `pip install <package>==<version>` or `pip install --requirement <requirements file>`"
+  }
+ ],
+ "bases": [
+  "python:${PYTHON_VERSION}-slim",
+  "python:${PYTHON_VERSION}-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 13.9,
+ "error_build": "",
+ "bytes": 48597216,
+ "disco_mb": 201.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

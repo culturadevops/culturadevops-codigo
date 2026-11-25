@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"resources_vpc_config\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 3,
+          "byte": 288
+        },
+        "end": {
+          "line": 18,
+          "column": 23,
+          "byte": 308
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_eks_cluster\" \"example\"",
+        "code": "  resources_vpc_config {",
+        "start_line": 18,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 22,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Insufficient vpc_config blocks",
+      "detail": "At least 1 \"vpc_config\" blocks are required.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 14,
+          "column": 38,
+          "byte": 210
+        },
+        "end": {
+          "line": 14,
+          "column": 39,
+          "byte": 211
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_eks_cluster\" \"example\"",
+        "code": "resource \"aws_eks_cluster\" \"example\" {",
+        "start_line": 14,
+        "highlight_start_offset": 37,
+        "highlight_end_offset": 38,
+        "values": []
+      }
+    }
+  ]
+}

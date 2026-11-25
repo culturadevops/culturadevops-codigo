@@ -1,0 +1,54 @@
+$ cd /root && python flota.py -hosts hosts-50.txt -p 50; echo "código de salida: $?"
+s01      0    1.2s  s01 disco 41%
+s02      0    1.2s  s02 disco 41%
+s03      0    1.2s  s03 disco 41%
+s04      0    1.2s  s04 disco 41%
+s05      0    1.2s  s05 disco 41%
+s06      0    1.2s  s06 disco 41%
+s07      0    1.2s  s07 disco 41%
+s08      0    1.2s  s08 disco 41%
+s09      0    1.2s  s09 disco 41%
+s10      0    1.2s  s10 disco 41%
+s11      0    1.2s  s11 disco 41%
+s12      0    1.2s  s12 disco 41%
+s13      2    1.2s  s13 disco 97%
+s13    stderr        revisar: disco casi lleno
+s14      0    1.2s  s14 disco 41%
+s15      0    1.2s  s15 disco 41%
+s16      0    1.2s  s16 disco 41%
+s17      0    1.2s  s17 disco 41%
+s18      0    1.2s  s18 disco 41%
+s19      0    1.2s  s19 disco 41%
+s20      0    1.2s  s20 disco 41%
+s21      0    1.2s  s21 disco 41%
+s22      0    1.2s  s22 disco 41%
+s23      0    1.2s  s23 disco 41%
+s24      0    1.2s  s24 disco 41%
+s25      0    1.2s  s25 disco 41%
+s26      0    1.2s  s26 disco 41%
+s27      0    1.2s  s27 disco 41%
+s28      0    1.2s  s28 disco 41%
+s29      0    1.2s  s29 disco 41%
+s30      0    1.2s  s30 disco 41%
+s31      0    1.2s  s31 disco 41%
+s32      0    1.2s  s32 disco 41%
+s33      0    1.2s  s33 disco 41%
+s34      0    1.2s  s34 disco 41%
+s35      0    1.2s  s35 disco 41%
+s36      0    1.2s  s36 disco 41%
+s37      0    1.2s  s37 disco 41%
+s38      0    1.2s  s38 disco 41%
+s39      0    1.2s  s39 disco 41%
+s40      0    1.2s  s40 disco 41%
+s41      0    1.2s  s41 disco 41%
+s42      0    1.2s  s42 disco 41%
+s43      0    1.2s  s43 disco 41%
+s44      0    1.2s  s44 disco 41%
+s45      0    1.2s  s45 disco 41%
+s46    ERR    0.1s  PermissionDenied: Permission denied for user admin on host s46
+s47      0    1.2s  s47 disco 41%
+s48    ERR    3.0s  no conectó en 3s
+s49    ERR   10.2s  el comando no terminó en 10s
+s50    ERR    3.0s  no conectó en 3s
+50 hosts · 45 ok · 1 con código distinto de 0 · 4 sin respuesta · 10.2s en total
+código de salida: 2

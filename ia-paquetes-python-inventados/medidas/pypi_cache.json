@@ -1,0 +1,1468 @@
+{
+ "adicional": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "aiohttp": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "aiohttp",
+  "primera": "2013-10-25",
+  "resumen": "Async http client/server framework (asyncio)",
+  "ultima": "2026-10-11",
+  "versiones": 314
+ },
+ "alembic": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "alembic",
+  "primera": "2011-11-30",
+  "resumen": "A database migration tool for SQLAlchemy.",
+  "ultima": "2026-10-22",
+  "versiones": 149
+ },
+ "apscheduler": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "APScheduler",
+  "primera": "2009-08-01",
+  "resumen": "In-process task scheduler with Cron-like capabilities",
+  "ultima": "2026-06-28",
+  "versiones": 59
+ },
+ "bandit": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "bandit",
+  "primera": "2015-03-23",
+  "resumen": "Security oriented static analyser for python code.",
+  "ultima": "2026-02-25",
+  "versiones": 50
+ },
+ "bcrypt": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "bcrypt",
+  "primera": "2013-05-11",
+  "resumen": "Modern password hashing for your software and your servers",
+  "ultima": "2025-09-25",
+  "versiones": 28
+ },
+ "beautifulsoup4": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "beautifulsoup4",
+  "primera": "2013-10-02",
+  "resumen": "Screen-scraping library",
+  "ultima": "2026-06-07",
+  "versiones": 54
+ },
+ "biblioteca": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "biblioteca",
+  "primera": "2021-08-03",
+  "resumen": "",
+  "ultima": "2021-11-24",
+  "versiones": 2
+ },
+ "bibliotecas": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "boto3": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "boto3",
+  "primera": "2014-11-11",
+  "resumen": "The AWS SDK for Python (Boto3)",
+  "ultima": "2026-10-28",
+  "versiones": 2145
+ },
+ "botocore": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "botocore",
+  "primera": "2012-12-21",
+  "resumen": "Low-level, data-driven core of boto 3.",
+  "ultima": "2026-10-28",
+  "versiones": 2543
+ },
+ "bs4": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "bs4",
+  "primera": "2016-03-03",
+  "resumen": "Dummy package for Beautiful Soup (beautifulsoup4)",
+  "ultima": "2024-01-17",
+  "versiones": 3
+ },
+ "caso": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "caso",
+  "primera": "2015-01-16",
+  "resumen": "cASO is an OpenStack Accounting extractor.",
+  "ultima": "2026-07-15",
+  "versiones": 37
+ },
+ "celery": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "celery",
+  "primera": "2009-04-27",
+  "resumen": "Distributed Task Queue.",
+  "ultima": "2026-10-18",
+  "versiones": 227
+ },
+ "click": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "click",
+  "primera": "2014-04-28",
+  "resumen": "Composable command line interface toolkit",
+  "ultima": "2026-08-26",
+  "versiones": 65
+ },
+ "colorama": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "colorama",
+  "primera": "2010-04-20",
+  "resumen": "Cross-platform colored terminal text.",
+  "ultima": "2022-10-25",
+  "versiones": 46
+ },
+ "compose-to-k8s": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "compose2k8s": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "config": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "config",
+  "primera": "2013-06-04",
+  "resumen": "A hierarchical, easy-to-use, powerful configuration module for Python",
+  "ultima": "2021-09-11",
+  "versiones": 15
+ },
+ "configparser": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "configparser",
+  "primera": "2011-04-29",
+  "resumen": "Updated configparser from stdlib for earlier Pythons.",
+  "ultima": "2026-10-22",
+  "versiones": 32
+ },
+ "confluent-kafka": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "confluent-kafka",
+  "primera": "2016-05-24",
+  "resumen": "Confluent's Python client for Apache Kafka",
+  "ultima": "2026-10-28",
+  "versiones": 70
+ },
+ "cryptography": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "cryptography",
+  "primera": "2014-01-08",
+  "resumen": "cryptography is a package which provides cryptographic recipes and primitives to Python developers.",
+  "ultima": "2026-09-30",
+  "versiones": 160
+ },
+ "datadog": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "datadog",
+  "primera": "2015-03-11",
+  "resumen": "The Datadog Python library",
+  "ultima": "2026-09-30",
+  "versiones": 69
+ },
+ "datadog-api-client": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "datadog-api-client",
+  "primera": "2020-10-21",
+  "resumen": "Collection of all Datadog Public endpoints",
+  "ultima": "2026-10-13",
+  "versiones": 89
+ },
+ "dateutil": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "de": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "de",
+  "primera": "2018-04-13",
+  "resumen": "de",
+  "ultima": "2018-04-13",
+  "versiones": 1
+ },
+ "deepdiff": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "deepdiff",
+  "primera": "2014-09-27",
+  "resumen": "Deep Difference and Search of any Python object/data. Recreate objects by adding adding deltas to each other.",
+  "ultima": "2026-05-15",
+  "versiones": 91
+ },
+ "diagrams": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "diagrams",
+  "primera": "2020-02-02",
+  "resumen": "Diagram as Code",
+  "ultima": "2025-11-22",
+  "versiones": 50
+ },
+ "dns": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "dns",
+  "primera": null,
+  "resumen": "",
+  "ultima": null,
+  "versiones": 1
+ },
+ "dnspython": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "dnspython",
+  "primera": "2013-07-22",
+  "resumen": "DNS toolkit",
+  "ultima": "2026-10-09",
+  "versiones": 51
+ },
+ "docker": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "docker",
+  "primera": "2016-12-12",
+  "resumen": "A Python library for the Docker Engine API.",
+  "ultima": "2026-07-09",
+  "versiones": 66
+ },
+ "docker-compose": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "docker-compose",
+  "primera": "2015-01-20",
+  "resumen": "Multi-container orchestration for Docker",
+  "ultima": "2021-05-10",
+  "versiones": 142
+ },
+ "dockerfile": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "dockerfile",
+  "primera": "2017-02-01",
+  "resumen": "Parse a dockerfile into a high-level representation using the official go parser.",
+  "ultima": "2025-01-04",
+  "versiones": 13
+ },
+ "dockerfile-parse": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "dockerfile-parse",
+  "primera": "2015-06-26",
+  "resumen": "Python library for Dockerfile manipulation",
+  "ultima": "2023-07-18",
+  "versiones": 19
+ },
+ "dockerfile-py": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "dotenv": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "dotenv",
+  "primera": "2013-01-23",
+  "resumen": "Deprecated package",
+  "ultima": "2025-02-19",
+  "versiones": 5
+ },
+ "en": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "es": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "es",
+  "primera": "2016-01-12",
+  "resumen": "A Python Event-Sourcing (ES) framework.",
+  "ultima": "2016-01-12",
+  "versiones": 1
+ },
+ "estamos": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "estas": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "este": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "exifread": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "ExifRead",
+  "primera": "2013-07-27",
+  "resumen": "Library to extract Exif information from digital camera image files.",
+  "ultima": "2025-08-23",
+  "versiones": 27
+ },
+ "fastavro": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "fastavro",
+  "primera": "2012-01-05",
+  "resumen": "Fast read/write of AVRO files",
+  "ultima": "2026-10-08",
+  "versiones": 215
+ },
+ "fileinput": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "flask": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "Flask",
+  "primera": "2010-04-16",
+  "resumen": "A simple framework for building complex web applications.",
+  "ultima": "2026-02-19",
+  "versiones": 64
+ },
+ "git": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "gitlab": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "gitlab",
+  "primera": "2018-07-27",
+  "resumen": "Get GitLab user Details",
+  "ultima": "2018-07-29",
+  "versiones": 3
+ },
+ "gitpython": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "GitPython",
+  "primera": "2010-03-21",
+  "resumen": "GitPython is a Python library used to interact with Git repositories",
+  "ultima": "2026-10-14",
+  "versiones": 117
+ },
+ "google": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "google",
+  "primera": "2016-07-26",
+  "resumen": "Python bindings to the Google search engine.",
+  "ultima": "2020-07-11",
+  "versiones": 5
+ },
+ "google-api-python-client": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "google-api-python-client",
+  "primera": "2011-02-26",
+  "resumen": "Google API Client Library for Python",
+  "ultima": "2026-09-30",
+  "versiones": 289
+ },
+ "google-auth": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "google-auth",
+  "primera": "2016-10-10",
+  "resumen": "Google Authentication Library",
+  "ultima": "2026-10-12",
+  "versiones": 207
+ },
+ "google-cloud-cost-management": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "graphviz": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "graphviz",
+  "primera": "2014-01-12",
+  "resumen": "Simple Python interface for Graphviz",
+  "ultima": "2025-06-15",
+  "versiones": 59
+ },
+ "grpc": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "grpc",
+  "primera": "2013-01-05",
+  "resumen": "Please install the official package with: pip install grpcio",
+  "ultima": "2020-06-01",
+  "versiones": 11
+ },
+ "grpcio": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "grpcio",
+  "primera": "2015-03-30",
+  "resumen": "HTTP/2-based RPC framework",
+  "ultima": "2026-10-26",
+  "versiones": 287
+ },
+ "grpcio-tools": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "grpcio-tools",
+  "primera": "2016-05-10",
+  "resumen": "Protobuf code generator for gRPC",
+  "ultima": "2026-10-26",
+  "versiones": 271
+ },
+ "haralyzer": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "haralyzer",
+  "primera": "2015-03-01",
+  "resumen": "A python framework for getting useful stuff out of HAR files",
+  "ultima": "2023-07-11",
+  "versiones": 34
+ },
+ "hcl": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "hcl",
+  "primera": "2020-09-07",
+  "resumen": "Interactive CLI for exploring HDF5 files",
+  "ultima": "2020-11-20",
+  "versiones": 3
+ },
+ "hcl2": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "helm": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "helm",
+  "primera": "2011-04-05",
+  "resumen": "Helm is a system monitor released under GNU GPLv3.",
+  "ultima": "2011-04-25",
+  "versiones": 3
+ },
+ "hjson": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "hjson",
+  "primera": "2015-01-05",
+  "resumen": "Hjson, a user interface for JSON.",
+  "ultima": "2022-08-13",
+  "versiones": 22
+ },
+ "httpx": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "httpx",
+  "primera": "2019-07-19",
+  "resumen": "The next generation HTTP client.",
+  "ultima": "2026-08-31",
+  "versiones": 77
+ },
+ "hvac": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "hvac",
+  "primera": "2015-05-17",
+  "resumen": "HashiCorp Vault API client",
+  "ultima": "2025-10-30",
+  "versiones": 73
+ },
+ "ijson": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "ijson",
+  "primera": "2010-08-26",
+  "resumen": "Iterative JSON parser with standard Python iterator interfaces",
+  "ultima": "2026-10-12",
+  "versiones": 45
+ },
+ "instala": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "instalar": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "jinja2": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "Jinja2",
+  "primera": "2008-06-09",
+  "resumen": "A very fast and expressive template engine.",
+  "ultima": "2025-03-05",
+  "versiones": 52
+ },
+ "journal": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "journal",
+  "primera": "2011-08-16",
+  "resumen": "A CLI tool to help with keeping a work/personal journal",
+  "ultima": "2015-09-01",
+  "versiones": 4
+ },
+ "json": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "json5": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "json5",
+  "primera": "2015-03-26",
+  "resumen": "A Python implementation of the JSON5 data format.",
+  "ultima": "2026-10-09",
+  "versiones": 61
+ },
+ "jsonschema": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "jsonschema",
+  "primera": "2012-01-02",
+  "resumen": "An implementation of JSON Schema validation for Python",
+  "ultima": "2026-01-07",
+  "versiones": 109
+ },
+ "jwt": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "jwt",
+  "primera": "2014-04-16",
+  "resumen": "JSON Web Token library for Python 3.",
+  "ultima": "2025-06-23",
+  "versiones": 19
+ },
+ "kubernetes": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "kubernetes",
+  "primera": "2016-11-23",
+  "resumen": "Kubernetes python client",
+  "ultima": "2026-10-09",
+  "versiones": 122
+ },
+ "la": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "la",
+  "primera": "2010-02-03",
+  "resumen": "Label the rows, columns, any dimension, of your NumPy arrays.",
+  "ultima": "2012-03-19",
+  "versiones": 6
+ },
+ "langdetect": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "langdetect",
+  "primera": "2014-05-14",
+  "resumen": "Language detection library ported from Google's language-detection.",
+  "ultima": "2021-05-07",
+  "versiones": 11
+ },
+ "las": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "las",
+  "primera": "2015-12-10",
+  "resumen": "A reader for Canadian Well Logging Society LAS (Log ASCII Standard) files.",
+  "ultima": "2024-06-02",
+  "versiones": 4
+ },
+ "locust": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "locust",
+  "primera": "2020-05-16",
+  "resumen": "Developer-friendly load testing framework",
+  "ultima": "2026-10-27",
+  "versiones": 1067
+ },
+ "lxml": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "lxml",
+  "primera": "2007-07-03",
+  "resumen": "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.",
+  "ultima": "2026-09-03",
+  "versiones": 130
+ },
+ "markdown-it": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "markdown-it-py": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "markdown-it-py",
+  "primera": "2020-03-25",
+  "resumen": "Python port of markdown-it. Markdown parsing, done right!",
+  "ultima": "2026-05-07",
+  "versiones": 45
+ },
+ "markdown2": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "markdown2",
+  "primera": "2008-09-09",
+  "resumen": "A fast and complete Python implementation of Markdown",
+  "ultima": "2026-03-02",
+  "versiones": 60
+ },
+ "math-operations": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "matplotlib": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "matplotlib",
+  "primera": "2006-01-09",
+  "resumen": "Python plotting package",
+  "ultima": "2026-09-11",
+  "versiones": 143
+ },
+ "mdit-py-plugins": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "mdit-py-plugins",
+  "primera": "2020-12-14",
+  "resumen": "Collection of plugins for markdown-it-py",
+  "ultima": "2026-05-13",
+  "versiones": 22
+ },
+ "my-module": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "my_module",
+  "primera": "2016-08-20",
+  "resumen": "a simple module for printing lists",
+  "ultima": "2016-08-20",
+  "versiones": 4
+ },
+ "mymodule": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "myModule",
+  "primera": "2012-03-20",
+  "resumen": "UNKNOWN",
+  "ultima": "2012-03-20",
+  "versiones": 1
+ },
+ "mysql": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "mysql",
+  "primera": "2015-01-28",
+  "resumen": "Virtual package for MySQL-python",
+  "ultima": "2021-05-25",
+  "versiones": 3
+ },
+ "mysql-connector-python": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "mysql-connector-python",
+  "primera": "2017-11-20",
+  "resumen": "A self-contained Python driver for communicating with MySQL servers, using an API that is compliant with the Python Data",
+  "ultima": "2026-10-22",
+  "versiones": 25
+ },
+ "necesario": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "networkx": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "networkx",
+  "primera": "2007-04-13",
+  "resumen": "Python package for creating and manipulating graphs and networks",
+  "ultima": "2026-09-21",
+  "versiones": 98
+ },
+ "ninguna": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "no": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "no",
+  "primera": null,
+  "resumen": "no",
+  "ultima": null,
+  "versiones": 1
+ },
+ "numpy": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "numpy",
+  "primera": "2006-12-02",
+  "resumen": "Fundamental package for array computing in Python",
+  "ultima": "2026-10-10",
+  "versiones": 152
+ },
+ "opa": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "opa-client": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "opa-python": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "opa-python",
+  "primera": "2025-03-11",
+  "resumen": "A Python OPA client library",
+  "ultima": "2025-03-11",
+  "versiones": 1
+ },
+ "openapi-spec-validator": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "openapi-spec-validator",
+  "primera": "2017-09-06",
+  "resumen": "OpenAPI 2.0 (aka Swagger) and OpenAPI 3 spec validator",
+  "ultima": "2026-05-20",
+  "versiones": 48
+ },
+ "openapi-validation": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "openpyxl": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "openpyxl",
+  "primera": "2010-08-11",
+  "resumen": "A Python library to read/write Excel 2010 xlsx/xlsm files",
+  "ultima": "2024-06-28",
+  "versiones": 96
+ },
+ "opentelemetry": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "opentelemetry-api": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "opentelemetry-api",
+  "primera": "2019-10-01",
+  "resumen": "OpenTelemetry Python API",
+  "ultima": "2026-10-06",
+  "versiones": 86
+ },
+ "opentelemetry-exporter-jaeger": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "opentelemetry-exporter-jaeger",
+  "primera": "2020-08-14",
+  "resumen": "Jaeger Exporters for OpenTelemetry",
+  "ultima": "2023-11-07",
+  "versiones": 38
+ },
+ "opentelemetry-exporter-otlp-proto-http": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "opentelemetry-exporter-otlp-proto-http",
+  "primera": "2021-08-26",
+  "resumen": "OpenTelemetry Collector Protobuf over HTTP Exporter",
+  "ultima": "2026-10-06",
+  "versiones": 58
+ },
+ "opentelemetry-sdk": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "opentelemetry-sdk",
+  "primera": "2019-10-01",
+  "resumen": "OpenTelemetry Python SDK",
+  "ultima": "2026-10-06",
+  "versiones": 85
+ },
+ "orjson": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "orjson",
+  "primera": "2018-11-23",
+  "resumen": "Fast, correct Python JSON library supporting dataclasses, datetimes, and numpy",
+  "ultima": "2026-10-07",
+  "versiones": 151
+ },
+ "pagerduty": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pagerduty",
+  "primera": "2010-11-29",
+  "resumen": "Clients for PagerDuty's Public APIs",
+  "ultima": "2026-09-04",
+  "versiones": 26
+ },
+ "pandas": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pandas",
+  "primera": "2009-12-25",
+  "resumen": "Powerful data structures for data analysis, time series, and statistics",
+  "ultima": "2026-10-22",
+  "versiones": 120
+ },
+ "para": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "para",
+  "primera": "2015-09-09",
+  "resumen": "a set utilities that ake advantage of python's 'multiprocessing' module to distribute CPU-intensive tasks",
+  "ultima": "2020-01-17",
+  "versiones": 8
+ },
+ "paramiko": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "paramiko",
+  "primera": "2010-10-27",
+  "resumen": "SSH2 protocol library",
+  "ultima": "2026-10-18",
+  "versiones": 153
+ },
+ "pathlib": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pathlib",
+  "primera": "2012-01-30",
+  "resumen": "Object-oriented filesystem paths",
+  "ultima": "2022-05-04",
+  "versiones": 11
+ },
+ "pika": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pika",
+  "primera": "2010-07-01",
+  "resumen": "Pika Python AMQP Client Library",
+  "ultima": "2026-10-27",
+  "versiones": 53
+ },
+ "pil": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "PIL",
+  "primera": null,
+  "resumen": "Python Imaging Library",
+  "ultima": null,
+  "versiones": 6
+ },
+ "pillow": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pillow",
+  "primera": "2010-07-31",
+  "resumen": "Python Imaging Library (fork)",
+  "ultima": "2026-10-16",
+  "versiones": 108
+ },
+ "pip-audit": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pip-audit",
+  "primera": "2021-09-16",
+  "resumen": "A tool for scanning Python environments for known vulnerabilities",
+  "ultima": "2026-06-10",
+  "versiones": 63
+ },
+ "pipdeptree": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pipdeptree",
+  "primera": "2014-02-05",
+  "resumen": "Command line utility to show dependency tree of packages.",
+  "ultima": "2026-10-29",
+  "versiones": 106
+ },
+ "playwright": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "playwright",
+  "primera": "2021-02-24",
+  "resumen": "A high-level API to automate web browsers",
+  "ultima": "2026-10-22",
+  "versiones": 87
+ },
+ "plotext": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "plotext",
+  "primera": "2020-05-03",
+  "resumen": "plotext plots directly on terminal",
+  "ultima": "2026-09-07",
+  "versiones": 19
+ },
+ "plotly": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "plotly",
+  "primera": "2013-06-12",
+  "resumen": "An open-source interactive data visualization library for Python",
+  "ultima": "2026-09-15",
+  "versiones": 321
+ },
+ "porque": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "primero": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "prometheus-client": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "prometheus-client",
+  "primera": "2015-02-09",
+  "resumen": "Python client for the Prometheus monitoring system.",
+  "ultima": "2026-07-24",
+  "versiones": 60
+ },
+ "psutil": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "psutil",
+  "primera": "2013-09-28",
+  "resumen": "Cross-platform lib for process and system monitoring.",
+  "ultima": "2026-01-28",
+  "versiones": 104
+ },
+ "psycopg": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "psycopg",
+  "primera": "2021-08-30",
+  "resumen": "PostgreSQL database adapter for Python",
+  "ultima": "2026-09-18",
+  "versiones": 63
+ },
+ "psycopg2": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "psycopg2",
+  "primera": "2010-09-09",
+  "resumen": "psycopg2 - Python-PostgreSQL Database Adapter",
+  "ultima": "2026-09-09",
+  "versiones": 66
+ },
+ "psycopg2-binary": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "psycopg2-binary",
+  "primera": "2018-01-29",
+  "resumen": "psycopg2 - Python-PostgreSQL Database Adapter",
+  "ultima": "2026-09-10",
+  "versiones": 27
+ },
+ "pyarrow": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pyarrow",
+  "primera": "2017-03-16",
+  "resumen": "Python library for Apache Arrow",
+  "ultima": "2026-10-09",
+  "versiones": 66
+ },
+ "pydantic": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pydantic",
+  "primera": "2017-05-03",
+  "resumen": "Data validation using Python type hints",
+  "ultima": "2026-10-11",
+  "versiones": 208
+ },
+ "pydantic-settings": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pydantic-settings",
+  "primera": "2019-08-19",
+  "resumen": "Settings management using Pydantic",
+  "ultima": "2026-10-28",
+  "versiones": 48
+ },
+ "pydub": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pydub",
+  "primera": "2011-05-03",
+  "resumen": "Manipulate audio with an simple and easy high level interface",
+  "ultima": "2021-03-10",
+  "versiones": 67
+ },
+ "pygments": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "Pygments",
+  "primera": "2006-10-30",
+  "resumen": "Pygments is a syntax highlighting package written in Python.",
+  "ultima": "2026-08-17",
+  "versiones": 69
+ },
+ "pyhcl": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pyhcl",
+  "primera": "2014-09-09",
+  "resumen": "HCL configuration parser for python",
+  "ultima": "2023-09-01",
+  "versiones": 40
+ },
+ "pyjwt": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "PyJWT",
+  "primera": "2011-02-24",
+  "resumen": "JSON Web Token implementation in Python",
+  "ultima": "2026-09-28",
+  "versiones": 58
+ },
+ "pymongo": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pymongo",
+  "primera": "2009-01-22",
+  "resumen": "PyMongo - the Official MongoDB Python driver",
+  "ultima": "2026-10-14",
+  "versiones": 175
+ },
+ "pypdf2": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "PyPDF2",
+  "primera": "2013-08-12",
+  "resumen": "A pure-python PDF library capable of splitting, merging, cropping, and transforming PDF files",
+  "ultima": "2022-12-31",
+  "versiones": 66
+ },
+ "pytesseract": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pytesseract",
+  "primera": "2014-02-06",
+  "resumen": "Python-tesseract is a python wrapper for Google's Tesseract-OCR",
+  "ultima": "2024-08-16",
+  "versiones": 28
+ },
+ "pytest": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pytest",
+  "primera": "2010-11-25",
+  "resumen": "pytest: simple powerful testing with Python",
+  "ultima": "2026-10-27",
+  "versiones": 193
+ },
+ "pytest-cov": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pytest-cov",
+  "primera": "2010-04-25",
+  "resumen": "Pytest plugin for measuring coverage.",
+  "ultima": "2026-03-21",
+  "versiones": 54
+ },
+ "pytest-fixture": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "pytest-fixtures": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pytest-fixtures",
+  "primera": "2018-05-16",
+  "resumen": "Common fixtures for pytest",
+  "ultima": "2019-05-01",
+  "versiones": 6
+ },
+ "pytest-mock": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pytest-mock",
+  "primera": "2014-07-17",
+  "resumen": "Thin-wrapper around the mock package for easier use with pytest",
+  "ultima": "2026-10-17",
+  "versiones": 69
+ },
+ "pytest-xdist": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pytest-xdist",
+  "primera": "2010-01-18",
+  "resumen": "pytest xdist plugin for distributed testing, most importantly across multiple CPUs",
+  "ultima": "2025-07-01",
+  "versiones": 71
+ },
+ "python": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "python-dateutil": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "python-dateutil",
+  "primera": "2008-08-06",
+  "resumen": "Extensions to the standard Python datetime module",
+  "ultima": "2026-10-21",
+  "versiones": 35
+ },
+ "python-dotenv": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "python-dotenv",
+  "primera": "2014-09-08",
+  "resumen": "Read key-value pairs from a .env file and set them as environment variables",
+  "ultima": "2026-10-01",
+  "versiones": 52
+ },
+ "python-gitlab": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "python-gitlab",
+  "primera": "2013-07-08",
+  "resumen": "The python wrapper for the GitLab REST and GraphQL APIs.",
+  "ultima": "2026-09-28",
+  "versiones": 125
+ },
+ "python-hcl2": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "python-hcl2",
+  "primera": "2019-08-27",
+  "resumen": "A parser for HCL2",
+  "ultima": "2026-09-08",
+  "versiones": 58
+ },
+ "python-telegram-bot": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "python-telegram-bot",
+  "primera": "2015-07-08",
+  "resumen": "We have made you a wrapper you can't refuse",
+  "ultima": "2026-06-12",
+  "versiones": 157
+ },
+ "python3-smtpd": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "pytz": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "pytz",
+  "primera": "2005-08-19",
+  "resumen": "World timezone definitions, modern and historical",
+  "ultima": "2026-10-29",
+  "versiones": 126
+ },
+ "pyyaml": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "PyYAML",
+  "primera": "2011-07-01",
+  "resumen": "YAML parser and emitter for Python",
+  "ultima": "2025-09-29",
+  "versiones": 40
+ },
+ "qrcode": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "qrcode",
+  "primera": "2011-11-10",
+  "resumen": "QR Code image generator",
+  "ultima": "2025-05-01",
+  "versiones": 39
+ },
+ "que": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "que",
+  "primera": "2017-05-16",
+  "resumen": "CSS selectors for parsing html on the command line",
+  "ultima": "2017-06-30",
+  "versiones": 2
+ },
+ "redis": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "redis",
+  "primera": "2012-10-08",
+  "resumen": "Python client for Redis database and key-value store",
+  "ultima": "2026-07-30",
+  "versiones": 169
+ },
+ "reportlab": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "reportlab",
+  "primera": "2009-02-04",
+  "resumen": "The Reportlab Toolkit",
+  "ultima": "2026-10-22",
+  "versiones": 102
+ },
+ "requests": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "requests",
+  "primera": "2011-02-14",
+  "resumen": "Python HTTP for Humans.",
+  "ultima": "2026-05-14",
+  "versiones": 163
+ },
+ "rich": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "rich",
+  "primera": "2019-11-10",
+  "resumen": "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",
+  "ultima": "2026-04-12",
+  "versiones": 207
+ },
+ "ruamel": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "ruamel-yaml": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "ruamel.yaml",
+  "primera": "2014-11-23",
+  "resumen": "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key o",
+  "ultima": "2026-01-02",
+  "versiones": 273
+ },
+ "scapy": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "scapy",
+  "primera": "2013-10-12",
+  "resumen": "Scapy: interactive packet manipulation tool",
+  "ultima": "2026-10-02",
+  "versiones": 33
+ },
+ "schedule": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "schedule",
+  "primera": "2013-05-19",
+  "resumen": "Job scheduling for humans.",
+  "ultima": "2024-06-18",
+  "versiones": 27
+ },
+ "scikit-learn": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "scikit-learn",
+  "primera": "2011-09-22",
+  "resumen": "A set of python modules for machine learning and data mining",
+  "ultima": "2026-09-10",
+  "versiones": 76
+ },
+ "secure-smtplib": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "secure-smtplib",
+  "primera": "2015-04-07",
+  "resumen": "Secure SMTP subclasses for Python 2",
+  "ultima": "2015-04-07",
+  "versiones": 1
+ },
+ "selenium": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "selenium",
+  "primera": "2008-04-25",
+  "resumen": "Official Python bindings for Selenium WebDriver",
+  "ultima": "2026-10-29",
+  "versiones": 237
+ },
+ "sklearn": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "sklearn",
+  "primera": "2015-07-15",
+  "resumen": "deprecated sklearn package, use scikit-learn instead",
+  "ultima": "2023-12-01",
+  "versiones": 10
+ },
+ "slack-sdk": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "slack-sdk",
+  "primera": "2020-08-03",
+  "resumen": "The Slack API Platform SDK for Python",
+  "ultima": "2026-10-01",
+  "versiones": 135
+ },
+ "son": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "son",
+  "primera": "2019-06-03",
+  "resumen": "Tools to read and write .son files",
+  "ultima": "2021-05-03",
+  "versiones": 18
+ },
+ "sqlalchemy": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "SQLAlchemy",
+  "primera": "2006-02-14",
+  "resumen": "Database Abstraction Library",
+  "ultima": "2026-10-21",
+  "versiones": 338
+ },
+ "subprocess": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "systemd-python": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "systemd-python",
+  "primera": "2016-09-22",
+  "resumen": "Python interface for libsystemd",
+  "ultima": "2023-02-11",
+  "versiones": 4
+ },
+ "telegram": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "telegram",
+  "primera": "2015-09-29",
+  "resumen": "Telegram APIs",
+  "ultima": "2015-09-29",
+  "versiones": 2
+ },
+ "terraform": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "terraform",
+  "primera": null,
+  "resumen": "A simple generator for any Jinja2 template",
+  "ultima": null,
+  "versiones": 1
+ },
+ "terraform-docs": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "terraform-python": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "terraform-state-iterator": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "tfstate": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "toml": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "toml",
+  "primera": "2013-02-24",
+  "resumen": "Python Library for Tom's Obvious, Minimal Language",
+  "ultima": "2020-11-01",
+  "versiones": 16
+ },
+ "tqdm": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "tqdm",
+  "primera": "2013-10-26",
+  "resumen": "Fast, Extensible Progress Meter",
+  "ultima": "2026-09-11",
+  "versiones": 151
+ },
+ "typer": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "typer",
+  "primera": "2019-12-20",
+  "resumen": "Typer, build great CLIs. Easy to code. Based on Python type hints.",
+  "ultima": "2026-10-06",
+  "versiones": 91
+ },
+ "usando": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "webdriver-manager": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "webdriver-manager",
+  "primera": "2016-12-25",
+  "resumen": "Library provides the way to automatically manage drivers for different browsers",
+  "ultima": "2026-06-04",
+  "versiones": 61
+ },
+ "ya": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "ya",
+  "primera": "2021-01-06",
+  "resumen": "Make filters with the mongo language",
+  "ultima": "2026-09-01",
+  "versiones": 5
+ },
+ "yagmail": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "yagmail",
+  "primera": "2015-04-17",
+  "resumen": "Yet Another GMAIL client",
+  "ultima": "2026-05-26",
+  "versiones": 108
+ },
+ "yaml": {
+  "consultado": "2026-10-29",
+  "existe": false
+ },
+ "zstandard": {
+  "consultado": "2026-10-29",
+  "existe": true,
+  "nombre": "zstandard",
+  "primera": "2016-09-03",
+  "resumen": "Zstandard bindings for Python",
+  "ultima": "2025-09-14",
+  "versiones": 42
+ }
+}

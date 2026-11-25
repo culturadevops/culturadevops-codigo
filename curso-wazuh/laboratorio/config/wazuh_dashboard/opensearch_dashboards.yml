@@ -1,0 +1,37 @@
+# Copia del `opensearch_dashboards.yml` que trae la imagen, con UNA linea cambiada.
+#
+# ⛔ EL FALLO (descubierto el 2026-08-23): la imagen viene con
+#     opensearch.hosts: https://localhost:9200
+# es decir, el dashboard busca el almacen DENTRO DE SI MISMO. En el log salia, cada dos
+# segundos y para siempre:
+#     [ConnectionError]: connect ECONNREFUSED 127.0.0.1:9200
+# El contenedor seguia «Up», `docker ps` decia que todo bien y el panel devolvia 503.
+# Las variables INDEXER_URL / INDEXER_USERNAME del compose NO las lee esta imagen: solo
+# usa DASHBOARD_USERNAME y DASHBOARD_PASSWORD, y las mete en su keystore.
+#
+# ⚠️ `wazuh.indexer` es el `hostname:` del servicio indexer en el compose, no el nombre del
+# contenedor: es el nombre que hay en el certificado, y la verificacion TLS lo comprueba.
+server.host: 0.0.0.0
+server.port: 443
+opensearch.hosts: https://wazuh.indexer:9200
+# ⛔ Y ESTAS DOS LINEAS TAMPOCO SON OPCIONALES. La imagen guarda el usuario y la contraseña
+# en un «keystore», y para escribirlo usa OSD_PATH_CONF=/etc/wazuh-dashboard — una carpeta que
+# NO EXISTE en la imagen. La crea Docker al montar ahi los certificados, y Docker crea las
+# carpetas que faltan como ROOT; el contenedor corre como uid 1000. Resultado, en la primera
+# linea del log y nada mas:
+#     FATAL CLI ERROR Error: EACCES: permission denied, open
+#     '/etc/wazuh-dashboard/opensearch_dashboards.keystore'
+# El proceso sigue arrancando sin credenciales, no puede ni preguntar la version del indexer
+# («Unable to retrieve version information from OpenSearch nodes»), nunca termina de migrar y
+# devuelve 503 para siempre. `docker ps` dice «Up» todo el rato.
+opensearch.username: kibanaserver
+opensearch.password: kibanaserver
+opensearch.ssl.verificationMode: certificate
+opensearch.requestHeadersAllowlist: ["securitytenant","Authorization"]
+opensearch_security.multitenancy.enabled: false
+opensearch_security.readonly_mode.roles: ["kibana_read_only"]
+server.ssl.enabled: true
+server.ssl.key: "/etc/wazuh-dashboard/certs/dashboard-key.pem"
+server.ssl.certificate: "/etc/wazuh-dashboard/certs/dashboard.pem"
+opensearch.ssl.certificateAuthorities: ["/etc/wazuh-dashboard/certs/root-ca.pem"]
+uiSettings.overrides.defaultRoute: /app/wz-home

@@ -1,0 +1,14 @@
+### destroy con TEXTO (salida real)
+docker_network.red: Destroying... [id=ec06a68f057d402af9ffd4debd10f050a575bec5250623e3689fd34093db1fc2]
+docker_container.lento: Destroying... [id=cf609ab6b330c88b7b34887491bff48cac0f186c155b00ad9fb0baf82ba366e3]
+docker_container.lento: Destruction complete after 0s
+docker_image.lento: Destroying... [id=sha256:14358309a308569c32bdc37e2e0e9694be33a9d99e68afb0f5ff33cc1f695dcealpine:3.22]
+docker_image.lento: Destruction complete after 0s
+docker_network.red: Destruction complete after 2s
+### destroy con REFERENCIA (salida real)
+docker_container.lento: Destroying... [id=20de5b859ccb610f4fa2fca08025858a64f401d6ab84e00ec91998470723cbc3]
+docker_container.lento: Destruction complete after 1s
+docker_network.red: Destroying... [id=c2aadcffd45220b2783cc53cfd617f262f6fca1a16f0c36b877d20f70675d566]
+docker_image.lento: Destroying... [id=sha256:14358309a308569c32bdc37e2e0e9694be33a9d99e68afb0f5ff33cc1f695dcealpine:3.22]
+docker_image.lento: Destruction complete after 0s
+docker_network.red: Destruction complete after 2s

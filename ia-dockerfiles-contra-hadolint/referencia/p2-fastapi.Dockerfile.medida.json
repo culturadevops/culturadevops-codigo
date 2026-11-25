@@ -1,0 +1,18 @@
+{
+ "app": "p2-fastapi",
+ "dockerfile": "referencia/p2-fastapi.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.12.8-slim-bookworm"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 5.2,
+ "error_build": "",
+ "bytes": 53846148,
+ "disco_mb": 221.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

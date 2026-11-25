@@ -1,0 +1,61 @@
+== 1 · EL ROOTFS: un contenedor no baja magia, descomprime un tar ==
+   ficheros en el rootfs: 87
+   tamaño en disco:       8.7M
+   primer nivel:
+     bin dev etc home lib media mnt opt proc root run sbin srv sys 
+     tmp usr var    ^ eso es una imagen de Alpine: un tar con un sistema de ficheros dentro.
+
+== 2 · EL ENOENT QUE PARECE UN FICHERO QUE FALTA Y NO LO ES ==
+   ¿está el binario dentro del chroot vacío?  SÍ, ahí está, 158632 bytes
+   1. unshare UTS+PID+MNT+IPC ... OK
+   2. sethostname ... OK  (y ojo: esto ya cambió el hostname del PADRE)
+   3. el hijo se ve como PID 1  <- es 1: tabla de procesos propia
+   4. chroot a /vacio ... OK
+   5. hostname que ve el de dentro: contenedorcito
+   6. mount de /proc ... OK
+   7. ejecuto /bin/ls dentro
+   [X] ENOENT ejecutando /bin/ls.
+       El binario ESTÁ ahí. Lo que falta es su cargador dinámico:
+       dentro del chroot no hay /lib/ld-musl ni /lib64/ld-linux.
+   8. el contenedor terminó con código 2
+   9. y aquí fuera el hostname es: contenedorcito  <- cambiado, porque UTS SÍ afectó al padre
+   y lo que le falta de verdad: 	linux-vdso.so.1 (0x00007e3a1c058000) 	libselinux.so.1 => /lib/x86_64-linux-gnu/libselinux.so.1 (0x00007e3a1bff1000) 
+   ^ nada de eso existe dentro del chroot. Por eso ENOENT.
+
+== 3 · Y AHORA CON UN ROOTFS DE VERDAD ==
+   1. unshare UTS+PID+MNT+IPC ... OK
+   2. sethostname ... OK  (y ojo: esto ya cambió el hostname del PADRE)
+   3. el hijo se ve como PID 1  <- es 1: tabla de procesos propia
+   4. chroot a /rootfs ... OK
+   5. hostname que ve el de dentro: contenedorcito
+   6. mount de /proc ... OK
+   7. ejecuto /bin/busybox dentro
+   --- ya estoy dentro ---
+   me veo como PID: 1
+   hostname:        contenedorcito
+   procesos que veo desde dentro:
+   PID   COMMAND
+       1 busybox
+       3 ps
+       4 head
+   raiz del sistema de ficheros: bin dev etc home lib media mnt opt proc root run sbin srv sys tmp usr var 
+   8. el contenedor terminó con código 0
+   9. y aquí fuera el hostname es: contenedorcito  <- cambiado, porque UTS SÍ afectó al padre
+
+== 4 · ¿EL AISLAMIENTO ES DE VERDAD? ==
+   el de FUERA arranca un proceso con PID 40.
+   ¿lo VE el de dentro?    NO
+   ¿puede MATARLO?         NO: para el, ese PID no existe
+   ¿sigue vivo el de fuera? SÍ
+
+== 5 · LO QUE NO AÍSLA (la mitad honesta del vídeo) ==
+   núcleo que ve el de FUERA:  6.18.33.2-microsoft-standard-WSL2
+   núcleo que ve el de DENTRO: 6.18.33.2-microsoft-standard-WSL2
+   ^ EL MISMO. No hay máquina virtual: es UN núcleo repartido, y de ahí sale que un
+     fallo del núcleo se lleve por delante a todos los contenedores de la máquina.
+   memoria que cree tener el de FUERA:  MemTotal: 16101044 kB
+   memoria que cree tener el de DENTRO: MemTotal: 16101044 kB
+   ^ la de la máquina entera. Los namespaces NO limitan recursos: eso son los cgroups,
+     que es otra cosa distinta y NO está en este programa.
+   usuario que soy dentro: 0
+   ^ cero: root. Sin namespace de usuario, el root de dentro es el root de fuera.

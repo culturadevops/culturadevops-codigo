@@ -1,0 +1,30 @@
+# 877 · Jenkins sin asistente, sin ejecutores propios y con la nube de Kubernetes (kind jk-b-k8s).
+# El token del ServiceAccount entra por la variable K8S_TOKEN (k8s/correr_877.sh lo crea con kubectl create token).
+jenkins:
+  systemMessage: "Banco 877: agentes como pods en kind"
+  numExecutors: 0
+  mode: EXCLUSIVE
+  securityRealm: none
+  authorizationStrategy: unsecured
+  clouds:
+    - kubernetes:
+        name: "kind"
+        serverUrl: "https://jk-b-k8s-control-plane:6443"
+        skipTlsVerify: true
+        credentialsId: "k8s-token"
+        namespace: "jenkins-agentes"
+        jenkinsUrl: "http://jk-b-jenkins-877:8080/"
+        webSocket: true
+        containerCapStr: "10"
+unclassified:
+  location:
+    url: "http://jk-b-jenkins-877:8080/"
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - string:
+              scope: GLOBAL
+              id: "k8s-token"
+              description: "ServiceAccount jenkins en jenkins-agentes"
+              secret: "${K8S_TOKEN}"

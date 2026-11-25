@@ -1,0 +1,6 @@
+{
+ "prompt": "Este es tu script:\n```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR is not a directory\"\n    exit 1\nfi\n\ncd \"$DIR\" || exit\n\nfor file in *; do\n    if [ -f \"$file\" ]; do\n        ext=\"${file##*.}\"\n        mkdir -p \"$ext/\"\n        mv \"$file\" \"$ext/\"\n    fi\ndone\n```\nShellCheck 0.11.0 da estos avisos:\nscript.sh:17:1: info: The mentioned syntax error was in this for loop. [SC1009]\nscript.sh:18:5: error: Couldn't parse this if expression. Fix to allow more checks. [SC1073]\nscript.sh:18:24: error: Expected 'then'. [SC1050]\nscript.sh:18:26: error: Unexpected keyword/token. Fix any mentioned problems and try again. [SC1072]\nCorrige el script para que ShellCheck no dé avisos. Responde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR is not a directory\"\n    exit 1\nfi\n\ncd \"$DIR\" || exit\n\nfor file in *; do\n    if [ -f \"$file\" ]; then\n        ext=\"${file##*.}\"\n        mkdir -p \"$ext/\"\n        mv \"$file\" \"$ext/\"\n    fi\ndone\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 121
+}

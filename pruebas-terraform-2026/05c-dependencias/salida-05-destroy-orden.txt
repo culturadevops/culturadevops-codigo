@@ -1,0 +1,6 @@
+### DESTROY con el nombre como TEXTO (5 veces: apply y destroy)
+  vez 1: bien
+  vez 2: bien
+  vez 3: bien
+  vez 4: bien
+  vez 5: bien

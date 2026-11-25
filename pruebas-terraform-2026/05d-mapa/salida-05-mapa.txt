@@ -1,0 +1,23 @@
+### for_each sobre un mapa
+  # docker_container.web["blog"] will be created
+      + name                                        = "blog"
+  # docker_container.web["tienda"] will be created
+      + name                                        = "tienda"
+  + urls = {
+      + blog   = "http://localhost:8142"
+      + tienda = "http://localhost:8141"
+docker_container.web["tienda"]: Creating...
+tienda 200
+blog 200
+### state list
+docker_container.web["blog"]
+docker_container.web["tienda"]
+docker_image.web
+docker_network.red
+### grafo con depends_on
+  "docker_container.web" -> "docker_image.web";
+  "docker_container.web" -> "docker_network.red";
+### cambio solo el puerto de blog 8142->8143
+  # docker_container.web["blog"] must be replaced
+          ~ external = 8142 -> 8143 # forces replacement
+Plan: 1 to add, 0 to change, 1 to destroy.

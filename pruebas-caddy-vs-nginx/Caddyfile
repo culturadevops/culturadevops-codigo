@@ -1,0 +1,13 @@
+# Caddyfile — servir un sitio por HTTPS y hacer de proxy inverso a un backend.
+# ⛔ Ni una línea de más: hace exactamente lo mismo que la configuración de nginx.
+#
+# ⚠️ `handle_path` en vez de `reverse_proxy /api/*` porque QUITA el prefijo antes de pasar la
+#    petición. Es lo mismo que hace nginx con la barra final en `proxy_pass http://backend:80/`.
+#    Sin esto los dos no hacen lo mismo y la comparación no vale: lo pillé comprobando la salida.
+sitio.local {
+	root * /sitio
+	file_server
+	handle_path /api/* {
+		reverse_proxy backend:80
+	}
+}

@@ -1,0 +1,1 @@
+{"Rules":[{"ID":"versiones-viejas","Status":"Enabled","Filter":{"Prefix":""},"NoncurrentVersionExpiration":{"NoncurrentDays":30},"Expiration":{"ExpiredObjectDeleteMarker":true}}]}

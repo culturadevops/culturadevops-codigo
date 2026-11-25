@@ -1,0 +1,7 @@
+# El arreglo de la trampa 4: monta solo lo que editas. vendor (y storage) siguen siendo los de la imagen.
+services:
+  app:
+    volumes:
+      - ./app:/var/www/html/app
+      - ./routes:/var/www/html/routes
+      - ./resources:/var/www/html/resources

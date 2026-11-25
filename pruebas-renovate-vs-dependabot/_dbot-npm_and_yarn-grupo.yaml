@@ -1,0 +1,195 @@
+input:
+    job:
+        command: update
+        package-manager: npm_and_yarn
+        allowed-updates:
+            - update-type: all
+        dependency-groups:
+            - name: todo-npm
+              rules:
+                patterns:
+                    - '*'
+        ignore-conditions:
+            - dependency-name: express
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn-grupo.yaml
+              version-requirement: '>5.3.0'
+            - dependency-name: lodash
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn-grupo.yaml
+              version-requirement: '>4.18.1'
+            - dependency-name: axios
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn-grupo.yaml
+              version-requirement: '>1.20.0'
+            - dependency-name: jest
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn-grupo.yaml
+              version-requirement: '>30.5.2'
+            - dependency-name: eslint
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-npm_and_yarn-grupo.yaml
+              version-requirement: '>10.12.0'
+        source:
+            provider: github
+            repo: lab/app
+            directory: /
+            commit: 08345f8793e7d01b09a294ea16a0e6feffb08d6e
+output:
+    - type: update_dependency_list
+      expect:
+        data:
+            dependencies:
+                - name: express
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.1
+                      source: null
+                  version: 4.17.1
+                - name: lodash
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.15
+                      source: null
+                  version: 4.17.15
+                - name: axios
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 0.21.1
+                      source: null
+                  version: 0.21.1
+                - name: jest
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 26.6.3
+                      source: null
+                  version: 26.6.3
+                - name: eslint
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 7.32.0
+                      source: null
+                  version: 7.32.0
+            dependency_files:
+                - /package.json
+    - type: create_pull_request
+      expect:
+        data:
+            base-commit-sha: 08345f8793e7d01b09a294ea16a0e6feffb08d6e
+            dependencies:
+                - name: express
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.1
+                      source: null
+                  previous-version: 4.17.1
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 5.3.0
+                      source: null
+                  version: 5.3.0
+                  directory: /
+                - name: lodash
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.17.15
+                      source: null
+                  previous-version: 4.17.15
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 4.18.1
+                      source: null
+                  version: 4.18.1
+                  directory: /
+                - name: axios
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 0.21.1
+                      source: null
+                  previous-version: 0.21.1
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - dependencies
+                      requirement: 1.20.0
+                      source: null
+                  version: 1.20.0
+                  directory: /
+                - name: jest
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 26.6.3
+                      source: null
+                  previous-version: 26.6.3
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 30.5.2
+                      source: null
+                  version: 30.5.2
+                  directory: /
+                - name: eslint
+                  previous-requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 7.32.0
+                      source: null
+                  previous-version: 7.32.0
+                  requirements:
+                    - file: package.json
+                      groups:
+                        - devDependencies
+                      requirement: 10.12.0
+                      source: null
+                  version: 10.12.0
+                  directory: /
+            updated-dependency-files:
+                - content: |
+                    {
+                      "name": "app",
+                      "version": "1.0.0",
+                      "dependencies": {
+                        "express": "5.3.0",
+                        "lodash": "4.18.1",
+                        "axios": "1.20.0"
+                      },
+                      "devDependencies": {
+                        "jest": "30.5.2",
+                        "eslint": "10.12.0"
+                      }
+                    }
+                  content_encoding: utf-8
+                  deleted: false
+                  directory: /
+                  name: package.json
+                  operation: update
+                  support_file: false
+                  type: file
+            pr-title: Bump the todo-npm group with 5 updates
+            pr-body: "Bumps the todo-npm group with 5 updates:\n\n| Package | From | To |\n| --- | --- | --- |\n| [express](https://github.com/expressjs/express) | `4.17.1` | `5.3.0` |\n| [lodash](https://github.com/lodash/lodash) | `4.17.15` | `4.18.1` |\n| [axios](https://github.com/axios/axios) | `0.21.1` | `1.20.0` |\n| [jest](https://github.com/jestjs/jest/tree/HEAD/packages/jest) | `26.6.3` | `30.5.2` |\n| [eslint](https://github.com/eslint/eslint) | `7.32.0` | `10.12.0` |\n\nUpdates `express` from 4.17.1 to 5.3.0\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/expressjs/express/releases\">express's releases</a>.</em></p>\n<blockquote>\n<h2>v5.3.0</h2>\n<h2>Highlights</h2>\n<h3>\U0001F41E Bug fixes</h3>\n<ul>\n<li>\n<p>Fixed HTTP header conflict between Content-Length and Transfer-Encoding in res.send - by <a href=\"https://github.com/YuryShkoda\"><code>@​YuryShkoda</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/4893\">#4893</a></p>\n<p>Fixed the behavior of <code>res.send()</code> to prevent conflicts between <code>Content-Length</code> and <code>Transfer-Encoding</code> HTTP headers in responses. The <code>Content-Length</code> header in <code>res.send()</code> is now only added when a <code>Transfer-Encoding</code> header is not present, complying with the HTTP specification that states both headers should not coexist in the same response. ETag generation is unaffected by the presence of a <code>Transfer-Encoding</code> header - by <a href=\"https://github.com/cuishuang\"><code>@​cuishuang</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7459\">#7459</a></p>\n</li>\n</ul>\n<ul>\n<li>\n<p>Upgrade <code>qs</code> to <code>^6.16.0</code>, which fixes <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-2391\">CVE-2026-2391</a> (<a href=\"https://github.com/ljharb/qs/security/advisories/GHSA-w7fw-mjwx-w883\">GHSA-w7fw-mjwx-w883</a>), <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-82417\">CVE-2026-82417</a> (<a href=\"https://github.com/advisories/GHSA-4mjr-xmp4-gh2g\">GHSA-4mjr-xmp4-gh2g</a>) and <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-82562\">CVE-2026-82562</a> (<a href=\"https://github.com/advisories/GHSA-x5fp-wj9c-mxmx\">GHSA-x5fp-wj9c-mxmx</a>): <code>arrayLimit</code> bypasses in comma parsing and a denial of service via an attacker-controlled <code>isBuffer</code> - by <a href=\"https://github.com/davetashner\"><code>@​davetashner</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7057\">#7057</a> and <a href=\"https://redirect.github.com/expressjs/express/pull/7478\">#7478</a>, and <a href=\"https://github.com/cyphercodes\"><code>@​cyphercodes</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7305\">#7305</a></p>\n</li>\n<li>\n<p>Upgrade <code>proxy-addr</code> to <code>^2.0.8</code>, which fixes <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-90711\">CVE-2026-90711</a> - by <a href=\"https://github.com/lazerg\"><code>@​lazerg</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7474\">#7474</a></p>\n</li>\n</ul>\n<h3>\U0001F680 Improvements</h3>\n<ul>\n<li>\n<p>Allow conditional revalidation for QUERY requests. <code>req.fresh</code> previously only validated freshness for GET and HEAD requests, so QUERY responses never returned 304 despite a matching validator. Since QUERY is a safe, idempotent, and cacheable method that supports conditional requests, it is now included in the freshness check - by <a href=\"https://github.com/Cherry\"><code>@​Cherry</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7366\">#7366</a></p>\n<pre lang=\"js\"><code>// QUERY /reports with If-None-Match: &quot;12345&quot;\r\napp.query('/reports', (req, res) =&gt; {\r\n  res.set('ETag', '&quot;12345&quot;');\r\n  res.send(results); // now responds 304 Not Modified\r\n});\r\n</code></pre>\n</li>\n<li>\n<p>Improve HTML structure in <code>res.redirect()</code> responses when HTML format is accepted by adding <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;title&gt;</code>, and <code>&lt;body&gt;</code> tags for better browser compatibility - by <a href=\"https://github.com/Bernice55231\"><code>@​Bernice55231</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/5167\">#5167</a></p>\n</li>\n<li>\n<p>When calling <code>app.render</code> with options set to null, the locals object is handled correctly, preventing unexpected errors and making the method behave the same as when options is omitted or an empty object is passed - by <a href=\"https://github.com/AkaHarshit\">AkaHarshit</a> in <a href=\"https://redirect.github.com/expressjs/express/pull/6903\">#6903</a></p>\n<pre lang=\"js\"><code>app.render('index', null, callback); // now works as expected\r\n</code></pre>\n</li>\n<li>\n<p>Upgrade <code>content-type</code> to <code>^2.0.0</code>, bringing a faster parser (~1.5x quicker <code>Content-Type</code> parsing/formatting in <code>res.send()</code>) along with a behavior change: <code>res.send()</code> now keeps any existing parameters when adding the charset and no longer throws on a <code>Content-Type</code> that fails to parse. <code>type-is</code> is upgraded to <code>^2.1.0</code> as part of the same change - by <a href=\"https://github.com/blakeembrey\"><code>@​blakeembrey</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7234\">#7234</a></p>\n<pre lang=\"js\"><code>res.set('Content-Type', 'text/plain; foo=bar').send('hey');\r\n// -&gt; Content-Type: text/plain; foo=bar; charset=utf-8\r\n</code></pre>\n</li>\n<li>\n<p>The default error handler now logs the full error object instead of only its stack trace, so nested details such as <code>Error.cause</code> and library-specific properties (e.g. Sequelize's <code>parent</code>/<code>original</code>) are no longer swallowed - by <a href=\"https://github.com/Nitin-Mohapatra\"><code>@​Nitin-Mohapatra</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/6464\">#6464</a></p>\n</li>\n<li>\n<p>Upgrade <code>content-disposition</code> to <code>^2.0.1</code>, which changes the <code>Content-Disposition</code> header emitted by <code>res.download()</code>, <code>res.attachment()</code>, and <code>res.sendFile()</code>: file names that are valid HTTP tokens are no longer wrapped in quotes. This is equivalent per RFC 6266, but applications asserting on the exact header bytes should update their expectations - by <a href=\"https://github.com/blakeembrey\"><code>@​blakeembrey</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7233\">#7233</a></p>\n<pre lang=\"js\"><code>res.attachment('user.html');\r\n// before -&gt; Content-Disposition: attachment; filename=&quot;user.html&quot;\r\n// after  -&gt; Content-Disposition: attachment; filename=user.html\r\n</code></pre>\n</li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/expressjs/express/blob/master/History.md\">express's changelog</a>.</em></p>\n<blockquote>\n<h1>5.3.0</h1>\n<h2>\U0001F41E Bug fixes</h2>\n<ul>\n<li>\n<p>Fixed HTTP header conflict between Content-Length and Transfer-Encoding in res.send - by <a href=\"https://github.com/YuryShkoda\"><code>@​YuryShkoda</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/4893\">#4893</a></p>\n<p>Fixed the behavior of <code>res.send()</code> to prevent conflicts between <code>Content-Length</code> and <code>Transfer-Encoding</code> HTTP headers in responses. The <code>Content-Length</code> header in <code>res.send()</code> is now only added when a <code>Transfer-Encoding</code> header is not present, complying with the HTTP specification that states both headers should not coexist in the same response. ETag generation is unaffected by the presence of a <code>Transfer-Encoding</code> header - by <a href=\"https://github.com/cuishuang\"><code>@​cuishuang</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7459\">#7459</a></p>\n</li>\n</ul>\n<ul>\n<li>\n<p>Upgrade <code>qs</code> to <code>^6.16.0</code>, which fixes <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-2391\">CVE-2026-2391</a> (<a href=\"https://github.com/ljharb/qs/security/advisories/GHSA-w7fw-mjwx-w883\">GHSA-w7fw-mjwx-w883</a>), <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-82417\">CVE-2026-82417</a> (<a href=\"https://github.com/advisories/GHSA-4mjr-xmp4-gh2g\">GHSA-4mjr-xmp4-gh2g</a>) and <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-82562\">CVE-2026-82562</a> (<a href=\"https://github.com/advisories/GHSA-x5fp-wj9c-mxmx\">GHSA-x5fp-wj9c-mxmx</a>): <code>arrayLimit</code> bypasses in comma parsing and a denial of service via an attacker-controlled <code>isBuffer</code> - by <a href=\"https://github.com/davetashner\"><code>@​davetashner</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7057\">#7057</a> and <a href=\"https://redirect.github.com/expressjs/express/pull/7478\">#7478</a>, and <a href=\"https://github.com/cyphercodes\"><code>@​cyphercodes</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7305\">#7305</a></p>\n</li>\n<li>\n<p>Upgrade <code>proxy-addr</code> to <code>^2.0.8</code>, which fixes <a href=\"https://www.cve.org/CVERecord?id=CVE-2026-90711\">CVE-2026-90711</a> - by <a href=\"https://github.com/lazerg\"><code>@​lazerg</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7474\">#7474</a></p>\n</li>\n</ul>\n<h2>\U0001F680 Improvements</h2>\n<ul>\n<li>\n<p>Allow conditional revalidation for QUERY requests. <code>req.fresh</code> previously only validated freshness for GET and HEAD requests, so QUERY responses never returned 304 despite a matching validator. Since QUERY is a safe, idempotent, and cacheable method that supports conditional requests, it is now included in the freshness check - by <a href=\"https://github.com/Cherry\"><code>@​Cherry</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7366\">#7366</a></p>\n<pre lang=\"js\"><code>// QUERY /reports with If-None-Match: &quot;12345&quot;\napp.query('/reports', (req, res) =&gt; {\n  res.set('ETag', '&quot;12345&quot;');\n  res.send(results); // now responds 304 Not Modified\n});\n</code></pre>\n</li>\n<li>\n<p>Improve HTML structure in <code>res.redirect()</code> responses when HTML format is accepted by adding <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;title&gt;</code>, and <code>&lt;body&gt;</code> tags for better browser compatibility - by <a href=\"https://github.com/Bernice55231\"><code>@​Bernice55231</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/5167\">#5167</a></p>\n</li>\n<li>\n<p>When calling <code>app.render</code> with options set to null, the locals object is handled correctly, preventing unexpected errors and making the method behave the same as when options is omitted or an empty object is passed - by <a href=\"https://github.com/AkaHarshit\">AkaHarshit</a> in <a href=\"https://redirect.github.com/expressjs/express/pull/6903\">#6903</a></p>\n<pre lang=\"js\"><code>app.render('index', null, callback); // now works as expected\n</code></pre>\n</li>\n<li>\n<p>Upgrade <code>content-type</code> to <code>^2.0.0</code>, bringing a faster parser (~1.5x quicker <code>Content-Type</code> parsing/formatting in <code>res.send()</code>) along with a behavior change: <code>res.send()</code> now keeps any existing parameters when adding the charset and no longer throws on a <code>Content-Type</code> that fails to parse. <code>type-is</code> is upgraded to <code>^2.1.0</code> as part of the same change - by <a href=\"https://github.com/blakeembrey\"><code>@​blakeembrey</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7234\">#7234</a></p>\n<pre lang=\"js\"><code>res.set('Content-Type', 'text/plain; foo=bar').send('hey');\n// -&gt; Content-Type: text/plain; foo=bar; charset=utf-8\n</code></pre>\n</li>\n<li>\n<p>The default error handler now logs the full error object instead of only its stack trace, so nested details such as <code>Error.cause</code> and library-specific properties (e.g. Sequelize's <code>parent</code>/<code>original</code>) are no longer swallowed - by <a href=\"https://github.com/Nitin-Mohapatra\"><code>@​Nitin-Mohapatra</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/6464\">#6464</a></p>\n</li>\n<li>\n<p>Upgrade <code>content-disposition</code> to <code>^2.0.1</code>, which changes the <code>Content-Disposition</code> header emitted by <code>res.download()</code>, <code>res.attachment()</code>, and <code>res.sendFile()</code>: file names that are valid HTTP tokens are no longer wrapped in quotes. This is equivalent per RFC 6266, but applications asserting on the exact header bytes should update their expectations - by <a href=\"https://github.com/blakeembrey\"><code>@​blakeembrey</code></a> in <a href=\"https://redirect.github.com/expressjs/express/pull/7233\">#7233</a></p>\n<pre lang=\"js\"><code>res.attachment('user.html');\n// before -&gt; Content-Disposition: attachment; filename=&quot;user.html&quot;\n// after  -&gt; Content-Disposition: attachment; filename=user.html\n</code></pre>\n</li>\n</ul>\n<!-- raw HTML omitted -->\n</blockquote>\n<p>... (truncated)</p>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/expressjs/express/commit/cf6722bf89a86905281d9160b6482e08166b5ef0\"><code>cf6722b</code></a> 5.3.0 (<a href=\"https://redirect.github.com/expressjs/express/issues/7468\">#7468</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/8c2fcfcb7d37c9c2e89363b7b86a092768c3a8a3\"><code>8c2fcfc</code></a> docs: fix typos and a stale API reference in lib comments (<a href=\"https://redirect.github.com/expressjs/express/issues/7512\">#7512</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/9efc29e280018dafc1f0617f3a3d28f4e463b7be\"><code>9efc29e</code></a> docs: fix pass-through typos (<a href=\"https://redirect.github.com/expressjs/express/issues/7509\">#7509</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/2717ae3cbf2bdc3f946d22ea6a4e0b5bd438b87b\"><code>2717ae3</code></a> build(deps): bump the github-actions group with 3 updates (<a href=\"https://redirect.github.com/expressjs/express/issues/7499\">#7499</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/de777714df3fb1e81ac2d95f509c421478ab1e56\"><code>de77771</code></a> build(deps-dev): bump hbs from 4.3.0 to 4.3.1 (<a href=\"https://redirect.github.com/expressjs/express/issues/7500\">#7500</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/9169cbe1127ed1f9bc4f80a70b82c412467dd156\"><code>9169cbe</code></a> docs: add missing apostrophe in example (<a href=\"https://redirect.github.com/expressjs/express/issues/7483\">#7483</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/7ef98448f8b38099ab1ded55e458538ad47a51e7\"><code>7ef9844</code></a> build(deps-dev): bump morgan from 1.12.0 to 1.12.1 (<a href=\"https://redirect.github.com/expressjs/express/issues/7493\">#7493</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/3b7e39fe74371ddabc77fed736dd22aa71c14f5c\"><code>3b7e39f</code></a> deps: bump qs minimum to 6.16.0 (<a href=\"https://redirect.github.com/expressjs/express/issues/7478\">#7478</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/98bd4cd96b250d25e1672c36f49cfc743bc801e7\"><code>98bd4cd</code></a> deps: proxy-addr@^2.0.8 (<a href=\"https://redirect.github.com/expressjs/express/issues/7474\">#7474</a>)</li>\n<li><a href=\"https://github.com/expressjs/express/commit/9a34acf03cb818ff3f8bc40e44176e277a25cbb9\"><code>9a34acf</code></a> fix(res.send): preserve ETag generation with Transfer-Encoding (<a href=\"https://redirect.github.com/expressjs/express/issues/7459\">#7459</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/expressjs/express/compare/4.17.1...v5.3.0\">compare view</a></li>\n</ul>\n</details>\n<details>\n<summary>Maintainer changes</summary>\n<p>This version was pushed to npm by <a href=\"https://www.npmjs.com/~GitHub%20Actions\">GitHub Actions</a>, a new releaser for express since your current version.</p>\n</details>\n<br />\n\nUpdates `lodash` from 4.17.15 to 4.18.1\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/lodash/lodash/releases\">lodash's releases</a>.</em></p>\n<blockquote>\n<h2>4.18.1</h2>\n<h2>Bugs</h2>\n<p>Fixes a <code>ReferenceError</code> issue in <code>lodash</code> <code>lodash-es</code> <code>lodash-amd</code> and <code>lodash.template</code> when using the <code>template</code> and <code>fromPairs</code> functions from the modular builds. See <a href=\"https://redirect.github.com/lodash/lodash/issues/6167#issuecomment-4165269769\">lodash/lodash#6167</a></p>\n<p>These defects were related to how lodash distributions are built from the main branch using <a href=\"https://github.com/lodash-archive/lodash-cli\">https://github.com/lodash-archive/lodash-cli</a>. When internal dependencies change inside lodash functions, equivalent updates need to be made to a mapping in the lodash-cli. (hey, it was ahead of its time once upon a time!). We know this, but we missed it in the last release. It's the kind of thing that passes in CI, but fails bc the build is not the same thing you tested.</p>\n<p>There is no diff on main for this, but you can see the diffs for each of the npm packages on their respective branches:</p>\n<ul>\n<li><code>lodash</code>: <a href=\"https://github.com/lodash/lodash/compare/4.18.0-npm...4.18.1-npm\">https://github.com/lodash/lodash/compare/4.18.0-npm...4.18.1-npm</a></li>\n<li><code>lodash-es</code>: <a href=\"https://github.com/lodash/lodash/compare/4.18.0-es...4.18.1-es\">https://github.com/lodash/lodash/compare/4.18.0-es...4.18.1-es</a></li>\n<li><code>lodash-amd</code>: <a href=\"https://github.com/lodash/lodash/compare/4.18.0-amd...4.18.1-amd\">https://github.com/lodash/lodash/compare/4.18.0-amd...4.18.1-amd</a></li>\n<li><code>lodash.template</code><a href=\"https://github.com/lodash/lodash/compare/4.18.0-npm-packages...4.18.1-npm-packages\">https://github.com/lodash/lodash/compare/4.18.0-npm-packages...4.18.1-npm-packages</a></li>\n</ul>\n<h2>4.18.0</h2>\n<h2>v4.18.0</h2>\n<p><strong>Full Changelog</strong>: <a href=\"https://github.com/lodash/lodash/compare/4.17.23...4.18.0\">https://github.com/lodash/lodash/compare/4.17.23...4.18.0</a></p>\n<h3>Security</h3>\n<p><strong><code>_.unset</code> / <code>_.omit</code></strong>: Fixed prototype pollution via <code>constructor</code>/<code>prototype</code> path traversal (<a href=\"https://github.com/lodash/lodash/security/advisories/GHSA-f23m-r3pf-42rh\">GHSA-f23m-r3pf-42rh</a>, <a href=\"https://github.com/lodash/lodash/commit/fe8d32eda854377349a4f922ab7655c8e5df9a0b\">fe8d32e</a>). Previously, array-wrapped path segments and primitive roots could bypass the existing guards, allowing deletion of properties from built-in prototypes. Now <code>constructor</code> and <code>prototype</code> are blocked unconditionally as non-terminal path keys, matching <code>baseSet</code>. Calls that previously returned <code>true</code> and deleted the property now return <code>false</code> and leave the target untouched.</p>\n<p><strong><code>_.template</code></strong>: Fixed code injection via <code>imports</code> keys (<a href=\"https://github.com/lodash/lodash/security/advisories/GHSA-r5fr-rjxr-66jc\">GHSA-r5fr-rjxr-66jc</a>, CVE-2026-4800, <a href=\"https://github.com/lodash/lodash/commit/879aaa93132d78c2f8d20c60279da9f8b21576d6\">879aaa9</a>). Fixes an incomplete patch for CVE-2021-23337. The <code>variable</code> option was validated against <code>reForbiddenIdentifierChars</code> but <code>importsKeys</code> was left unguarded, allowing code injection via the same <code>Function()</code> constructor sink. <code>imports</code> keys containing forbidden identifier characters now throw <code>&quot;Invalid imports option passed into _.template&quot;</code>.</p>\n<h3>Docs</h3>\n<ul>\n<li>Add security notice for <code>_.template</code> in threat model and API docs (<a href=\"https://redirect.github.com/lodash/lodash/pull/6099\">#6099</a>)</li>\n<li>Document <code>lower &gt; upper</code> behavior in <code>_.random</code> (<a href=\"https://redirect.github.com/lodash/lodash/pull/6115\">#6115</a>)</li>\n<li>Fix quotes in <code>_.compact</code> jsdoc (<a href=\"https://redirect.github.com/lodash/lodash/pull/6090\">#6090</a>)</li>\n</ul>\n<h3><code>lodash.*</code> modular packages</h3>\n<p><a href=\"https://redirect.github.com/lodash/lodash/pull/6157\">Diff</a></p>\n<p>We have also regenerated and published a select number of the <code>lodash.*</code> modular packages.</p>\n<p>These modular packages had fallen out of sync significantly from the minor/patch updates to lodash. Specifically, we have brought the following packages up to parity w/ the latest lodash release because they have had CVEs on them in the past:</p>\n<ul>\n<li><a href=\"https://www.npmjs.com/package/lodash.orderby\">lodash.orderby</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.tonumber\">lodash.tonumber</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.trim\">lodash.trim</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.trimend\">lodash.trimend</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.sortedindexby\">lodash.sortedindexby</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.zipobjectdeep\">lodash.zipobjectdeep</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.unset\">lodash.unset</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.omit\">lodash.omit</a></li>\n<li><a href=\"https://www.npmjs.com/package/lodash.template\">lodash.template</a></li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/lodash/lodash/commit/cb0b9b9212521c08e3eafe7c8cb0af1b42b6649e\"><code>cb0b9b9</code></a> release(patch): bump main to 4.18.1 (<a href=\"https://redirect.github.com/lodash/lodash/issues/6177\">#6177</a>)</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/75535f57883b7225adb96de1cfc1cd4169cfcb51\"><code>75535f5</code></a> chore: prune stale advisory refs (<a href=\"https://redirect.github.com/lodash/lodash/issues/6170\">#6170</a>)</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/62e91bc6a39c98d85b9ada8c44d40593deaf82a4\"><code>62e91bc</code></a> docs: remove n_ Node.js &lt; 6 REPL note from README (<a href=\"https://redirect.github.com/lodash/lodash/issues/6165\">#6165</a>)</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/59be2de61f8aa9461c7856533b51d31b7d8babc4\"><code>59be2de</code></a> release(minor): bump to 4.18.0 (<a href=\"https://redirect.github.com/lodash/lodash/issues/6161\">#6161</a>)</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/af634573030f979194871da7c68f79420992f53d\"><code>af63457</code></a> fix: broken tests for _.template 879aaa9</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/1073a7693e1727e0cf3641e5f71f75ddcf8de7c0\"><code>1073a76</code></a> fix: linting issues</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/879aaa93132d78c2f8d20c60279da9f8b21576d6\"><code>879aaa9</code></a> fix: validate imports keys in _.template</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/fe8d32eda854377349a4f922ab7655c8e5df9a0b\"><code>fe8d32e</code></a> fix: block prototype pollution in baseUnset via constructor/prototype traversal</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/18ba0a32f42fd02117f096b032f89c984173462d\"><code>18ba0a3</code></a> refactor(fromPairs): use baseAssignValue for consistent assignment (<a href=\"https://redirect.github.com/lodash/lodash/issues/6153\">#6153</a>)</li>\n<li><a href=\"https://github.com/lodash/lodash/commit/b8190803d48d60b8c80ad45d39125f32fa618cb2\"><code>b819080</code></a> ci: add dist sync validation workflow (<a href=\"https://redirect.github.com/lodash/lodash/issues/6137\">#6137</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/lodash/lodash/compare/4.17.15...4.18.1\">compare view</a></li>\n</ul>\n</details>\n<br />\n\nUpdates `axios` from 0.21.1 to 1.20.0\nUpdates `jest` from 26.6.3 to 30.5.2\nUpdates `eslint` from 7.32.0 to 10.12.0"
+            commit-message: Bump the todo-npm group with 5 updates
+            dependency-group:
+                name: todo-npm
+    - type: mark_as_processed
+      expect:
+        data:
+            base-commit-sha: 08345f8793e7d01b09a294ea16a0e6feffb08d6e

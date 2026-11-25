@@ -1,0 +1,5200 @@
+{
+ "claude": [
+  {
+   "id": "c01",
+   "pip": [
+    [
+     "requests",
+     true
+    ],
+    [
+     "beautifulsoup4",
+     true
+    ],
+    [
+     "lxml",
+     true
+    ],
+    [
+     "playwright",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "bs4",
+     "paquete": "beautifulsoup4",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c05",
+   "pip": [
+    [
+     "Pillow",
+     true
+    ],
+    [
+     "tqdm",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "PIL",
+     "paquete": "pillow",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "tqdm",
+     "paquete": "tqdm",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c09",
+   "pip": [
+    [
+     "slack_sdk",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "slack_sdk",
+     "paquete": "slack-sdk",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ],
+    [
+     "pytest-mock",
+     true
+    ],
+    [
+     "pytest-cov",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c17",
+   "pip": [
+    [
+     "python-dotenv",
+     true
+    ],
+    [
+     "pydantic-settings",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dotenv",
+     "paquete": "python-dotenv",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c21",
+   "pip": [
+    [
+     "confluent-kafka",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "confluent_kafka",
+     "paquete": "confluent-kafka",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c25",
+   "pip": [
+    [
+     "pymongo",
+     true
+    ],
+    [
+     "python-dotenv",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dotenv",
+     "paquete": "python-dotenv",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "pymongo",
+     "paquete": "pymongo",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c29",
+   "pip": [
+    [
+     "qrcode",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "PIL",
+     "paquete": "pillow",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    },
+    {
+     "import": "qrcode",
+     "paquete": "qrcode",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c33",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c37",
+   "pip": [
+    [
+     "PyJWT",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "cryptography",
+     "paquete": "cryptography",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    },
+    {
+     "import": "jwt",
+     "paquete": "pyjwt",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c41",
+   "pip": [
+    [
+     "sqlalchemy",
+     true
+    ],
+    [
+     "psycopg",
+     true
+    ],
+    [
+     "alembic",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "sqlalchemy",
+     "paquete": "sqlalchemy",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c45",
+   "pip": [
+    [
+     "markdown-it-py",
+     true
+    ],
+    [
+     "mdit-py-plugins",
+     true
+    ],
+    [
+     "pygments",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "markdown_it",
+     "paquete": "markdown-it-py",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    },
+    {
+     "import": "mdit_py_plugins",
+     "paquete": "mdit_py_plugins",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pygments",
+     "paquete": "pygments",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c49",
+   "pip": [
+    [
+     "rich",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "rich",
+     "paquete": "rich",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "dockerfile-parse",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dockerfile_parse",
+     "paquete": "dockerfile-parse",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n07",
+   "pip": [
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "botocore",
+     "paquete": "botocore",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n15",
+   "pip": [
+    [
+     "pagerduty",
+     true
+    ],
+    [
+     "rich",
+     true
+    ],
+    [
+     "python-dotenv",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dotenv",
+     "paquete": "python-dotenv",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "pagerduty",
+     "paquete": "pagerduty",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "rich",
+     "paquete": "rich",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n19",
+   "pip": [
+    [
+     "datadog-api-client",
+     true
+    ],
+    [
+     "python-dotenv",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "datadog_api_client",
+     "paquete": "datadog-api-client",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "dotenv",
+     "paquete": "python-dotenv",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n23",
+   "pip": [
+    [
+     "ijson",
+     true
+    ],
+    [
+     "orjson",
+     true
+    ],
+    [
+     "rich",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "ijson",
+     "paquete": "ijson",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "orjson",
+     "paquete": "orjson",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "rich",
+     "paquete": "rich",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n27",
+   "pip": [
+    [
+     "httpx",
+     true
+    ],
+    [
+     "rich",
+     true
+    ],
+    [
+     "typer",
+     true
+    ],
+    [
+     "locust",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "httpx",
+     "paquete": "httpx",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "rich",
+     "paquete": "rich",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "typer",
+     "paquete": "typer",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n31",
+   "pip": [
+    [
+     "opentelemetry-api",
+     true
+    ],
+    [
+     "opentelemetry-sdk",
+     true
+    ],
+    [
+     "opentelemetry-exporter-otlp-proto-http",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opentelemetry",
+     "paquete": "opentelemetry-api",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n35",
+   "pip": [
+    [
+     "diagrams",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "diagrams",
+     "paquete": "diagrams",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n39",
+   "pip": [
+    [
+     "ruamel.yaml",
+     true
+    ],
+    [
+     "rich",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "rich",
+     "paquete": "rich",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "ruamel",
+     "paquete": "ruamel.yaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n43",
+   "pip": [
+    [
+     "requests",
+     true
+    ],
+    [
+     "plotext",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "plotext",
+     "paquete": "plotext",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n47",
+   "pip": [
+    [
+     "psutil",
+     true
+    ],
+    [
+     "rich",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "psutil",
+     "paquete": "psutil",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "rich",
+     "paquete": "rich",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s1": [
+  {
+   "id": "c01",
+   "pip": [
+    [
+     "requests",
+     true
+    ],
+    [
+     "beautifulsoup4",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "bs4",
+     "paquete": "beautifulsoup4",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c02",
+   "pip": [
+    [
+     "pandas",
+     true
+    ],
+    [
+     "openpyxl",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c03",
+   "pip": [
+    [
+     "Flask",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "flask",
+     "paquete": "flask",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c04",
+   "pip": [
+    [
+     "pyyaml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "c05",
+   "pip": [
+    [
+     "pillow",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "PIL",
+     "paquete": "pillow",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c06",
+   "pip": [
+    [
+     "psycopg2-binary",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "psycopg2",
+     "paquete": "psycopg2-binary",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c07",
+   "pip": [
+    [
+     "mysql-connector-python",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "mysql",
+     "paquete": "mysql-connector-python",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c08",
+   "pip": [
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "botocore",
+     "paquete": "botocore",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c09",
+   "pip": [
+    [
+     "slack_sdk",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "slack_sdk",
+     "paquete": "slack-sdk",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "python3-smtpd",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "c11",
+   "pip": [
+    [
+     "reportlab",
+     true
+    ],
+    [
+     "pandas",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "reportlab",
+     "paquete": "reportlab",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c12",
+   "pip": [
+    [
+     "pandas",
+     true
+    ],
+    [
+     "matplotlib",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "matplotlib",
+     "paquete": "matplotlib",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ],
+    [
+     "pytest-fixture",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c14",
+   "pip": [
+    [
+     "pydantic",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pydantic",
+     "paquete": "pydantic",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c15",
+   "pip": [
+    [
+     "schedule",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "schedule",
+     "paquete": "schedule",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c16",
+   "pip": [
+    [
+     "click",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "click",
+     "paquete": "click",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c17",
+   "pip": [
+    [
+     "python-dotenv",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dotenv",
+     "paquete": "python-dotenv",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c18",
+   "pip": [
+    [
+     "aiohttp",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "aiohttp",
+     "paquete": "aiohttp",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c19",
+   "pip": [
+    [
+     "redis",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "redis",
+     "paquete": "redis",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c20",
+   "pip": [
+    [
+     "pika",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pika",
+     "paquete": "pika",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c21",
+   "pip": [
+    [
+     "confluent-kafka",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "confluent_kafka",
+     "paquete": "confluent-kafka",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "necesario",
+     false
+    ],
+    [
+     "selenium",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c23",
+   "pip": [
+    [
+     "pandas",
+     true
+    ],
+    [
+     "scikit-learn",
+     true
+    ],
+    [
+     "numpy",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "sklearn",
+     "paquete": "scikit-learn",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c24",
+   "pip": [
+    [
+     "pandas",
+     true
+    ],
+    [
+     "pyarrow",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pyarrow",
+     "paquete": "pyarrow",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c25",
+   "pip": [
+    [
+     "pymongo",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pymongo",
+     "paquete": "pymongo",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c26",
+   "pip": [
+    [
+     "pytz",
+     true
+    ],
+    [
+     "python-dateutil",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dateutil",
+     "paquete": "python-dateutil",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    },
+    {
+     "import": "pytz",
+     "paquete": "pytz",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c27",
+   "pip": [
+    [
+     "tqdm",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "tqdm",
+     "paquete": "tqdm",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c28",
+   "pip": [
+    [
+     "colorama",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "colorama",
+     "paquete": "colorama",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c29",
+   "pip": [
+    [
+     "qrcode",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "qrcode",
+     "paquete": "qrcode",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c30",
+   "pip": [
+    [
+     "PyPDF2",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "PyPDF2",
+     "paquete": "pypdf2",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c31",
+   "pip": [
+    [
+     "python-telegram-bot",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "telegram",
+     "paquete": "python-telegram-bot",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c32",
+   "pip": [
+    [
+     "prometheus_client",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "prometheus_client",
+     "paquete": "prometheus-client",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c33",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c34",
+   "pip": [
+    [
+     "docker",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "docker",
+     "paquete": "docker",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c35",
+   "pip": [
+    [
+     "paramiko",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "paramiko",
+     "paquete": "paramiko",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c36",
+   "pip": [
+    [
+     "cryptography",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "cryptography",
+     "paquete": "cryptography",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c37",
+   "pip": [
+    [
+     "PyJWT",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "jwt",
+     "paquete": "pyjwt",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "c38",
+   "pip": [
+    [
+     "bcrypt",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "bcrypt",
+     "paquete": "bcrypt",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c39",
+   "pip": [
+    [
+     "toml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "toml",
+     "paquete": "toml",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c40",
+   "pip": [
+    [
+     "Flask",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "flask",
+     "paquete": "flask",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c41",
+   "pip": [
+    [
+     "SQLAlchemy",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "sqlalchemy",
+     "paquete": "sqlalchemy",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c42",
+   "pip": [
+    [
+     "sqlalchemy",
+     true
+    ],
+    [
+     "alembic",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "alembic",
+     "paquete": "alembic",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "sqlalchemy",
+     "paquete": "sqlalchemy",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c43",
+   "pip": [
+    [
+     "celery",
+     true
+    ],
+    [
+     "redis",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "celery",
+     "paquete": "celery",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "config",
+     "paquete": "config",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c44",
+   "pip": [
+    [
+     "langdetect",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "langdetect",
+     "paquete": "langdetect",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c45",
+   "pip": [
+    [
+     "markdown2",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "markdown2",
+     "paquete": "markdown2",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c46",
+   "pip": [
+    [
+     "pytesseract",
+     true
+    ],
+    [
+     "pillow",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "PIL",
+     "paquete": "pillow",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "pytesseract",
+     "paquete": "pytesseract",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c47",
+   "pip": [
+    [
+     "pydub",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pydub",
+     "paquete": "pydub",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c48",
+   "pip": [
+    [
+     "exifread",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "exifread",
+     "paquete": "exifread",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c49",
+   "pip": [],
+   "imports": []
+  },
+  {
+   "id": "c50",
+   "pip": [
+    [
+     "Flask",
+     true
+    ],
+    [
+     "pandas",
+     true
+    ],
+    [
+     "plotly",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "flask",
+     "paquete": "flask",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "plotly",
+     "paquete": "plotly",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "subprocess",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n02",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "jsonschema",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "jsonschema",
+     "paquete": "jsonschema",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "dockerfile-py",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dockerfile",
+     "paquete": "dockerfile",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n04",
+   "pip": [
+    [
+     "pyyaml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n05",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n06",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n07",
+   "pip": [
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n08",
+   "pip": [
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n09",
+   "pip": [
+    [
+     "pandas",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose-to-k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose_to_k8s",
+     "paquete": "compose_to_k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n12",
+   "pip": [
+    [
+     "hvac",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hvac",
+     "paquete": "hvac",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ],
+    [
+     "ruamel.yaml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    },
+    {
+     "import": "ruamel",
+     "paquete": "ruamel.yaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n14",
+   "pip": [
+    [
+     "pipdeptree",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n15",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n16",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n17",
+   "pip": [
+    [
+     "configparser",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n18",
+   "pip": [
+    [
+     "PyYAML",
+     true
+    ],
+    [
+     "ruamel.yaml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "ruamel",
+     "paquete": "ruamel.yaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n19",
+   "pip": [
+    [
+     "datadog",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "datadog",
+     "paquete": "datadog",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [
+    [
+     "json",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n21",
+   "pip": [
+    [
+     "gitpython",
+     true
+    ],
+    [
+     "bandit",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "git",
+     "paquete": "gitpython",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n22",
+   "pip": [
+    [
+     "scapy",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "scapy",
+     "paquete": "scapy",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n23",
+   "pip": [
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n24",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n25",
+   "pip": [
+    [
+     "cryptography",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "cryptography",
+     "paquete": "cryptography",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n26",
+   "pip": [
+    [
+     "dnspython",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dns",
+     "paquete": "dnspython",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n27",
+   "pip": [
+    [
+     "locust",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "locust",
+     "paquete": "locust",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "terraform-python",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "terraform",
+     "paquete": "terraform",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n29",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n30",
+   "pip": [
+    [
+     "apscheduler",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "apscheduler",
+     "paquete": "apscheduler",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n31",
+   "pip": [
+    [
+     "opentelemetry-api",
+     true
+    ],
+    [
+     "opentelemetry-sdk",
+     true
+    ],
+    [
+     "opentelemetry-exporter-jaeger",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opentelemetry",
+     "paquete": "opentelemetry-api",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n32",
+   "pip": [
+    [
+     "fastavro",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "fastavro",
+     "paquete": "fastavro",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n33",
+   "pip": [
+    [
+     "systemd-python",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "journal",
+     "paquete": "journal",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n34",
+   "pip": [
+    [
+     "pandas",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n35",
+   "pip": [
+    [
+     "networkx",
+     true
+    ],
+    [
+     "graphviz",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "graphviz",
+     "paquete": "graphviz",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "networkx",
+     "paquete": "networkx",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "openapi-validation",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "openapi_validation",
+     "paquete": "openapi_validation",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n37",
+   "pip": [
+    [
+     "haralyzer",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "haralyzer",
+     "paquete": "haralyzer",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n38",
+   "pip": [
+    [
+     "python-gitlab",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "gitlab",
+     "paquete": "python-gitlab",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n39",
+   "pip": [
+    [
+     "helm",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "helm",
+     "paquete": "helm",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n40",
+   "pip": [
+    [
+     "docker",
+     true
+    ],
+    [
+     "cryptography",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "cryptography",
+     "paquete": "cryptography",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "docker",
+     "paquete": "docker",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n41",
+   "pip": [
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "botocore",
+     "paquete": "botocore",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n42",
+   "pip": [
+    [
+     "pip-audit",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pip_audit",
+     "paquete": "pip_audit",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n43",
+   "pip": [
+    [
+     "prometheus-client",
+     true
+    ],
+    [
+     "matplotlib",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "matplotlib",
+     "paquete": "matplotlib",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "prometheus_client",
+     "paquete": "prometheus-client",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n44",
+   "pip": [
+    [
+     "pyyaml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "google-cloud-cost-management",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "google",
+     "paquete": "google-api-python-client",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n46",
+   "pip": [
+    [
+     "ruamel.yaml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "ruamel",
+     "paquete": "ruamel.yaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n47",
+   "pip": [
+    [
+     "psutil",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "psutil",
+     "paquete": "psutil",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n48",
+   "pip": [
+    [
+     "Jinja2",
+     true
+    ],
+    [
+     "PyYAML",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "jinja2",
+     "paquete": "jinja2",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n49",
+   "pip": [
+    [
+     "grpcio",
+     true
+    ],
+    [
+     "grpcio-tools",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "grpc",
+     "paquete": "grpcio",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    }
+   ],
+   "locales": [
+    "your_service_pb2",
+    "your_service_pb2_grpc"
+   ]
+  },
+  {
+   "id": "n50",
+   "pip": [
+    [
+     "zstandard",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "zstandard",
+     "paquete": "zstandard",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s10": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ],
+    [
+     "webdriver-manager",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "webdriver_manager",
+     "paquete": "webdriver_manager",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "para",
+     true
+    ],
+    [
+     "instalar",
+     false
+    ],
+    [
+     "colorama",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "colorama",
+     "paquete": "colorama",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "pathlib",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose-to-k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose_to_k8s",
+     "paquete": "compose_to_k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [
+    [
+     "toml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "toml",
+     "paquete": "toml",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "hcl",
+     true
+    ],
+    [
+     "deepdiff",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "deepdiff",
+     "paquete": "deepdiff",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "hcl",
+     "paquete": "pyhcl",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "jsonschema",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "jsonschema",
+     "paquete": "jsonschema",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s2": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ],
+    [
+     "webdriver-manager",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "webdriver_manager",
+     "paquete": "webdriver_manager",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "colorama",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "colorama",
+     "paquete": "colorama",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "dockerfile-py",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dockerfile",
+     "paquete": "dockerfile",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose2k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose2k8s",
+     "paquete": "compose2k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "necesario",
+     false
+    ],
+    [
+     "opa",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [
+    [
+     "hjson",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hjson",
+     "paquete": "hjson",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "terraform-state-iterator",
+     false
+    ],
+    [
+     "deepdiff",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "deepdiff",
+     "paquete": "deepdiff",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "terraform_state_iterator",
+     "paquete": "terraform_state_iterator",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "openapi-spec-validator",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "openapi_spec_validator",
+     "paquete": "openapi-spec-validator",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "boto3",
+     true
+    ],
+    [
+     "pandas",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s3": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [],
+   "imports": []
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "dockerfile-parse",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "dockerfile_parse",
+     "paquete": "dockerfile-parse",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose-to-k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose_to_k8s",
+     "paquete": "compose_to_k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl",
+     "paquete": "pyhcl",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [],
+   "imports": []
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "tfstate",
+     false
+    ],
+    [
+     "json5",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "json5",
+     "paquete": "json5",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "tfstate",
+     "paquete": "tfstate",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "openapi-spec-validator",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "openapi_spec_validator",
+     "paquete": "openapi-spec-validator",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "pandas",
+     true
+    ],
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s4": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "secure-smtplib",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ],
+    [
+     "pytest-cov",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ],
+    [
+     "webdriver-manager",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "bs4",
+     "paquete": "beautifulsoup4",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    },
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "webdriver_manager",
+     "paquete": "webdriver_manager",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "click",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "click",
+     "paquete": "click",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "fileinput",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose2k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose2k8s",
+     "paquete": "compose2k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "docker",
+     "paquete": "docker",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    },
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa-client",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa_client",
+     "paquete": "opa_client",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl",
+     "paquete": "pyhcl",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [
+    [
+     "no",
+     true
+    ],
+    [
+     "es",
+     true
+    ],
+    [
+     "necesario",
+     false
+    ],
+    [
+     "en",
+     false
+    ],
+    [
+     "este",
+     false
+    ],
+    [
+     "caso",
+     true
+    ],
+    [
+     "ya",
+     true
+    ],
+    [
+     "que",
+     true
+    ],
+    [
+     "estamos",
+     false
+    ],
+    [
+     "usando",
+     false
+    ],
+    [
+     "las",
+     true
+    ],
+    [
+     "bibliotecas",
+     false
+    ],
+    [
+     "de",
+     true
+    ],
+    [
+     "Python",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "terraform-docs",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "openapi-spec-validator",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s5": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "mymodule",
+     "paquete": "mymodule",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    },
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "click",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "click",
+     "paquete": "click",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "es",
+     true
+    ],
+    [
+     "necesario",
+     false
+    ],
+    [
+     "ya",
+     true
+    ],
+    [
+     "que",
+     true
+    ],
+    [
+     "estas",
+     false
+    ],
+    [
+     "son",
+     true
+    ],
+    [
+     "bibliotecas",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose-to-k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose_to_k8s",
+     "paquete": "compose_to_k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [],
+   "imports": []
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "hcl",
+     true
+    ],
+    [
+     "deepdiff",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "deepdiff",
+     "paquete": "deepdiff",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "hcl",
+     "paquete": "pyhcl",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "Primero",
+     false
+    ],
+    [
+     "instalar",
+     false
+    ],
+    [
+     "la",
+     true
+    ],
+    [
+     "biblioteca",
+     true
+    ],
+    [
+     "jsonschema",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "jsonschema",
+     "paquete": "jsonschema",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s6": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ],
+    [
+     "pytest-fixtures",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ],
+    [
+     "beautifulsoup4",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "bs4",
+     "paquete": "beautifulsoup4",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "No",
+     true
+    ],
+    [
+     "es",
+     true
+    ],
+    [
+     "necesario",
+     false
+    ],
+    [
+     "instalar",
+     false
+    ],
+    [
+     "ninguna",
+     false
+    ],
+    [
+     "biblioteca",
+     true
+    ],
+    [
+     "adicional",
+     false
+    ],
+    [
+     "porque",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n03",
+   "pip": [],
+   "imports": []
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose2k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose2k8s",
+     "paquete": "compose2k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [
+    [
+     "json",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n28",
+   "pip": [],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "openapi-spec-validator",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "openapi_spec_validator",
+     "paquete": "openapi-spec-validator",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "google-auth",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "google",
+     "paquete": "google-api-python-client",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    },
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s7": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "math_operations",
+     "paquete": "math_operations",
+     "distinto": false,
+     "existe": false,
+     "en_pip": false,
+     "literal_existe": null
+    },
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ],
+    [
+     "webdriver-manager",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "webdriver_manager",
+     "paquete": "webdriver_manager",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "pathlib",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "docker-compose",
+     true
+    ],
+    [
+     "kubernetes",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "docker_compose",
+     "paquete": "docker_compose",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [
+    [
+     "json5",
+     true
+    ],
+    [
+     "Instala",
+     false
+    ],
+    [
+     "la",
+     true
+    ],
+    [
+     "biblioteca",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "json5",
+     "paquete": "json5",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "tfstate",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "tfstate",
+     "paquete": "tfstate",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "openapi-spec-validator",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "openapi_spec_validator",
+     "paquete": "openapi-spec-validator",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "boto3",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "boto3",
+     "paquete": "boto3",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s8": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ],
+    [
+     "pytest-xdist",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ],
+    [
+     "beautifulsoup4",
+     true
+    ],
+    [
+     "lxml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "bs4",
+     "paquete": "beautifulsoup4",
+     "distinto": true,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": true
+    },
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "json",
+     false
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n03",
+   "pip": [
+    [
+     "docker",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "docker",
+     "paquete": "docker",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose2k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "compose2k8s",
+     "paquete": "compose2k8s",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [],
+   "imports": []
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "hcl2",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl2",
+     "paquete": "python-hcl2",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "openapi-spec-validator",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "pandas",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ],
+ "qwen-s9": [
+  {
+   "id": "c10",
+   "pip": [
+    [
+     "yagmail",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yagmail",
+     "paquete": "yagmail",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c13",
+   "pip": [
+    [
+     "pytest",
+     true
+    ],
+    [
+     "pytest-fixtures",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "my_module",
+     "paquete": "my_module",
+     "distinto": false,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": null
+    },
+    {
+     "import": "pytest",
+     "paquete": "pytest",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "c22",
+   "pip": [
+    [
+     "selenium",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "selenium",
+     "paquete": "selenium",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n01",
+   "pip": [
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": []
+  },
+  {
+   "id": "n03",
+   "pip": [],
+   "imports": []
+  },
+  {
+   "id": "n10",
+   "pip": [
+    [
+     "compose-to-k8s",
+     false
+    ]
+   ],
+   "imports": [
+    {
+     "import": "yaml",
+     "paquete": "pyyaml",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": false
+    }
+   ]
+  },
+  {
+   "id": "n11",
+   "pip": [
+    [
+     "opa-python",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "opa",
+     "paquete": "opa",
+     "distinto": false,
+     "existe": false,
+     "en_pip": false,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n13",
+   "pip": [
+    [
+     "hcl",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "hcl",
+     "paquete": "pyhcl",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n20",
+   "pip": [
+    [
+     "toml",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "toml",
+     "paquete": "toml",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n28",
+   "pip": [
+    [
+     "hcl",
+     true
+    ],
+    [
+     "deepdiff",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "deepdiff",
+     "paquete": "deepdiff",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "hcl",
+     "paquete": "pyhcl",
+     "distinto": true,
+     "existe": true,
+     "en_pip": false,
+     "literal_existe": true
+    }
+   ]
+  },
+  {
+   "id": "n36",
+   "pip": [
+    [
+     "jsonschema",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "jsonschema",
+     "paquete": "jsonschema",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  },
+  {
+   "id": "n45",
+   "pip": [
+    [
+     "kubernetes",
+     true
+    ],
+    [
+     "pandas",
+     true
+    ],
+    [
+     "requests",
+     true
+    ]
+   ],
+   "imports": [
+    {
+     "import": "kubernetes",
+     "paquete": "kubernetes",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "pandas",
+     "paquete": "pandas",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    },
+    {
+     "import": "requests",
+     "paquete": "requests",
+     "distinto": false,
+     "existe": true,
+     "en_pip": true,
+     "literal_existe": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+### precedencia del puerto
+solo default          :   + url   = "http://localhost:8090"
+terraform.tfvars      :   + url   = "http://localhost:8091"
+tfvars + TF_VAR 8092  :   + url   = "http://localhost:8091"
++ zz.auto.tfvars 8094 :   + url   = "http://localhost:8094"
++ -var puerto=8093    :   + url   = "http://localhost:8093"

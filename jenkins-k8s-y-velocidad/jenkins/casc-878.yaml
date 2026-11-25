@@ -1,0 +1,11 @@
+# 878 · Jenkins sin asistente; los builds corren en contenedores Docker (agent { docker }) lanzados desde el propio
+# controlador por el socket de Docker. 4 ejecutores para que las ramas en paralelo no esperen turno.
+jenkins:
+  systemMessage: "Banco 878: pipeline de PetClinic medido"
+  numExecutors: 4
+  mode: NORMAL
+  securityRealm: none
+  authorizationStrategy: unsecured
+unclassified:
+  location:
+    url: "http://localhost:28078/"

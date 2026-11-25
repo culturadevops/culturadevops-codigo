@@ -1,0 +1,18 @@
+{
+ "app": "p5-aiohttp",
+ "dockerfile": "muestras/qwen/p5-aiohttp/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.9-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 9.7,
+ "error_build": "",
+ "bytes": 50781824,
+ "disco_mb": 209.0,
+ "usuario": "",
+ "root": true,
+ "arranca": true,
+ "error_arranque": ""
+}

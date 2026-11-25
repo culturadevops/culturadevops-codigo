@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lee FILE (un nombre de usuario por línea) e imprime el comando useradd que ejecutaría para cada uno, sin ejecutarlo (modo de prueba).\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 FILE\"\n    exit 1\nfi\n\nFILE=$1\n\nwhile IFS= read -r user; do\n    echo \"useradd $user\"\ndone < \"$FILE\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 65
+}

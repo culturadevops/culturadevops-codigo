@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Attribute redefined",
+      "detail": "The argument \"description\" was already set at main.tf:99,3-14. Each argument may be set only once.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 115,
+          "column": 3,
+          "byte": 2554
+        },
+        "end": {
+          "line": 115,
+          "column": 14,
+          "byte": 2565
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_security_group\" \"efs_sg\"",
+        "code": "  description = \"Security group for EFS access\"",
+        "start_line": 115,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 13,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Duplicate resource \"aws_instance\" configuration",
+      "detail": "A aws_instance resource named \"example\" was already declared at main.tf:74,1-34. Resource names must be unique per type in each module.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 119,
+          "column": 1,
+          "byte": 2662
+        },
+        "end": {
+          "line": 119,
+          "column": 34,
+          "byte": 2695
+        }
+      },
+      "snippet": {
+        "context": null,
+        "code": "resource \"aws_instance\" \"example\" {",
+        "start_line": 119,
+        "highlight_start_offset": 0,
+        "highlight_end_offset": 33,
+        "values": []
+      }
+    }
+  ]
+}

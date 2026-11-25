@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"name\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 56,
+          "byte": 862
+        },
+        "end": {
+          "line": 33,
+          "column": 57,
+          "byte": 863
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_api_gateway_request_validator\" \"example\"",
+        "code": "resource \"aws_api_gateway_request_validator\" \"example\" {",
+        "start_line": 33,
+        "highlight_start_offset": 55,
+        "highlight_end_offset": 56,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Incorrect attribute value type",
+      "detail": "Inappropriate value for attribute \"validate_request_parameters\": bool required, but have object.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 36,
+          "column": 33,
+          "byte": 982
+        },
+        "end": {
+          "line": 41,
+          "column": 4,
+          "byte": 1068
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_api_gateway_request_validator\" \"example\"",
+        "code": "  validate_request_parameters = {\n    method = true\n    path = true\n    query_string = true\n    header = true\n  }",
+        "start_line": 36,
+        "highlight_start_offset": 32,
+        "highlight_end_offset": 113,
+        "values": []
+      }
+    }
+  ]
+}

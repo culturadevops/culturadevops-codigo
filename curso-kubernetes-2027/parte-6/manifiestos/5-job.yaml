@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: lote
+spec:
+  completions: 6       # 6 ejecuciones que terminen bien
+  parallelism: 2       # de 2 en 2
+  backoffLimit: 4
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: tarea
+          image: busybox:1.37
+          command: ["sh", "-c", "echo \"proceso un lote en $(hostname)\"; sleep 5"]

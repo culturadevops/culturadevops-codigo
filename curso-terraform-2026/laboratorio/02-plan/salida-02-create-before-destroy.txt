@@ -1,0 +1,27 @@
+### leyenda de simbolos (cabecera real de un plan)
+plan. Resource actions are indicated with the following symbols:
++/- create replacement and then destroy
+
+Terraform will perform the following actions:
+### create_before_destroy + cambio de puerto
++/- create replacement and then destroy
+  # docker_container.web must be replaced
++/- resource "docker_container" "web" {
+          ~ external = 8130 -> 8131 # forces replacement
+Plan: 1 to add, 0 to change, 1 to destroy.
+### apply
+docker_container.web: Creating...
+Error: Unable to create container: Error response from daemon: Conflict. The container name "/plan-web" is already in use by container "60074108eac72443dcf144851a9464204efe0ae506d5c25290f2583f6697e39b". You have to remove (or rename) that container to be able to reuse that name.
+### docker ps
+plan-web Up 2 seconds 0.0.0.0:8130->80/tcp
+### plan despues del apply fallido
+  # docker_container.web must be replaced
+          ~ external = 8130 -> 8131 # forces replacement
+Plan: 1 to add, 0 to change, 1 to destroy.
+### arreglo: nombre que cambia con el puerto (name = "plan-web-${puerto}")
+docker_container.web: Creating...
+docker_container.web: Creation complete after 1s [id=cb3685be0e7b7b878e0ab7e7a9cf486936af9a8e3b9896b79b6dcb1d7b87eebb]
+docker_container.web (deposed object 23e8c72b): Destroying... [id=60074108eac72443dcf144851a9464204efe0ae506d5c25290f2583f6697e39b]
+docker_container.web: Destruction complete after 0s
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+plan-web-8131 Up Less than a second

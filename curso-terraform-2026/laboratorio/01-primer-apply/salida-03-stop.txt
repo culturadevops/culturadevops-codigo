@@ -1,0 +1,8 @@
+### tras apply:
+curso-web Up Less than a second
+### tras docker stop, ANTES del plan:
+curso-web Exited (0) Less than a second ago
+  # docker_container.web will be created
+Plan: 1 to add, 0 to change, 0 to destroy.
+### DESPUES del plan:
+(fin)

@@ -1,0 +1,112 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 4,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"public_access_block\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 58,
+          "column": 3,
+          "byte": 1090
+        },
+        "end": {
+          "line": 58,
+          "column": 22,
+          "byte": 1109
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example\"",
+        "code": "  public_access_block {",
+        "start_line": 58,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 21,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"event_notification_configuration\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 77,
+          "column": 3,
+          "byte": 1456
+        },
+        "end": {
+          "line": 77,
+          "column": 35,
+          "byte": 1488
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example\"",
+        "code": "  event_notification_configuration {",
+        "start_line": 77,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 34,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"enabled\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 69,
+          "column": 18,
+          "byte": 1324
+        },
+        "end": {
+          "line": 69,
+          "column": 19,
+          "byte": 1325
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example\"",
+        "code": "  lifecycle_rule {",
+        "start_line": 69,
+        "highlight_start_offset": 17,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"status\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 71,
+          "column": 5,
+          "byte": 1365
+        },
+        "end": {
+          "line": 71,
+          "column": 11,
+          "byte": 1371
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example\"",
+        "code": "    status  = \"Enabled\"",
+        "start_line": 71,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    }
+  ]
+}

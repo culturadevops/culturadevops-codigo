@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lee el archivo de configuración FILE (líneas CLAVE=valor; las que empiezan con # son comentarios) e imprime el valor de la clave CLAVE.\nUso: script.sh FILE CLAVE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Verifica si se proporcionaron dos argumentos\nif [ \"$#\" -ne 2 ]; then\n    echo \"Uso: $0 FILE CLAVE\"\n    exit 1\nfi\n\nFILE=$1\nCLAVE=$2\n\n# Lee el archivo y busca la clave\ngrep -v '^#' $FILE | while IFS='=' read -r key value; do\n    if [ \"$key\" == \"$CLAVE\" ]; then\n        echo \"$value\"\n        exit 0\n    fi\ndone\n\necho \"Clave no encontrada\"\nexit 1\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 130
+}

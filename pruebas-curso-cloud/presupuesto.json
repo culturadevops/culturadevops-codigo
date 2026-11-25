@@ -1,0 +1,9 @@
+{
+  "BudgetName": "mi-cuenta-de-practica",
+  "BudgetType": "COST",
+  "TimeUnit": "MONTHLY",
+  "BudgetLimit": {
+    "Amount": "10",
+    "Unit": "USD"
+  }
+}

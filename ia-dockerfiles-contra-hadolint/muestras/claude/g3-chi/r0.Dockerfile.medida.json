@@ -1,0 +1,19 @@
+{
+ "app": "g3-chi",
+ "dockerfile": "muestras/claude/g3-chi/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24-alpine",
+  "gcr.io/distroless/static-debian12:nonroot"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 3.0,
+ "error_build": "",
+ "bytes": 3175882,
+ "disco_mb": 14.4,
+ "usuario": "nonroot:nonroot",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

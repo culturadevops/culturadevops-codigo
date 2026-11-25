@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Organiza DIR: mueve cada archivo regular de DIR (sin subcarpetas) a una subcarpeta de DIR con el nombre de su extensión en minúsculas (txt/, log/, etc.).\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR is not a directory\"\n    exit 1\nfi\n\ncd \"$DIR\"\n\nfor file in *; do\n    if [ -f \"$file\" ]; then\n        ext=\"${file##*.}\"\n        mkdir -p \"$ext/\"\n        mv \"$file\" \"$ext/\"\n    fi\ndone\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 118
+}

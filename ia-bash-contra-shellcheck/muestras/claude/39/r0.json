@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Mueve cada archivo .log de DIR (sin subcarpetas) a una subcarpeta de DIR llamada AAAA-MM según su fecha de modificación.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nusage() {\n    echo \"Uso: $(basename \"$0\") DIR\" >&2\n    exit 1\n}\n\n[[ $# -eq 1 ]] || usage\n\nDIR=\"${1%/}\"\n[[ -n \"$DIR\" ]] || DIR=\"/\"\n\nif [[ ! -d \"$DIR\" ]]; then\n    echo \"Error: '$DIR' no es un directorio\" >&2\n    exit 1\nfi\n\nmovidos=0\nerrores=0\n\nwhile IFS= read -r -d '' archivo; do\n    mes=$(date -r \"$archivo\" +%Y-%m) || { echo \"Error: no se pudo leer la fecha de '$archivo'\" >&2; errores=$((errores + 1)); continue; }\n    destino=\"$DIR/$mes\"\n\n    if ! mkdir -p -- \"$destino\"; then\n        echo \"Error: no se pudo crear '$destino'\" >&2\n        errores=$((errores + 1))\n        continue\n    fi\n\n    nombre=$(basename -- \"$archivo\")\n    if [[ -e \"$destino/$nombre\" ]]; then\n        echo \"Aviso: '$destino/$nombre' ya existe, se omite '$archivo'\" >&2\n        errores=$((errores + 1))\n        continue\n    fi\n\n    if mv -n -- \"$archivo\" \"$destino/\"; then\n        echo \"Movido: $archivo -> $destino/\"\n        movidos=$((movidos + 1))\n    else\n        echo \"Error: no se pudo mover '$archivo'\" >&2\n        errores=$((errores + 1))\n    fi\ndone < <(find \"$DIR\" -mindepth 1 -maxdepth 1 -type f -name '*.log' -print0)\n\necho \"Total movidos: $movidos, errores/omitidos: $errores\"\n[[ $errores -eq 0 ]]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.025027,
+ "segundos": 7.0,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-57pci98p"
+}

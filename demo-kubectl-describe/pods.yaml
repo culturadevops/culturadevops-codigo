@@ -1,0 +1,63 @@
+# Cinco pods: uno sano y cuatro rotos de maneras distintas.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sano
+  labels: { app: tienda }
+spec:
+  containers:
+    - name: web
+      image: nginx:1.30.5-alpine
+      ports: [{ containerPort: 80 }]
+      resources:
+        requests: { cpu: 50m, memory: 32Mi }
+        limits: { memory: 64Mi }
+      readinessProbe:
+        httpGet: { path: /, port: 80 }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pendiente
+spec:
+  containers:
+    - name: web
+      image: nginx:1.30.5-alpine
+      resources:
+        requests: { cpu: "50" }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: se-cae
+spec:
+  containers:
+    - name: app
+      image: busybox:1.37
+      command: ["sh", "-c", "echo conectando a la base de datos...; echo ERROR: no encuentro DB_HOST; exit 1"]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: no-listo
+spec:
+  containers:
+    - name: web
+      image: nginx:1.30.5-alpine
+      readinessProbe:
+        httpGet: { path: /salud, port: 80 }
+        periodSeconds: 3
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sin-config
+spec:
+  containers:
+    - name: web
+      image: nginx:1.30.5-alpine
+      volumeMounts:
+        - { name: config, mountPath: /etc/app }
+  volumes:
+    - name: config
+      configMap: { name: config-app }

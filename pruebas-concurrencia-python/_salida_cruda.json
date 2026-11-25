@@ -1,0 +1,774 @@
+[
+ {
+  "que": "version",
+  "version": "3.14.10",
+  "gil_build": 0,
+  "gil": true,
+  "cpu_count": 24,
+  "process_cpu_count": 24,
+  "cpu_max": "400000 100000",
+  "start_method": "forkserver",
+  "py": "python3.14"
+ },
+ {
+  "que": "version",
+  "version": "3.14.10",
+  "gil_build": 1,
+  "gil": false,
+  "cpu_count": 24,
+  "process_cpu_count": 24,
+  "cpu_max": "400000 100000",
+  "start_method": "forkserver",
+  "py": "python3.14t"
+ },
+ {
+  "que": "comprobar",
+  "tipo": "cpu",
+  "res": {
+   "secuencial": 9439192,
+   "threading": 9439192,
+   "asyncio": 9439192,
+   "multiprocessing": 9439192,
+   "ThreadPoolExecutor": 9439192,
+   "ProcessPoolExecutor": 9439192
+  },
+  "py": "python3.14"
+ },
+ {
+  "que": "comprobar",
+  "tipo": "espera",
+  "res": {
+   "secuencial": 2470,
+   "threading": 2470,
+   "asyncio": 2470,
+   "multiprocessing": 2470,
+   "ThreadPoolExecutor": 2470,
+   "ProcessPoolExecutor": 2470
+  },
+  "py": "python3.14"
+ },
+ {
+  "que": "comprobar",
+  "tipo": "red",
+  "res": {
+   "secuencial": 2470,
+   "threading": 2470,
+   "asyncio": 2470,
+   "multiprocessing": 2470,
+   "ThreadPoolExecutor": 2470,
+   "ProcessPoolExecutor": 2470
+  },
+  "py": "python3.14"
+ },
+ {
+  "que": "comprobar",
+  "tipo": "cpu",
+  "res": {
+   "secuencial": 9439192,
+   "threading": 9439192,
+   "asyncio": 9439192,
+   "multiprocessing": 9439192,
+   "ThreadPoolExecutor": 9439192,
+   "ProcessPoolExecutor": 9439192
+  },
+  "py": "python3.14t"
+ },
+ {
+  "que": "comprobar",
+  "tipo": "espera",
+  "res": {
+   "secuencial": 2470,
+   "threading": 2470,
+   "asyncio": 2470,
+   "multiprocessing": 2470,
+   "ThreadPoolExecutor": 2470,
+   "ProcessPoolExecutor": 2470
+  },
+  "py": "python3.14t"
+ },
+ {
+  "que": "comprobar",
+  "tipo": "red",
+  "res": {
+   "secuencial": 2470,
+   "threading": 2470,
+   "asyncio": 2470,
+   "multiprocessing": 2470,
+   "ThreadPoolExecutor": 2470,
+   "ProcessPoolExecutor": 2470
+  },
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "secuencial",
+  "mediana": 0.9125783439994848,
+  "reps": [
+   0.9180773980006052,
+   0.9097557770001004,
+   0.9123281570000472,
+   0.9125783439994848,
+   0.9152887999998711
+  ],
+  "resultado": 8614191,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "threading",
+  "mediana": 0.9289783169997463,
+  "reps": [
+   0.9289783169997463,
+   0.9318531700000676,
+   0.9356906029997845,
+   0.9289496820001659,
+   0.9278591909996976
+  ],
+  "resultado": 8614191,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "asyncio",
+  "mediana": 0.9173494220003704,
+  "reps": [
+   0.9116443149996485,
+   0.913255677000052,
+   0.9621345890000157,
+   0.9173494220003704,
+   0.9299691510004777
+  ],
+  "resultado": 8614191,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "multiprocessing",
+  "mediana": 0.28077854399998614,
+  "reps": [
+   0.30247216099996876,
+   0.27874712299944804,
+   0.28077854399998614,
+   0.2822969250000824,
+   0.27924935200007894
+  ],
+  "resultado": 8614191,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "ThreadPoolExecutor",
+  "mediana": 0.9287514130001,
+  "reps": [
+   0.9243886840004052,
+   0.9287514130001,
+   0.9267923859997609,
+   0.9331432819999463,
+   0.9307447709998087
+  ],
+  "resultado": 8614191,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "ProcessPoolExecutor",
+  "mediana": 0.2824076389997572,
+  "reps": [
+   0.28329234499960876,
+   0.28000644100029604,
+   0.2824076389997572,
+   0.2855971190001583,
+   0.28145264200065867
+  ],
+  "resultado": 8614191,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "secuencial",
+  "mediana": 1.0416502070002025,
+  "reps": [
+   1.0416502070002025,
+   1.0383645760002764,
+   1.037965391000398,
+   1.0418184099999053,
+   1.0452814259997467
+  ],
+  "resultado": 8614191,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "threading",
+  "mediana": 0.25465256400002545,
+  "reps": [
+   0.23690735999934986,
+   0.2559637059994202,
+   0.25465256400002545,
+   0.2531875949998721,
+   0.3302238820006096
+  ],
+  "resultado": 8614191,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "asyncio",
+  "mediana": 1.0418906320001042,
+  "reps": [
+   1.0395249539997167,
+   1.041910786999324,
+   1.0418906320001042,
+   1.0423220520005998,
+   1.0406441370005268
+  ],
+  "resultado": 8614191,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "multiprocessing",
+  "mediana": 0.3177588909993574,
+  "reps": [
+   0.3458805680002115,
+   0.3177588909993574,
+   0.32331689999955415,
+   0.3149320800002897,
+   0.3175888420000774
+  ],
+  "resultado": 8614191,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "ThreadPoolExecutor",
+  "mediana": 0.2712046239994379,
+  "reps": [
+   0.2726565749999281,
+   0.2712046239994379,
+   0.27061294299983274,
+   0.2699841429994194,
+   0.2752992080004333
+  ],
+  "resultado": 8614191,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "cpu",
+  "variante": "ProcessPoolExecutor",
+  "mediana": 0.3193466350003291,
+  "reps": [
+   0.3217535889998544,
+   0.3188154310000755,
+   0.3193466350003291,
+   0.32011404700006096,
+   0.31885231400065095
+  ],
+  "resultado": 8614191,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "secuencial",
+  "mediana": 4.027531858000657,
+  "reps": [
+   4.0271460189997015,
+   4.0277441189991805,
+   4.027195044000109,
+   4.027531858000657,
+   4.027960301000348
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "threading",
+  "mediana": 0.038440487000116264,
+  "reps": [
+   0.038771413000176835,
+   0.038440487000116264,
+   0.0387477950007451,
+   0.03666944799988414,
+   0.03638531300020986
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "asyncio",
+  "mediana": 0.021461246000399115,
+  "reps": [
+   0.021512523000637884,
+   0.021371743000599963,
+   0.021398997000687814,
+   0.021501888999409857,
+   0.021461246000399115
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "multiprocessing",
+  "mediana": 0.17563291399983427,
+  "reps": [
+   0.2041879369999151,
+   0.17413268699965556,
+   0.17563291399983427,
+   0.17366080800002237,
+   0.177083321000282
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "ThreadPoolExecutor",
+  "mediana": 0.08884326899988082,
+  "reps": [
+   0.09150381299969013,
+   0.08990203099983773,
+   0.08884326899988082,
+   0.08833016199969279,
+   0.08847543899992161
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "ProcessPoolExecutor",
+  "mediana": 0.19032593100018858,
+  "reps": [
+   0.19579413599967666,
+   0.1835683279996374,
+   0.1948941480004578,
+   0.19032593100018858,
+   0.1864963309999439
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "secuencial",
+  "mediana": 4.027640192000035,
+  "reps": [
+   4.027464513000268,
+   4.02779846500016,
+   4.028413109999747,
+   4.027640192000035,
+   4.027178781000657
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "threading",
+  "mediana": 0.04994512499979464,
+  "reps": [
+   0.0527174950002518,
+   0.04905322200011142,
+   0.04994512499979464,
+   0.049978008999460144,
+   0.04965349400026753
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "asyncio",
+  "mediana": 0.021517416999813577,
+  "reps": [
+   0.021641319999616826,
+   0.021424714000204403,
+   0.021659484000338125,
+   0.021517416999813577,
+   0.02151278600013029
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "multiprocessing",
+  "mediana": 0.18749459899936483,
+  "reps": [
+   0.2093452850003814,
+   0.18688183999984176,
+   0.18749459899936483,
+   0.18467158200019185,
+   0.1892824249998739
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "ThreadPoolExecutor",
+  "mediana": 0.09280134900018311,
+  "reps": [
+   0.09415797000019666,
+   0.09215980699991633,
+   0.09268517800046538,
+   0.09280134900018311,
+   0.09306483999989723
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "espera",
+  "variante": "ProcessPoolExecutor",
+  "mediana": 0.19325173600009293,
+  "reps": [
+   0.20469169700027123,
+   0.19325173600009293,
+   0.19871707299989794,
+   0.190070108999862,
+   0.18599310600075114
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "secuencial",
+  "mediana": 4.13807215199995,
+  "reps": [
+   4.143515026999921,
+   4.1381891179999,
+   4.1375713079996785,
+   4.13807215199995,
+   4.136361526000655
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "threading",
+  "mediana": 0.08241563599949586,
+  "reps": [
+   0.0874788669998452,
+   0.06963123100013036,
+   0.08241563599949586,
+   0.07952426199972251,
+   0.0895780119999472
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "asyncio",
+  "mediana": 0.03201086800072517,
+  "reps": [
+   0.03249248700012686,
+   0.03202574300030392,
+   0.03185419900000852,
+   0.03201086800072517,
+   0.03198538899960113
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "multiprocessing",
+  "mediana": 0.1975034400002187,
+  "reps": [
+   0.2061102010002287,
+   0.1975034400002187,
+   0.18704213900036848,
+   0.20961410200015962,
+   0.18581402499967226
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "ThreadPoolExecutor",
+  "mediana": 0.09687137699984305,
+  "reps": [
+   0.09687137699984305,
+   0.09704419399986364,
+   0.09688190299948474,
+   0.09565070000007836,
+   0.09568843400029436
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "ProcessPoolExecutor",
+  "mediana": 0.2059973829991577,
+  "reps": [
+   0.21102341799996793,
+   0.21258894099992176,
+   0.1908902629993463,
+   0.2059973829991577,
+   0.19263997100006236
+  ],
+  "resultado": 2646700,
+  "py": "python3.14"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "secuencial",
+  "mediana": 4.138643166999827,
+  "reps": [
+   4.145044013000188,
+   4.140055498000038,
+   4.1357301070001995,
+   4.138408128000265,
+   4.138643166999827
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "threading",
+  "mediana": 0.10096456500014028,
+  "reps": [
+   0.10529114499968273,
+   0.09657827599949087,
+   0.09525519100043311,
+   0.10655112899985397,
+   0.10096456500014028
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "asyncio",
+  "mediana": 0.0316622059999645,
+  "reps": [
+   0.031240495999554696,
+   0.03162647099998139,
+   0.0316622059999645,
+   0.03260081200005516,
+   0.03201623499990092
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "multiprocessing",
+  "mediana": 0.23664870599986898,
+  "reps": [
+   0.26902187499945285,
+   0.23664870599986898,
+   0.23515345199939475,
+   0.2353100580003229,
+   0.23873585899946193
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "ThreadPoolExecutor",
+  "mediana": 0.09612145800019789,
+  "reps": [
+   0.10018765099994198,
+   0.09846496700083662,
+   0.0948741100000916,
+   0.09609101100068074,
+   0.09612145800019789
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "tiempos",
+  "tipo": "red",
+  "variante": "ProcessPoolExecutor",
+  "mediana": 0.2097737039994172,
+  "reps": [
+   0.2097737039994172,
+   0.1990626210008486,
+   0.21861180999985663,
+   0.21819843199955358,
+   0.20585822500015638
+  ],
+  "resultado": 2646700,
+  "py": "python3.14t"
+ },
+ {
+  "que": "coste",
+  "modo": "hilos",
+  "n": 10000,
+  "s": 0.8296316279993334,
+  "rss_mb": 207.01171875,
+  "kb_cada": 21.198,
+  "virtual_mb": 92460.015625,
+  "hilos_so": 10001,
+  "gil": true,
+  "todas_s": [
+   0.8094181910000771,
+   0.8152431040007286,
+   0.8296316279993334,
+   0.8743497039995418,
+   0.9051488690001861
+  ],
+  "py": "python3.14"
+ },
+ {
+  "que": "coste",
+  "modo": "asyncio",
+  "n": 10000,
+  "s": 0.014343070999530028,
+  "rss_mb": 10.54296875,
+  "kb_cada": 1.0796,
+  "virtual_mb": 10.1875,
+  "hilos_so": 1,
+  "gil": true,
+  "todas_s": [
+   0.013816188999953738,
+   0.014123109999673034,
+   0.014343070999530028,
+   0.01458179699966422,
+   0.01484727200022462
+  ],
+  "py": "python3.14"
+ },
+ {
+  "que": "coste",
+  "modo": "hilos",
+  "n": 10000,
+  "s": 1.7809793329997774,
+  "rss_mb": 2273.39453125,
+  "kb_cada": 232.7956,
+  "virtual_mb": 443840.58203125,
+  "hilos_so": 10001,
+  "gil": false,
+  "todas_s": [
+   1.6566370010004903,
+   1.7594769130000714,
+   1.7809793329997774,
+   2.016269763999844,
+   2.34508808999999
+  ],
+  "py": "python3.14t"
+ },
+ {
+  "que": "coste",
+  "modo": "asyncio",
+  "n": 10000,
+  "s": 0.019999510999696213,
+  "rss_mb": 11.3984375,
+  "kb_cada": 1.1672,
+  "virtual_mb": 0.0,
+  "hilos_so": 1,
+  "gil": false,
+  "todas_s": [
+   0.019260355999904277,
+   0.01998857400030829,
+   0.019999510999696213,
+   0.02027831299983518,
+   0.02048410099996545
+  ],
+  "py": "python3.14t"
+ },
+ {
+  "que": "carrera",
+  "modo": "sin",
+  "totales": [
+   4000000,
+   4000000,
+   4000000,
+   4000000,
+   4000000
+  ],
+  "esperado": 4000000,
+  "mediana": 0.05551026800003456,
+  "py": "python3.14"
+ },
+ {
+  "que": "carrera",
+  "modo": "lock",
+  "totales": [
+   4000000,
+   4000000,
+   4000000,
+   4000000,
+   4000000
+  ],
+  "esperado": 4000000,
+  "mediana": 0.20765695099998993,
+  "py": "python3.14"
+ },
+ {
+  "que": "carrera",
+  "modo": "sin",
+  "totales": [
+   1258097,
+   1217860,
+   1179013,
+   1138797,
+   1177703
+  ],
+  "esperado": 4000000,
+  "mediana": 0.1369890089999899,
+  "py": "python3.14t"
+ },
+ {
+  "que": "carrera",
+  "modo": "lock",
+  "totales": [
+   4000000,
+   4000000,
+   4000000,
+   4000000,
+   4000000
+  ],
+  "esperado": 4000000,
+  "mediana": 0.5209989869999845,
+  "py": "python3.14t"
+ }
+]

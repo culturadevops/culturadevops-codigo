@@ -1,0 +1,45 @@
+### destroy y la imagen
+  # docker_container.web will be destroyed
+  # docker_image.web will be destroyed
+docker_container.web: Destroying... [id=3537cb7921747eea7299ad4562bedec75a3ea4303183d68283588790c8200270]
+docker_container.web: Destruction complete after 1s
+docker_image.web: Destroying... [id=sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830denginx:1.29-alpine]
+docker_image.web: Destruction complete after 0s
+Destroy complete! Resources: 2 destroyed.
+--- docker images nginx:1.29-alpine tras destroy:
+(vacio = la borro)
+### cambio el puerto 8080 -> 8081
+-/+ destroy and then create replacement
+  # docker_container.web must be replaced
+-/+ resource "docker_container" "web" {
+      ~ command                                     = [
+      ~ entrypoint                                  = [
+      ~ env                                         = [] -> (known after apply)
+      ~ hostname                                    = "9fd7b572a85c" -> (known after apply)
+      ~ id                                          = "9fd7b572a85c409b5cc1ca5e1496cc476b0c98e99b73aa427d96bf9ce7199cf5" -> (known after apply)
+      ~ init                                        = false -> (known after apply)
+      ~ ipc_mode                                    = "private" -> (known after apply)
+      ~ log_driver                                  = "json-file" -> (known after apply)
+      ~ network_data                                = [
+      ~ runtime                                     = "runc" -> (known after apply)
+      ~ security_opts                               = [] -> (known after apply)
+      ~ shm_size                                    = 64 -> (known after apply)
+      ~ stop_signal                                 = "SIGQUIT" -> (known after apply)
+      ~ stop_timeout                                = 0 -> (known after apply)
+      ~ healthcheck (known after apply)
+      ~ labels (known after apply)
+      ~ ports {
+          ~ external = 8080 -> 8081 # forces replacement
+Plan: 1 to add, 0 to change, 1 to destroy.
+### cambio solo el nombre curso-web -> curso-web2
+  # docker_container.web must be replaced
+      ~ name                                        = "curso-web" -> "curso-web2" # forces replacement
+Plan: 1 to add, 0 to change, 1 to destroy.
+### restart no -> always
+  ~ update in-place
+  # docker_container.web will be updated in-place
+      ~ restart                                     = "no" -> "always"
+Plan: 0 to add, 1 to change, 0 to destroy.
+
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.

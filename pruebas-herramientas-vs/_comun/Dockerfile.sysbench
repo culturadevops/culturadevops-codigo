@@ -1,0 +1,5 @@
+# Cliente de carga para «¿Postgres o MySQL?»: sysbench (el mismo programa y los mismos scripts OLTP contra los dos)
+# + los clientes de línea de comandos para la comprobación previa.
+FROM ubuntu:24.04
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends sysbench postgresql-client mysql-client \
+    && rm -rf /var/lib/apt/lists/*

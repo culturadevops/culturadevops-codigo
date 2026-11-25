@@ -1,0 +1,16 @@
+# 4 · EL MODERNO CON UV — mismo multi-stage, pero instala uv (el pip escrito en Rust).
+# La apuesta de este Dockerfile no es la imagen final (esa la gana el 3 igual):
+# es el TIEMPO de build, que es lo que pagas en cada CI.
+FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim AS builder
+WORKDIR /app
+ENV UV_PROJECT_ENVIRONMENT=/venv
+COPY app/requirements.txt .
+RUN uv venv /venv && uv pip install --python /venv/bin/python -r requirements.txt
+
+FROM python:3.13-slim
+WORKDIR /app
+COPY --from=builder /venv /venv
+ENV PATH="/venv/bin:$PATH"
+COPY app/ .
+EXPOSE 8000
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]

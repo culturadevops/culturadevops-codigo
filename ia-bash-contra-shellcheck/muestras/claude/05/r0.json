@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Imprime cada archivo .txt de DIR (sin subcarpetas) con su número de líneas, en el formato 'NOMBRE: N', una por línea, donde NOMBRE es el nombre del archivo sin la ruta.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nif [[ $# -ne 1 ]]; then\n    echo \"Uso: $0 DIR\" >&2\n    exit 1\nfi\n\ndir=$1\n\nif [[ ! -d $dir ]]; then\n    echo \"Error: '$dir' no es un directorio\" >&2\n    exit 1\nfi\n\nshopt -s nullglob\n\nfor f in \"$dir\"/*.txt; do\n    [[ -f $f ]] || continue\n    n=$(awk 'END { print NR }' \"$f\")\n    printf '%s: %s\\n' \"${f##*/}\" \"$n\"\ndone\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.020159099999999996,
+ "segundos": 5.5,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-nbwn4v6p"
+}

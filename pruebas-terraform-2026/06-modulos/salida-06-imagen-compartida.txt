@@ -1,0 +1,21 @@
+### terraform providers
+Providers required by configuration:
+.
+├── provider[registry.terraform.io/kreuzwerker/docker] ~> 3.0
+├── module.tienda
+│   └── provider[registry.terraform.io/kreuzwerker/docker] ~> 3.0
+└── module.blog
+    └── provider[registry.terraform.io/kreuzwerker/docker] ~> 3.0
+### modulo SIN keep_locally: apply de los dos y destroy SOLO de blog
+0
+Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+module.blog.docker_container.web: Destroying... [id=aa15241f01349ed45c4942cbc595450cb5d7acc7cac4ffe844eb3b5d2fcd325d]
+module.blog.docker_container.web: Destruction complete after 1s
+module.blog.docker_image.web: Destroying... [id=sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830denginx:1.29-alpine]
+Warning: Applied changes may be incomplete
+Error: Unable to remove Docker image: Error response from daemon: conflict: unable to delete nginx:1.29-alpine (must be forced) - container 887c6fe9a3b5 is using its referenced image 5616878291a2
+tienda sigue? tienda Up 1 second
+imagen nginx:1.29-alpine: 5616878291a2
+### plan de tienda despues
+  # module.blog.docker_container.web will be created
+Plan: 1 to add, 0 to change, 0 to destroy.

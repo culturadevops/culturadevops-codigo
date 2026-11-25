@@ -1,0 +1,10 @@
+# 2 · EL SLIM CON CAPAS BIEN — el arreglo de una tarde.
+# Base slim, requirements ANTES que el código (la caché sobrevive a tus commits),
+# pip sin caché, y gunicorn como servidor de verdad.
+FROM python:3.13-slim
+WORKDIR /app
+COPY app/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app/ .
+EXPOSE 8000
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]

@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_s3_bucket\" \"app_backups\" {\n  bucket = \"app-backups-${var.env}\"\n  acl    = \"private\"\n}\n\nresource \"aws_s3_bucket_policy\" \"app_backups\" {\n  bucket = aws_s3_bucket.app_backups.id\n  policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Sid          = \"AllowPublicRead\"\n        Effect       = \"Allow\"\n        Principal    = \"*\"\n        Action       = \"s3:GetObject\"\n        Resource     = \"${aws_s3_bucket.app_backups.bucket}/{*}\"\n      }\n    ]\n  })\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 4.3,
+ "tokens": 197,
+ "prompt": "Escribe el código de Terraform para un bucket de S3 para guardar los backups de la aplicación en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

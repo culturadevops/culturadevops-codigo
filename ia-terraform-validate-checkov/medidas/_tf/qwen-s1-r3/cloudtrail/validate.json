@@ -1,0 +1,294 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 11,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 95,
+          "column": 3,
+          "byte": 2362
+        },
+        "end": {
+          "line": 95,
+          "column": 21,
+          "byte": 2380
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sqs_queue\" \"example\"",
+        "code": "  encryption_enabled = true",
+        "start_line": 95,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"kinesis_firehose\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 129,
+          "column": 3,
+          "byte": 3191
+        },
+        "end": {
+          "line": 129,
+          "column": 19,
+          "byte": 3207
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kinesis_firehose_delivery_stream\" \"example2\"",
+        "code": "  kinesis_firehose {",
+        "start_line": 129,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"kinesis_firehose\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 71,
+          "column": 3,
+          "byte": 1745
+        },
+        "end": {
+          "line": 71,
+          "column": 19,
+          "byte": 1761
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kinesis_firehose_delivery_stream\" \"example\"",
+        "code": "  kinesis_firehose {",
+        "start_line": 71,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"access_policy\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 43,
+          "column": 60,
+          "byte": 995
+        },
+        "end": {
+          "line": 43,
+          "column": 61,
+          "byte": 996
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination_policy\" \"example\" {",
+        "start_line": 43,
+        "highlight_start_offset": 59,
+        "highlight_end_offset": 60,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"destination_name\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 43,
+          "column": 60,
+          "byte": 995
+        },
+        "end": {
+          "line": 43,
+          "column": 61,
+          "byte": 996
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination_policy\" \"example\" {",
+        "start_line": 43,
+        "highlight_start_offset": 59,
+        "highlight_end_offset": 60,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"destination_arn\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 44,
+          "column": 3,
+          "byte": 1000
+        },
+        "end": {
+          "line": 44,
+          "column": 18,
+          "byte": 1015
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "  destination_arn = aws_cloudwatch_log_destination.example.arn",
+        "start_line": 44,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 17,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"policy_document\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 45,
+          "column": 3,
+          "byte": 1064
+        },
+        "end": {
+          "line": 45,
+          "column": 18,
+          "byte": 1079
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "  policy_document = jsonencode({",
+        "start_line": 45,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 17,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"target_arn\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 34,
+          "column": 53,
+          "byte": 755
+        },
+        "end": {
+          "line": 34,
+          "column": 54,
+          "byte": 756
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination\" \"example\" {",
+        "start_line": 34,
+        "highlight_start_offset": 52,
+        "highlight_end_offset": 53,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"role_arn\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 34,
+          "column": 53,
+          "byte": 755
+        },
+        "end": {
+          "line": 34,
+          "column": 54,
+          "byte": 756
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination\" \"example\" {",
+        "start_line": 34,
+        "highlight_start_offset": 52,
+        "highlight_end_offset": 53,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"destination_type\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 36,
+          "column": 3,
+          "byte": 803
+        },
+        "end": {
+          "line": 36,
+          "column": 19,
+          "byte": 819
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "  destination_type = \"kinesis-firehose\"",
+        "start_line": 36,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"kinesis_firehose\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 38,
+          "column": 3,
+          "byte": 846
+        },
+        "end": {
+          "line": 38,
+          "column": 19,
+          "byte": 862
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "  kinesis_firehose {",
+        "start_line": 38,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    }
+  ]
+}

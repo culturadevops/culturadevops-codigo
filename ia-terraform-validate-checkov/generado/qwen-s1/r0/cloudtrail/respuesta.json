@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_cloudtrail\" \"example\" {\n  name     = \"example-cloudtrail\"\n  s3_bucket_name = \"example-bucket\"\n  is_multi_region_trail = true\n  enable_logging = true\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 1,
+ "s": 3.5,
+ "tokens": 103,
+ "prompt": "Escribe el código de Terraform para un trail de CloudTrail que guarde los eventos en S3 en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

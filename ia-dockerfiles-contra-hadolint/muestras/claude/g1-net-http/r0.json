@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- go.mod ---\nmodule ejemplo.com/servidor\n\ngo 1.24\n\n--- main.go ---\npackage main\n\nimport (\n\t\"log\"\n\t\"net/http\"\n)\n\nfunc main() {\n\thttp.HandleFunc(\"/\", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte(\"ok\")) })\n\tlog.Fatal(http.ListenAndServe(\":8080\", nil))\n}\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# syntax=docker/dockerfile:1\n\nFROM golang:1.24-alpine AS build\nWORKDIR /src\n\nCOPY go.mod ./\nRUN go mod download\n\nCOPY . .\nRUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags=\"-s -w\" -o /out/servidor .\n\nFROM gcr.io/distroless/static-debian12:nonroot\nCOPY --from=build /out/servidor /servidor\nEXPOSE 8080\nUSER nonroot:nonroot\nENTRYPOINT [\"/servidor\"]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0175292,
+ "segundos": 4.4,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v711-rl4eqgmh"
+}

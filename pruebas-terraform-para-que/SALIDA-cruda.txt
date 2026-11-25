@@ -1,0 +1,50 @@
+== 1 · LEVANTAR EL ENTORNO ==
+   (una red, un volumen, una base de datos, una cache y dos copias de la app)
+   a mano:      1522 ms
+   con codigo:  5068 ms
+
+   >>> GANA A MANO, y se dice tal cual en el video. Para levantar UNA vez, escribir
+       codigo es mas lento y mas trabajo. Quien te venda lo contrario te esta vendiendo algo.
+
+== 2 · Y AHORA LO EJECUTAS OTRA VEZ, con el entorno ya puesto ==
+   a mano:
+     Error response from daemon: network with name pruebas-red already exists
+     ^ y aqui es donde se acaba el guion de shell: no sabe que ya existe.
+     (y ademas se quedo a medias: piezas creadas antes de reventar) 4
+   con codigo:
+     No changes. Your infrastructure matches the configuration.
+     Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+== 3 · ¿QUE HAY LEVANTADO? ==
+   a mano: la respuesta honesta es mirar docker ps y adivinar que es de quien.
+   con codigo, la lista es exacta:
+     docker_container.app[0]
+     docker_container.app[1]
+     docker_container.cache
+     docker_container.db
+     docker_image.app
+     docker_image.postgres
+     docker_image.redis
+     docker_network.red
+     docker_volume.datos
+   piezas de las que lleva la cuenta: 9
+
+== 4 · ALGUIEN TOCA POR FUERA (el martes, con prisa) ==
+   borro un contenedor a mano y le pregunto al codigo que ve:
+       # docker_container.app[1] will be created
+     Plan: 1 to add, 0 to change, 0 to destroy.
+   y lo repone solo:
+     contenedores vivos tras el apply: 4
+   ^ el guion de shell no se habria enterado NUNCA de que faltaba uno.
+
+== 5 · DESTRUIR SIN DEJAR BASURA ==
+   a mano: a_mano.sh no tiene destruccion. Lineas de borrado en el fichero: 0
+   (hay que escribir un segundo guion, y mantenerlo en sintonia con el primero)
+   con codigo: destruido en 6920 ms, sin escribir nada
+     contenedores 'pruebas-' que quedan: 0
+     redes 'pruebas-' que quedan:        0
+     volumenes 'pruebas-' que quedan:    0
+   ^ el volumen es el que siempre se queda olvidado cuando se destruye a mano,
+     y es justo el que cuesta dinero todos los meses.
+
+== limpio ==

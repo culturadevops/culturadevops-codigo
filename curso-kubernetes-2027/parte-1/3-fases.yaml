@@ -1,0 +1,44 @@
+# Cuatro pods de busybox que solo se diferencian en cómo terminan y en su restartPolicy.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: termina-bien
+spec:
+  restartPolicy: Never
+  containers:
+    - name: tarea
+      image: busybox:1.37.0
+      command: ["sh", "-c", "sleep 3; exit 0"]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: termina-mal
+spec:
+  restartPolicy: Never
+  containers:
+    - name: tarea
+      image: busybox:1.37.0
+      command: ["sh", "-c", "sleep 3; exit 3"]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: reintenta
+spec:
+  restartPolicy: OnFailure
+  containers:
+    - name: tarea
+      image: busybox:1.37.0
+      command: ["sh", "-c", "sleep 1; exit 1"]
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: siempre
+spec:
+  restartPolicy: Always
+  containers:
+    - name: tarea
+      image: busybox:1.37.0
+      command: ["sh", "-c", "sleep 1; exit 0"]

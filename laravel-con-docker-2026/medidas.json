@@ -1,0 +1,58 @@
+{
+ "laravel_framework": "v13.39.0",
+ "build": {
+  "multi_sin_cache": [
+   14.935218600090593,
+   13.863491300027817
+  ],
+  "gorda_sin_cache": [
+   72.1834204000188,
+   72.80517329997383
+  ],
+  "multi_cache_sin_cambios": 1.283683200017549,
+  "gorda_cache_sin_cambios": 0.7009481999557465,
+  "multi_cache_1_linea": [
+   3.98233040003106,
+   3.913383899955079
+  ],
+  "gorda_cache_1_linea": [
+   10.191553800017573,
+   10.020556299947202
+  ]
+ },
+ "tamano_comprimido_bytes": {
+  "v697-app:multi": 44121743,
+  "v697-app:gorda": 415403831,
+  "v697-web:multi": 25968052,
+  "php:8.5-fpm-alpine": 38893314,
+  "php:8.5-fpm": 177760167
+ },
+ "tamano_disco": {
+  "v697-app:sin-permisos": "206MB",
+  "v697-app:gorda": "1.8GB",
+  "v697-app:multi": "207MB",
+  "v697-web:multi": "92.5MB"
+ },
+ "primera_respuesta_s": {
+  "frio_volumen_nuevo": [
+   7.52460940007586,
+   9.479664699989371,
+   7.501470200018957
+  ],
+  "up_d_frio": [
+   7.167244500014931,
+   9.144071899936534,
+   7.139257200062275
+  ],
+  "tibio_volumen_existente": [
+   3.2913217999739572,
+   3.3961037000408396,
+   3.329700900008902
+  ]
+ },
+ "trampa_healthcheck": {
+  "app_murio_s": 0.7594947000034153,
+  "db_sana_s": 8.629010900040157
+ },
+ "gorda_primera_respuesta_frio_s": 9.505029699997976
+}

@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Para cada archivo .csv de DIR y sus subcarpetas, imprime 'NOMBRE: N filas', sin contar la línea de cabecera.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nfind \"$DIR\" -type f -name \"*.csv\" | while read -r file; do\n    if [ -f \"$file\" ]; then\n        lines=$(sed -n 1p \"$file\" | grep -o \",\" | wc -l)\n        total_lines=$(wc -l < \"$file\")\n        echo \"${file##*/}: $(($total_lines - $lines - 1)) filas\"\n    fi\ndone\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 132
+}

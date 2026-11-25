@@ -1,0 +1,2 @@
+neg 1 /s/negativos/1.sh
+neg 6 /s/negativos/6.sh

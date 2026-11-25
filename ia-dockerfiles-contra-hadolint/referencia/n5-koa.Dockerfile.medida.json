@@ -1,0 +1,18 @@
+{
+ "app": "n5-koa",
+ "dockerfile": "referencia/n5-koa.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:22.12.0-bookworm-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 6.8,
+ "error_build": "",
+ "bytes": 78596274,
+ "disco_mb": 327.0,
+ "usuario": "node",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

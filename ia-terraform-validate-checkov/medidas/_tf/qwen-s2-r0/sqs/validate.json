@@ -1,0 +1,86 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 3,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_queue\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 10,
+          "byte": 247
+        },
+        "end": {
+          "line": 18,
+          "column": 21,
+          "byte": 258
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_queue\" \"dead_letter_queue\"",
+        "code": "resource \"aws_queue\" \"dead_letter_queue\" {",
+        "start_line": 18,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_queue\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 14,
+          "column": 10,
+          "byte": 182
+        },
+        "end": {
+          "line": 14,
+          "column": 21,
+          "byte": 193
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_queue\" \"main_queue\"",
+        "code": "resource \"aws_queue\" \"main_queue\" {",
+        "start_line": 14,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_queue_policy\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 29,
+          "column": 10,
+          "byte": 579
+        },
+        "end": {
+          "line": 29,
+          "column": 28,
+          "byte": 597
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_queue_policy\" \"dead_letter_queue_policy\"",
+        "code": "resource \"aws_queue_policy\" \"dead_letter_queue_policy\" {",
+        "start_line": 29,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 27,
+        "values": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+$ time ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 5 > /dev/null
+
+real	0m12.025s
+user	0m1.950s
+sys	0m0.734s
+$ time ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 5 > /dev/null
+
+real	0m10.541s
+user	0m1.618s
+sys	0m0.666s
+$ time ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 10 > /dev/null
+
+real	0m5.689s
+user	0m1.415s
+sys	0m0.607s
+$ time ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 10 > /dev/null
+
+real	0m5.639s
+user	0m1.389s
+sys	0m0.645s
+$ time ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 50 > /dev/null
+
+real	0m2.639s
+user	0m1.212s
+sys	0m0.628s
+$ time ansible all -l 'all:!s46:!s48:!s49:!s50' -m raw -a revisar -f 50 > /dev/null
+
+real	0m2.615s
+user	0m1.218s
+sys	0m0.573s
+$ time ansible-playbook revisar.yml -f 50 -T 3 > /dev/null
+
+real	0m11.019s
+user	0m1.014s
+sys	0m0.485s
+$ time ansible-playbook revisar.yml -f 50 -T 3 > /dev/null
+
+real	0m10.995s
+user	0m0.969s
+sys	0m0.531s

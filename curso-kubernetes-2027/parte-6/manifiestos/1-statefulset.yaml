@@ -1,0 +1,42 @@
+# Service headless: sin IP propia; da un nombre DNS a cada pod del StatefulSet.
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  clusterIP: None
+  selector: {app: web}
+  ports: [{port: 80}]
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web
+spec:
+  serviceName: web
+  replicas: 3
+  selector:
+    matchLabels: {app: web}
+  template:
+    metadata:
+      labels: {app: web}
+    spec:
+      containers:
+        - name: web
+          image: busybox:1.37
+          # la primera vez anota quién es y cuándo nació; si el archivo ya existe, lo respeta
+          command: ["sh", "-c", "[ -f /datos/index.html ] || echo \"soy $(hostname), naci a las $(date +%T)\" > /datos/index.html; exec httpd -f -p 80 -h /datos"]
+          ports: [{containerPort: 80}]
+          readinessProbe:
+            httpGet: {path: /, port: 80}
+            initialDelaySeconds: 5
+            periodSeconds: 2
+          volumeMounts: [{name: datos, mountPath: /datos}]
+  volumeClaimTemplates:          # un PVC por réplica
+    - metadata:
+        name: datos
+      spec:
+        accessModes: [ReadWriteOnce]
+        resources:
+          requests:
+            storage: 100Mi

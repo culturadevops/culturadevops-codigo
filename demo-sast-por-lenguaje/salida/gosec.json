@@ -1,0 +1,268 @@
+{
+	"Golang errors": {},
+	"Issues": [
+		{
+			"severity": "HIGH",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "89",
+				"url": "https://cwe.mitre.org/data/definitions/89.html"
+			},
+			"rule_id": "G701",
+			"details": "SQL injection via taint analysis: (*database/sql.DB).Query",
+			"file": "/w/go/main.go",
+			"code": "47: \t}\n48: \tfilas, _ := db.Query(\"SELECT total FROM pedidos WHERE id = \" + strconv.Itoa(id))\n49: \tfmt.Fprint(w, filas)\n",
+			"line": "48",
+			"column": "22",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "HIGH",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "89",
+				"url": "https://cwe.mitre.org/data/definitions/89.html"
+			},
+			"rule_id": "G701",
+			"details": "SQL injection via taint analysis: (*database/sql.DB).Query",
+			"file": "/w/go/main.go",
+			"code": "18: \tid := r.URL.Query().Get(\"id\")\n19: \tfilas, _ := db.Query(\"SELECT nombre FROM usuarios WHERE id = \" + id)\n20: \tfmt.Fprint(w, filas)\n",
+			"line": "19",
+			"column": "22",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "HIGH",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "89",
+				"url": "https://cwe.mitre.org/data/definitions/89.html"
+			},
+			"rule_id": "G701",
+			"details": "SQL injection via taint analysis: (*database/sql.DB).Query",
+			"file": "/w/go/consultas.go",
+			"code": "8: \tsql := \"SELECT nombre FROM productos WHERE nombre LIKE '%\" + texto + \"%'\"\n9: \tfilas, _ := db.Query(sql)\n10: \treturn filas\n",
+			"line": "9",
+			"column": "22",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "HIGH",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "78",
+				"url": "https://cwe.mitre.org/data/definitions/78.html"
+			},
+			"rule_id": "G702",
+			"details": "Command injection via taint analysis: os/exec.Command",
+			"file": "/w/go/main.go",
+			"code": "25: \thost := r.URL.Query().Get(\"host\")\n26: \tsalida, _ := exec.Command(\"sh\", \"-c\", \"ping -c 1 \"+host).Output()\n27: \tw.Write(salida)\n",
+			"line": "26",
+			"column": "27",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "79",
+				"url": "https://cwe.mitre.org/data/definitions/79.html"
+			},
+			"rule_id": "G705",
+			"details": "XSS via taint analysis: fmt.Fprint",
+			"file": "/w/go/main.go",
+			"code": "54: \tetiqueta, _ := language.Parse(r.Header.Get(\"Accept-Language\"))\n55: \tfmt.Fprint(w, etiqueta)\n56: }\n",
+			"line": "55",
+			"column": "12",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "79",
+				"url": "https://cwe.mitre.org/data/definitions/79.html"
+			},
+			"rule_id": "G705",
+			"details": "XSS via taint analysis: fmt.Fprint",
+			"file": "/w/go/main.go",
+			"code": "37: \tfilas, _ := db.Query(\"SELECT nombre FROM usuarios WHERE id = ?\", r.URL.Query().Get(\"id\"))\n38: \tfmt.Fprint(w, filas)\n39: }\n",
+			"line": "38",
+			"column": "12",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "79",
+				"url": "https://cwe.mitre.org/data/definitions/79.html"
+			},
+			"rule_id": "G705",
+			"details": "XSS via taint analysis: fmt.Fprint",
+			"file": "/w/go/main.go",
+			"code": "31: \t// V3: inyección SQL a través de otro archivo\n32: \tfmt.Fprint(w, buscarProductos(db, r.URL.Query().Get(\"q\")))\n33: }\n",
+			"line": "32",
+			"column": "12",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "79",
+				"url": "https://cwe.mitre.org/data/definitions/79.html"
+			},
+			"rule_id": "G705",
+			"details": "XSS via taint analysis: fmt.Fprint",
+			"file": "/w/go/main.go",
+			"code": "19: \tfilas, _ := db.Query(\"SELECT nombre FROM usuarios WHERE id = \" + id)\n20: \tfmt.Fprint(w, filas)\n21: }\n",
+			"line": "20",
+			"column": "12",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "79",
+				"url": "https://cwe.mitre.org/data/definitions/79.html"
+			},
+			"rule_id": "G705",
+			"details": "XSS via taint analysis: (net/http.ResponseWriter).Write",
+			"file": "/w/go/main.go",
+			"code": "26: \tsalida, _ := exec.Command(\"sh\", \"-c\", \"ping -c 1 \"+host).Output()\n27: \tw.Write(salida)\n28: }\n",
+			"line": "27",
+			"column": "9",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "676",
+				"url": "https://cwe.mitre.org/data/definitions/676.html"
+			},
+			"rule_id": "G114",
+			"details": "Use of net/http serve function that has no support for setting timeouts",
+			"file": "/w/go/main.go",
+			"code": "65: \thttp.HandleFunc(\"/idioma\", idioma)\n66: \thttp.ListenAndServe(\"127.0.0.1:8080\", nil)\n67: }\n",
+			"line": "66",
+			"column": "2",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "78",
+				"url": "https://cwe.mitre.org/data/definitions/78.html"
+			},
+			"rule_id": "G204",
+			"details": "Subprocess launched with a potential tainted input or cmd arguments",
+			"file": "/w/go/main.go",
+			"code": "25: \thost := r.URL.Query().Get(\"host\")\n26: \tsalida, _ := exec.Command(\"sh\", \"-c\", \"ping -c 1 \"+host).Output()\n27: \tw.Write(salida)\n",
+			"line": "26",
+			"column": "15",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "89",
+				"url": "https://cwe.mitre.org/data/definitions/89.html"
+			},
+			"rule_id": "G202",
+			"details": "SQL string concatenation",
+			"file": "/w/go/main.go",
+			"code": "47: \t}\n48: \tfilas, _ := db.Query(\"SELECT total FROM pedidos WHERE id = \" + strconv.Itoa(id))\n49: \tfmt.Fprint(w, filas)\n",
+			"line": "48",
+			"column": "23",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "89",
+				"url": "https://cwe.mitre.org/data/definitions/89.html"
+			},
+			"rule_id": "G202",
+			"details": "SQL string concatenation",
+			"file": "/w/go/main.go",
+			"code": "18: \tid := r.URL.Query().Get(\"id\")\n19: \tfilas, _ := db.Query(\"SELECT nombre FROM usuarios WHERE id = \" + id)\n20: \tfmt.Fprint(w, filas)\n",
+			"line": "19",
+			"column": "23",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "MEDIUM",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "89",
+				"url": "https://cwe.mitre.org/data/definitions/89.html"
+			},
+			"rule_id": "G202",
+			"details": "SQL string concatenation",
+			"file": "/w/go/consultas.go",
+			"code": "7: \t// V3: el SQL se arma aquí, lejos de donde entra el dato\n8: \tsql := \"SELECT nombre FROM productos WHERE nombre LIKE '%\" + texto + \"%'\"\n9: \tfilas, _ := db.Query(sql)\n",
+			"line": "8",
+			"column": "9",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "703",
+				"url": "https://cwe.mitre.org/data/definitions/703.html"
+			},
+			"rule_id": "G104",
+			"details": "Errors unhandled",
+			"file": "/w/go/main.go",
+			"code": "65: \thttp.HandleFunc(\"/idioma\", idioma)\n66: \thttp.ListenAndServe(\"127.0.0.1:8080\", nil)\n67: }\n",
+			"line": "66",
+			"column": "2",
+			"nosec": false,
+			"suppressions": null
+		},
+		{
+			"severity": "LOW",
+			"confidence": "HIGH",
+			"cwe": {
+				"id": "703",
+				"url": "https://cwe.mitre.org/data/definitions/703.html"
+			},
+			"rule_id": "G104",
+			"details": "Errors unhandled",
+			"file": "/w/go/main.go",
+			"code": "26: \tsalida, _ := exec.Command(\"sh\", \"-c\", \"ping -c 1 \"+host).Output()\n27: \tw.Write(salida)\n28: }\n",
+			"line": "27",
+			"column": "2",
+			"nosec": false,
+			"suppressions": null
+		}
+	],
+	"Stats": {
+		"files": 2,
+		"lines": 78,
+		"nosec": 0,
+		"found": 16
+	},
+	"GosecVersion": "dev"
+}

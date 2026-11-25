@@ -1,0 +1,1 @@
+[{"file": "r0.sh", "line": 15, "endLine": 15, "column": 152, "endColumn": 156, "level": "info", "code": 2162, "message": "read without -r will mangle backslashes.", "fix": null}]

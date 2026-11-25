@@ -1,0 +1,48 @@
+# Tres CronJob cada minuto. «lento-*» tardan 90 s: más que el intervalo.
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: rapido
+spec:
+  schedule: "* * * * *"
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - {name: t, image: busybox:1.37, command: ["sh", "-c", "date +%T; sleep 2"]}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: lento-forbid
+spec:
+  schedule: "* * * * *"
+  concurrencyPolicy: Forbid          # si el anterior sigue corriendo, se salta esta vez
+  successfulJobsHistoryLimit: 5
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - {name: t, image: busybox:1.37, command: ["sh", "-c", "sleep 90"]}
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: lento-allow
+spec:
+  schedule: "* * * * *"
+  concurrencyPolicy: Allow           # el valor por defecto: se apilan
+  successfulJobsHistoryLimit: 5
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - {name: t, image: busybox:1.37, command: ["sh", "-c", "sleep 90"]}

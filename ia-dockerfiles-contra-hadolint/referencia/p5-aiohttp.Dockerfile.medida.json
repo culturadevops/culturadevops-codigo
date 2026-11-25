@@ -1,0 +1,18 @@
+{
+ "app": "p5-aiohttp",
+ "dockerfile": "referencia/p5-aiohttp.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.12.8-slim-bookworm"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 5.2,
+ "error_build": "",
+ "bytes": 52301595,
+ "disco_mb": 216.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

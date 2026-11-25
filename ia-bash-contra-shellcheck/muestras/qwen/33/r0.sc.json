@@ -1,0 +1,1 @@
+[{"file": "r0.sh", "line": 18, "endLine": 18, "column": 9, "endColumn": 17, "level": "warning", "code": 2034, "message": "filename appears unused. Verify use (or export if used externally).", "fix": null}]

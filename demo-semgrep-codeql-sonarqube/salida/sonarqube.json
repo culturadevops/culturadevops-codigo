@@ -1,0 +1,492 @@
+{
+ "seguridad": {
+  "total": 8,
+  "p": 1,
+  "ps": 500,
+  "paging": {
+   "pageIndex": 1,
+   "pageSize": 500,
+   "total": 8
+  },
+  "effortTotal": 125,
+  "issues": [
+   {
+    "key": "e46f5346-40d3-48ae-896e-181143ae642a",
+    "rule": "java:S2077",
+    "severity": "MAJOR",
+    "component": "tienda-vulnerable:java/src/main/java/tienda/Consultas.java",
+    "project": "tienda-vulnerable",
+    "line": 16,
+    "hash": "3a5474effca9c3c6ef473eda3578980a",
+    "textRange": {
+     "startLine": 16,
+     "endLine": 16,
+     "startOffset": 49,
+     "endOffset": 52
+    },
+    "flows": [
+     {
+      "locations": [
+       {
+        "component": "tienda-vulnerable:java/src/main/java/tienda/Consultas.java",
+        "textRange": {
+         "startLine": 15,
+         "endLine": 15,
+         "startOffset": 21,
+         "endOffset": 87
+        },
+        "msg": "SQL Query is dynamically formatted and assigned to 'sql'",
+        "msgFormattings": []
+       }
+      ]
+     }
+    ],
+    "status": "OPEN",
+    "message": "Make sure using a dynamically formatted SQL query is safe here.",
+    "effort": "20min",
+    "debt": "20min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "spring",
+     "bad-practice",
+     "cert",
+     "hibernate",
+     "former-hotspot",
+     "sql"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "MEDIUM"
+     },
+     {
+      "softwareQuality": "MAINTAINABILITY",
+      "severity": "LOW"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   },
+   {
+    "key": "ee850bc3-c007-42b3-a567-cac6eb72b6f1",
+    "rule": "java:S2077",
+    "severity": "MAJOR",
+    "component": "tienda-vulnerable:java/src/main/java/tienda/TiendaServlet.java",
+    "project": "tienda-vulnerable",
+    "line": 26,
+    "hash": "cecf56c3a0ac2155ad70728821cb4e48",
+    "textRange": {
+     "startLine": 26,
+     "endLine": 26,
+     "startOffset": 56,
+     "endOffset": 102
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure using a dynamically formatted SQL query is safe here.",
+    "effort": "20min",
+    "debt": "20min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "spring",
+     "bad-practice",
+     "cert",
+     "hibernate",
+     "former-hotspot",
+     "sql"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "MEDIUM"
+     },
+     {
+      "softwareQuality": "MAINTAINABILITY",
+      "severity": "LOW"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   },
+   {
+    "key": "0ed73d55-e9ec-4a01-bf4e-4e883bde0943",
+    "rule": "java:S4036",
+    "severity": "MINOR",
+    "component": "tienda-vulnerable:java/src/main/java/tienda/TiendaServlet.java",
+    "project": "tienda-vulnerable",
+    "line": 31,
+    "hash": "096f00d4d0583e2403d56f6afd4097fe",
+    "textRange": {
+     "startLine": 31,
+     "endLine": 31,
+     "startOffset": 46,
+     "endOffset": 92
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure the \"PATH\" variable only contains fixed, unwriteable directories.",
+    "effort": "15min",
+    "debt": "15min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "former-hotspot"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "LOW"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   },
+   {
+    "key": "7cfbf4cf-0722-4140-a9bb-e0d773cd14ce",
+    "rule": "java:S2077",
+    "severity": "MAJOR",
+    "component": "tienda-vulnerable:java/src/main/java/tienda/TiendaServlet.java",
+    "project": "tienda-vulnerable",
+    "line": 45,
+    "hash": "52e2a47ea946a6f74db1178fe1425bd1",
+    "textRange": {
+     "startLine": 45,
+     "endLine": 45,
+     "startOffset": 56,
+     "endOffset": 100
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure using a dynamically formatted SQL query is safe here.",
+    "effort": "20min",
+    "debt": "20min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "spring",
+     "bad-practice",
+     "cert",
+     "hibernate",
+     "former-hotspot",
+     "sql"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "MEDIUM"
+     },
+     {
+      "softwareQuality": "MAINTAINABILITY",
+      "severity": "LOW"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   },
+   {
+    "key": "58e33af0-a271-496b-bfb8-92b8721ed501",
+    "rule": "javascript:S5689",
+    "severity": "MINOR",
+    "component": "tienda-vulnerable:node/app.js",
+    "project": "tienda-vulnerable",
+    "line": 7,
+    "hash": "4af77bcf43147b78489dd9c4043bfe01",
+    "textRange": {
+     "startLine": 7,
+     "endLine": 7,
+     "startOffset": 6,
+     "endOffset": 9
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "This framework implicitly discloses version information by default. Make sure it is safe here.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "express.js",
+     "former-hotspot"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "TRUSTWORTHY",
+    "cleanCodeAttributeCategory": "RESPONSIBLE",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "LOW"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   },
+   {
+    "key": "d0bf791f-493e-41fa-a12d-0df99db80c19",
+    "rule": "php:S2077",
+    "severity": "MAJOR",
+    "component": "tienda-vulnerable:php/index.php",
+    "project": "tienda-vulnerable",
+    "line": 11,
+    "hash": "dbed780b70e6e4c30ee02f7605bac3b7",
+    "textRange": {
+     "startLine": 11,
+     "endLine": 11,
+     "startOffset": 21,
+     "endOffset": 31
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure that formatting this SQL query is safe here.",
+    "effort": "20min",
+    "debt": "20min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "bad-practice",
+     "former-hotspot",
+     "sql"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "MEDIUM"
+     },
+     {
+      "softwareQuality": "MAINTAINABILITY",
+      "severity": "LOW"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   },
+   {
+    "key": "a67a9021-dac9-4fe4-b4cd-1ffb4f27fabd",
+    "rule": "php:S2077",
+    "severity": "MAJOR",
+    "component": "tienda-vulnerable:php/index.php",
+    "project": "tienda-vulnerable",
+    "line": 27,
+    "hash": "ef126be22654a4fdaaa4036bc43e8c04",
+    "textRange": {
+     "startLine": 27,
+     "endLine": 27,
+     "startOffset": 21,
+     "endOffset": 31
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure that formatting this SQL query is safe here.",
+    "effort": "20min",
+    "debt": "20min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "bad-practice",
+     "former-hotspot",
+     "sql"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "MEDIUM"
+     },
+     {
+      "softwareQuality": "MAINTAINABILITY",
+      "severity": "LOW"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   },
+   {
+    "key": "87affac9-3157-43f8-bbfe-f62f539a9cf8",
+    "rule": "python:S4502",
+    "severity": "CRITICAL",
+    "component": "tienda-vulnerable:python/app.py",
+    "project": "tienda-vulnerable",
+    "line": 9,
+    "hash": "179643042db29a9995dc460d16749c31",
+    "textRange": {
+     "startLine": 9,
+     "endLine": 9,
+     "startOffset": 6,
+     "endOffset": 21
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure disabling CSRF protection is safe here.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+     "cwe",
+     "django",
+     "flask",
+     "former-hotspot"
+    ],
+    "creationDate": "2026-10-23T18:10:50+0000",
+    "updateDate": "2026-10-23T18:10:50+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+     {
+      "softwareQuality": "SECURITY",
+      "severity": "HIGH"
+     }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false,
+    "fromSonarQubeUpdate": false,
+    "internalTags": [],
+    "linkedTicketStatus": "NOT_LINKED"
+   }
+  ],
+  "components": [
+   {
+    "key": "tienda-vulnerable:python/app.py",
+    "enabled": true,
+    "qualifier": "FIL",
+    "name": "app.py",
+    "longName": "python/app.py",
+    "path": "python/app.py"
+   },
+   {
+    "key": "tienda-vulnerable",
+    "enabled": true,
+    "qualifier": "TRK",
+    "name": "tienda-vulnerable",
+    "longName": "tienda-vulnerable"
+   },
+   {
+    "key": "tienda-vulnerable:java/src/main/java/tienda/Consultas.java",
+    "enabled": true,
+    "qualifier": "FIL",
+    "name": "Consultas.java",
+    "longName": "java/src/main/java/tienda/Consultas.java",
+    "path": "java/src/main/java/tienda/Consultas.java"
+   },
+   {
+    "key": "tienda-vulnerable:java/src/main/java/tienda/TiendaServlet.java",
+    "enabled": true,
+    "qualifier": "FIL",
+    "name": "TiendaServlet.java",
+    "longName": "java/src/main/java/tienda/TiendaServlet.java",
+    "path": "java/src/main/java/tienda/TiendaServlet.java"
+   },
+   {
+    "key": "tienda-vulnerable:php/index.php",
+    "enabled": true,
+    "qualifier": "FIL",
+    "name": "index.php",
+    "longName": "php/index.php",
+    "path": "php/index.php"
+   },
+   {
+    "key": "tienda-vulnerable:node/app.js",
+    "enabled": true,
+    "qualifier": "FIL",
+    "name": "app.js",
+    "longName": "node/app.js",
+    "path": "node/app.js"
+   }
+  ],
+  "facets": []
+ },
+ "hotspots": {
+  "paging": {
+   "pageIndex": 1,
+   "pageSize": 500,
+   "total": 0
+  },
+  "hotspots": [],
+  "components": []
+ }
+}

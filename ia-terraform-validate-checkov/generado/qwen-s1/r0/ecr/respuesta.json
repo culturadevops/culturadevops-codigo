@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_ecr_repository\" \"docker_images\" {\n  name = \"docker-images-repo\"\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 1,
+ "s": 3.3,
+ "tokens": 79,
+ "prompt": "Escribe el código de Terraform para un repositorio de ECR para mis imágenes de Docker en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

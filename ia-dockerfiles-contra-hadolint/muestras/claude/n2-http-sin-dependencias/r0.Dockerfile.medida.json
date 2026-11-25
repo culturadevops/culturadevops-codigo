@@ -1,0 +1,27 @@
+{
+ "app": "n2-http-sin-dependencias",
+ "dockerfile": "muestras/claude/n2-http-sin-dependencias/r0.Dockerfile",
+ "hadolint": [
+  {
+   "code": "DL3018",
+   "column": 1,
+   "file": "-",
+   "level": "warning",
+   "line": 5,
+   "message": "Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`"
+  }
+ ],
+ "bases": [
+  "node:22-alpine"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 6.6,
+ "error_build": "",
+ "bytes": 61368467,
+ "disco_mb": 239.0,
+ "usuario": "node",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

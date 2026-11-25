@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Imprime los archivos de DIR (incluidas las subcarpetas) modificados en las últimas 24 horas, uno por línea.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nif [[ $# -ne 1 ]]; then\n    echo \"Uso: $0 DIR\" >&2\n    exit 1\nfi\n\ndir=$1\n\nif [[ ! -d \"$dir\" ]]; then\n    echo \"Error: '$dir' no es un directorio\" >&2\n    exit 1\nfi\n\nfind \"$dir\" -type f -mmin -1440 -print\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.015232299999999999,
+ "segundos": 3.5,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-rcwvubwn"
+}

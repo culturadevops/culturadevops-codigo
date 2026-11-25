@@ -1,0 +1,17 @@
+Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
+### state list
+docker_container.con_count[0]
+docker_container.con_count[1]
+docker_container.con_count[2]
+docker_container.con_foreach["alfa"]
+docker_container.con_foreach["beta"]
+docker_container.con_foreach["gamma"]
+docker_image.web
+### quito beta (el del medio)
+  # docker_container.con_count[1] must be replaced
+      ~ name                                        = "count-beta" -> "count-gamma" # forces replacement
+  # docker_container.con_count[2] will be destroyed
+  # (because index [2] is out of range for count)
+  # docker_container.con_foreach["beta"] will be destroyed
+  # (because key ["beta"] is not in for_each map)
+Plan: 1 to add, 0 to change, 3 to destroy.

@@ -1,0 +1,34 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 1,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Duplicate resource \"aws_ecr_repository\" configuration",
+      "detail": "A aws_ecr_repository resource named \"docker_images\" was already declared at main.tf:14,1-46. Resource names must be unique per type in each module.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 28,
+          "column": 1,
+          "byte": 521
+        },
+        "end": {
+          "line": 28,
+          "column": 46,
+          "byte": 566
+        }
+      },
+      "snippet": {
+        "context": null,
+        "code": "resource \"aws_ecr_repository\" \"docker_images\" {",
+        "start_line": 28,
+        "highlight_start_offset": 0,
+        "highlight_end_offset": 45,
+        "values": []
+      }
+    }
+  ]
+}

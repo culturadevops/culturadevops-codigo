@@ -1,0 +1,50 @@
+# Laravel 13 + PHP-FPM 8.5 + nginx + MySQL 8.4 (cultura-devops 697).
+# La versión BUENA. Las trampas son archivos compose.trampa-*.yaml que se suman a este con -f.
+name: v697-laravel
+
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secreto
+      MYSQL_ROOT_PASSWORD: secreto-root
+    volumes:
+      - dbdata:/var/lib/mysql
+    healthcheck:
+      # Por TCP (-h 127.0.0.1): durante la inicialización MySQL escucha solo por socket,
+      # así que esto no da «sano» hasta que el servidor de verdad acepta conexiones.
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-ularavel", "-psecreto", "--silent"]
+      interval: 2s
+      timeout: 3s
+      retries: 60
+    cpus: "2"
+
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: runtime
+    image: v697-app:multi
+    env_file: ${APP_ENV_FILE:-docker/app.env}
+    environment:
+      MIGRAR: ${MIGRAR:-1}
+    depends_on:
+      db:
+        condition: service_healthy
+    cpus: "2"
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      target: web
+    image: v697-web:multi
+    ports:
+      - "8697:80"
+    depends_on:
+      - app
+
+volumes:
+  dbdata:

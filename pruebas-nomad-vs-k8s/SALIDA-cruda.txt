@@ -1,0 +1,41 @@
+== 1 · LINEAS DE CONFIGURACION para el mismo servicio ==
+   Nomad (web.nomad.hcl):  19
+   Kubernetes (web.k8s.yaml): 23
+
+== 2 · LO QUE TE BAJAS ==
+   imagen de Nomad: 207MB
+   imagen de k3s:   297MB
+
+== 3 · DE CERO A «EL SERVICIO RESPONDE» ==
+   --- Nomad ---
+      listo en 13 s
+   --- k3s ---
+      listo en 1042 s
+
+== 4 · ⛔ ¿LLEGARON LOS DOS AL MISMO ESTADO? ==
+   Nomad, replicas sanas:    k3s, réplicas listas:          
+   contenedores nginx vivos en la máquina: 0
+
+== 5 · MEMORIA DEL PLANO DE CONTROL ==
+Error response from daemon: No such container: nomad
+Error response from daemon: No such container: k3s
+
+== 6 · CUANTAS PIEZAS HAY QUE TENER VIVAS ==
+   procesos dentro del contenedor de Nomad: 0
+   procesos dentro del contenedor de k3s:   0
+   piezas de k3s que se ven por nombre:
+   pods del sistema que k3s levanta solo: 0
+
+== limpio ==
+tainerd
+     containerd-shim
+     coredns
+     exe
+     k3s
+     local-path-prov
+     nginx
+     pause
+     ps
+   pods del sistema que k3s levanta solo: 4
+
+== limpio ==

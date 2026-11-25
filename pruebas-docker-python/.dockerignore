@@ -1,0 +1,7 @@
+# Lo que NO debe viajar al demonio de Docker (se mide con y sin esto en el vídeo).
+.git
+__pycache__
+*.pyc
+.venv
+node_modules
+_basura

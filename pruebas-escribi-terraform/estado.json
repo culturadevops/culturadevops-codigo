@@ -1,0 +1,10 @@
+{
+  "recursos": {
+    "db.conf": {
+      "gestionado": true
+    },
+    "web.conf": {
+      "gestionado": true
+    }
+  }
+}

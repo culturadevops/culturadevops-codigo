@@ -1,0 +1,11 @@
+route:
+  receiver: busca
+  group_by: [alertname]
+  group_wait: 1s
+  group_interval: 5s
+  repeat_interval: 1h
+receivers:
+  - name: busca
+    webhook_configs:
+      - url: http://receptor:8001/aviso
+        send_resolved: true

@@ -1,0 +1,19 @@
+{
+ "app": "g4-cmd-internal",
+ "dockerfile": "muestras/claude/g4-cmd-internal/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24",
+  "gcr.io/distroless/static-debian12:nonroot"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 17.6,
+ "error_build": "",
+ "bytes": 3075974,
+ "disco_mb": 14.1,
+ "usuario": "nonroot:nonroot",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

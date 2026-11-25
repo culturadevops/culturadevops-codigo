@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- index.js ---\nconst http = require('http');\nhttp.createServer((req, res) => { res.end('ok'); }).listen(8080, () => console.log('escuchando en 8080'));\n\n--- package.json ---\n{\n  \"name\": \"http-simple\",\n  \"version\": \"1.0.0\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"start\": \"node index.js\"\n  }\n}\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# Usar una imagen base de Node.js\nFROM node:14\n\n# Copiar el contenido del proyecto al directorio /app en la imagen\nCOPY . /app\n\n# Establecer el directorio de trabajo\nWORKDIR /app\n\n# Instalar las dependencias\nRUN npm install\n\n# Exponer el puerto 8080\nEXPOSE 8080\n\n# Comando a ejecutar la aplicación\nCMD [\"npm\", \"start\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 105
+}

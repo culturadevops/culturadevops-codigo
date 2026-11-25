@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Imprime el tamaño de cada subcarpeta directa de DIR en formato legible (como du -h), de la más grande a la más pequeña.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nif [[ $# -ne 1 ]]; then\n    echo \"Uso: $0 DIR\" >&2\n    exit 1\nfi\n\ndir=\"$1\"\n\nif [[ ! -d \"$dir\" ]]; then\n    echo \"Error: '$dir' no es un directorio\" >&2\n    exit 1\nfi\n\nfind \"$dir\" -mindepth 1 -maxdepth 1 -type d -print0 \\\n    | xargs -0 -r du -sh -- 2>/dev/null \\\n    | sort -rh\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0161896,
+ "segundos": 4.2,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-gpu26qxq"
+}

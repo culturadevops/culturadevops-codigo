@@ -1,0 +1,19 @@
+{
+ "app": "p5-aiohttp",
+ "dockerfile": "muestras/claude/p5-aiohttp/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.12-slim",
+  "python:3.12-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 7.7,
+ "error_build": "",
+ "bytes": 50771535,
+ "disco_mb": 211.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

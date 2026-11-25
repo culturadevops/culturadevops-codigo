@@ -1,0 +1,96 @@
+# Salida literal — curso MIEMBROS «Tu nube local SIN licencias»
+# Corrida: 2026-09-03. Sin retocar.
+# nubecita (imagen local, 10,5 MB) contra la CLI OFICIAL de AWS.
+
+############ ENTORNO ############
+aws-cli/2.36.19 Python/3.14.6 Linux/6.18.33.2-microsoft-standard-WSL2 docker/x86_64.amzn.2023
+
+############ EP1 · el primer bucket contra tu propia nube ############
+make_bucket: fotos
+2026-09-03 18:53:27 fotos
+
+############ EP2 · S3 NO tiene carpetas ############
+-- ls plano: 2026/ aparece como PRE(fijo), que no es una carpeta --
+                           PRE 2026/
+2026-09-03 18:53:28          8 gato.txt
+-- ls --recursive: la 'carpeta' era parte del NOMBRE --
+2026-09-03 18:53:28          6 2026/enero/nota.txt
+2026-09-03 18:53:28          8 gato.txt
+-- la API cruda: el delimitador / es quien INVENTA las carpetas --
+[
+    "2026/"
+]
+-- sin delimitador: la clave entera es el nombre --
+[
+    "2026/enero/nota.txt",
+    "gato.txt"
+]
+
+############ EP3 · DynamoDB: otro protocolo, el MISMO puerto ############
+pedidos
+-- Query: SOLO la particion de ana, y ya viene ordenado --
+[
+    "2026-01-03",
+    "2026-02-11"
+]
+-- Query con begins_with sobre la clave de ORDEN --
+1
+-- Scan: recorre la tabla ENTERA. Por eso se paga --
+3
+
+############ EP4 · SQS: recibir NO saca el mensaje, lo ESCONDE ############
+1d3cf5a2dcee492cb8398be401c1989b
+-- 1a recepcion --
+[
+    [
+        "procesa el pedido 42",
+        "1"
+    ]
+]
+-- 2a recepcion INMEDIATA: no hay nada. No se perdio: esta invisible --
+null
+{
+    "ApproximateNumberOfMessages": "0",
+    "ApproximateNumberOfMessagesNotVisible": "1",
+    "QueueArn": "arn:aws:sqs:us-east-1:000000000000:trabajos",
+    "VisibilityTimeout": "30"
+}
+
+############ EP4b · SNS: publicas UNA vez, y llega dentro de un SOBRE ############
+arn:aws:sns:us-east-1:000000000000:avisos:00000001-0000-4000-8000-000000000000
+avisos-2
+-- y esto es lo que hay en la COLA: tu mensaje NO viene solo --
+{"Type":"Notification","MessageId":"avisos-2","TopicArn":"arn:aws:sns:us-east-1:000000000000:avisos","Message":"se cayo el disco","Timestamp":"2026-09-03T18:53:34.973Z"}
+
+############ FIN ############
+
+############ EP5 · con -firmar (contenedor aparte: nubecita -firmar) ############
+-- la credencial BUENA entra --
+make_bucket: privado2
+-- la credencial MALA, y fijate en lo que AWS NO te dice nunca --
+
+aws: [ERROR]: An error occurred (SignatureDoesNotMatch) when calling the ListBuckets operation: The request signature we calculated does not match the signature you provided. nubecita dice por qué: la firma no coincide (revisa la petición canónica: ruta, consulta o cabeceras)
+
+############ EP6-7 · Lambda + lanzador (contenedor aparte: -docker) ############
+saludar2	Image	Active
+-- 1a invocacion: levanta el contenedor. FRIO --
+{"saludo":"hola, Ada","frio":true,"invocacion":1,"peticion":"00000000-0000-4000-8000-000000000004","quedanMs":19999,"contenedor":"7ff14abda72e"}
+-- 2a invocacion: MISMO contenedor. TEMPLADO --
+{"saludo":"hola, Ada","frio":false,"invocacion":2,"peticion":"00000000-0000-4000-8000-000000000005","quedanMs":19999,"contenedor":"7ff14abda72e"}
+-- la funcion FALLA. El codigo HTTP es 200 --
+200	Unhandled
+{"errorMessage":"me han pedido que falle, y he fallado","errorType":"errorString"}
+
+-- y los contenedores los levanto ELLA, no tu --
+nubecita-saludar2-2 | Up 1 second
+
+############ EP8 · -semilla: lee al arrancar y NO escribe NUNCA ############
+(contenedor recien arrancado con -semilla, sin nada en memoria)
+sha256 de la semilla ANTES:   de5bca04112fca24
+-- lo que trae puesto, sin que nadie lo suba --
+2026-09-03 18:49:11         22 contrato.txt
+-- escribo algo nuevo: entra, pero solo en memoria --
+2026-09-03 18:49:11         22 contrato.txt
+2026-09-03 18:54:36          5 h.txt
+sha256 de la semilla DESPUES: de5bca04112fca24
+-> IDENTICA. Cada prueba arranca del MISMO sitio.

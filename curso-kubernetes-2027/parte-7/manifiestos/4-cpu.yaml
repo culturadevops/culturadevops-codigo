@@ -1,0 +1,33 @@
+# El mismo trabajo de CPU con tres límites distintos.
+apiVersion: v1
+kind: Pod
+metadata: {name: cpu-200m}
+spec:
+  containers:
+    - name: api
+      image: k8s-b-api:1
+      resources:
+        requests: {cpu: 200m, memory: 64Mi}
+        limits: {cpu: 200m, memory: 64Mi}
+---
+apiVersion: v1
+kind: Pod
+metadata: {name: cpu-500m}
+spec:
+  containers:
+    - name: api
+      image: k8s-b-api:1
+      resources:
+        requests: {cpu: 500m, memory: 64Mi}
+        limits: {cpu: 500m, memory: 64Mi}
+---
+apiVersion: v1
+kind: Pod
+metadata: {name: cpu-1}
+spec:
+  containers:
+    - name: api
+      image: k8s-b-api:1
+      resources:
+        requests: {cpu: "1", memory: 64Mi}
+        limits: {cpu: "1", memory: 64Mi}

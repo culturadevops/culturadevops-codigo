@@ -1,0 +1,35 @@
+# Lo mínimo para que Jenkins cree y borre pods-agente en su espacio de nombres.
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: jenkins-agentes
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: jenkins
+  namespace: jenkins-agentes
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: jenkins-agentes
+  namespace: jenkins-agentes
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "pods/exec", "pods/log", "events", "secrets"]
+    verbs: ["get", "list", "watch", "create", "delete", "patch", "update"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: jenkins-agentes
+  namespace: jenkins-agentes
+subjects:
+  - kind: ServiceAccount
+    name: jenkins
+    namespace: jenkins-agentes
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: jenkins-agentes

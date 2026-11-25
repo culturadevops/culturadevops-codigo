@@ -1,0 +1,31 @@
+# ⚠️ Tiempos comprimidos para el laboratorio: se mide y se evalúa cada 5 s, y las alertas piden
+# aguantar 10-15 s. En producción lo normal es 15-60 s y varios minutos de `for`.
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ["alertmanager:9093"]
+
+rule_files:
+  - /etc/prometheus/alertas.yml
+
+scrape_configs:
+  - job_name: tienda
+    static_configs:
+      - targets: ["tienda:8000"]
+  - job_name: certificado
+    metrics_path: /probe
+    params:
+      module: [https]
+    static_configs:
+      - targets: ["https://api.tienda.test"]
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: blackbox:9115

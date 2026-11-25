@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lista los usuarios del sistema (de /etc/passwd) cuya shell es /bin/bash, uno por línea.\nUso: script.sh\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\ncut -d: -f1 /etc/passwd | grep '^:' | cut -d: -f7 | grep '/bin/bash' | cut -d: -f1\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 47
+}

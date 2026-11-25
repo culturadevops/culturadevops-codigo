@@ -1,0 +1,78 @@
+# Un escáner de seguridad por lenguaje: el código (SAST) y las dependencias (SCA).
+# Cada trabajo falla si encuentra algo: así el pipeline se pone en rojo antes de desplegar.
+name: seguridad
+on: [push, pull_request]
+
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    container: composer:2.10.3
+    steps:
+      - uses: actions/checkout@v4
+      - name: psalm (taint analysis)
+        working-directory: php
+        run: |
+          composer global require -q vimeo/psalm:6.20.1
+          composer dump-autoload -q
+          PSALM="$(composer global config bin-dir --absolute -q)/psalm"
+          $PSALM --init . 1 >/dev/null
+          $PSALM --taint-analysis --no-cache --no-progress
+      - name: composer (bloquea versiones con avisos de seguridad)
+        working-directory: php
+        run: composer update --no-install --no-interaction && composer audit --locked
+
+  python:
+    runs-on: ubuntu-latest
+    container: python:3.13-slim
+    steps:
+      - uses: actions/checkout@v4
+      - name: bandit
+        run: pip install -q bandit==1.9.4 && bandit -r python -q
+      - name: pip-audit
+        run: pip install -q pip-audit==2.10.1 && pip-audit -r python/requirements.txt
+
+  go:
+    runs-on: ubuntu-latest
+    container: golang:1.27.2
+    steps:
+      - uses: actions/checkout@v4
+      - name: gosec
+        working-directory: go
+        run: go run github.com/securego/gosec/v2/cmd/gosec@v2.30.0 -quiet ./...
+      - name: govulncheck
+        working-directory: go
+        run: go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
+
+  java:
+    runs-on: ubuntu-latest
+    container: maven:3.9.16-eclipse-temurin-21
+    steps:
+      - uses: actions/checkout@v4
+      - name: spotbugs + find security bugs
+        working-directory: java
+        run: mvn -q -B compile com.github.spotbugs:spotbugs-maven-plugin:4.9.3.0:check
+
+  java-dependencias:
+    runs-on: ubuntu-latest
+    container: aquasec/trivy:0.75.0
+    steps:
+      - uses: actions/checkout@v4
+      - name: trivy (dependencias del pom)
+        run: trivy fs --scanners vuln --offline-scan --exit-code 1 --severity HIGH,CRITICAL --quiet java
+
+  node:
+    runs-on: ubuntu-latest
+    container: node:22-bookworm-slim
+    steps:
+      - uses: actions/checkout@v4
+      - name: npm audit
+        working-directory: node
+        run: npm install --package-lock-only --ignore-scripts --no-audit -q && npm audit --audit-level=high
+
+  node-codigo:
+    runs-on: ubuntu-latest
+    container: python:3.13-slim
+    steps:
+      - uses: actions/checkout@v4
+      - name: njsscan
+        run: pip install -q njsscan==1.0.1 && njsscan node

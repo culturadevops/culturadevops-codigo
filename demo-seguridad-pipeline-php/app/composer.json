@@ -1,0 +1,12 @@
+{
+    "name": "demo/tienda",
+    "require": {
+        "php": ">=8.3",
+        "guzzlehttp/guzzle": "7.4.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "6.20.1",
+        "phpstan/phpstan": "2.3.1"
+    },
+    "config": {"audit": {"block-insecure": false}}
+}

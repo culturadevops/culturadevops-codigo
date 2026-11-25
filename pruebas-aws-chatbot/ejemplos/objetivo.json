@@ -1,0 +1,13 @@
+[
+  {
+    "Id": "espia",
+    "Arn": "arn:aws:sqs:us-east-2:123456789012:espia",
+    "InputTransformer": {
+      "InputPathsMap": {
+        "svc": "$.detail.servicio",
+        "ver": "$.detail.version"
+      },
+      "InputTemplate": "{\"version\":\"1.0\",\"source\":\"custom\",\"content\":{\"description\":\":rocket: <svc> <ver> desplegado\"}}"
+    }
+  }
+]

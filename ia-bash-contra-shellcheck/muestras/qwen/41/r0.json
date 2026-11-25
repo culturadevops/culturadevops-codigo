@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Comprueba que las variables de entorno DB_HOST, DB_USER y DB_PASS existen y no están vacías; imprime cuáles faltan y termina con código 1 si falta alguna.\nUso: DB_HOST=... DB_USER=... DB_PASS=... script.sh\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Comprobar si las variables de entorno necesarias existen y no están vacías\nif [ -z \"${DB_HOST}\" ] || [ -z \"${DB_USER}\" ] || [ -z \"${DB_PASS}\" ]; then\n    echo \"Faltan variables de entorno:\"\n    if [ -z \"${DB_HOST}\" ]; then echo \"DB_HOST\"; fi\n    if [ -z \"${DB_USER}\" ]; then echo \"DB_USER\"; fi\n    if [ -z \"${DB_PASS}\" ]; then echo \"DB_PASS\"; fi\n    exit 1\nfi\n\necho \" Todas las variables de entorno necesarias están definidas y no están vacías.\"\nexit 0\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 154
+}

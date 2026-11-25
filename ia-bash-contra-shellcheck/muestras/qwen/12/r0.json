@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lista los 3 archivos más grandes de DIR (incluidas las subcarpetas), uno por línea con su ruta, del más grande al más pequeño.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR no es un directorio válido\"\n    exit 1\nfi\n\nfind \"$DIR\" -type f -print0 | xargs -0 du -b | sort -nr | awk -F '\\t' '{print $2, $1}' | head -n 3\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 117
+}

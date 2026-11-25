@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Descomprime cada archivo .tar.gz de DIR en una carpeta de DIR con el mismo nombre sin la extensión.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\nfind \"$DIR\" -type f -name \"*.tar.gz\" | while read -r file; do\n    filename=$(basename \"$file\" .tar.gz)\n    mkdir -p \"$DIR/$filename\"\n    tar -xzf \"$file\" -C \"$DIR/$filename\"\ndone\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 101
+}

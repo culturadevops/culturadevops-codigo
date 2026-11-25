@@ -1,0 +1,112 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 4,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"replication_group_id\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 62,
+          "byte": 332
+        },
+        "end": {
+          "line": 18,
+          "column": 63,
+          "byte": 333
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_elasticache_replication_group\" \"redis_cluster\"",
+        "code": "resource \"aws_elasticache_replication_group\" \"redis_cluster\" {",
+        "start_line": 18,
+        "highlight_start_offset": 61,
+        "highlight_end_offset": 62,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"replication_group_name\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 19,
+          "column": 3,
+          "byte": 337
+        },
+        "end": {
+          "line": 19,
+          "column": 25,
+          "byte": 359
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_elasticache_replication_group\" \"redis_cluster\"",
+        "code": "  replication_group_name = \"terraform-redis-cluster\"",
+        "start_line": 19,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 24,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"at_rest_kms_key_id\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 29,
+          "column": 3,
+          "byte": 711
+        },
+        "end": {
+          "line": 29,
+          "column": 21,
+          "byte": 729
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_elasticache_replication_group\" \"redis_cluster\"",
+        "code": "  at_rest_kms_key_id = aws_kms_key.redis_key.id",
+        "start_line": 29,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "This object has no argument, nested block, or exported attribute named \"replication_group_name\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 134,
+          "byte": 960
+        },
+        "end": {
+          "line": 33,
+          "column": 157,
+          "byte": 983
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_elasticache_replication_group\" \"redis_cluster\"",
+        "code": "    command = \"aws elasticache describe-replication-groups --replication-group-name ${aws_elasticache_replication_group.redis_cluster.replication_group_name} --query 'ReplicationGroups[0].ReplicationGroupDescription' --output text\"",
+        "start_line": 33,
+        "highlight_start_offset": 133,
+        "highlight_end_offset": 156,
+        "values": []
+      }
+    }
+  ]
+}

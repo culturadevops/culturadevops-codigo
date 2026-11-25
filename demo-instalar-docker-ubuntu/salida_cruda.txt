@@ -1,0 +1,116 @@
+### 0 · El Ubuntu de partida
+$ . /etc/os-release && echo $PRETTY_NAME
+Ubuntu 24.04.4 LTS
+$ docker --version
+bash: line 1: docker: command not found
+
+### 1 · Prerrequisitos y la llave GPG oficial
+debconf: delaying package configuration, since apt-utils is not installed
+$ apt update && apt install ca-certificates curl   (hecho)
+$ install -m 0755 -d /etc/apt/keyrings
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+$ chmod a+r /etc/apt/keyrings/docker.asc && ls -l /etc/apt/keyrings/docker.asc
+-rw-r--r-- 1 root root 3817 Oct 23 18:00 /etc/apt/keyrings/docker.asc
+
+### 2 · El repositorio apt de Docker
+$ cat /etc/apt/sources.list.d/docker.sources
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: noble
+Components: stable
+Architectures: amd64
+Signed-By: /etc/apt/keyrings/docker.asc
+$ apt-get update 2>&1 | grep -i docker
+Get:1 https://download.docker.com/linux/ubuntu noble InRelease [48.5 kB]
+Get:2 https://download.docker.com/linux/ubuntu noble/stable amd64 Packages [86.8 kB]
+
+### 3 · Instalar los paquetes
+$ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+exit=0
+$ docker --version
+Docker version 29.9.2, build a82e528
+$ docker compose version
+Docker Compose version v5.6.1
+
+### 4 · Arrancar el servicio y probar
+# (en un Ubuntu normal lo arranca systemd solo: systemctl status docker. Aquí, sin systemd, lo lanzo a mano)
+$ docker run --rm hello-world | head -3
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+4f55086f7dd0: Pulling fs layer
+d5e71e642bf5: Download complete
+4f55086f7dd0: Download complete
+4f55086f7dd0: Pull complete
+Digest: sha256:11a3eb1597e864c51b3f56733cb2e8a90bf0c284bfc05f9444d81c558bc848aa
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+### 5 · Un usuario normal: permission denied
+ana$ docker ps
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+$ ls -l /var/run/docker.sock
+srw-rw---- 1 root docker 0 Oct 23 18:01 /var/run/docker.sock
+
+### 6 · El paso post-instalación: el grupo docker
+$ groupadd docker
+groupadd: group 'docker' already exists
+$ getent group docker
+docker:x:995:
+$ usermod -aG docker ana
+$ getent group docker
+docker:x:995:ana
+ana$ docker ps   (la terminal que ya tenía abierta)
+grupos: ana
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+ana$ newgrp docker   # o cerrar sesión y volver a entrar
+ana$ docker run --rm hello-world | head -3
+grupos: ana docker
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+### 7 · Versiones finales
+$ docker version --format 'cliente {{.Client.Version}} · servidor {{.Server.Version}}'
+cliente 29.9.2 · servidor 29.9.2
+
+### 8 · Las versiones disponibles (para fijar una)
+$ apt list --all-versions docker-ce 2>/dev/null | head -4
+Listing...
+docker-ce/noble,now 5:29.9.2-1~ubuntu.24.04~noble amd64 [installed]
+docker-ce/noble 5:29.9.1-1~ubuntu.24.04~noble amd64
+docker-ce/noble 5:29.9.0-1~ubuntu.24.04~noble amd64
+
+### 9 · Dónde guarda Docker sus datos
+$ docker info --format '{{.DockerRootDir}}'
+/var/lib/docker
+$ docker images --format '{{.Repository}}:{{.Tag}} {{.Size}}'
+hello-world:latest 25.9kB
+$ ls /var/lib/docker
+buildkit
+containerd
+containers
+engine-id
+image
+network
+plugins
+rootfs
+runtimes
+swarm
+tmp
+volumes
+
+### 10 · Desinstalar: los datos se quedan
+$ apt purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
+exit=0
+$ docker --version
+bash: line 1: docker: command not found
+$ ls /var/lib/docker | head -5
+buildkit
+containerd
+containers
+engine-id
+image
+$ du -sh /var/lib/docker
+572K	/var/lib/docker
+(contenedor de la demo borrado)

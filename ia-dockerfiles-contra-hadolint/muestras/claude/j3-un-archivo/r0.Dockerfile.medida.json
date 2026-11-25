@@ -1,0 +1,19 @@
+{
+ "app": "j3-un-archivo",
+ "dockerfile": "muestras/claude/j3-un-archivo/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "eclipse-temurin:21-jdk-alpine",
+  "eclipse-temurin:21-jre-alpine"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 20.3,
+ "error_build": "",
+ "bytes": 74089793,
+ "disco_mb": 286.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

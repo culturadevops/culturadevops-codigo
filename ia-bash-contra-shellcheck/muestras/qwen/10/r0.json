@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Imprime el tamaño total de DIR en kilobytes (solo el número) y, si pasa de LIMITE kilobytes, termina con código 2.\nUso: script.sh DIR LIMITE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\nLIMITE=$2\n\nif [ -d \"$DIR\" ]; then\n    TAMAÑO=$(du -sk \"$DIR\" | cut -f1)\n    if [ \"$TAMAÑO\" -gt \"$LIMITE\" ]; then\n        echo \"$TAMAÑO\"\n        exit 2\n    else\n        echo \"$TAMAÑO\"\n    fi\nelse\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 113
+}

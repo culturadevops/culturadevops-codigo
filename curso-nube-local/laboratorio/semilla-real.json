@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "creada": "2026-09-03T18:49:11.793519896Z",
+  "buckets": [
+    {
+      "nombre": "sembrado",
+      "creado": "2026-09-03T18:49:11.257014372Z",
+      "objetos": [
+        {
+          "clave": "contrato.txt",
+          "datos": "dW4gY29udHJhdG8gZGUgcHJ1ZWJhCg==",
+          "tipo": "text/plain",
+          "modificado": "2026-09-03T18:49:11.592712222Z"
+        }
+      ]
+    }
+  ],
+  "tablas": [],
+  "colas": [],
+  "funciones": []
+}

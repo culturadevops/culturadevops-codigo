@@ -1,0 +1,47 @@
+== 1 · levanto el servicio que va a ser medido ==
+-- el formato de exposición es TEXTO. Esto es lo que hay en /metrics:
+# HELP peticiones_total Peticiones atendidas desde el arranque.
+# TYPE peticiones_total counter
+peticiones_total{ruta="/",codigo="200"} 65
+peticiones_total{ruta="/",codigo="500"} 4
+peticiones_total{ruta="/api/libros",codigo="200"} 71
+peticiones_total{ruta="/api/libros",codigo="500"} 6
+peticiones_total{ruta="/login",codigo="200"} 80
+peticiones_total{ruta="/login",codigo="500"} 2
+peticiones_total{ruta="/salud",codigo="200"} 65
+peticiones_total{ruta="/salud",codigo="500"} 7
+# HELP latencia_segundos_media Latencia medi
+
+== 2 · levanto prometeillo, que va a buscarlas cada 2 segundos ==
+== 3 · Grafana OFICIAL, imagen sin tocar ==
+   esperando a Grafana...
+{
+  "database": "ok",
+  "version": "13.2.1",
+  "commit": "56cd3e9288d8255fecebe5d05b48d191f50674b5"
+}
+== 4 · le digo a Grafana que esto es un Prometheus ==
+{"datasource":{"id":1,"uid":"efxnqpmr21la8a","orgId":1,"name":"prometeillo","type":"prometheus","typeLogoUrl":"public/plugins/prometheus/img/prometheus_logo.svg","access":"proxy","url":"http://prometeillo:9090","user":"","database":"","basicAuth":false,"basicAuthUser":"","withCredentials":false,"isDefault":true,"jsonData":{},"secureJsonFields":{},"version":1,"readOnly":false,"apiVersion":""},"id":1,"message":"Datasource added","name":"prometeillo"}
+== 5 · el botón de «Guardar y probar» de Grafana, por su API ==
+   uid=efxnqpmr21la8a
+{"details":{"application":"Prometheus","features":{"rulerApiEnabled":false}},"message":"Successfully queried the Prometheus API.","status":"OK"}
+
+== 6 · LA PRUEBA DE VERDAD: un panel pidiendo datos a través de Grafana ==
+   (esto es exactamente lo que manda un panel de serie temporal al cargarse)
+   Grafana devolvio 8 series al panel
+     /            codigo=200  4 puntos  ultimo=428
+     /            codigo=500  4 puntos  ultimo=20
+     /api/libros  codigo=200  4 puntos  ultimo=397
+     /api/libros  codigo=500  4 puntos  ultimo=26
+
+   ^ Grafana pinto esto sin saber que detras hay 200 lineas de Python.
+
+== 7 · LA CARDINALIDAD: qué pasa si etiquetas por usuario ==
+   series ahora mismo, sin etiqueta de usuario: 8
+   ...reinicio la app con una etiqueta usuario="uN" y espero 20 segundos...
+   series con la etiqueta de usuario:           1853
+   ^ y esto sube para siempre, con cada usuario nuevo. Ese es el coste que se paga.
+
+== 8 · la métrica que NADIE expone y siempre está: up ==
+   up {'instance': 'app:9101', 'job': 'demo', '__name__': 'up'} = 1.0
+   ^ la escribe el que recoge, no el medido. Por eso puedes alertar de algo muerto.

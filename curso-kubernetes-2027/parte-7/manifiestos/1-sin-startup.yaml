@@ -1,0 +1,14 @@
+# La app tarda 30 s en arrancar. Solo liveness: 3 fallos cada 5 s = la mata a los ~15 s.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sin-startup
+spec:
+  containers:
+    - name: api
+      image: k8s-b-api:1
+      env: [{name: ARRANQUE_SEGUNDOS, value: "30"}]
+      livenessProbe:
+        httpGet: {path: /salud, port: 8080}
+        periodSeconds: 5
+        failureThreshold: 3

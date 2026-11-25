@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Añade a FILE una línea con la fecha de hoy (AAAA-MM-DD) y el tamaño total de DIR en bytes, separados por un espacio.\nUso: script.sh DIR FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\nFILE=$2\n\nDATE=$(date +%Y-%m-%d)\nSIZE=$(du -sb \"$DIR\" | awk '{print $1}')\n\necho \"$DATE $SIZE\" >> \"$FILE\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 52
+}

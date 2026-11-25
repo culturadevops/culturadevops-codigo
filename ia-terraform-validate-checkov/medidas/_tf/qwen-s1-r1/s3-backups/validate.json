@@ -1,0 +1,140 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 3,
+  "warning_count": 2,
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "summary": "Argument is deprecated",
+      "detail": "Use the aws_s3_bucket_acl resource instead",
+      "address": "aws_s3_bucket.replication_bucket",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 88,
+          "column": 12,
+          "byte": 1839
+        },
+        "end": {
+          "line": 88,
+          "column": 21,
+          "byte": 1848
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"replication_bucket\"",
+        "code": "  acl    = \"private\"",
+        "start_line": 88,
+        "highlight_start_offset": 11,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "warning",
+      "summary": "Argument is deprecated",
+      "detail": "Use the aws_s3_bucket_acl resource instead",
+      "address": "aws_s3_bucket.access_logs_bucket",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 83,
+          "column": 12,
+          "byte": 1727
+        },
+        "end": {
+          "line": 83,
+          "column": 21,
+          "byte": 1736
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"access_logs_bucket\"",
+        "code": "  acl    = \"private\"",
+        "start_line": 83,
+        "highlight_start_offset": 11,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"public_access_block\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 19,
+          "column": 3,
+          "byte": 306
+        },
+        "end": {
+          "line": 19,
+          "column": 22,
+          "byte": 325
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"backup_bucket\"",
+        "code": "  public_access_block {",
+        "start_line": 19,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 21,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"event_notification\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 36,
+          "column": 3,
+          "byte": 704
+        },
+        "end": {
+          "line": 36,
+          "column": 21,
+          "byte": 722
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"backup_bucket\"",
+        "code": "  event_notification {",
+        "start_line": 36,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"cross_region_replication\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 70,
+          "column": 3,
+          "byte": 1418
+        },
+        "end": {
+          "line": 70,
+          "column": 27,
+          "byte": 1442
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"backup_bucket\"",
+        "code": "  cross_region_replication {",
+        "start_line": 70,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 26,
+        "values": []
+      }
+    }
+  ]
+}

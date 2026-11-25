@@ -1,0 +1,8 @@
+Python 3.14.10 (main, Oct 28 2026, 01:59:47) [GCC 14.2.0]
+f-string : cat informe.txt; rm -rf /tmp/x
+tipo     : Template
+strings  : ('cat ', '')
+valores  : ('informe.txt; rm -rf /tmp/x',)
+t-string : cat 'informe.txt; rm -rf /tmp/x'
+$ python3.14 -c "lazy import json"
+SyntaxError: invalid syntax

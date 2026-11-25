@@ -1,0 +1,17 @@
+### con el nombre de la red como TEXTO (5 intentos desde cero)
+  intento 1: bien
+  intento 2: bien
+  intento 3: bien
+  intento 4: bien
+  intento 5: bien
+### grafo (terraform graph) con texto:
+  "docker_container.web" -> "docker_image.web";
+### con REFERENCIA docker_network.red.name (5 intentos)
+  intento 1: bien
+  intento 2: bien
+  intento 3: bien
+  intento 4: bien
+  intento 5: bien
+### grafo con referencia:
+  "docker_container.web" -> "docker_image.web";
+  "docker_container.web" -> "docker_network.red";

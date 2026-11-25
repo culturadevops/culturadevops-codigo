@@ -1,0 +1,34 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 1,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"dead_letter_target_arn\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 94,
+          "column": 3,
+          "byte": 2276
+        },
+        "end": {
+          "line": 94,
+          "column": 25,
+          "byte": 2298
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sqs_queue\" \"main_queue_with_dead_letter\"",
+        "code": "  dead_letter_target_arn = aws_sqs_queue.dead_letter_target.arn",
+        "start_line": 94,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 24,
+        "values": []
+      }
+    }
+  ]
+}

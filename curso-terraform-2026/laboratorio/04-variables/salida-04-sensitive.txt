@@ -1,0 +1,22 @@
+### apply con clave_bd=Sup3rS3creta-2026
+      + env                                         = (sensitive value)
+Changes to Outputs:
+  + clave = (sensitive value)
+  + url   = "http://localhost:8090"
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+Outputs:
+clave = <sensitive>
+url = "http://localhost:8090"
+### terraform output
+clave = <sensitive>
+url = "http://localhost:8090"
+### terraform output clave
+"Sup3rS3creta-2026"
+### terraform output -raw clave
+Sup3rS3creta-2026
+### grep en terraform.tfstate
+2
+8:      "value": "Sup3rS3creta-2026",
+54:              "CLAVE_BD=Sup3rS3creta-2026"
+### docker inspect
+CLAVE_BD=Sup3rS3creta-2026

@@ -1,0 +1,22 @@
+{
+ "app": "g4-cmd-internal",
+ "dockerfile": "muestras/qwen/g4-cmd-internal/r0.Dockerfile",
+ "hadolint": [
+  {
+   "code": "DL3007",
+   "column": 1,
+   "file": "-",
+   "level": "warning",
+   "line": 18,
+   "message": "Using latest is prone to errors if the image will ever update. Pin the version explicitly to a release tag"
+  }
+ ],
+ "bases": [
+  "golang:1.24",
+  "alpine:latest"
+ ],
+ "latest": true,
+ "construye": false,
+ "segundos_build": 0.5,
+ "error_build": "#9 ERROR: failed to calculate checksum of ref g7x334u8qbm68w1z2klnpk8ou::padx89yic0p5s42gfjovektdd: \"/go.sum\": not found\nERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref g7x334u8qbm68w1z2klnpk8ou::padx89yic0p5s42gfjovektdd: \"/go.sum\": not found"
+}

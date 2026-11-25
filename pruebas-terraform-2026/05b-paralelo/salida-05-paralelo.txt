@@ -1,0 +1,4 @@
+### crear 12 contenedores (5 pasadas, ms)
+  -parallelism=1                 7225   7055   7140   7151   7128   media 7139 ms
+  por omision (10)               3178   3141   3185   3134   3140   media 3155 ms
+  -parallelism=20                2843   2883   2841   2843   2888   media 2859 ms

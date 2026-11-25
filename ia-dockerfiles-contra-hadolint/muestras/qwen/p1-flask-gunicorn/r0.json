@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- README.md ---\nEn producción: gunicorn -b 0.0.0.0:8080 app:app\n\n--- app.py ---\nfrom flask import Flask\n\napp = Flask(__name__)\n\n\n@app.get('/')\ndef inicio():\n    return 'ok'\n\n--- requirements.txt ---\nflask==3.1.0\ngunicorn==23.0.0\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# Use una imagen base de Python\nFROM python:3.11-slim\n\n# Establecer el trabajo actual como directorio de trabajo\nWORKDIR /app\n\n# Copiar los archivos requirements.txt y app.py al directorio de trabajo\nCOPY requirements.txt .\nCOPY app.py .\n\n# Instalar las dependencias\nRUN pip install --no-cache-dir -r requirements.txt\n\n# Exponer el puerto 8080\nEXPOSE 8080\n\n# Comando a ejecutar la aplicación\nCMD [\"gunicorn\", \"--bind\", \"0.0.0.0:8080\", \"app:app\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 141
+}

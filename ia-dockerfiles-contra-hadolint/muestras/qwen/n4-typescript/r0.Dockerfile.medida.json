@@ -1,0 +1,18 @@
+{
+ "app": "n4-typescript",
+ "dockerfile": "muestras/qwen/n4-typescript/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:18-alpine"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 15.1,
+ "error_build": "",
+ "bytes": 56229767,
+ "disco_mb": 232.0,
+ "usuario": "",
+ "root": true,
+ "arranca": true,
+ "error_arranque": ""
+}

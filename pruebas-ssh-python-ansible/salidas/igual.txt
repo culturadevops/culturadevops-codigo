@@ -1,0 +1,5 @@
+$ python comparar.py; echo "código de salida: $?"
+python : {'error': 4, 'rc=0': 45, 'rc=2': 1}
+ansible: {'error': 4, 'rc=0': 45, 'rc=2': 1}
+hosts con el mismo estado y la misma salida: 50 de 50
+código de salida: 0

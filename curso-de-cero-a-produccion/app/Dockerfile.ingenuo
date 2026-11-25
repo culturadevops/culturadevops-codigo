@@ -1,0 +1,6 @@
+# El Dockerfile de casi todos los tutoriales: la imagen completa, y como root.
+FROM python:3.13
+RUN pip install --no-cache-dir "psycopg[binary]==3.2.*"
+COPY tienda.py /app/tienda.py
+WORKDIR /app
+CMD ["python", "-u", "tienda.py"]

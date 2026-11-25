@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- app.js ---\nimport Fastify from 'fastify';\nconst app = Fastify({ logger: true });\napp.get('/', async () => 'ok');\nawait app.listen({ port: 8080, host: '0.0.0.0' });\n\n--- package-lock.json --- (existe; no se muestra: 639 líneas)\n\n--- package.json ---\n{\n  \"name\": \"api-fastify\",\n  \"version\": \"1.0.0\",\n  \"main\": \"app.js\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"start\": \"node app.js\"\n  },\n  \"dependencies\": {\n    \"fastify\": \"^5.2.1\"\n  }\n}\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# syntax=docker/dockerfile:1\n\nFROM node:22-alpine AS deps\nWORKDIR /app\nCOPY package.json package-lock.json ./\nRUN npm ci --omit=dev && npm cache clean --force\n\nFROM node:22-alpine AS runtime\nENV NODE_ENV=production\nWORKDIR /app\n\nCOPY --from=deps --chown=node:node /app/node_modules ./node_modules\nCOPY --chown=node:node package.json app.js ./\n\nUSER node\n\nEXPOSE 8080\n\nHEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3 \\\n  CMD wget -qO- http://127.0.0.1:8080/ || exit 1\n\nCMD [\"node\", \"app.js\"]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0205393,
+ "segundos": 4.9,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v711-9sd7vo7z"
+}

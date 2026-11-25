@@ -1,0 +1,14 @@
+$ time timeout 200  python flota.py -ingenuo -hosts s48.txt; echo "código de salida: $?"
+s48    ERR  120.1s  ConnectionLost: Login timeout expired
+1 hosts · 0 ok · 0 con código distinto de 0 · 1 sin respuesta · 120.1s en total
+
+real	2m0.285s
+user	0m0.107s
+sys	0m0.034s
+código de salida: 2
+$ cd /root && python flota.py -ingenuo -hosts s49.txt
+s49      0   30.1s  s49 disco 41%
+1 hosts · 1 ok · 0 con código distinto de 0 · 0 sin respuesta · 30.1s en total
+$ cd /root && python flota.py -ingenuo -hosts s50.txt
+s50    ERR    3.1s  OSError: [Errno 113] Connect call failed ('10.80.0.60', 22)
+1 hosts · 0 ok · 0 con código distinto de 0 · 1 sin respuesta · 3.1s en total

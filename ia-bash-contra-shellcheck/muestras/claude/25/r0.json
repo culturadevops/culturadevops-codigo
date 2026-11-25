@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lee el archivo de configuración FILE (líneas CLAVE=valor; las que empiezan con # son comentarios) e imprime el valor de la clave CLAVE.\nUso: script.sh FILE CLAVE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\n# Uso: script.sh FILE CLAVE\n# Imprime el valor de CLAVE en un archivo de configuración con líneas CLAVE=valor.\nset -euo pipefail\n\nif [[ $# -ne 2 ]]; then\n    echo \"Uso: $(basename \"$0\") FILE CLAVE\" >&2\n    exit 2\nfi\n\nfile=$1\nkey=$2\n\nif [[ ! -f $file || ! -r $file ]]; then\n    echo \"Error: no se puede leer el archivo '$file'\" >&2\n    exit 2\nfi\n\nif [[ -z $key ]]; then\n    echo \"Error: la clave no puede estar vacía\" >&2\n    exit 2\nfi\n\nfound=0\nvalue=\"\"\n\nwhile IFS= read -r line || [[ -n $line ]]; do\n    line=${line%$'\\r'}\n    # Quitar espacios iniciales\n    trimmed=${line#\"${line%%[![:space:]]*}\"}\n    # Ignorar líneas vacías y comentarios\n    [[ -z $trimmed || $trimmed == \\#* ]] && continue\n    [[ $trimmed == *=* ]] || continue\n\n    k=${trimmed%%=*}\n    v=${trimmed#*=}\n    # Quitar espacios finales de la clave y espacios iniciales/finales del valor\n    k=${k%\"${k##*[![:space:]]}\"}\n    v=${v#\"${v%%[![:space:]]*}\"}\n    v=${v%\"${v##*[![:space:]]}\"}\n\n    if [[ $k == \"$key\" ]]; then\n        # Quitar comillas envolventes si las hay\n        if [[ ${#v} -ge 2 && ( ( $v == \\\"*\\\" ) || ( $v == \\'*\\' ) ) ]]; then\n            v=${v:1:${#v}-2}\n        fi\n        value=$v\n        found=1\n        # La última aparición prevalece\n    fi\ndone < \"$file\"\n\nif [[ $found -eq 1 ]]; then\n    printf '%s\\n' \"$value\"\n    exit 0\nelse\n    echo \"Error: clave '$key' no encontrada en '$file'\" >&2\n    exit 1\nfi\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.027281599999999996,
+ "segundos": 9.0,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-bgj1yeig"
+}

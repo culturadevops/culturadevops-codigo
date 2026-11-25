@@ -1,0 +1,86 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 3,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 37,
+          "column": 5,
+          "byte": 746
+        },
+        "end": {
+          "line": 37,
+          "column": 12,
+          "byte": 753
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example_bucket\"",
+        "code": "    enabled = true",
+        "start_line": 37,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"rule\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 38,
+          "column": 5,
+          "byte": 766
+        },
+        "end": {
+          "line": 38,
+          "column": 9,
+          "byte": 770
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket\" \"example_bucket\"",
+        "code": "    rule {",
+        "start_line": 38,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 8,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Duplicate resource \"aws_cloudfront_distribution\" configuration",
+      "detail": "A aws_cloudfront_distribution resource named \"example_distribution\" was already declared at main.tf:52,1-62. Resource names must be unique per type in each module.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 163,
+          "column": 1,
+          "byte": 3765
+        },
+        "end": {
+          "line": 163,
+          "column": 62,
+          "byte": 3826
+        }
+      },
+      "snippet": {
+        "context": null,
+        "code": "resource \"aws_cloudfront_distribution\" \"example_distribution\" {",
+        "start_line": 163,
+        "highlight_start_offset": 0,
+        "highlight_end_offset": 61,
+        "values": []
+      }
+    }
+  ]
+}

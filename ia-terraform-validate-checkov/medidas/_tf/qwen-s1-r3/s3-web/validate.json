@@ -1,0 +1,320 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 12,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"role\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 188,
+          "column": 69,
+          "byte": 4316
+        },
+        "end": {
+          "line": 188,
+          "column": 70,
+          "byte": 4317
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_replication_configuration\" \"static_website\"",
+        "code": "resource \"aws_s3_bucket_replication_configuration\" \"static_website\" {",
+        "start_line": 188,
+        "highlight_start_offset": 68,
+        "highlight_end_offset": 69,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"bucket\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 196,
+          "column": 17,
+          "byte": 4441
+        },
+        "end": {
+          "line": 196,
+          "column": 18,
+          "byte": 4442
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_replication_configuration\" \"static_website\"",
+        "code": "    destination {",
+        "start_line": 196,
+        "highlight_start_offset": 16,
+        "highlight_end_offset": 17,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"bucket_arn\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 197,
+          "column": 7,
+          "byte": 4450
+        },
+        "end": {
+          "line": 197,
+          "column": 17,
+          "byte": 4460
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_replication_configuration\" \"static_website\"",
+        "code": "      bucket_arn = \"arn:aws:s3:::my-cross-region-bucket\"",
+        "start_line": 197,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 16,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 77,
+          "column": 5,
+          "byte": 1714
+        },
+        "end": {
+          "line": 77,
+          "column": 12,
+          "byte": 1721
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "    enabled = true",
+        "start_line": 77,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"days\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 94,
+          "column": 7,
+          "byte": 2033
+        },
+        "end": {
+          "line": 94,
+          "column": 11,
+          "byte": 2037
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "      days = 365",
+        "start_line": 94,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"transition\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 86,
+          "column": 7,
+          "byte": 1909
+        },
+        "end": {
+          "line": 86,
+          "column": 17,
+          "byte": 1919
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "      transition    = \"30 days\"",
+        "start_line": 86,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 16,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"transition\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 81,
+          "column": 7,
+          "byte": 1793
+        },
+        "end": {
+          "line": 81,
+          "column": 17,
+          "byte": 1803
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "      transition    = \"30 days\"",
+        "start_line": 81,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 16,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_kms_key_grant\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 123,
+          "column": 10,
+          "byte": 2654
+        },
+        "end": {
+          "line": 123,
+          "column": 29,
+          "byte": 2673
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kms_key_grant\" \"static_website\"",
+        "code": "resource \"aws_kms_key_grant\" \"static_website\" {",
+        "start_line": 123,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 28,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_s3_bucket_website\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 10,
+          "byte": 271
+        },
+        "end": {
+          "line": 18,
+          "column": 33,
+          "byte": 294
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_website\" \"static_website\"",
+        "code": "resource \"aws_s3_bucket_website\" \"static_website\" {",
+        "start_line": 18,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"arn\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 140,
+          "column": 50,
+          "byte": 3163
+        },
+        "end": {
+          "line": 140,
+          "column": 51,
+          "byte": 3164
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sns_topic_policy\" \"static_website\"",
+        "code": "resource \"aws_sns_topic_policy\" \"static_website\" {",
+        "start_line": 140,
+        "highlight_start_offset": 49,
+        "highlight_end_offset": 50,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"topic_arn\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 141,
+          "column": 3,
+          "byte": 3168
+        },
+        "end": {
+          "line": 141,
+          "column": 12,
+          "byte": 3177
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sns_topic_policy\" \"static_website\"",
+        "code": "  topic_arn = aws_sns_topic.static_website.arn",
+        "start_line": 141,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_kms_key_rotation_policy\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 118,
+          "column": 10,
+          "byte": 2514
+        },
+        "end": {
+          "line": 118,
+          "column": 39,
+          "byte": 2543
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kms_key_rotation_policy\" \"static_website\"",
+        "code": "resource \"aws_kms_key_rotation_policy\" \"static_website\" {",
+        "start_line": 118,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 38,
+        "values": []
+      }
+    }
+  ]
+}

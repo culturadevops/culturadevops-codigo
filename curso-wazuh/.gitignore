@@ -1,0 +1,27 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.env
+
+# Datos que generan los contenedores
+datos/
+volumes/
+
+# De este curso
+config/wazuh_indexer_ssl_certs/
+*.pem
+*.key
+windows/sysmon/
+windows/*.msi
+windows/*.zip

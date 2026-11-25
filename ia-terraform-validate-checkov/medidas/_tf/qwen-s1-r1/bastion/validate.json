@@ -1,0 +1,112 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 4,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"roles\" is not expected here. Did you mean \"role\"?",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 68,
+          "column": 3,
+          "byte": 1754
+        },
+        "end": {
+          "line": 68,
+          "column": 8,
+          "byte": 1759
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_iam_instance_profile\" \"bastion_host\"",
+        "code": "  roles = [aws_iam_role.bastion_host.arn]",
+        "start_line": 68,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 7,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"disable_api_terminate\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 47,
+          "column": 3,
+          "byte": 1167
+        },
+        "end": {
+          "line": 47,
+          "column": 24,
+          "byte": 1188
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"bastion_host\"",
+        "code": "  disable_api_terminate = true",
+        "start_line": 47,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 23,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"iam_instance_profile\" are not expected here. Did you mean to define argument \"iam_instance_profile\"? If so, use the equals sign to assign it a value.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 61,
+          "column": 3,
+          "byte": 1578
+        },
+        "end": {
+          "line": 61,
+          "column": 23,
+          "byte": 1598
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"bastion_host\"",
+        "code": "  iam_instance_profile {",
+        "start_line": 61,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 22,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 54,
+          "column": 5,
+          "byte": 1401
+        },
+        "end": {
+          "line": 54,
+          "column": 23,
+          "byte": 1419
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"bastion_host\"",
+        "code": "    encryption_enabled = true",
+        "start_line": 54,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 22,
+        "values": []
+      }
+    }
+  ]
+}

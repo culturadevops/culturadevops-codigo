@@ -1,0 +1,24 @@
+$ cd /root && ansible all -m raw -a revisar -f 50 -T 3 > adhoc.txt 2>&1; echo "código de salida: $?"; grep -E '^s(01|13|46|48|49|50) ' adhoc.txt
+código de salida: 4
+s01 | CHANGED | rc=0 >>
+s01 disco 41%
+s13 | FAILED | rc=2 >>
+s13 disco 97%
+s46 | UNREACHABLE! => {
+s48 | UNREACHABLE! => {
+s50 | UNREACHABLE! => {
+s49 | CHANGED | rc=0 >>
+s49 disco 41%
+$ cd /root && ansible-playbook revisar.yml -f 50 -T 3 > play.txt 2>&1; echo "código de salida: $?"; grep -E '^fatal' play.txt; grep -E '^s(01|13|46|48|49|50) ' play.txt
+código de salida: 4
+fatal: [s46]: UNREACHABLE! => {"changed": false, "msg": "Task failed: Failed to connect to the host via ssh: admin@s46: Permission denied (publickey).", "unreachable": true}
+fatal: [s13]: FAILED! => {"changed": true, "msg": "non-zero return code", "rc": 2, "stderr": "Shared connection to s13 closed.\r\n", "stderr_lines": ["Shared connection to s13 closed."], "stdout": "s13 disco 97%\r\nrevisar: disco casi lleno\r\n", "stdout_lines": ["s13 disco 97%", "revisar: disco casi lleno"]}
+fatal: [s48]: UNREACHABLE! => {"changed": false, "msg": "Task failed: Failed to connect to the host via ssh: Connection timed out during banner exchange\r\nConnection to 10.80.0.58 port 22 timed out", "unreachable": true}
+fatal: [s50]: UNREACHABLE! => {"changed": false, "msg": "Task failed: Failed to connect to the host via ssh: ssh: connect to host s50 port 22: Connection timed out", "unreachable": true}
+fatal: [s49]: FAILED! => {"changed": false, "msg": "Task failed: Timed out after 10 second(s).", "timedout": {"frame": "Configure `DISPLAY_TRACEBACK` to see a traceback on timeout errors.", "period": 10}}
+s01                        : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+s13                        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+s46                        : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+s48                        : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+s49                        : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+s50                        : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0

@@ -1,0 +1,7 @@
+# TRAMPA 2: depends_on sin esperar a que MySQL esté sano. Compose arranca la app en cuanto
+# el contenedor de MySQL EXISTE, no cuando acepta conexiones.
+services:
+  app:
+    depends_on:
+      db:
+        condition: service_started

@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_version = \">= 1.5.0\"\n\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 5.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nvariable \"app_name\" {\n  description = \"Nombre de la aplicación\"\n  type        = string\n  default     = \"mi-aplicacion\"\n}\n\nvariable \"environment\" {\n  description = \"Entorno de despliegue (dev, staging, prod)\"\n  type        = string\n  default     = \"dev\"\n}\n\nvariable \"retention_in_days\" {\n  description = \"Días de retención de los logs\"\n  type        = number\n  default     = 30\n}\n\nresource \"aws_cloudwatch_log_group\" \"app\" {\n  name              = \"/aplicacion/${var.app_name}/${var.environment}\"\n  retention_in_days = var.retention_in_days\n\n  tags = {\n    Application = var.app_name\n    Environment = var.environment\n    ManagedBy   = \"terraform\"\n  }\n}\n\noutput \"log_group_name\" {\n  description = \"Nombre del grupo de logs\"\n  value       = aws_cloudwatch_log_group.app.name\n}\n\noutput \"log_group_arn\" {\n  description = \"ARN del grupo de logs\"\n  value       = aws_cloudwatch_log_group.app.arn\n}\n```",
+ "modelo": "claude-opus-5-5",
+ "s": 5.5,
+ "usd": 0.020955400000000002,
+ "error": false,
+ "prompt": "Escribe el código de Terraform para un grupo de logs de CloudWatch para mi aplicación en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

@@ -1,0 +1,18 @@
+{
+ "app": "p1-flask-gunicorn",
+ "dockerfile": "muestras/qwen/p1-flask-gunicorn/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.11-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 10.0,
+ "error_build": "",
+ "bytes": 51579649,
+ "disco_mb": 212.0,
+ "usuario": "",
+ "root": true,
+ "arranca": true,
+ "error_arranque": ""
+}

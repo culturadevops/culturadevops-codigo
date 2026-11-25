@@ -1,0 +1,7 @@
+# Clúster del 877: un solo nodo, imagen fijada (la que trae por defecto kind v0.30.0).
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: jk-b-k8s
+nodes:
+  - role: control-plane
+    image: kindest/node:v1.34.0@sha256:7416a61b42b1662ca6ca89f02028ac133a309a2a30ba309614e8ec94d976dc5a

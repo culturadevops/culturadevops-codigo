@@ -1,0 +1,5 @@
+# El «servicio» de prueba en el 8080. Mientras se llama .apagado, nginx no lo carga.
+server {
+    listen 8080;
+    location / { return 200 "ok desde el servicio\n"; }
+}

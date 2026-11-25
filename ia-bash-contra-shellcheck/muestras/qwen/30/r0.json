@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Crea en DEST un respaldo tar.gz de DIR con la fecha y la hora en el nombre, y luego deja en DEST solo los 3 respaldos .tar.gz más recientes.\nUso: script.sh DIR DEST\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\nDEST=$2\n\n# Verifica si los directorios existen\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio $DIR no existe.\"\n    exit 1\nfi\n\nif [ ! -d \"$DEST\" ]; then\n    echo \"El directorio $DEST no existe.\"\n    exit 1\nfi\n\n# Crea el nombre del archivo de respaldo con la fecha y hora\nTIMESTAMP=$(date +\"%Y%m%d_%H%M%S\")\nBACKUP_FILE=\"$DEST/backup_$DIR_$TIMESTAMP.tar.gz\"\n\n# Realiza el respaldo\ntar -czf \"$BACKUP_FILE\" -C \"$DIR\" .\n\n# Lista todos los archivos .tar.gz en DEST\ntar_files=$(find \"$DEST\" -maxdepth 1 -type f -name \"*.tar.gz\")\n\n# Mantiene solo los 3 archivos más recientes\necho \"$tar_files\" | sort -r | sed -n '4,$p' | xargs -d '\\n' rm -f\n\necho \"Respaldo creado: $BACKUP_FILE\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 238
+}

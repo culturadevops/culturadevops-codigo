@@ -1,0 +1,86 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 3,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"roles\" is not expected here. Did you mean \"role\"?",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 73,
+          "column": 3,
+          "byte": 1906
+        },
+        "end": {
+          "line": 73,
+          "column": 8,
+          "byte": 1911
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_iam_instance_profile\" \"bastion_host\"",
+        "code": "  roles = [aws_iam_role.bastion_host.arn]",
+        "start_line": 73,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 7,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"iam_instance_profile\" are not expected here. Did you mean to define argument \"iam_instance_profile\"? If so, use the equals sign to assign it a value.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 66,
+          "column": 3,
+          "byte": 1730
+        },
+        "end": {
+          "line": 66,
+          "column": 23,
+          "byte": 1750
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"bastion_host\"",
+        "code": "  iam_instance_profile {",
+        "start_line": 66,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 22,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 59,
+          "column": 5,
+          "byte": 1553
+        },
+        "end": {
+          "line": 59,
+          "column": 23,
+          "byte": 1571
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"bastion_host\"",
+        "code": "    encryption_enabled = true",
+        "start_line": 59,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 22,
+        "values": []
+      }
+    }
+  ]
+}

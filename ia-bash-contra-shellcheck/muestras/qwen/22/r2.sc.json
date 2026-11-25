@@ -1,0 +1,1 @@
+[{"file": "r2.sh", "line": 13, "endLine": 13, "column": 30, "endColumn": 32, "level": "error", "code": 2145, "message": "Argument mixes string and array. Use * or separate argument.", "fix": null}]

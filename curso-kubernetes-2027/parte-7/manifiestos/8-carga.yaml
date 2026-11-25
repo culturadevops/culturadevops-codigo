@@ -1,0 +1,16 @@
+# 4 bucles pidiendo trabajo de CPU sin parar.
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: carga}
+spec:
+  replicas: 4
+  selector:
+    matchLabels: {app: carga}
+  template:
+    metadata:
+      labels: {app: carga}
+    spec:
+      containers:
+        - name: carga
+          image: busybox:1.37
+          command: ["sh", "-c", "while true; do wget -q -O /dev/null 'http://web/cpu?n=500000'; done"]

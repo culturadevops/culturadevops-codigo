@@ -1,0 +1,19 @@
+{
+ "app": "g2-gin",
+ "dockerfile": "muestras/claude/g2-gin/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24-alpine",
+  "gcr.io/distroless/static-debian12:nonroot"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 16.7,
+ "error_build": "",
+ "bytes": 4004092,
+ "disco_mb": 17.6,
+ "usuario": "nonroot:nonroot",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

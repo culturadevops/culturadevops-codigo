@@ -1,0 +1,112 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 4,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"point_in_time_recovery_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 3,
+          "byte": 503
+        },
+        "end": {
+          "line": 33,
+          "column": 33,
+          "byte": 533
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  point_in_time_recovery_enabled = true",
+        "start_line": 33,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"server_side_encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 35,
+          "column": 3,
+          "byte": 546
+        },
+        "end": {
+          "line": 35,
+          "column": 33,
+          "byte": 576
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  server_side_encryption_enabled = true",
+        "start_line": 35,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"kms_master_key_id\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 36,
+          "column": 3,
+          "byte": 587
+        },
+        "end": {
+          "line": 36,
+          "column": 20,
+          "byte": 604
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  kms_master_key_id              = aws_kms_key.user_sessions.key_id",
+        "start_line": 36,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 19,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"key_schema\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 28,
+          "column": 3,
+          "byte": 420
+        },
+        "end": {
+          "line": 28,
+          "column": 13,
+          "byte": 430
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  key_schema {",
+        "start_line": 28,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 12,
+        "values": []
+      }
+    }
+  ]
+}

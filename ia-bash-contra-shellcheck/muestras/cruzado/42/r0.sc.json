@@ -1,0 +1,1 @@
+[{"file": "r0.sh", "line": 6, "endLine": 6, "column": 14, "endColumn": 25, "level": "style", "code": 2004, "message": "$/${} is unnecessary on arithmetic variables.", "fix": null}]

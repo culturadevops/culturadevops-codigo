@@ -1,0 +1,18 @@
+{
+ "app": "p3-sin-dependencias",
+ "dockerfile": "muestras/claude/p3-sin-dependencias/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.12-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 4.2,
+ "error_build": "",
+ "bytes": 43277961,
+ "disco_mb": 177.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

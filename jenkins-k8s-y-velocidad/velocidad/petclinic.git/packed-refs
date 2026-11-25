@@ -1,0 +1,12 @@
+# pack-refs with: peeled fully-peeled sorted 
+24eac813cfc442f81d97ee5870184d6b1267d9c7 refs/heads/3310
+b3c85600ca79c990c8d15f95c5ab064c19c65588 refs/heads/detached
+30e16ab3fea583da295e0fdf88eaf0aa980d4927 refs/heads/efficient-webjars
+193b38a561ae246301a1b3f7f8e4b854546dc8d7 refs/heads/gh-pages
+b3ee2c53e76e9267f03551a7cd36b0983c859c56 refs/heads/gradle-remove-redundancies
+a2672fef9bac82ea5ef2e73e09d4dafda2095f18 refs/heads/hacking/mysql
+500158f732419217507c7656904b8e6aa1bcc0d6 refs/heads/main
+809e6f1c1cb04e112ba3ef87ebda5f99f0e4f624 refs/heads/spring-ai
+dade7fcf31248b21eb158985b250c436b2e9eb54 refs/heads/springboot3
+bf0452d6f2df564c6bb1cafecd0f6893473de3c5 refs/heads/wavefront
+c36452a2c34443ae26b4ecbba4f149906af14717 refs/tags/1.5.x

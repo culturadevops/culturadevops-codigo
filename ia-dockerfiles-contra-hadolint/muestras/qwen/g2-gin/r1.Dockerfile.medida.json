@@ -1,0 +1,19 @@
+{
+ "app": "g2-gin",
+ "dockerfile": "muestras/qwen/g2-gin/r1.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24",
+  "alpine:3.18"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 2.7,
+ "error_build": "",
+ "bytes": 9997084,
+ "disco_mb": 30.1,
+ "usuario": "",
+ "root": true,
+ "arranca": false,
+ "error_arranque": "Error response from daemon: No such container: v711-run\n"
+}

@@ -1,0 +1,14 @@
+# 715 · Dependencias típicas de un repo de automatización DevOps. requirements.txt se genera de aquí
+# con versiones exactas (uv pip compile), y pip y uv instalan ESE mismo archivo.
+ansible-core
+boto3
+kubernetes
+requests
+pyyaml
+jinja2
+paramiko
+fabric
+pandas
+rich
+typer
+pydantic

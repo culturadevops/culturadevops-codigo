@@ -1,0 +1,19 @@
+{
+ "app": "j2-spring-boot",
+ "dockerfile": "muestras/claude/j2-spring-boot/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "maven:3.9-eclipse-temurin-21",
+  "eclipse-temurin:21-jre-alpine"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 35.3,
+ "error_build": "",
+ "bytes": 92681159,
+ "disco_mb": 326.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

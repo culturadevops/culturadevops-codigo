@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Comprime con gzip cada archivo .log de DIR (sin subcarpetas) que no esté comprimido.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\n# Comprime con gzip cada archivo .log de DIR (sin subcarpetas) que no esté comprimido.\n# Uso: script.sh DIR\n\nset -u\n\nusage() {\n    echo \"Uso: $(basename \"$0\") DIR\" >&2\n    exit 2\n}\n\n[ \"$#\" -eq 1 ] || usage\n\ndir=$1\n\nif [ ! -d \"$dir\" ]; then\n    echo \"Error: '$dir' no es un directorio\" >&2\n    exit 1\nfi\n\nif [ ! -r \"$dir\" ] || [ ! -w \"$dir\" ] || [ ! -x \"$dir\" ]; then\n    echo \"Error: permisos insuficientes en '$dir'\" >&2\n    exit 1\nfi\n\nshopt -s nullglob dotglob\n\ncomprimidos=0\nomitidos=0\nerrores=0\n\nfor f in \"$dir\"/*.log; do\n    # Solo archivos regulares, no enlaces simbólicos\n    if [ -L \"$f\" ] || [ ! -f \"$f\" ]; then\n        continue\n    fi\n\n    # Omitir si ya existe la versión comprimida\n    if [ -e \"$f.gz\" ]; then\n        echo \"Omitido (ya existe $f.gz): $f\"\n        omitidos=$((omitidos + 1))\n        continue\n    fi\n\n    # Omitir si el contenido ya está en formato gzip (magic bytes 1f 8b)\n    magic=$(head -c 2 -- \"$f\" 2>/dev/null | od -An -tx1 | tr -d ' \\n')\n    if [ \"$magic\" = \"1f8b\" ]; then\n        echo \"Omitido (contenido ya comprimido): $f\"\n        omitidos=$((omitidos + 1))\n        continue\n    fi\n\n    if gzip -- \"$f\"; then\n        echo \"Comprimido: $f -> $f.gz\"\n        comprimidos=$((comprimidos + 1))\n    else\n        echo \"Error al comprimir: $f\" >&2\n        errores=$((errores + 1))\n    fi\ndone\n\necho \"Resumen: $comprimidos comprimidos, $omitidos omitidos, $errores errores\"\n\n[ \"$errores\" -eq 0 ] || exit 1\nexit 0\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.030127599999999997,
+ "segundos": 9.1,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-954q426a"
+}

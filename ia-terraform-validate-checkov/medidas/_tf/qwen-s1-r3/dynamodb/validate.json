@@ -1,0 +1,164 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 6,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"kms_key_id\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 36,
+          "column": 3,
+          "byte": 587
+        },
+        "end": {
+          "line": 36,
+          "column": 13,
+          "byte": 597
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  kms_key_id                      = aws_kms_key.user_sessions.arn",
+        "start_line": 36,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 12,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"point_in_time_recovery_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 3,
+          "byte": 503
+        },
+        "end": {
+          "line": 33,
+          "column": 33,
+          "byte": 533
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  point_in_time_recovery_enabled = true",
+        "start_line": 33,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"server_side_encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 35,
+          "column": 3,
+          "byte": 546
+        },
+        "end": {
+          "line": 35,
+          "column": 33,
+          "byte": 576
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  server_side_encryption_enabled = true",
+        "start_line": 35,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"key_schema\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 28,
+          "column": 3,
+          "byte": 420
+        },
+        "end": {
+          "line": 28,
+          "column": 13,
+          "byte": 430
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_dynamodb_table\" \"user_sessions\"",
+        "code": "  key_schema {",
+        "start_line": 28,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 12,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_kms_key_grant\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 51,
+          "column": 10,
+          "byte": 976
+        },
+        "end": {
+          "line": 51,
+          "column": 29,
+          "byte": 995
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kms_key_grant\" \"user_sessions\"",
+        "code": "resource \"aws_kms_key_grant\" \"user_sessions\" {",
+        "start_line": 51,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 28,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_kms_key_rotation_policy\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 47,
+          "column": 10,
+          "byte": 865
+        },
+        "end": {
+          "line": 47,
+          "column": 39,
+          "byte": 894
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kms_key_rotation_policy\" \"user_sessions\"",
+        "code": "resource \"aws_kms_key_rotation_policy\" \"user_sessions\" {",
+        "start_line": 47,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 38,
+        "values": []
+      }
+    }
+  ]
+}

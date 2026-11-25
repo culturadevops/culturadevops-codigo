@@ -1,0 +1,29 @@
+### terraform version
+Terraform v1.16.2
+on windows_amd64
+### apply
+
+Plan: 2 to add, 0 to change, 0 to destroy.
+docker_image.web: Creating...
+docker_image.web: Creation complete after 6s [id=sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830denginx:1.29-alpine]
+docker_container.web: Creating...
+docker_container.web: Creation complete after 1s [id=e4adcb6f9a176eb993b7c7fa53f87e7973a4a37ebd926b0fd8229678caaad43b]
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+
+real	0m7.184s
+user	0m0.015s
+sys	0m0.000s
+### curl
+HTTP 200
+<title>Welcome to nginx!</title>
+### docker ps
+e4adcb6f9a17 5616878291a2 Up Less than a second 0.0.0.0:8080->80/tcp
+### state list
+docker_container.web
+docker_image.web
+### state size
+4842 terraform.tfstate
+format version 4 terraform_version 1.16.2
+docker_container web atributos 72
+docker_image web atributos 11

@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Imprime la última línea que contiene ERROR en el archivo FILE.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nFILE=$1\n\nif [ ! -f \"$FILE\" ]; then\n  echo \"El archivo $FILE no existe.\"\n  exit 1\nfi\n\ntail -n +1 \"$FILE\" | grep -m 1 -i 'error' | tail -n 1\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 67
+}

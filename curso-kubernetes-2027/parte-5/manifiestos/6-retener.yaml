@@ -1,0 +1,33 @@
+# Una StorageClass igual a la de kind, pero que CONSERVA el volumen al borrar el PVC.
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: retener
+provisioner: rancher.io/local-path
+reclaimPolicy: Retain
+volumeBindingMode: WaitForFirstConsumer
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: datos-retener
+spec:
+  storageClassName: retener
+  accessModes: [ReadWriteOnce]
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: usa-retener
+spec:
+  containers:
+    - name: app
+      image: busybox:1.37
+      command: ["sh", "-c", "echo 'pedido 42 guardado' > /datos/pedido.txt; sleep 3600"]
+      volumeMounts: [{name: datos, mountPath: /datos}]
+  volumes:
+    - name: datos
+      persistentVolumeClaim: {claimName: datos-retener}

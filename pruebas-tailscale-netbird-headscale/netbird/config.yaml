@@ -1,0 +1,23 @@
+server:
+  listenAddress: ":80"
+  exposedAddress: "http://nb-server:80"
+  stunPorts:
+    - 3478
+  metricsPort: 9090
+  healthcheckAddress: ":9000"
+  logLevel: "info"
+  logFile: "console"
+  authSecret: "cambia-este-secreto-de-laboratorio"
+  dataDir: "/var/lib/netbird"
+  auth:
+    issuer: "http://nb-server/oauth2"
+    signKeyRefreshEnabled: true
+    sessionCookieEncryptionKey: "l+/zmrZfXvxo41N6GdDYhvCDUVHz30djO0csk+JaDU8"
+    dashboardRedirectURIs:
+      - "http://nb-server/nb-auth"
+      - "http://nb-server/nb-silent-auth"
+    cliRedirectURIs:
+      - "http://localhost:53000/"
+  store:
+    engine: "sqlite"
+    encryptionKey: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="

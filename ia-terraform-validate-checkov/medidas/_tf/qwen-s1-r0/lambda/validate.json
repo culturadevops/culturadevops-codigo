@@ -1,0 +1,47 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 1,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Error in function call",
+      "detail": "Call to function \"filebase64sha256\" failed: open lambda_function.zip: no such file or directory.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 43,
+          "column": 22,
+          "byte": 970
+        },
+        "end": {
+          "line": 43,
+          "column": 39,
+          "byte": 987
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_lambda_function\" \"example\"",
+        "code": "  source_code_hash = filebase64sha256(\"lambda_function.zip\")",
+        "start_line": 43,
+        "highlight_start_offset": 21,
+        "highlight_end_offset": 38,
+        "values": [],
+        "function_call": {
+          "called_as": "filebase64sha256",
+          "signature": {
+            "name": "filebase64sha256",
+            "params": [
+              {
+                "name": "path",
+                "type": "string"
+              }
+            ],
+            "return_type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

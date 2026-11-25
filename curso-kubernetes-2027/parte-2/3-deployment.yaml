@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.29.8-alpine
+          ports:
+            - containerPort: 80
+          readinessProbe:          # la parte 7 va a fondo; aquí solo marca «listo»
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 1
+---
+# Un Service delante para mandar tráfico durante el rollout (la parte 3 lo explica).
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  selector:
+    app: web
+  ports:
+    - port: 80
+---
+# Cliente: una petición cada ~20 ms al Service; escribe «segundo versión» o «segundo ERROR-motivo».
+# (Sin la pausa, el cliente reusa puertos tan rápido que hay esperas de 1 s también sin rollout.)
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cliente
+spec:
+  containers:
+    - name: cliente
+      image: busybox:1.37.0
+      command:
+        - sh
+        - -c
+        - |
+          while true; do
+            o=$(wget -q -T 2 -S -O /dev/null http://web 2>&1)
+            r=$(echo "$o" | grep -o 'nginx/[0-9.]*')
+            if [ -z "$r" ]; then
+              case "$o" in
+                *refused*) r=ERROR-rechazada;; *"timed out"*) r=ERROR-tiempo;; *) r=ERROR-otro;;
+              esac
+            fi
+            echo "$(date +%s) $r"
+            usleep 20000
+          done

@@ -1,0 +1,35 @@
+→ R-V01
+  ejecutado = False 0.0494054
+→ R-V02
+  ejecutado = True 0.0513903
+→ R-V03
+  ejecutado = False 0.05003250000000001
+→ R-V04
+  ejecutado = False 0.0510868
+→ R-V05
+  ejecutado = False 0.049363699999999996
+→ R-V06
+  ejecutado = False 0.0498824
+→ R-V07
+  ejecutado = False 0.049698
+→ R-V08
+  ejecutado = False 0.0494818
+→ R-V09
+  ejecutado = True 0.04892440000000001
+→ R-V10
+  ejecutado = False 0.0512543
+→ H-V02
+  ejecutado = False 0.050184000000000006
+→ H-V03
+  ejecutado = False 0.0498899
+→ H-V09
+  ejecutado = False 0.0502948
+→ F1-roto-sin-onFailure-V02
+  ejecutado = True 0.05137409999999999
+→ F2-roto-onFailure-block-V02
+  ejecutado = False 0.0532885
+→ F3-ruta-mal-escrita-V02
+  ejecutado = False 0.0533261
+→ M-lector-V08
+→ S-sandbox
+SALIDA.md escrita

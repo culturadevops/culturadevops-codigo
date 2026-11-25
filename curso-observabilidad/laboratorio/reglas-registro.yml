@@ -1,0 +1,9 @@
+groups:
+  - name: precalculado
+    interval: 15s
+    rules:
+      # La consulta cara de la lección 5, precalculada una sola vez.
+      - record: tienda:latencia_media:5m
+        expr: sum(rate(tienda_latencia_suma_segundos[5m])) / sum(rate(tienda_latencia_cuenta[5m]))
+      - record: tienda:fallo_porcentaje:5m
+        expr: sum(rate(tienda_peticiones_total{codigo="500"}[5m])) / sum(rate(tienda_peticiones_total[5m])) * 100

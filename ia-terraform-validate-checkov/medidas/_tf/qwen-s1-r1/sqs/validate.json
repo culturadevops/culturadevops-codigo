@@ -1,0 +1,138 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 5,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 74,
+          "column": 3,
+          "byte": 1736
+        },
+        "end": {
+          "line": 74,
+          "column": 21,
+          "byte": 1754
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sqs_queue\" \"dead_letter_target\"",
+        "code": "  encryption_enabled = true",
+        "start_line": 74,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 98,
+          "column": 3,
+          "byte": 2428
+        },
+        "end": {
+          "line": 98,
+          "column": 21,
+          "byte": 2446
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sqs_queue\" \"main_queue_with_dead_letter\"",
+        "code": "  encryption_enabled = true",
+        "start_line": 98,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"dead_letter_target_arn\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 97,
+          "column": 3,
+          "byte": 2363
+        },
+        "end": {
+          "line": 97,
+          "column": 25,
+          "byte": 2385
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sqs_queue\" \"main_queue_with_dead_letter\"",
+        "code": "  dead_letter_target_arn = aws_sqs_queue.dead_letter_target.arn",
+        "start_line": 97,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 24,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 3,
+          "byte": 318
+        },
+        "end": {
+          "line": 18,
+          "column": 21,
+          "byte": 336
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sqs_queue\" \"main_queue\"",
+        "code": "  encryption_enabled = true",
+        "start_line": 18,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 25,
+          "column": 3,
+          "byte": 509
+        },
+        "end": {
+          "line": 25,
+          "column": 21,
+          "byte": 527
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sqs_queue\" \"dead_letter_queue\"",
+        "code": "  encryption_enabled = true",
+        "start_line": 25,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lee FILE, que tiene una ruta por línea, e imprime 'FALTA: RUTA' por cada ruta que no exista. Termina con código 1 si falta alguna.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nFILE=$1\n\nwhile IFS= read -r line; do\n    if [ ! -e \"$line\" ]; then\n        echo \"FALTA: $line\"\n    fi\ndone < \"$FILE\"\n\nif grep -q \"FALTA:\" \"$FILE\"; then\n    exit 1\nfi\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 75
+}

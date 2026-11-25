@@ -1,0 +1,52 @@
+# Gateway API con Envoy Gateway v1.10.0. Lo mismo que el Ingress, repartido en tres papeles.
+# 1) GatewayClass: QUÉ implementación (lo pone quien administra la plataforma)
+apiVersion: gateway.networking.k8s.io/v1
+kind: GatewayClass
+metadata:
+  name: envoy
+spec:
+  controllerName: gateway.envoyproxy.io/gatewayclass-controller
+---
+# 2) Gateway: DÓNDE se escucha (puertos, certificados)
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: entrada
+spec:
+  gatewayClassName: envoy
+  listeners:
+    - name: http
+      protocol: HTTP
+      port: 80
+    - name: https
+      protocol: HTTPS
+      port: 443
+      hostname: "*.ejemplo.test"
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - name: tls-ejemplo
+---
+# 3) HTTPRoute: A DÓNDE va cada petición (lo pone cada equipo)
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: tienda
+spec:
+  parentRefs: [{name: entrada}]
+  hostnames: [tienda.ejemplo.test]
+  rules:
+    - matches: [{path: {type: PathPrefix, value: /api}}]
+      backendRefs: [{name: api, port: 80}]
+    - matches: [{path: {type: PathPrefix, value: /}}]
+      backendRefs: [{name: tienda, port: 80}]
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: blog
+spec:
+  parentRefs: [{name: entrada}]
+  hostnames: [blog.ejemplo.test]
+  rules:
+    - backendRefs: [{name: blog, port: 80}]

@@ -1,0 +1,44 @@
+jenkins:
+  systemMessage: "Banco 874: agente fijo contra agentes efímeros en Docker"
+  numExecutors: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: ${ADMIN_PASS}
+  authorizationStrategy: loggedInUsersCanDoAnything
+  nodes:
+    - permanent:
+        name: fijo
+        labelString: fijo
+        remoteFS: /home/jenkins/agent
+        numExecutors: 1
+        launcher:
+          inbound:
+            webSocket: true
+  clouds:
+    - docker:
+        name: docker
+        dockerApi:
+          dockerHost:
+            uri: unix:///var/run/docker.sock
+        templates:
+          - name: efimero
+            labelString: efimero
+            dockerTemplateBase:
+              image: jenkins/agent:3395.v6e5377b_0fb_3c-5-jdk21
+            connector:
+              attach:
+                user: jenkins
+            remoteFs: /home/jenkins/agent
+            instanceCapStr: "4"
+            pullStrategy: PULL_NEVER
+            removeVolumes: true
+            retentionStrategy:
+              idleMinutes: 1
+unclassified:
+  location:
+    url: http://jk-a-jenkins:8080/
+jobs:
+  - file: /var/jenkins_home/casc/jobs.groovy

@@ -1,0 +1,19 @@
+{
+ "app": "n5-koa",
+ "dockerfile": "muestras/claude/n5-koa/r1.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:22-alpine3.22",
+  "node:22-alpine3.22"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 7.3,
+ "error_build": "",
+ "bytes": 57678821,
+ "disco_mb": 233.0,
+ "usuario": "node",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

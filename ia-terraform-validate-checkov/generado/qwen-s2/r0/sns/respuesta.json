@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_sns_topic\" \"alerts\" {\n  name = \"alerts-topic\"\n}\n\nresource \"aws_sns_topic_subscription\" \"email\" {\n  topic_arn = aws_sns_topic.alerts.arn\n  protocol  = \"email\"\n  endpoint  = \"youremail@example.com\"\n}\n\nresource \"aws_cloudwatch alarm\" \"high_cpu\" {\n  alarm_name          = \"HighCPUUtilization\"\n  alarm_description   = \"Alarm when CPU Utilization is > 70% for 5 minutes\"\n  metric_name         = \"CPUUtilization\"\n  namespace           = \"AWS/EC2\"\n  statistic           = \"Average\"\n  period              = 300\n  evaluation_periods  = 1\n  threshold           = 70\n  comparison_operator = \"GreaterThanThreshold\"\n  treat_missing_data  = \"notBreaching\"\n\n  alarm_actions = [aws_sns_topic.alerts.arn]\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 4.4,
+ "tokens": 252,
+ "prompt": "Escribe el código de Terraform para un tema de SNS que mande alertas por correo en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

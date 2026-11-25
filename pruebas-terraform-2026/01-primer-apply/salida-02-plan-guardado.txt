@@ -1,0 +1,12 @@
+### plan -out=cambio.plan (cambio restart)
+Plan: 0 to add, 1 to change, 0 to destroy.
+Saved the plan to: cambio.plan
+### terraform show cambio.plan (resumen)
+  # docker_container.web will be updated in-place
+      ~ restart                                     = "no" -> "always"
+### alguien aplica otro cambio antes (apply normal)
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+### ahora aplico el plan guardado
+Error: Saved plan is stale
+The given plan file can no longer be applied because the state was changed by
+another operation after the plan was created.

@@ -1,0 +1,59 @@
+# Laboratorio del curso «Observabilidad de verdad». Se levanta con: docker compose up -d
+services:
+  prometheus:
+    image: prom/prometheus:v3.1.0
+    container_name: obs-prometheus
+    ports: ["9090:9090"]
+    volumes:
+      - "./prometheus.yml:/etc/prometheus/prometheus.yml:ro"
+      - "./alertas.yml:/etc/prometheus/alertas.yml:ro"
+      - "./reglas-registro.yml:/etc/prometheus/reglas-registro.yml:ro"
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --web.enable-lifecycle          # recargar sin reiniciar (lección 3)
+
+  loki:
+    image: grafana/loki:3.3.2
+    container_name: obs-loki
+    ports: ["3100:3100"]
+    command: -config.file=/etc/loki/local-config.yaml
+
+  grafana:
+    image: grafana/grafana:11.4.0
+    container_name: obs-grafana
+    ports: ["3001:3000"]   # el 3000 lo tenia ocupado otro proceso (node) de la maquina
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=lab
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    volumes:
+      - "./provision:/etc/grafana/provisioning:ro"
+    depends_on: [prometheus, loki]
+
+  alertmanager:
+    image: prom/alertmanager:v0.28.0
+    container_name: obs-alertmanager
+    ports: ["9093:9093"]
+    volumes:
+      - "./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro"
+
+  node-exporter:
+    image: prom/node-exporter:v1.8.2
+    container_name: obs-node
+    ports: ["9100:9100"]
+    # ⚠️ En Docker Desktop NO se puede montar la raiz del anfitrion (rslave falla), asi que
+    #    node_exporter mide la VM de Linux de Docker, no Windows. En un servidor Linux de verdad
+    #    se monta / y mide la maquina entera. Se cuenta asi en el video.
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
+    container_name: obs-cadvisor
+    ports: ["8080:8080"]
+    volumes:
+      - "/:/rootfs:ro"
+      - "/var/run:/var/run:ro"
+      - "/sys:/sys:ro"
+      - "/var/lib/docker/:/var/lib/docker:ro"
+      - "/dev/disk/:/dev/disk:ro"
+    privileged: true
+    devices: ["/dev/kmsg"]

@@ -1,0 +1,18 @@
+{
+ "app": "n2-http-sin-dependencias",
+ "dockerfile": "muestras/qwen/n2-http-sin-dependencias/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:14"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 58.4,
+ "error_build": "",
+ "bytes": 349585140,
+ "disco_mb": 1350.0,
+ "usuario": "",
+ "root": true,
+ "arranca": true,
+ "error_arranque": ""
+}

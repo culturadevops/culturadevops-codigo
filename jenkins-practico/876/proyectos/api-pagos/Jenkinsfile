@@ -1,0 +1,3 @@
+@Library('pipeline-comun@v1.0') _
+
+pipelineEstandar(nombre: 'api-pagos')

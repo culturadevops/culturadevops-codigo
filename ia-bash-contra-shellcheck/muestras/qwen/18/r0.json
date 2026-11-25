@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Vacía (deja en 0 bytes, sin borrarlos) los archivos .log de DIR que pesen más de 100 KB.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"Error: $DIR is not a valid directory\"\n    exit 1\nfi\n\nfind \"$DIR\" -type f -name \"*.log\" -size +100k -exec truncate -s 0 {} \\;\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 99
+}

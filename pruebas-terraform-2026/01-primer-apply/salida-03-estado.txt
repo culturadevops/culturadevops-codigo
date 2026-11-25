@@ -1,0 +1,34 @@
+### extracto real del estado
+version: 4 | terraform_version: 1.16.2 | serial: 68 | lineage: 78901832...
+managed docker_container web | id: 02a34fa12a5fc64cfd9a2a75... | name: curso-web
+managed docker_image web | id: sha256:5616878291a2eed59... | name: nginx:1.29-alpine
+### state show (primeras lineas)
+# docker_container.web:
+resource "docker_container" "web" {
+    attach                                      = false
+    bridge                                      = null
+    command                                     = [
+        "nginx",
+        "-g",
+        "daemon off;",
+    ]
+    container_read_refresh_timeout_milliseconds = 15000
+    cpu_set                                     = null
+    cpu_shares                                  = 0
+### apply otra vez sin cambios: sube el serial?
+serial antes 68 despues 69
+### BORRO terraform.tfstate y hago plan
+  # docker_container.web will be created
+  # docker_image.web will be created
+Plan: 2 to add, 0 to change, 0 to destroy.
+### y apply
+docker_image.web: Creation complete after 0s [id=sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830denginx:1.29-alpine]
+Error: Unable to create container: Error response from daemon: Conflict. The container name "/curso-web" is already in use by container "02a34fa12a5fc64cfd9a2a75aa7622199d7663a696eece36cd5f65472889df8e". You have to remove (or rename) that container to be able to reuse that name.
+docker ps: curso-web Up 2 seconds
+No changes. Your infrastructure matches the configuration.
+### terraform state rm docker_container.web
+Removed docker_container.web
+Successfully removed 1 resource instance(s).
+docker ps tras state rm: curso-web Up 3 seconds
+  # docker_container.web will be created
+Plan: 1 to add, 0 to change, 0 to destroy.

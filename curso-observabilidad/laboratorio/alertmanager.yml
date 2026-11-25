@@ -1,0 +1,11 @@
+route:
+  receiver: registro
+  group_by: [alertname]        # ⚠️ la línea de la lección 13: agrupa por nombre de alerta
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 1h
+
+receivers:
+  - name: registro
+    webhook_configs:
+      - url: http://host.docker.internal:8001/aviso

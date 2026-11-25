@@ -1,0 +1,19 @@
+# VERSIÓN BUENA: el archivo entero lo escribe UNA sola tarea. Así la segunda ejecución no cambia nada (idempotente).
+- name: Preparar los servidores web
+  hosts: web
+  vars:
+    puerto: 8080
+  tasks:
+    - name: Crear la carpeta de la app
+      ansible.builtin.file:
+        path: "{{ raiz }}/app"
+        state: directory
+        mode: "0755"
+
+    - name: Escribir la configuración completa
+      ansible.builtin.copy:
+        dest: "{{ raiz }}/app/app.conf"
+        content: |
+          servidor = {{ inventory_hostname }}
+          puerto = {{ puerto }}
+          mantenimiento = no

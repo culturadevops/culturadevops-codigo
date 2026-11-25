@@ -1,0 +1,12 @@
+--- lock info:
+-rw-r--r-- 1 USER 197121 221 Sep 13 12:31 .terraform.tfstate.lock.info
+### segundo plan:
+Error: Error acquiring the state lock
+Error message: Failed to read state file: The state file could not be read:
+Terraform acquires a state lock to protect the state from being written
+again. For most commands, you can disable locking with the "-lock=false"
+--- el primero:
+
+  Enter a value: 
+Error: error asking for approval: EOF
+

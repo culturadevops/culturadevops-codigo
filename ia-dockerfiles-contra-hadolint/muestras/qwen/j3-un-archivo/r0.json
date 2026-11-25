@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- App.java ---\nimport com.sun.net.httpserver.HttpServer;\nimport java.io.OutputStream;\nimport java.net.InetSocketAddress;\n\npublic class App {\n    public static void main(String[] args) throws Exception {\n        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);\n        server.createContext(\"/\", ex -> {\n            byte[] b = \"ok\".getBytes();\n            ex.sendResponseHeaders(200, b.length);\n            try (OutputStream os = ex.getResponseBody()) { os.write(b); }\n        });\n        server.start();\n        System.out.println(\"escuchando en 8080\");\n    }\n}\n\n--- README.md ---\nUna sola clase, sin Maven ni Gradle: javac App.java && java App\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\nFROM openjdk:17-alpine\n\nCOPY App.java /App.java\n\nRUN javac /App.java\n\nCMD [\"java\", \"-cp\", \".\", \"App\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 40
+}

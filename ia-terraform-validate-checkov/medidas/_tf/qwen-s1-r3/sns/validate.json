@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"arn\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 50,
+          "byte": 289
+        },
+        "end": {
+          "line": 18,
+          "column": 51,
+          "byte": 290
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sns_topic_policy\" \"alertas_policy\"",
+        "code": "resource \"aws_sns_topic_policy\" \"alertas_policy\" {",
+        "start_line": 18,
+        "highlight_start_offset": 49,
+        "highlight_end_offset": 50,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"topic_arn\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 19,
+          "column": 3,
+          "byte": 294
+        },
+        "end": {
+          "line": 19,
+          "column": 12,
+          "byte": 303
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_sns_topic_policy\" \"alertas_policy\"",
+        "code": "  topic_arn = aws_sns_topic.alertas.arn",
+        "start_line": 19,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    }
+  ]
+}

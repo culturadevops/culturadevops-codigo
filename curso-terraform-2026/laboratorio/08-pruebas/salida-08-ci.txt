@@ -1,0 +1,25 @@
+### filtro con ruta equivocada: salida completa y codigo de salida
+
+Success! 0 passed, 0 failed.
+
+Warning: Unknown test file
+
+The specified test file, tests/no-existe.tftest.hcl, could not be found.
+codigo de salida: 0
+### fmt -check sobre un fichero mal sangrado
+mal.tf
+codigo de salida fmt -check: 3
+mal.tf
+--- old/mal.tf
++++ new/mal.tf
+@@ -1,4 +1,4 @@
+ variable "x" {
+-type=string
+-  default    = "a"
++  type    = string
++  default = "a"
+ }
+### validate
+Success! The configuration is valid.
+
+codigo: 0

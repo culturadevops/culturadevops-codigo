@@ -1,0 +1,7 @@
+== parando (sin borrar datos) ==
+== arranque en frío ==
+  docker dice Started: 1 s
+  el indexer contesta: 8 s
+  el manager contesta: 8 s
+       0 [main] sh 896 dofork: child -1 - forked process 22896 died unexpectedly, retry 0, exit code 0xC000026B, errno 11
+cronometrar-arranque.sh: fork: retry: Resource temporarily unavailable

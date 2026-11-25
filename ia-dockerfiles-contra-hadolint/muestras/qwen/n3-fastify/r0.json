@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- app.js ---\nimport Fastify from 'fastify';\nconst app = Fastify({ logger: true });\napp.get('/', async () => 'ok');\nawait app.listen({ port: 8080, host: '0.0.0.0' });\n\n--- package-lock.json --- (existe; no se muestra: 639 líneas)\n\n--- package.json ---\n{\n  \"name\": \"api-fastify\",\n  \"version\": \"1.0.0\",\n  \"main\": \"app.js\",\n  \"type\": \"module\",\n  \"scripts\": {\n    \"start\": \"node app.js\"\n  },\n  \"dependencies\": {\n    \"fastify\": \"^5.2.1\"\n  }\n}\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\nFROM node:16-alpine\n\nWORKDIR /usr/src/app\n\nCOPY package.json .\nCOPY package-lock.json .\nRUN npm ci\n\nCOPY . .\n\nEXPOSE 8080\n\nCMD [\"npm\", \"start\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 52
+}

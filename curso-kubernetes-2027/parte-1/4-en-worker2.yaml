@@ -1,0 +1,11 @@
+# Un pod suelto, sin Deployment, fijado al nodo que vamos a apagar.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: huerfano
+spec:
+  nodeSelector:
+    kubernetes.io/hostname: k8s-a-worker2
+  containers:
+    - name: nginx
+      image: nginx:1.29.8-alpine

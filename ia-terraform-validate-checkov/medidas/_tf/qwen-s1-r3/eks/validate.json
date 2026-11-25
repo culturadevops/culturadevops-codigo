@@ -1,0 +1,164 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 6,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"default_security_group\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 94,
+          "column": 3,
+          "byte": 1836
+        },
+        "end": {
+          "line": 94,
+          "column": 25,
+          "byte": 1858
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_vpc\" \"example\"",
+        "code": "  default_security_group {",
+        "start_line": 94,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 24,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enable_aws_logs\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 31,
+          "column": 3,
+          "byte": 585
+        },
+        "end": {
+          "line": 31,
+          "column": 18,
+          "byte": 600
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_eks_cluster\" \"example\"",
+        "code": "  enable_aws_logs = true",
+        "start_line": 31,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 17,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"resources_vpc_config\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 3,
+          "byte": 288
+        },
+        "end": {
+          "line": 18,
+          "column": 23,
+          "byte": 308
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_eks_cluster\" \"example\"",
+        "code": "  resources_vpc_config {",
+        "start_line": 18,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 22,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"logging\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 25,
+          "column": 3,
+          "byte": 469
+        },
+        "end": {
+          "line": 25,
+          "column": 10,
+          "byte": 476
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_eks_cluster\" \"example\"",
+        "code": "  logging {",
+        "start_line": 25,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 9,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Insufficient vpc_config blocks",
+      "detail": "At least 1 \"vpc_config\" blocks are required.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 14,
+          "column": 38,
+          "byte": 210
+        },
+        "end": {
+          "line": 14,
+          "column": 39,
+          "byte": 211
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_eks_cluster\" \"example\"",
+        "code": "resource \"aws_eks_cluster\" \"example\" {",
+        "start_line": 14,
+        "highlight_start_offset": 37,
+        "highlight_end_offset": 38,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 36,
+          "column": 7,
+          "byte": 682
+        },
+        "end": {
+          "line": 36,
+          "column": 14,
+          "byte": 689
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_eks_cluster\" \"example\"",
+        "code": "      enabled = true",
+        "start_line": 36,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 13,
+        "values": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+ "app": "p4-pyproject",
+ "dockerfile": "muestras/claude/p4-pyproject/r1.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:${PYTHON_VERSION}-slim",
+  "python:${PYTHON_VERSION}-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 9.5,
+ "error_build": "",
+ "bytes": 48597220,
+ "disco_mb": 201.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_version = \">= 1.5.0\"\n\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 5.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_dynamodb_table\" \"user_sessions\" {\n  name         = \"user-sessions\"\n  billing_mode = \"PAY_PER_REQUEST\"\n  hash_key     = \"session_id\"\n\n  attribute {\n    name = \"session_id\"\n    type = \"S\"\n  }\n\n  attribute {\n    name = \"user_id\"\n    type = \"S\"\n  }\n\n  global_secondary_index {\n    name            = \"user_id-index\"\n    hash_key        = \"user_id\"\n    projection_type = \"ALL\"\n  }\n\n  ttl {\n    attribute_name = \"expires_at\"\n    enabled        = true\n  }\n\n  point_in_time_recovery {\n    enabled = true\n  }\n\n  server_side_encryption {\n    enabled = true\n  }\n\n  deletion_protection_enabled = true\n\n  tags = {\n    Name      = \"user-sessions\"\n    ManagedBy = \"terraform\"\n  }\n}\n\noutput \"user_sessions_table_name\" {\n  value = aws_dynamodb_table.user_sessions.name\n}\n\noutput \"user_sessions_table_arn\" {\n  value = aws_dynamodb_table.user_sessions.arn\n}\n```",
+ "modelo": "claude-opus-5-5",
+ "s": 5.8,
+ "usd": 0.021327099999999998,
+ "error": false,
+ "prompt": "Escribe el código de Terraform para una tabla de DynamoDB para guardar sesiones de usuario en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

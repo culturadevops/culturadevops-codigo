@@ -1,0 +1,5 @@
+FROM debian:bookworm-slim
+RUN apt-get update -qq && apt-get install -y -qq openssh-server iptables fail2ban >/dev/null \
+ && mkdir -p /run/sshd /run/fail2ban && touch /var/log/auth.log \
+ && printf '[sshd]\nenabled = true\nbackend = polling\nlogpath = /var/log/auth.log\nbanaction = iptables-multiport\n' > /etc/fail2ban/jail.d/lab.local
+CMD /usr/sbin/sshd && fail2ban-server -xf start

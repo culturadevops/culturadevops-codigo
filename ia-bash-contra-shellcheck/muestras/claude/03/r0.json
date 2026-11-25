@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Rota el archivo de log FILE: si existe, lo renombra a FILE.1 (el FILE.1 anterior pasa a FILE.2, y así hasta FILE.5; el más viejo se borra) y crea un FILE nuevo vacío.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\nset -euo pipefail\n\nMAX=5\n\nusage() {\n    echo \"Uso: $(basename \"$0\") FILE\" >&2\n    exit 1\n}\n\n[[ $# -eq 1 ]] || usage\nFILE=\"$1\"\n[[ -n \"$FILE\" ]] || usage\n\ndir=$(dirname -- \"$FILE\")\nif [[ ! -d \"$dir\" ]]; then\n    echo \"Error: el directorio '$dir' no existe\" >&2\n    exit 1\nfi\nif [[ -e \"$FILE\" && ! -f \"$FILE\" ]]; then\n    echo \"Error: '$FILE' existe pero no es un archivo regular\" >&2\n    exit 1\nfi\n\nif [[ -f \"$FILE\" ]]; then\n    # Borrar el más viejo\n    rm -f -- \"${FILE}.${MAX}\"\n\n    # Desplazar FILE.(n) -> FILE.(n+1), de mayor a menor\n    for (( i = MAX - 1; i >= 1; i-- )); do\n        if [[ -e \"${FILE}.${i}\" ]]; then\n            mv -f -- \"${FILE}.${i}\" \"${FILE}.$(( i + 1 ))\"\n        fi\n    done\n\n    # FILE -> FILE.1\n    mv -f -- \"$FILE\" \"${FILE}.1\"\n\n    # Crear FILE nuevo vacío conservando permisos y propietario del anterior\n    : > \"$FILE\"\n    chmod --reference=\"${FILE}.1\" -- \"$FILE\" 2>/dev/null || true\n    chown --reference=\"${FILE}.1\" -- \"$FILE\" 2>/dev/null || true\nelse\n    : > \"$FILE\"\nfi\n\necho \"Rotado: $FILE\"\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0262708,
+ "segundos": 8.8,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-t1g9sj_5"
+}

@@ -1,0 +1,23 @@
+# VERSIÓN MALA (a propósito en el vídeo): copy reescribe el archivo y lineinfile le vuelve a añadir la línea. Se pelean en cada ejecución.
+- name: Preparar los servidores web
+  hosts: web
+  vars:
+    puerto: 8080
+  tasks:
+    - name: Crear la carpeta de la app
+      ansible.builtin.file:
+        path: "{{ raiz }}/app"
+        state: directory
+        mode: "0755"
+
+    - name: Escribir la configuración
+      ansible.builtin.copy:
+        dest: "{{ raiz }}/app/app.conf"
+        content: |
+          servidor = {{ inventory_hostname }}
+          puerto = {{ puerto }}
+
+    - name: Dejar el aviso de mantenimiento apagado
+      ansible.builtin.lineinfile:
+        path: "{{ raiz }}/app/app.conf"
+        line: "mantenimiento = no"

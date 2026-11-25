@@ -1,0 +1,3546 @@
+{
+ "qwen": {
+  "1": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/01/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 24,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "2": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/02/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 29,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "3": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/03/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "4": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/04/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 22,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "5": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/05/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "6": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/06/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 17,
+      "endLine": 17,
+      "column": 6,
+      "endColumn": 18,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 6,
+         "endColumn": 6,
+         "endLine": 17,
+         "insertionPoint": "afterEnd",
+         "line": 17,
+         "precedence": 7,
+         "replacement": "\""
+        },
+        {
+         "column": 18,
+         "endColumn": 18,
+         "endLine": 17,
+         "insertionPoint": "beforeStart",
+         "line": 17,
+         "precedence": 7,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/06/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "7": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/07/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "8": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/08/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 22,
+    "control": [
+     0,
+     false,
+     "mv: cannot move '/tmp/tmp.z9asFncoMD/datos_de_prueba/registro_antiguo.log' to '/tmp/tmp.z9asfncomd/datos_de_prueba/registro_antiguo.log': No such file or directory mv: cannot move '/tmp/tmp.z9asFncoMD/datos_de_prueba/foto_de_perfil.JPG' to '/tmp/tmp.z9asfncomd/datos_de_prueba/foto_de_perfil.JPG': No"
+    ],
+    "espacios": [
+     0,
+     false,
+     "mv: cannot move '/tmp/tmp.eqBOVHZKvT/datos de prueba/copia vieja.bak' to '/tmp/tmp.eqbovhzkvt/datos de prueba/copia vieja.bak': No such file or directory mv: cannot move '/tmp/tmp.eqBOVHZKvT/datos de prueba/paquete de prueba.tar.gz' to '/tmp/tmp.eqbovhzkvt/datos de prueba/paquete de prueba.tar.gz': "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "9": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/09/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "10": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/10/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/10/r0.sh: line 7: $'TAMA\\303\\221O=408': command not found /s/muestras/qwen/10/r0.sh: line 8: [: ÑO: integer expression expected "
+    ],
+    "espacios": [
+     0,
+     false,
+     "/s/muestras/qwen/10/r0.sh: line 7: $'TAMA\\303\\221O=408': command not found /s/muestras/qwen/10/r0.sh: line 8: [: ÑO: integer expression expected "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "11": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/11/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 1,
+      "endColumn": 10,
+      "level": "warning",
+      "code": 2164,
+      "message": "Use 'cd ... || exit' or 'cd ... || return' in case cd fails.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 10,
+         "endColumn": 10,
+         "endLine": 15,
+         "insertionPoint": "beforeStart",
+         "line": 15,
+         "precedence": 5,
+         "replacement": " || exit"
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 23,
+    "control": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace_bueno/': File exists mv: cannot stat 'enlace_bueno/': Not a directory "
+    ],
+    "espacios": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace bueno/': File exists mv: cannot stat 'enlace bueno/': Not a directory "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/11/r1.sh",
+    "sc": [
+     {
+      "file": "r1.sh",
+      "line": 17,
+      "endLine": 17,
+      "column": 1,
+      "endColumn": 1,
+      "level": "info",
+      "code": 1009,
+      "message": "The mentioned syntax error was in this for loop.",
+      "fix": null
+     },
+     {
+      "file": "r1.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 5,
+      "endColumn": 5,
+      "level": "error",
+      "code": 1073,
+      "message": "Couldn't parse this if expression. Fix to allow more checks.",
+      "fix": null
+     },
+     {
+      "file": "r1.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 24,
+      "endColumn": 24,
+      "level": "error",
+      "code": 1050,
+      "message": "Expected 'then'.",
+      "fix": null
+     },
+     {
+      "file": "r1.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 26,
+      "endColumn": 26,
+      "level": "error",
+      "code": 1072,
+      "message": "Unexpected keyword/token. Fix any mentioned problems and try again.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 23,
+    "control": [
+     2,
+     false,
+     "/s/muestras/qwen/11/r1.sh: line 18: syntax error near unexpected token `do' /s/muestras/qwen/11/r1.sh: line 18: `    if [ -f \"$file\" ]; do' "
+    ],
+    "espacios": [
+     2,
+     false,
+     "/s/muestras/qwen/11/r1.sh: line 18: syntax error near unexpected token `do' /s/muestras/qwen/11/r1.sh: line 18: `    if [ -f \"$file\" ]; do' "
+    ],
+    "shfmt": "sintaxis"
+   },
+   {
+    "k": 2,
+    "ruta": "muestras/qwen/11/r2.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 23,
+    "control": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace_bueno/': File exists mv: cannot stat 'enlace_bueno/': Not a directory "
+    ],
+    "espacios": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace bueno/': File exists mv: cannot stat 'enlace bueno/': Not a directory "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "12": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/12/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "13": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/13/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "14": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/14/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 12,
+    "control": [
+     1,
+     true,
+     ""
+    ],
+    "espacios": [
+     1,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "15": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/15/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 19,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "16": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/16/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "17": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/17/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 23,
+      "endColumn": 27,
+      "level": "info",
+      "code": 2295,
+      "message": "Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 23,
+         "endColumn": 23,
+         "endLine": 18,
+         "insertionPoint": "afterEnd",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        },
+        {
+         "column": 27,
+         "endColumn": 27,
+         "endLine": 18,
+         "insertionPoint": "beforeStart",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 26,
+      "endLine": 26,
+      "column": 35,
+      "endColumn": 41,
+      "level": "warning",
+      "code": 2058,
+      "message": "Unknown unary operator.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 30,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/17/r0.sh: line 26: [: -newer: unary operator expected cp: cannot create regular file '/tmp/tmp.tb6QSPcqsd/destino_final/sub_carpeta/volcado_grande.dat': No such file or directory cp: cannot create regular file '/tmp/tmp.tb6QSPcqsd/destino_final/sub_carpeta/usuarios.csv': No such fil"
+    ],
+    "espacios": [
+     0,
+     false,
+     "cp: cannot create regular file '/tmp/tmp.nJvBDsH4Rj/destino final/sub carpeta/usuarios.csv': No such file or directory cp: cannot create regular file '/tmp/tmp.nJvBDsH4Rj/destino final/sub carpeta/apuntes de clase.txt': No such file or directory cp: cannot create regular file '/tmp/tmp.nJvBDsH4Rj/de"
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/17/r1.sh",
+    "sc": [
+     {
+      "file": "r1.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 23,
+      "endColumn": 27,
+      "level": "info",
+      "code": 2295,
+      "message": "Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 23,
+         "endColumn": 23,
+         "endLine": 18,
+         "insertionPoint": "afterEnd",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        },
+        {
+         "column": 27,
+         "endColumn": 27,
+         "endLine": 18,
+         "insertionPoint": "beforeStart",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r1.sh",
+      "line": 26,
+      "endLine": 26,
+      "column": 35,
+      "endColumn": 41,
+      "level": "warning",
+      "code": 2058,
+      "message": "Unknown unary operator.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 30,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/17/r1.sh: line 26: [: -newer: unary operator expected cp: cannot create regular file '/tmp/tmp.JNayUdV6Fa/destino_final/sub_carpeta/volcado_grande.dat': No such file or directory cp: cannot create regular file '/tmp/tmp.JNayUdV6Fa/destino_final/sub_carpeta/usuarios.csv': No such fil"
+    ],
+    "espacios": [
+     0,
+     false,
+     "cp: cannot create regular file '/tmp/tmp.o3v6qsjjh2/destino final/sub carpeta/usuarios.csv': No such file or directory cp: cannot create regular file '/tmp/tmp.o3v6qsjjh2/destino final/sub carpeta/apuntes de clase.txt': No such file or directory cp: cannot create regular file '/tmp/tmp.o3v6qsjjh2/de"
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 2,
+    "ruta": "muestras/qwen/17/r2.sh",
+    "sc": [
+     {
+      "file": "r2.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 23,
+      "endColumn": 27,
+      "level": "info",
+      "code": 2295,
+      "message": "Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 23,
+         "endColumn": 23,
+         "endLine": 18,
+         "insertionPoint": "afterEnd",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        },
+        {
+         "column": 27,
+         "endColumn": 27,
+         "endLine": 18,
+         "insertionPoint": "beforeStart",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r2.sh",
+      "line": 26,
+      "endLine": 26,
+      "column": 35,
+      "endColumn": 41,
+      "level": "warning",
+      "code": 2058,
+      "message": "Unknown unary operator.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 30,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/17/r2.sh: line 26: [: -newer: unary operator expected cp: cannot create regular file '/tmp/tmp.0t07Jq8o6V/destino_final/sub_carpeta/volcado_grande.dat': No such file or directory cp: cannot create regular file '/tmp/tmp.0t07Jq8o6V/destino_final/sub_carpeta/usuarios.csv': No such fil"
+    ],
+    "espacios": [
+     0,
+     false,
+     "cp: cannot create regular file '/tmp/tmp.cdZpvxfhDg/destino final/sub carpeta/usuarios.csv': No such file or directory cp: cannot create regular file '/tmp/tmp.cdZpvxfhDg/destino final/sub carpeta/apuntes de clase.txt': No such file or directory cp: cannot create regular file '/tmp/tmp.cdZpvxfhDg/de"
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 3,
+    "ruta": "muestras/qwen/17/r3.sh",
+    "sc": [
+     {
+      "file": "r3.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 23,
+      "endColumn": 27,
+      "level": "info",
+      "code": 2295,
+      "message": "Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 23,
+         "endColumn": 23,
+         "endLine": 18,
+         "insertionPoint": "afterEnd",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        },
+        {
+         "column": 27,
+         "endColumn": 27,
+         "endLine": 18,
+         "insertionPoint": "beforeStart",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r3.sh",
+      "line": 26,
+      "endLine": 26,
+      "column": 35,
+      "endColumn": 41,
+      "level": "warning",
+      "code": 2058,
+      "message": "Unknown unary operator.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 30,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/17/r3.sh: line 26: [: -newer: unary operator expected cp: cannot create regular file '/tmp/tmp.G0a40iDCxL/destino_final/sub_carpeta/volcado_grande.dat': No such file or directory cp: cannot create regular file '/tmp/tmp.G0a40iDCxL/destino_final/sub_carpeta/usuarios.csv': No such fil"
+    ],
+    "espacios": [
+     0,
+     false,
+     "cp: cannot create regular file '/tmp/tmp.E0ZBH1FDFL/destino final/sub carpeta/usuarios.csv': No such file or directory cp: cannot create regular file '/tmp/tmp.E0ZBH1FDFL/destino final/sub carpeta/apuntes de clase.txt': No such file or directory cp: cannot create regular file '/tmp/tmp.E0ZBH1FDFL/de"
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "18": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/18/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "19": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/19/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 21,
+      "endLine": 21,
+      "column": 63,
+      "endColumn": 67,
+      "level": "info",
+      "code": 2162,
+      "message": "read without -r will mangle backslashes.",
+      "fix": null
+     },
+     {
+      "file": "r0.sh",
+      "line": 22,
+      "endLine": 22,
+      "column": 77,
+      "endColumn": 82,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 77,
+         "endColumn": 77,
+         "endLine": 22,
+         "insertionPoint": "afterEnd",
+         "line": 22,
+         "precedence": 22,
+         "replacement": "\""
+        },
+        {
+         "column": 82,
+         "endColumn": 82,
+         "endLine": 22,
+         "insertionPoint": "beforeStart",
+         "line": 22,
+         "precedence": 22,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 28,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/19/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 28,
+    "control": [
+     1,
+     false,
+     "awk: cannot open /tmp/duplicates.tmp (No such file or directory) rm: cannot remove '/tmp/duplicates.tmp': No such file or directory "
+    ],
+    "espacios": [
+     1,
+     false,
+     "awk: cannot open /tmp/duplicates.tmp (No such file or directory) rm: cannot remove '/tmp/duplicates.tmp': No such file or directory "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "20": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/20/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "21": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/21/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "22": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/22/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 13,
+      "endLine": 13,
+      "column": 30,
+      "endColumn": 32,
+      "level": "error",
+      "code": 2145,
+      "message": "Argument mixes string and array. Use * or separate argument.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/22/r1.sh",
+    "sc": [
+     {
+      "file": "r1.sh",
+      "line": 13,
+      "endLine": 13,
+      "column": 30,
+      "endColumn": 32,
+      "level": "error",
+      "code": 2145,
+      "message": "Argument mixes string and array. Use * or separate argument.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 2,
+    "ruta": "muestras/qwen/22/r2.sh",
+    "sc": [
+     {
+      "file": "r2.sh",
+      "line": 13,
+      "endLine": 13,
+      "column": 30,
+      "endColumn": 32,
+      "level": "error",
+      "code": 2145,
+      "message": "Argument mixes string and array. Use * or separate argument.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 20,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 3,
+    "ruta": "muestras/qwen/22/r3.sh",
+    "sc": [
+     {
+      "file": "r3.sh",
+      "line": 13,
+      "endLine": 13,
+      "column": 30,
+      "endColumn": 32,
+      "level": "error",
+      "code": 2145,
+      "message": "Argument mixes string and array. Use * or separate argument.",
+      "fix": null
+     },
+     {
+      "file": "r3.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 23,
+      "endColumn": 25,
+      "level": "warning",
+      "code": 2294,
+      "message": "eval negates the benefit of arrays. Drop eval to preserve whitespace/symbols (or eval as string).",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 20,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     "/s/muestras/qwen/22/r3.sh: line 14: test: too many arguments /s/muestras/qwen/22/r3.sh: line 14: test: too many arguments /s/muestras/qwen/22/r3.sh: line 14: test: too many arguments "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "23": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/23/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     127,
+     false,
+     "/s/muestras/qwen/23/r0.sh: line 6: /tmp/tmp.2HuMWP4Bjd/datos_de_prueba/mi_tarea.lock: No such file or directory "
+    ],
+    "espacios": [
+     127,
+     false,
+     "/s/muestras/qwen/23/r0.sh: line 6: /tmp/tmp.Flu169KQlr/datos de prueba/mi tarea.lock: No such file or directory "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "24": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/24/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "25": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/25/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 13,
+      "endLine": 13,
+      "column": 14,
+      "endColumn": 19,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 14,
+         "endColumn": 14,
+         "endLine": 13,
+         "insertionPoint": "afterEnd",
+         "line": 13,
+         "precedence": 7,
+         "replacement": "\""
+        },
+        {
+         "column": 19,
+         "endColumn": 19,
+         "endLine": 13,
+         "insertionPoint": "beforeStart",
+         "line": 13,
+         "precedence": 7,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     1,
+     true,
+     ""
+    ],
+    "espacios": [
+     1,
+     false,
+     "grep: /tmp/tmp.4s9blgYi3t/datos: No such file or directory grep: de: No such file or directory grep: prueba/config.conf: No such file or directory "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/25/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     1,
+     true,
+     ""
+    ],
+    "espacios": [
+     1,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "26": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/26/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 2,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "ok"
+   }
+  ],
+  "27": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/27/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "28": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/28/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 28,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "29": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/29/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "30": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/30/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 30,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "31": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/31/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "32": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/32/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 19,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "33": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/33/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 9,
+      "endColumn": 17,
+      "level": "warning",
+      "code": 2034,
+      "message": "filename appears unused. Verify use (or export if used externally).",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 23,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/33/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 22,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "34": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/34/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 6,
+      "endLine": 6,
+      "column": 13,
+      "endColumn": 17,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 13,
+         "endColumn": 13,
+         "endLine": 6,
+         "insertionPoint": "afterEnd",
+         "line": 6,
+         "precedence": 13,
+         "replacement": "\""
+        },
+        {
+         "column": 17,
+         "endColumn": 17,
+         "endLine": 6,
+         "insertionPoint": "beforeStart",
+         "line": 6,
+         "precedence": 13,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 6,
+      "endColumn": 10,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 6,
+         "endColumn": 6,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 10,
+         "endColumn": 10,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 15,
+      "endColumn": 22,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 15,
+         "endColumn": 15,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 22,
+         "endColumn": 22,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 12,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/34/r0.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "espacios": [
+     0,
+     false,
+     "df: /tmp/tmp.dQTEfK1Ot4/datos: No such file or directory df: de: No such file or directory df: prueba: No such file or directory /s/muestras/qwen/34/r0.sh: line 8: [: -ge: unary operator expected "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/34/r1.sh",
+    "sc": [
+     {
+      "file": "r1.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 6,
+      "endColumn": 10,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 6,
+         "endColumn": 6,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 10,
+         "endColumn": 10,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r1.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 15,
+      "endColumn": 22,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 15,
+         "endColumn": 15,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 22,
+         "endColumn": 22,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 12,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/34/r1.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "espacios": [
+     0,
+     false,
+     "/s/muestras/qwen/34/r1.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 2,
+    "ruta": "muestras/qwen/34/r2.sh",
+    "sc": [
+     {
+      "file": "r2.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 6,
+      "endColumn": 10,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 6,
+         "endColumn": 6,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 10,
+         "endColumn": 10,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 12,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/34/r2.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "espacios": [
+     0,
+     false,
+     "/s/muestras/qwen/34/r2.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 3,
+    "ruta": "muestras/qwen/34/r3.sh",
+    "sc": [
+     {
+      "file": "r3.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 6,
+      "endColumn": 10,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 6,
+         "endColumn": 6,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 10,
+         "endColumn": 10,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 12,
+    "control": [
+     0,
+     false,
+     "/s/muestras/qwen/34/r3.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "espacios": [
+     0,
+     false,
+     "/s/muestras/qwen/34/r3.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "35": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/35/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 12,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "36": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/36/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 14,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "37": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/37/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 152,
+      "endColumn": 156,
+      "level": "info",
+      "code": 2162,
+      "message": "read without -r will mangle backslashes.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "espacios": [
+     0,
+     true,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/37/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     false,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "espacios": [
+     0,
+     false,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "38": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/38/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 11,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "39": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/39/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 25,
+      "endColumn": 34,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 25,
+         "endColumn": 25,
+         "endLine": 15,
+         "insertionPoint": "afterEnd",
+         "line": 15,
+         "precedence": 19,
+         "replacement": "\""
+        },
+        {
+         "column": 34,
+         "endColumn": 34,
+         "endLine": 15,
+         "insertionPoint": "beforeStart",
+         "line": 15,
+         "precedence": 19,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 16,
+      "endLine": 16,
+      "column": 26,
+      "endColumn": 35,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 26,
+         "endColumn": 26,
+         "endLine": 16,
+         "insertionPoint": "afterEnd",
+         "line": 16,
+         "precedence": 19,
+         "replacement": "\""
+        },
+        {
+         "column": 35,
+         "endColumn": 35,
+         "endLine": 16,
+         "insertionPoint": "beforeStart",
+         "line": 16,
+         "precedence": 19,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/39/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "40": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/40/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "41": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/41/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     1,
+     true,
+     ""
+    ],
+    "espacios": [
+     1,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "42": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/42/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 6,
+      "endLine": 6,
+      "column": 14,
+      "endColumn": 25,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/42/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "43": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/43/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 19,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "44": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/44/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "45": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/45/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 1,
+      "endColumn": 49,
+      "level": "warning",
+      "code": 2038,
+      "message": "Use 'find .. -print0 | xargs -0 ..' or 'find .. -exec .. +' to allow non-alphanumeric filenames.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     123,
+     false,
+     "rm: cannot remove '/tmp/tmp.2JXsevJXYp/datos': No such file or directory rm: cannot remove 'de': No such file or directory rm: cannot remove 'prueba/enlace': No such file or directory rm: cannot remove 'roto': No such file or directory "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/45/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     123,
+     false,
+     "test: extra argument ';' rm: missing operand Try 'rm --help' for more information. "
+    ],
+    "espacios": [
+     123,
+     false,
+     "test: extra argument ';' rm: missing operand Try 'rm --help' for more information. "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "46": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/46/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 9,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "47": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/47/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 10,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "48": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/48/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 31,
+      "endColumn": 43,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     },
+     {
+      "file": "r0.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 46,
+      "endColumn": 52,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/qwen/48/r1.sh",
+    "sc": [
+     {
+      "file": "r1.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 31,
+      "endColumn": 43,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 2,
+    "ruta": "muestras/qwen/48/r2.sh",
+    "sc": [
+     {
+      "file": "r2.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 31,
+      "endColumn": 43,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     },
+     {
+      "file": "r2.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 46,
+      "endColumn": 52,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 3,
+    "ruta": "muestras/qwen/48/r3.sh",
+    "sc": [
+     {
+      "file": "r3.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 31,
+      "endColumn": 43,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "49": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/49/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 20,
+    "control": [
+     1,
+     false,
+     "cp: cannot create regular file '/tmp/tmp.TY9UGOAI01/destino_final//tmp/tmp.TY9UGOAI01/datos_de_prueba/informe_final.txt': No such file or directory "
+    ],
+    "espacios": [
+     1,
+     false,
+     "cp: cannot create regular file '/tmp/tmp.UfOWS8DyDG/destino final//tmp/tmp.UfOWS8DyDG/datos de prueba/informe final.txt': No such file or directory "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "50": [
+   {
+    "k": 0,
+    "ruta": "muestras/qwen/50/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ]
+ },
+ "claude": {
+  "1": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/01/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 22,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "3": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/03/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 47,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "5": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/05/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 22,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "7": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/07/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 65,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "9": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/09/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 39,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "11": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/11/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 80,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "13": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/13/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 25,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "15": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/15/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 61,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "17": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/17/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 66,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "19": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/19/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 81,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "21": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/21/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 57,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "23": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/23/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 22,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "25": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/25/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 59,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "27": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/27/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 27,
+    "control": [
+     1,
+     true,
+     ""
+    ],
+    "espacios": [
+     1,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "29": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/29/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "31": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/31/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "33": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/33/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 54,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "35": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/35/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 67,
+    "control": [
+     0,
+     true,
+     "# Modo de prueba: 2 comando(s) generado(s), no se ejecutó nada. "
+    ],
+    "espacios": [
+     0,
+     true,
+     "# Modo de prueba: 2 comando(s) generado(s), no se ejecutó nada. "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "37": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/37/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 45,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "39": [
+   {
+    "k": 0,
+    "ruta": "muestras/claude/39/r0.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 49,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ]
+ },
+ "cruzado": {
+  "6": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/06/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 17,
+      "endLine": 17,
+      "column": 6,
+      "endColumn": 18,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 6,
+         "endColumn": 6,
+         "endLine": 17,
+         "insertionPoint": "afterEnd",
+         "line": 17,
+         "precedence": 7,
+         "replacement": "\""
+        },
+        {
+         "column": 18,
+         "endColumn": 18,
+         "endLine": 17,
+         "insertionPoint": "beforeStart",
+         "line": 17,
+         "precedence": 7,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/06/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "11": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/11/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 1,
+      "endColumn": 10,
+      "level": "warning",
+      "code": 2164,
+      "message": "Use 'cd ... || exit' or 'cd ... || return' in case cd fails.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 10,
+         "endColumn": 10,
+         "endLine": 15,
+         "insertionPoint": "beforeStart",
+         "line": 15,
+         "precedence": 5,
+         "replacement": " || exit"
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 23,
+    "control": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace_bueno/': File exists mv: cannot stat 'enlace_bueno/': Not a directory "
+    ],
+    "espacios": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace bueno/': File exists mv: cannot stat 'enlace bueno/': Not a directory "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/11/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 23,
+    "control": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace_bueno/': File exists mv: cannot stat 'enlace_bueno/': Not a directory "
+    ],
+    "espacios": [
+     0,
+     true,
+     "mkdir: cannot create directory 'enlace bueno/': File exists mv: cannot stat 'enlace bueno/': Not a directory "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "17": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/17/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 23,
+      "endColumn": 27,
+      "level": "info",
+      "code": 2295,
+      "message": "Expansions inside ${..} need to be quoted separately, otherwise they match as patterns.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 23,
+         "endColumn": 23,
+         "endLine": 18,
+         "insertionPoint": "afterEnd",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        },
+        {
+         "column": 27,
+         "endColumn": 27,
+         "endLine": 18,
+         "insertionPoint": "beforeStart",
+         "line": 18,
+         "precedence": 14,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 26,
+      "endLine": 26,
+      "column": 35,
+      "endColumn": 41,
+      "level": "warning",
+      "code": 2058,
+      "message": "Unknown unary operator.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 30,
+    "control": [
+     0,
+     false,
+     "/s/muestras/cruzado/17/r0.sh: line 26: [: -newer: unary operator expected cp: cannot create regular file '/tmp/tmp.XpgLX2BNX5/destino_final/sub_carpeta/volcado_grande.dat': No such file or directory cp: cannot create regular file '/tmp/tmp.XpgLX2BNX5/destino_final/sub_carpeta/usuarios.csv': No such "
+    ],
+    "espacios": [
+     0,
+     false,
+     "cp: cannot create regular file '/tmp/tmp.S1IUTN5KGK/destino final/sub carpeta/usuarios.csv': No such file or directory cp: cannot create regular file '/tmp/tmp.S1IUTN5KGK/destino final/sub carpeta/apuntes de clase.txt': No such file or directory cp: cannot create regular file '/tmp/tmp.S1IUTN5KGK/de"
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/17/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 30,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "19": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/19/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 21,
+      "endLine": 21,
+      "column": 63,
+      "endColumn": 67,
+      "level": "info",
+      "code": 2162,
+      "message": "read without -r will mangle backslashes.",
+      "fix": null
+     },
+     {
+      "file": "r0.sh",
+      "line": 22,
+      "endLine": 22,
+      "column": 77,
+      "endColumn": 82,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 77,
+         "endColumn": 77,
+         "endLine": 22,
+         "insertionPoint": "afterEnd",
+         "line": 22,
+         "precedence": 22,
+         "replacement": "\""
+        },
+        {
+         "column": 82,
+         "endColumn": 82,
+         "endLine": 22,
+         "insertionPoint": "beforeStart",
+         "line": 22,
+         "precedence": 22,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 28,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/19/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 28,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "22": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/22/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 13,
+      "endLine": 13,
+      "column": 30,
+      "endColumn": 32,
+      "level": "error",
+      "code": 2145,
+      "message": "Argument mixes string and array. Use * or separate argument.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/22/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 18,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "25": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/25/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 13,
+      "endLine": 13,
+      "column": 14,
+      "endColumn": 19,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 14,
+         "endColumn": 14,
+         "endLine": 13,
+         "insertionPoint": "afterEnd",
+         "line": 13,
+         "precedence": 7,
+         "replacement": "\""
+        },
+        {
+         "column": 19,
+         "endColumn": 19,
+         "endLine": 13,
+         "insertionPoint": "beforeStart",
+         "line": 13,
+         "precedence": 7,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     1,
+     true,
+     ""
+    ],
+    "espacios": [
+     1,
+     false,
+     "grep: /tmp/tmp.bMjMPvdTY8/datos: No such file or directory grep: de: No such file or directory grep: prueba/config.conf: No such file or directory "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/25/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "33": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/33/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 18,
+      "endLine": 18,
+      "column": 9,
+      "endColumn": 17,
+      "level": "warning",
+      "code": 2034,
+      "message": "filename appears unused. Verify use (or export if used externally).",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 23,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/33/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 22,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "34": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/34/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 6,
+      "endLine": 6,
+      "column": 13,
+      "endColumn": 17,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 13,
+         "endColumn": 13,
+         "endLine": 6,
+         "insertionPoint": "afterEnd",
+         "line": 6,
+         "precedence": 13,
+         "replacement": "\""
+        },
+        {
+         "column": 17,
+         "endColumn": 17,
+         "endLine": 6,
+         "insertionPoint": "beforeStart",
+         "line": 6,
+         "precedence": 13,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 6,
+      "endColumn": 10,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 6,
+         "endColumn": 6,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 10,
+         "endColumn": 10,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 8,
+      "endLine": 8,
+      "column": 15,
+      "endColumn": 22,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 15,
+         "endColumn": 15,
+         "endLine": 8,
+         "insertionPoint": "afterEnd",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        },
+        {
+         "column": 22,
+         "endColumn": 22,
+         "endLine": 8,
+         "insertionPoint": "beforeStart",
+         "line": 8,
+         "precedence": 11,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 12,
+    "control": [
+     0,
+     false,
+     "/s/muestras/cruzado/34/r0.sh: line 8: [: 7%: integer expression expected "
+    ],
+    "espacios": [
+     0,
+     false,
+     "df: /tmp/tmp.WdhwUcsy7I/datos: No such file or directory df: de: No such file or directory df: prueba: No such file or directory /s/muestras/cruzado/34/r0.sh: line 8: [: -ge: unary operator expected "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/34/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "37": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/37/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 152,
+      "endColumn": 156,
+      "level": "info",
+      "code": 2162,
+      "message": "read without -r will mangle backslashes.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "espacios": [
+     0,
+     true,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/37/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 17,
+    "control": [
+     0,
+     true,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "espacios": [
+     0,
+     true,
+     "xargs: warning: options --max-args and --replace/-I/-i are mutually exclusive, ignoring previous --max-args value "
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "39": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/39/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 25,
+      "endColumn": 34,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 25,
+         "endColumn": 25,
+         "endLine": 15,
+         "insertionPoint": "afterEnd",
+         "line": 15,
+         "precedence": 19,
+         "replacement": "\""
+        },
+        {
+         "column": 34,
+         "endColumn": 34,
+         "endLine": 15,
+         "insertionPoint": "beforeStart",
+         "line": 15,
+         "precedence": 19,
+         "replacement": "\""
+        }
+       ]
+      }
+     },
+     {
+      "file": "r0.sh",
+      "line": 16,
+      "endLine": 16,
+      "column": 26,
+      "endColumn": 35,
+      "level": "info",
+      "code": 2086,
+      "message": "Double quote to prevent globbing and word splitting.",
+      "fix": {
+       "replacements": [
+        {
+         "column": 26,
+         "endColumn": 26,
+         "endLine": 16,
+         "insertionPoint": "afterEnd",
+         "line": 16,
+         "precedence": 19,
+         "replacement": "\""
+        },
+        {
+         "column": 35,
+         "endColumn": 35,
+         "endLine": 16,
+         "insertionPoint": "beforeStart",
+         "line": 16,
+         "precedence": 19,
+         "replacement": "\""
+        }
+       ]
+      }
+     }
+    ],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/39/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 21,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "42": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/42/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 6,
+      "endLine": 6,
+      "column": 14,
+      "endColumn": 25,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/42/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 13,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "45": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/45/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 15,
+      "endLine": 15,
+      "column": 1,
+      "endColumn": 49,
+      "level": "warning",
+      "code": 2038,
+      "message": "Use 'find .. -print0 | xargs -0 ..' or 'find .. -exec .. +' to allow non-alphanumeric filenames.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     123,
+     false,
+     "rm: cannot remove '/tmp/tmp.cfT7Fq5tS5/datos': No such file or directory rm: cannot remove 'de': No such file or directory rm: cannot remove 'prueba/enlace': No such file or directory rm: cannot remove 'roto': No such file or directory "
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/45/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 15,
+    "control": [
+     0,
+     true,
+     ""
+    ],
+    "espacios": [
+     0,
+     true,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ],
+  "48": [
+   {
+    "k": 0,
+    "ruta": "muestras/cruzado/48/r0.sh",
+    "sc": [
+     {
+      "file": "r0.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 31,
+      "endColumn": 43,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     },
+     {
+      "file": "r0.sh",
+      "line": 14,
+      "endLine": 14,
+      "column": 46,
+      "endColumn": 52,
+      "level": "style",
+      "code": 2004,
+      "message": "$/${} is unnecessary on arithmetic variables.",
+      "fix": null
+     }
+    ],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   },
+   {
+    "k": 1,
+    "ruta": "muestras/cruzado/48/r1.sh",
+    "sc": [],
+    "supr": 0,
+    "lineas": 16,
+    "control": [
+     0,
+     false,
+     ""
+    ],
+    "espacios": [
+     0,
+     false,
+     ""
+    ],
+    "shfmt": "formato"
+   }
+  ]
+ }
+}

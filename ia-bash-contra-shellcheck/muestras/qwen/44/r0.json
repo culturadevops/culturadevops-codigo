@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Imprime las 2 primeras líneas de cada archivo .log de DIR (sin subcarpetas), y antes de cada bloque una línea '== NOMBRE ==' con el nombre del archivo.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n    echo \"Usage: $0 DIR\"\n    exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"$DIR is not a directory\"\n    exit 1\nfi\n\nfind \"$DIR\" -maxdepth 1 -type f -name \"*.log\" -exec awk '\n    FNR == 1 {print \"== \" FILENAME \" ==\\n\" $0}\n    FNR == 2 {print $0}\n' {} \\;\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 122
+}

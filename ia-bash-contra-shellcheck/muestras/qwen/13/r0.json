@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lee el archivo CSV FILE (la primera línea es la cabecera: nombre,correo) e imprime solo los correos, uno por línea.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ -z \"$1\" ]; then\n    echo \"Usage: $0 FILE\"\n    exit 1\nfi\n\nif [ ! -f \"$1\" ]; then\n    echo \"File not found: $1\"\n    exit 1\nfi\n\nawk -F',' '{print $2}' \"$1\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 75
+}

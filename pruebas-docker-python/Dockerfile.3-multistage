@@ -1,0 +1,16 @@
+# 3 · EL MULTI-STAGE CON VENV — compilar en una imagen, correr en otra.
+# El builder puede ensuciar lo que quiera: al runtime solo viaja el venv.
+FROM python:3.13-slim AS builder
+WORKDIR /app
+RUN python -m venv /venv
+ENV PATH="/venv/bin:$PATH"
+COPY app/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+FROM python:3.13-slim
+WORKDIR /app
+COPY --from=builder /venv /venv
+ENV PATH="/venv/bin:$PATH"
+COPY app/ .
+EXPOSE 8000
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]

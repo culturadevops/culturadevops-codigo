@@ -1,0 +1,11 @@
+### renombro el recurso: docker_container.web -> docker_container.tienda (sin moved)
+  # docker_container.tienda will be created
+  # docker_container.web will be destroyed
+  # (because docker_container.web is not in configuration)
+Plan: 1 to add, 0 to change, 1 to destroy.
+### añado bloque moved
+  # docker_container.web has moved to docker_container.tienda
+Plan: 0 to add, 0 to change, 0 to destroy.
+  # docker_container.web has moved to docker_container.tienda
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+contenedor antes: 253975feae06  despues: 253975feae06

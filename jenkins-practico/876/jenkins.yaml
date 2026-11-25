@@ -1,0 +1,44 @@
+jenkins:
+  systemMessage: "Banco 876: Shared Libraries"
+  numExecutors: 2
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: ${ADMIN_PASS}
+  authorizationStrategy: loggedInUsersCanDoAnything
+unclassified:
+  location:
+    url: http://jk-a-jenkins:8080/
+  globalLibraries:
+    libraries:
+      - name: pipeline-comun
+        defaultVersion: main
+        allowVersionOverride: true
+        implicit: false
+        retriever:
+          modernSCM:
+            scm:
+              git:
+                remote: git://jk-a-git/pipeline-comun.git
+jobs:
+  - script: |
+      ['tienda-web', 'api-pagos', 'worker-correos'].each { p ->
+        pipelineJob(p) {
+          definition {
+            cpsScm {
+              scm { git { remote { url('git://jk-a-git/' + p + '.git') }; branch('main') } }
+              scriptPath('Jenkinsfile')
+            }
+          }
+        }
+      }
+      pipelineJob('tienda-web-sin-libreria') {
+        definition {
+          cpsScm {
+            scm { git { remote { url('git://jk-a-git/tienda-web.git') }; branch('main') } }
+            scriptPath('Jenkinsfile.completo')
+          }
+        }
+      }

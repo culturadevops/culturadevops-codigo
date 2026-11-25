@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Copia FILE a DEST; si en DEST ya existe un archivo con el mismo nombre, no lo sobrescribas: añade la fecha y la hora al nombre de la copia nueva.\nUso: script.sh FILE DEST\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Verificar si se proporcionaron dos argumentos\nif [ \"$#\" -ne 2 ]; then\n    echo \"Uso: $0 FILE DEST\"\n    exit 1\nfi\n\nFILE=$1\nDEST=$2\n\n# Verificar si el archivo de destino existe\nif [ -f \"$DEST/$FILE\" ]; then\n    # Si existe, agregar la fecha y hora al nombre del archivo\n    NEW_NAME=\"${FILE}_$(date +%Y%m%d_%H%M%S)\"\n    cp \"$FILE\" \"$DEST/$NEW_NAME\"\nelse\n    # Si no existe, simplemente copiar el archivo\n    cp \"$FILE\" \"$DEST/$FILE\"\nfi\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 149
+}

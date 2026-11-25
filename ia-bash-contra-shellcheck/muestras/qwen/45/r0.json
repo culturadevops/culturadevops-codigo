@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Busca los enlaces simbólicos rotos dentro de DIR y sus subcarpetas, y borra cada uno.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\nfind \"$DIR\" -type l -exec test ! -e {} \\; -print | xargs rm\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 93
+}

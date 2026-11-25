@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Rota el archivo de log FILE: si existe, lo renombra a FILE.1 (el FILE.1 anterior pasa a FILE.2, y así hasta FILE.5; el más viejo se borra) y crea un FILE nuevo vacío.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nFILE=$1\n\nif [ -f \"$FILE\" ]; then\n    count=5\n    while [ $count -gt 1 ]; do\n        prev_file=\"$FILE.$((count-1))\"\n        if [ -f \"$prev_file\" ]; then\n            mv \"$prev_file\" \"$FILE.$count\"\n        fi\n        count=$((count-1))\n    done\n    mv \"$FILE\" \"$FILE.1\"\n    touch \"$FILE\"\nelse\n    touch \"$FILE\"\nfi\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 111
+}

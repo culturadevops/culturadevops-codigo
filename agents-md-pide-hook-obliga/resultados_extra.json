@@ -1,0 +1,9 @@
+{
+  "confianza": {
+    "debug": [
+      "[DEBUG] Dropped 14 project-scoped permissions.allow entries — workspace not yet trusted"
+    ],
+    "stderr": "Ignoring 14 permissions.allow entries from .claude/settings.json: this workspace has not been trusted. Run Claude Code interactively here once and accept the trust dialog, or set projects[\"C:/Users/tu-usuario/AppData/Local/Temp/v708-confianza-x_pz0zdh\"].hasTrustDialogAccepted: true in C:\\Users\\tu-usuario\\.claude.json.\nWarning: no stdin data received in 3s, proceeding without it. If piping from a slow command, redirect stdin explicitly: < /dev/null to skip, or wait longer.",
+    "stdout": "ok"
+  }
+}

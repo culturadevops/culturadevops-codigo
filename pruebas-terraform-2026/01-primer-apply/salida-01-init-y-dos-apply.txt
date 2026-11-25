@@ -1,0 +1,17 @@
+### que deja init
+66M	.terraform
+-rw-r--r-- 1 USER 197121     4387 Sep 13 12:28 README.md
+-rwxr-xr-x 1 USER 197121 68402688 Sep 13 12:28 terraform-provider-docker_v3.9.0.exe
+### apply dos veces seguidas
+
+Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+No changes. Your infrastructure matches the configuration.
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+### ls tras apply
+drwxr-xr-x 1 USER 197121    0 Sep 13 12:28 .terraform
+-rw-r--r-- 1 USER 197121 1260 Sep 13 12:28 .terraform.lock.hcl
+-rw-r--r-- 1 USER 197121  402 Sep 13 12:45 main.tf
+-rw-r--r-- 1 USER 197121 4825 Sep 13 12:52 terraform.tfstate
+-rw-r--r-- 1 USER 197121 4843 Sep 13 12:52 terraform.tfstate.backup

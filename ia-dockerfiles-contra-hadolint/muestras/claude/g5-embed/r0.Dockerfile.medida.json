@@ -1,0 +1,19 @@
+{
+ "app": "g5-embed",
+ "dockerfile": "muestras/claude/g5-embed/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24-alpine",
+  "gcr.io/distroless/static-debian12:nonroot"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 7.5,
+ "error_build": "",
+ "bytes": 3122805,
+ "disco_mb": 14.2,
+ "usuario": "nonroot:nonroot",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

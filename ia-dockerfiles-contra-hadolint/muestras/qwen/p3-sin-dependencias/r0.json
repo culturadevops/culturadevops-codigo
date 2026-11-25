@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- server.py ---\nfrom http.server import BaseHTTPRequestHandler, HTTPServer\n\n\nclass H(BaseHTTPRequestHandler):\n    def do_GET(self):\n        self.send_response(200)\n        self.end_headers()\n        self.wfile.write(b'ok')\n\n\nHTTPServer(('0.0.0.0', 8080), H).serve_forever()\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\nFROM python:3.9-slim\n\nWORKDIR /app\n\nCOPY . /app\n\nEXPOSE 8080\n\nCMD [\"python\", \"server.py\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 41
+}

@@ -1,0 +1,4 @@
+mirrors:
+  "registro:5000":
+    endpoint:
+      - "http://registro:5000"

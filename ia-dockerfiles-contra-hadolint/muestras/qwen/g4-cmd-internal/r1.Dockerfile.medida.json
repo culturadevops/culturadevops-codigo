@@ -1,0 +1,13 @@
+{
+ "app": "g4-cmd-internal",
+ "dockerfile": "muestras/qwen/g4-cmd-internal/r1.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24",
+  "alpine:3.19.0"
+ ],
+ "latest": false,
+ "construye": false,
+ "segundos_build": 1.0,
+ "error_build": "#8 ERROR: failed to calculate checksum of ref g7x334u8qbm68w1z2klnpk8ou::kas5z09vw5zo6ikinxyhi2427: \"/go.sum\": not found\nERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref g7x334u8qbm68w1z2klnpk8ou::kas5z09vw5zo6ikinxyhi2427: \"/go.sum\": not found"
+}

@@ -1,0 +1,19 @@
+{
+ "app": "j4-maven-gson-shade",
+ "dockerfile": "muestras/claude/j4-maven-gson-shade/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "maven:3.9-eclipse-temurin-21",
+  "eclipse-temurin:21-jre"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 18.3,
+ "error_build": "",
+ "bytes": 115667390,
+ "disco_mb": 457.0,
+ "usuario": "10001:10001",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

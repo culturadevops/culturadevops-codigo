@@ -1,0 +1,22 @@
+### paso de count a for_each SIN moved
+19:  for_each = toset(var.nombres)
+20:  name     = "srv-${each.key}"
+      1   # docker_container.web["alfa"] will be created
+      1   # docker_container.web["beta"] will be created
+      1   # docker_container.web["gamma"] will be created
+      1   # docker_container.web[0] will be destroyed
+      1   # docker_container.web[1] will be destroyed
+      1   # docker_container.web[2] will be destroyed
+      1 Plan: 3 to add, 0 to change, 3 to destroy.
+### con tres bloques moved
+  # docker_container.web[0] has moved to docker_container.web["alfa"]
+  # docker_container.web[1] has moved to docker_container.web["beta"]
+  # docker_container.web[2] has moved to docker_container.web["gamma"]
+Plan: 0 to add, 0 to change, 0 to destroy.
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+ids antes:   srv-alfa:1c4c90aa1e05 srv-beta:c852265da867 srv-gamma:64dac876c52d 
+ids despues: srv-alfa:1c4c90aa1e05 srv-beta:c852265da867 srv-gamma:64dac876c52d 
+docker_container.web["alfa"]
+docker_container.web["beta"]
+docker_container.web["gamma"]
+docker_image.web

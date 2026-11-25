@@ -1,0 +1,48 @@
+$ curl -s -o /dev/null -w '%{http_code}\n' https://pypi.org/pypi/dockerfile-py/json
+404
+$ curl -s -o /dev/null -w '%{http_code}\n' https://pypi.org/pypi/dockerfile-parse/json
+200
+$ curl -s -o /dev/null -w '%{http_code}\n' https://pypi.org/pypi/hcl2/json
+404
+$ curl -s -o /dev/null -w '%{http_code}\n' https://pypi.org/pypi/python-hcl2/json
+200
+$ curl -s -o /dev/null -w '%{http_code}\n' https://pypi.org/pypi/yaml/json
+404
+$ curl -s -o /dev/null -w '%{http_code}\n' https://pypi.org/pypi/pyyaml/json
+200
+$ cat requirements.txt
+requests==2.34.2
+dockerfile-py==1.0.0
+$ pip-audit --version
+pip-audit 2.10.1
+$ pip-audit -r requirements.txt --no-deps --disable-pip
+No known vulnerabilities found
+Name          Skip Reason
+------------- ----------------------------------------------------------------------------
+dockerfile-py Dependency not found on PyPI and could not be audited: dockerfile-py (1.0.0)
+# exit=0
+$ pip-audit -r requirements.txt --no-deps --disable-pip --strict
+ERROR:pip_audit._cli:dockerfile-py: Dependency not found on PyPI and could not be audited: dockerfile-py (1.0.0)
+# exit=1
+$ python verificar_paquetes.py requirements.txt
+ok          requests  (desde 2011-02-14, 163 versiones)
+NO EXISTE   dockerfile-py
+# exit=1
+$ cat requirements-journal.txt
+journal==0.4.0
+$ pip-audit -r requirements-journal.txt --no-deps --disable-pip --strict
+No known vulnerabilities found
+# exit=0
+$ python verificar_paquetes.py requirements-journal.txt
+ok          journal  (desde 2011-08-16, 4 versiones)
+# exit=0
+$ cat requirements.lock
+requests==2.34.2 --hash=sha256:2a0d60c172f8…
+six==1.17.0
+$ pip install --require-hashes --no-deps --dry-run -r requirements.lock
+Requirement already satisfied: requests==2.34.2 in /usr/local/lib/python3.12/site-packages (from -r requirements.lock (line 1)) (2.34.2)
+Collecting six==1.17.0 (from -r requirements.lock (line 2))
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+ERROR: Hashes are required in --require-hashes mode, but they are missing from some requirements. Here is a list of those requirements along with the hashes their downloaded archives actually had. Add lines like these to your requirements files to prevent tampering. (If you did not enable --require-hashes manually, note that it turns on automatically when any package has a hash.)
+    six==1.17.0 --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274
+# exit=1

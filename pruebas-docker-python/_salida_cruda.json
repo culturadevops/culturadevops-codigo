@@ -1,0 +1,32 @@
+{
+ "1-ingenuo": {
+  "frio_s": 3.8,
+  "tibio_s": 3.0,
+  "descarga": 419461812,
+  "disco": "1.63GB",
+  "humo": true
+ },
+ "2-slim": {
+  "frio_s": 3.1,
+  "tibio_s": 0.6,
+  "descarga": 48561635,
+  "disco": "199MB",
+  "humo": true
+ },
+ "3-multistage": {
+  "frio_s": 4.1,
+  "tibio_s": 0.6,
+  "descarga": 48872793,
+  "disco": "202MB",
+  "humo": true
+ },
+ "4-uv": {
+  "frio_s": 7.1,
+  "tibio_s": 0.7,
+  "descarga": 43739282,
+  "disco": "180MB",
+  "humo": true
+ },
+ "contexto_sin": "#3 transferring context: 2B done",
+ "contexto_con": "#3 transferring context: 183B done"
+}

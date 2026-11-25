@@ -1,0 +1,10 @@
+# Clúster del curso de Kubernetes 2027, partes 1-4 (agente A). kind v0.30.0, kindest/node:v1.34.0.
+# Un plano de control y dos workers: hacen falta dos nodos para ver qué pasa cuando muere uno.
+# Sin extraPortMappings: nada se publica en la máquina; todo se prueba desde la red «kind» de Docker.
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: k8s-a
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker

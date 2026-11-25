@@ -1,0 +1,18 @@
+{
+ "app": "p3-sin-dependencias",
+ "dockerfile": "muestras/qwen/p3-sin-dependencias/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.9-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 7.8,
+ "error_build": "",
+ "bytes": 44963885,
+ "disco_mb": 183.0,
+ "usuario": "",
+ "root": true,
+ "arranca": true,
+ "error_arranque": ""
+}

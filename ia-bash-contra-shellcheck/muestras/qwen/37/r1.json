@@ -1,0 +1,6 @@
+{
+ "prompt": "Este es tu script:\n```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\nfind \"$DIR\" -type f -print0 | xargs -0 -n1 -I{} stat -c '%F %n' {} | awk -F/ '{print $NF}' | awk -F. '{print $NF}' | sort | uniq -c | sort -nr | while read count ext; do\n    echo \"$ext $count\"\ndone\n```\nShellCheck 0.11.0 da estos avisos:\nscript.sh:15:152: info: read without -r will mangle backslashes. [SC2162]\nCorrige el script para que ShellCheck no dé avisos. Responde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\nfind \"$DIR\" -type f -print0 | xargs -0 -n1 -I{} stat -c '%F %n' {} | awk -F/ '{print $NF}' | awk -F. '{print $NF}' | sort | uniq -c | sort -nr | while IFS= read -r count ext; do\n    echo \"$ext $count\"\ndone\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 152
+}

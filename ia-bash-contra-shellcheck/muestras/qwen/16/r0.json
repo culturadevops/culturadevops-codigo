@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Borra todos los archivos que terminan en .tmp o .bak dentro de DIR y sus subcarpetas, e imprime cuántos borró.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ -z \"$DIR\" ]; then\n  echo \"Debes proporcionar un directorio como argumento.\"\n  exit 1\nfi\n\nif [ ! -d \"$DIR\" ]; then\n  echo \"$DIR no es un directorio válido.\"\n  exit 1\nfi\n\ncount=0\nfind \"$DIR\" -type f \\( -name \"*.tmp\" -o -name \"*.bak\" \\) -exec rm {} \\; && count=$(find \"$DIR\" -type f \\( -name \"*.tmp\" -o -name \"*.bak\" \\) | wc -l)\n\necho \"Se borraron $count archivos .tmp o .bak.\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 149
+}

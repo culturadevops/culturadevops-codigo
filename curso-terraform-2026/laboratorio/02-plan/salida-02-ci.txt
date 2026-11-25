@@ -1,0 +1,16 @@
+### -detailed-exitcode sin cambios
+codigo: 0
+### -detailed-exitcode con un cambio (restart)
+codigo: 2
+### -detailed-exitcode con error de sintaxis
+codigo: 1
+### plan en JSON: acciones por recurso (cambio de puerto)
+docker_container.web ['create', 'delete']
+docker_image.web ['no-op']
+borrados: 1
+15649 p.json
+### plan -destroy
+  - destroy
+  # docker_container.web will be destroyed
+  # docker_image.web will be destroyed
+Plan: 0 to add, 0 to change, 2 to destroy.

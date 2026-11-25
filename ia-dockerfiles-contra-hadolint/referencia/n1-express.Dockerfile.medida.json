@@ -1,0 +1,18 @@
+{
+ "app": "n1-express",
+ "dockerfile": "referencia/n1-express.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:22.12.0-bookworm-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 6.5,
+ "error_build": "",
+ "bytes": 79428514,
+ "disco_mb": 330.0,
+ "usuario": "node",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

@@ -1,0 +1,5 @@
+### tiempos (5 pasadas, ms) · Terraform 1.16.2 · docker provider 3.9.0
+  plan sin cambios              653    667    655    645    669   media 657 ms
+  apply sin cambios             733    716    690    733    699   media 714 ms
+  destroy+apply de cero        7230   7338   7084   6938   7172   media 7152 ms
+  validate                      189    184    181    179    179   media 182 ms

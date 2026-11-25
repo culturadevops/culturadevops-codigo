@@ -1,0 +1,18 @@
+{
+ "app": "n2-http-sin-dependencias",
+ "dockerfile": "muestras/claude/n2-http-sin-dependencias/r1.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:22-alpine3.22"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 11.0,
+ "error_build": "",
+ "bytes": 57391328,
+ "disco_mb": 230.0,
+ "usuario": "node",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

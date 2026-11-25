@@ -1,0 +1,9 @@
+# 1 · EL INGENUO — el que tiene medio mundo en producción sin saberlo.
+# Imagen completa (con compiladores y todo), COPY antes del install (mata la caché),
+# pip sin --no-cache-dir, y el servidor de desarrollo de Flask como servidor.
+FROM python:3.13
+WORKDIR /app
+COPY app/ .
+RUN pip install -r requirements.txt
+EXPOSE 8000
+CMD ["python", "app.py"]

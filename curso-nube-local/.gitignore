@@ -1,0 +1,11 @@
+# Sistema
+.DS_Store
+Thumbs.db
+*.swp
+
+# Logs
+*.log
+
+# Datos que generan los contenedores
+datos/
+volumes/

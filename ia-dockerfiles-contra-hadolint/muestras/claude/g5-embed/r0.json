@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- go.mod ---\nmodule ejemplo.com/web\n\ngo 1.24\n\n--- main.go ---\npackage main\n\nimport (\n\t\"embed\"\n\t\"io/fs\"\n\t\"log\"\n\t\"net/http\"\n)\n\n//go:embed static\nvar static embed.FS\n\nfunc main() {\n\tsub, _ := fs.Sub(static, \"static\")\n\thttp.Handle(\"/\", http.FileServer(http.FS(sub)))\n\tlog.Fatal(http.ListenAndServe(\":8080\", nil))\n}\n\n--- static/index.html ---\nok\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# syntax=docker/dockerfile:1\n\nFROM golang:1.24-alpine AS build\nWORKDIR /src\n\nCOPY go.mod ./\nRUN go mod download\n\nCOPY main.go ./\nCOPY static ./static\n\nRUN CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags=\"-s -w\" -o /out/web .\n\nFROM gcr.io/distroless/static-debian12:nonroot\nCOPY --from=build /out/web /web\nUSER nonroot:nonroot\nEXPOSE 8080\nENTRYPOINT [\"/web\"]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.019485,
+ "segundos": 5.8,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v711-gh405gel"
+}

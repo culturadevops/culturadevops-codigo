@@ -1,0 +1,5 @@
+Error: Invalid list resource
+  on buscar.tfquery.hcl line 1, in list "docker_container" "todos":
+   1: list "docker_container" "todos" {
+The provider kreuzwerker/docker does not support list resource
+"docker_container".

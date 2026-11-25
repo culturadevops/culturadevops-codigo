@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_instance\" \"example\" {\n  ami           = \"ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20231005\"\n  instance_type = \"t3.micro\"\n\n  user_data = <<-EOF\n              #!/bin/bash\n              sudo apt-get update\n              sudo apt-get install -y ssh\n              EOF\n\n  connection {\n    type        = \"ssh\"\n    host        = self.public_ip\n    user        = \"ubuntu\"\n    private_key = file(\"~/.ssh/id_rsa\")\n  }\n\n  tags = {\n    Name = \"example-ec2\"\n  }\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 4.8,
+ "tokens": 196,
+ "prompt": "Escribe el código de Terraform para una instancia EC2 t3.micro con Ubuntu a la que me pueda conectar por SSH en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

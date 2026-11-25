@@ -1,0 +1,19 @@
+{
+ "app": "n3-fastify",
+ "dockerfile": "muestras/claude/n3-fastify/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:22-alpine",
+  "node:22-alpine"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 9.5,
+ "error_build": "",
+ "bytes": 62995301,
+ "disco_mb": 256.0,
+ "usuario": "node",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

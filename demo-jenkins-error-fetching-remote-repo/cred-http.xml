@@ -1,0 +1,7 @@
+<com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+  <scope>GLOBAL</scope>
+  <id>git-http</id>
+  <description>usuario del servidor git (demo)</description>
+  <username>jenkins</username>
+  <password>token-de-prueba</password>
+</com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>

@@ -1,0 +1,580 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 22,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Incorrect attribute value type",
+      "detail": "Inappropriate value for attribute \"assign_public_ip\": a bool is required.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 62,
+          "column": 24,
+          "byte": 1501
+        },
+        "end": {
+          "line": 62,
+          "column": 33,
+          "byte": 1510
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    assign_public_ip = \"ENABLED\"",
+        "start_line": 62,
+        "highlight_start_offset": 23,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (bool).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (bool).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (number).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (bool).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (bool).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (bool).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (bool).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (bool).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "This object does not have an attribute named \"id\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported attribute",
+      "detail": "Can't access attributes on a primitive-typed value (string).",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 60,
+          "column": 57,
+          "byte": 1417
+        },
+        "end": {
+          "line": 60,
+          "column": 60,
+          "byte": 1420
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_service\" \"web_service\"",
+        "code": "    subnets = [for subnet in aws_subnet.example : subnet.id]",
+        "start_line": 60,
+        "highlight_start_offset": 56,
+        "highlight_end_offset": 59,
+        "values": []
+      }
+    }
+  ]
+}

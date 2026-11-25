@@ -1,0 +1,19 @@
+{
+ "app": "n4-typescript",
+ "dockerfile": "referencia/n4-typescript.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "node:22.12.0-bookworm-slim",
+  "node:22.12.0-bookworm-slim"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 6.5,
+ "error_build": "",
+ "bytes": 79430714,
+ "disco_mb": 330.0,
+ "usuario": "node",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

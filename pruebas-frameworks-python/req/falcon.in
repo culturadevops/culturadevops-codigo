@@ -1,0 +1,2 @@
+falcon==4.4.0
+gunicorn==26.2.0

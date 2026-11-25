@@ -1,0 +1,13 @@
+# VARIANTE «de fábrica» de traefik.yml: sin tocar el pool al backend. Solo para la prueba de 1.000 conexiones.
+# Traefik 3.7 — configuración estática. Las rutas van en dinamica.yml (proveedor de archivo: en el banco no hay etiquetas de
+# Docker ni socket montado, para medir solo el proxy). Sin registro de accesos (de fábrica), log solo de errores.
+entryPoints:
+  web:
+    address: ":8080"
+  websecure:
+    address: ":8443"
+providers:
+  file:
+    filename: /etc/traefik/dinamica.yml
+log:
+  level: ERROR

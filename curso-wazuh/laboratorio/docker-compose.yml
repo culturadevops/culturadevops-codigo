@@ -1,0 +1,142 @@
+# Laboratorio del curso «Monta un SOC en tu casa con Wazuh».
+#
+# ⚠️ ANTES de esto hay que generar los certificados. No es opcional:
+#
+#     docker compose -f generar-certificados.yml run --rm generador
+#     docker compose up -d
+#
+# Comprobado el 2026-08-19: sin ese paso el dashboard muere con `ENOENT: dashboard-key.pem` y el
+# indexer tampoco levanta. Y `plugins.security.disabled=true` por variable de entorno NO sirve
+# para saltarselo — el plugin arranca igual. Es el primer tropiezo real del montaje y por eso la
+# leccion 02 lo enseña fallando de verdad, no fingido.
+#
+# ⚠️ Pide ~6 GB, casi todos del indexer. NO renderizar con esto levantado.
+#     parar:   docker compose down          (conserva los datos)
+#     borrar:  docker compose down -v
+services:
+
+  # El almacen. Fork de OpenSearch, y quien se come la RAM.
+  indexer:
+    image: wazuh/wazuh-indexer:4.9.2
+    container_name: lab-wazuh-indexer
+    hostname: wazuh.indexer
+    environment:
+      - "OPENSEARCH_JAVA_OPTS=-Xms1g -Xmx1g"   # 1 GB de heap: de sobra para un lab
+      - bootstrap.memory_lock=true
+    ulimits:
+      memlock: { soft: -1, hard: -1 }
+      nofile:  { soft: 65536, hard: 65536 }
+    volumes:
+      - indexer-data:/var/lib/wazuh-indexer
+      # ⚠️ Las rutas y los NOMBRES no son libres: los fija el `opensearch.yml` de la imagen.
+      # Se leyeron de ella (`grep pemcert`) en vez de copiarlos de un tutorial — la primera
+      # version monto `/usr/share/...` con el nombre del host y murio con
+      # `AccessControlException: access denied /etc/wazuh-indexer/certs/indexer.pem`.
+      - ./config/wazuh_indexer/opensearch.yml:/usr/share/wazuh-indexer/opensearch.yml
+      # ⚠️ SIN ESTO el indexer se queda con la contraseña de DEMOSTRACION de la imagen
+      # (`admin:admin`) mientras el manager y el dashboard usan la de abajo, y filebeat
+      # muere en bucle con `401 Unauthorized`. El fallo es silencioso: el manager sigue
+      # escribiendo alertas en su fichero, asi que parece que todo va bien y el indexer
+      # esta vacio. Descubierto el 2026-08-23 — el lab llevaba asi desde el 19.
+      - ./config/wazuh_indexer/internal_users.yml:/usr/share/wazuh-indexer/opensearch-security/internal_users.yml
+      - ./config/wazuh_indexer_ssl_certs/root-ca.pem:/usr/share/wazuh-indexer/certs/root-ca.pem
+      - ./config/wazuh_indexer_ssl_certs/wazuh.indexer.pem:/usr/share/wazuh-indexer/certs/indexer.pem
+      - ./config/wazuh_indexer_ssl_certs/wazuh.indexer-key.pem:/usr/share/wazuh-indexer/certs/indexer-key.pem
+      - ./config/wazuh_indexer_ssl_certs/admin.pem:/usr/share/wazuh-indexer/certs/admin.pem
+      - ./config/wazuh_indexer_ssl_certs/admin-key.pem:/usr/share/wazuh-indexer/certs/admin-key.pem
+    ports:
+      - "9200:9200"
+
+  # El cerebro: recibe eventos, los pasa por decoders y reglas, y decide si hay alerta.
+  manager:
+    image: wazuh/wazuh-manager:4.9.2
+    container_name: lab-wazuh-manager
+    hostname: wazuh.manager
+    depends_on: [indexer]
+    environment:
+      - INDEXER_URL=https://wazuh.indexer:9200
+      - INDEXER_USERNAME=admin
+      - INDEXER_PASSWORD=SecretPassword
+      - FILEBEAT_SSL_VERIFICATION_MODE=full
+      - SSL_CERTIFICATE_AUTHORITIES=/etc/ssl/root-ca.pem
+      - SSL_CERTIFICATE=/etc/ssl/filebeat.pem
+      - SSL_KEY=/etc/ssl/filebeat.key
+      - API_USERNAME=wazuh-wui
+      - API_PASSWORD=MyS3cr37P450r.*-
+    ulimits:
+      memlock: { soft: -1, hard: -1 }
+      nofile:  { soft: 65536, hard: 65536 }
+    volumes:
+      - manager-config:/var/ossec/etc
+      - manager-logs:/var/ossec/logs
+      - ./config/wazuh_indexer_ssl_certs/root-ca-manager.pem:/etc/ssl/root-ca.pem
+      - ./config/wazuh_indexer_ssl_certs/wazuh.manager.pem:/etc/ssl/filebeat.pem
+      - ./config/wazuh_indexer_ssl_certs/wazuh.manager-key.pem:/etc/ssl/filebeat.key
+    ports:
+      - "1514:1514"   # eventos de los agentes
+      - "1515:1515"   # enrolamiento
+      # ⚠️ La API de Wazuh escucha en 55000 DENTRO del contenedor, pero en Windows ese puerto
+      # no se puede publicar: Hyper-V/WinNAT tiene reservado el rango 54971-55070 y Docker
+      # muere con «bind: Intento de acceso a un socket no permitido por sus permisos de acceso».
+      # Comprobado el 2026-08-23 con `netsh interface ipv4 show excludedportrange protocol=tcp`.
+      # Se publica en 55500, que esta fuera de todos los rangos reservados. El dashboard NO
+      # usa este puerto: habla con el manager por la red de Docker (https://wazuh.manager).
+      # ⚠️ ACTUALIZADO el 2026-08-24: el 55500 TAMBIEN dejo de valer. Windows reinicio y el
+      # rango reservado se movio a 55444-55543, que se lo come. (Y el 54971-55070 que bloqueaba
+      # el 55000 ayer ya no existe: hoy el 55000 funcionaria.) Es exactamente lo que avisa la
+      # leccion 02: los rangos cambian en cada arranque.
+      #
+      # El arreglo DURADERO no es buscar otro puerto alto, es bajarse del rango dinamico:
+      # Windows solo reserva de 49152 para arriba. Un puerto por debajo no se lo puede quedar.
+      - "8555:55000" # API
+
+  # La cara: fork de OpenSearch Dashboards. Es lo que se graba en casi todo el curso.
+  dashboard:
+    image: wazuh/wazuh-dashboard:4.9.2
+    container_name: lab-wazuh-dashboard
+    hostname: wazuh.dashboard
+    depends_on: [indexer]
+    environment:
+      - INDEXER_USERNAME=admin
+      - INDEXER_PASSWORD=SecretPassword
+      - WAZUH_API_URL=https://wazuh.manager
+      - DASHBOARD_USERNAME=kibanaserver
+      - DASHBOARD_PASSWORD=kibanaserver
+      - API_USERNAME=wazuh-wui
+      - API_PASSWORD=MyS3cr37P450r.*-
+    volumes:
+      # ⛔ SIN ESTO el dashboard NO FUNCIONA (descubierto el 2026-08-23). La imagen trae
+      # `opensearch.hosts: https://localhost:9200`, o sea, se busca el almacen A SI MISMO, y
+      # su log repite para siempre `[ConnectionError]: connect ECONNREFUSED 127.0.0.1:9200`.
+      # `docker ps` lo da por «Up» igual. Las variables INDEXER_* de aqui abajo NO las lee
+      # esta imagen; solo DASHBOARD_USERNAME/PASSWORD, que mete en su keystore.
+      - ./config/wazuh_dashboard/opensearch_dashboards.yml:/usr/share/wazuh-dashboard/config/opensearch_dashboards.yml
+      # Igual que el indexer: rutas leidas de su `opensearch_dashboards.yml`.
+      - ./config/wazuh_indexer_ssl_certs/wazuh.dashboard.pem:/etc/wazuh-dashboard/certs/dashboard.pem
+      - ./config/wazuh_indexer_ssl_certs/wazuh.dashboard-key.pem:/etc/wazuh-dashboard/certs/dashboard-key.pem
+      - ./config/wazuh_indexer_ssl_certs/root-ca.pem:/etc/wazuh-dashboard/certs/root-ca.pem
+    ports:
+      # ⚠️ DENTRO escucha en el 443, no en el 5601: lo dice su propio `server.port`. El mapeo
+      # `5601:5601` de la primera version publicaba un puerto en el que no habia nada.
+      - "5601:443"
+
+  # La VICTIMA: Ubuntu con SSH y el agente. Es contra esta —y contra nada mas— que se hacen las
+  # demostraciones de ataque del modulo 2.
+  victima:
+    image: ubuntu:24.04
+    container_name: lab-wazuh-victima
+    hostname: victima
+    command: ["sleep", "infinity"]
+    # ⚠️ SIN NET_ADMIN la respuesta activa de la leccion 10 NO PUEDE bloquear nada, y falla
+    # callada (2026-08-27). Con iptables instalado pero sin esta capacidad, el binario contesta:
+    #     iptables v1.8.10 (nf_tables): Could not fetch rule set generation id:
+    #     Permission denied (you must be root)
+    # ...y en `active-responses.log` del agente no aparece ni una linea. La regla 5763 salta en
+    # 5 s, el manager manda la orden, y el bloqueo no ocurre. Nadie avisa.
+    cap_add:
+      - NET_ADMIN
+
+volumes:
+  indexer-data:
+  manager-config:
+  manager-logs:

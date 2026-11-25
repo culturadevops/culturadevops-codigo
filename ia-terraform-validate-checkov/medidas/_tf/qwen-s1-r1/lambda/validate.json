@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"mode\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 58,
+          "column": 18,
+          "byte": 1582
+        },
+        "end": {
+          "line": 58,
+          "column": 19,
+          "byte": 1583
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_lambda_function\" \"example\"",
+        "code": "  tracing_config {",
+        "start_line": 58,
+        "highlight_start_offset": 17,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 59,
+          "column": 5,
+          "byte": 1589
+        },
+        "end": {
+          "line": 59,
+          "column": 12,
+          "byte": 1596
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_lambda_function\" \"example\"",
+        "code": "    enabled = true",
+        "start_line": 59,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    }
+  ]
+}

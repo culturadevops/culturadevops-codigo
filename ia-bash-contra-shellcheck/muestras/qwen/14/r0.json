@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Lee FILE, que tiene un nombre de servicio por línea, y para cada uno comprueba con pgrep si hay un proceso con ese nombre; imprime 'NOMBRE: activo' o 'NOMBRE: caído'. Termina con código 1 si alguno está caído.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nFILE=$1\n\nwhile IFS= read -r service; do\n  if pgrep -x \"$service\" > /dev/null; then\n    echo \"$service: activo\"\n  else\n    echo \"$service: caído\"\n    exit 1\n  fi\ndone < \"$FILE\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 72
+}

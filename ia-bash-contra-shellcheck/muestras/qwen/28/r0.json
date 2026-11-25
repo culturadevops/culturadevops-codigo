@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Reemplaza el texto VIEJO por NUEVO en todos los archivos .conf de DIR y sus subcarpetas, guardando antes una copia .orig de cada archivo modificado.\nUso: script.sh DIR VIEJO NUEVO\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Verificar si se proporcionaron tres argumentos\nif [ \"$#\" -ne 3 ]; then\n    echo \"Uso: $0 DIR VIEJO NUEVO\"\n    exit 1\nfi\n\nDIR=\"$1\"\nVIEJO=\"$2\"\nNUEVO=\"$3\"\n\n# Verificar si DIR existe\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio $DIR no existe.\"\n    exit 1\nfi\n\n# Recorrer todos los archivos .conf en el directorio y sus subdirectorios\nfind \"$DIR\" -type f -name \"*.conf\" | while read -r archivo; do\n    # Crear una copia del archivo original\n    cp \"$archivo\" \"${archivo}.orig\"\n    \n    # Reemplazar el texto VIEJO por NUEVO en el archivo\n    sed -i \"s/$VIEJO/$NUEVO/g\" \"$archivo\"\ndone\n\necho \"Reemplazo completado.\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 215
+}

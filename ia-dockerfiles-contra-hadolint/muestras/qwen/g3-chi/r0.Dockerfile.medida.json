@@ -1,0 +1,28 @@
+{
+ "app": "g3-chi",
+ "dockerfile": "muestras/qwen/g3-chi/r0.Dockerfile",
+ "hadolint": [
+  {
+   "code": "DL3007",
+   "column": 1,
+   "file": "-",
+   "level": "warning",
+   "line": 20,
+   "message": "Using latest is prone to errors if the image will ever update. Pin the version explicitly to a release tag"
+  }
+ ],
+ "bases": [
+  "golang:1.24",
+  "alpine:latest"
+ ],
+ "latest": true,
+ "construye": true,
+ "segundos_build": 5.7,
+ "error_build": "",
+ "bytes": 8691870,
+ "disco_mb": 26.3,
+ "usuario": "",
+ "root": true,
+ "arranca": false,
+ "error_arranque": "Error response from daemon: No such container: v711-run\n"
+}

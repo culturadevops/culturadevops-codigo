@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Ejecuta el comando recibido como argumentos hasta 3 veces, esperando 1 segundo entre intentos, y termina con el código de salida del último intento.\nUso: script.sh COMANDO [ARGUMENTOS...]\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Comprueba si se ha proporcionado al menos un comando\nif [ -z \"$1\" ]; then\n  echo \"Usage: $0 COMANDO [ARGUMENTOS...]\"\n  exit 1\nfi\n\ncomando=\"$1\"\nshift\n\nfor ((i=1; i<=3; i++)); do\n  echo \"Intento $i: $comando $@\"\n  $comando \"$@\" && break\n  sleep 1\ndone\n\nexit $?\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 110
+}

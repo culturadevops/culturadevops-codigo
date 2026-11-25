@@ -1,0 +1,7 @@
+### import con el id CORTO de docker ps: b4715229da4e
+Error: Cannot import non-existent remote object
+pre-existing objects can be imported; check that the id is correct and that
+### con el id LARGO de docker inspect
+  # (imported from "b4715229da4e5191975de54cb50fc99927dff1602dfdeb57dc5d0c7ff2adac64")
+  # Warning: this will destroy the imported resource
+Plan: 1 to import, 1 to add, 0 to change, 1 to destroy.

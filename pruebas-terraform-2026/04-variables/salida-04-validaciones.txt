@@ -1,0 +1,23 @@
+### -var puerto=ochenta
+Error: Invalid value for input variable
+  on main.tf line 8:
+   8: variable "puerto" {
+Unsuitable value for var.puerto set using -var="puerto=...": a number is
+required.
+### -var puerto=80
+Error: Invalid value for variable
+  on main.tf line 8:
+   8: variable "puerto" {
+    ├────────────────
+    │ var.puerto is 80
+El puerto tiene que estar entre 1024 y 65535: por debajo hacen falta permisos
+de administrador.
+This was checked by the validation rule at main.tf:12,3-13.
+### -var entorno=prod
+Error: Invalid value for variable
+  on main.tf line 18:
+  18: variable "entorno" {
+    ├────────────────
+    │ var.entorno is "prod"
+entorno solo puede ser dev, pre o pro.
+This was checked by the validation rule at main.tf:21,3-13.

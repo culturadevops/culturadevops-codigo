@@ -1,0 +1,4 @@
+$ cd /root && python flota.py -hosts s01.txt -known known_hosts_vacio; echo "código de salida: $?"
+s01    ERR    0.0s  HostKeyNotVerifiable: Host key is not trusted for host s01
+1 hosts · 0 ok · 0 con código distinto de 0 · 1 sin respuesta · 0.0s en total
+código de salida: 2

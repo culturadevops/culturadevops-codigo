@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- server.py ---\nfrom http.server import BaseHTTPRequestHandler, HTTPServer\n\n\nclass H(BaseHTTPRequestHandler):\n    def do_GET(self):\n        self.send_response(200)\n        self.end_headers()\n        self.wfile.write(b'ok')\n\n\nHTTPServer(('0.0.0.0', 8080), H).serve_forever()\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\nFROM python:3.12-slim\n\nENV PYTHONDONTWRITEBYTECODE=1 \\\n    PYTHONUNBUFFERED=1\n\nWORKDIR /app\n\nRUN groupadd --system app && useradd --system --gid app --no-create-home app\n\nCOPY --chown=app:app server.py .\n\nUSER app\n\nEXPOSE 8080\n\nHEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \\\n  CMD python -c \"import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8080/', timeout=2).status == 200 else 1)\"\n\nCMD [\"python\", \"server.py\"]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.017731,
+ "segundos": 4.5,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v711-vvif7hix"
+}

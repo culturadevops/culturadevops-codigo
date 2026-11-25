@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Mueve cada archivo .log de DIR (sin subcarpetas) a una subcarpeta de DIR llamada AAAA-MM según su fecha de modificación.\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\nmkdir -p \"$DIR/AAAA-MM\"\n\nfor file in \"$DIR\"/*.log; do\n    if [ -f \"$file\" ]; then\n        mod_date=$(stat -c %y \"$file\" | awk '{print $1}' | sed 's/\\/.*//')\n        mod_year=$(echo $mod_date | cut -c1-4)\n        mod_month=$(echo $mod_date | cut -c5-6)\n        mod_dir=\"$DIR/$mod_year-$mod_month\"\n        mkdir -p \"$mod_dir\"\n        mv \"$file\" \"$mod_dir/\"\n    fi\ndone\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 167
+}

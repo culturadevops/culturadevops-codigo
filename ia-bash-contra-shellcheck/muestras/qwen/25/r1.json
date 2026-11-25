@@ -1,0 +1,6 @@
+{
+ "prompt": "Este es tu script:\n```bash\n#!/bin/bash\n\n# Verifica si se proporcionaron dos argumentos\nif [ \"$#\" -ne 2 ]; then\n    echo \"Uso: $0 FILE CLAVE\"\n    exit 1\nfi\n\nFILE=$1\nCLAVE=$2\n\n# Lee el archivo y busca la clave\ngrep -v '^#' $FILE | while IFS='=' read -r key value; do\n    if [ \"$key\" == \"$CLAVE\" ]; then\n        echo \"$value\"\n        exit 0\n    fi\ndone\n\necho \"Clave no encontrada\"\nexit 1\n```\nShellCheck 0.11.0 da estos avisos:\nscript.sh:13:14: info: Double quote to prevent globbing and word splitting. [SC2086]\nCorrige el script para que ShellCheck no dé avisos. Responde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Verifica si se proporcionaron dos argumentos\nif [ \"$#\" -ne 2 ]; then\n    echo \"Uso: $0 FILE CLAVE\"\n    exit 1\nfi\n\nFILE=$1\nCLAVE=$2\n\n# Lee el archivo y busca la clave\ngrep -v '^#' \"$FILE\" | while IFS='=' read -r key value; do\n    if [ \"$key\" == \"$CLAVE\" ]; then\n        echo \"$value\"\n        exit 0\n    fi\ndone\n\necho \"Clave no encontrada\"\nexit 1\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 131
+}

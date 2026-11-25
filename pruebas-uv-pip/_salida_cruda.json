@@ -1,0 +1,16 @@
+{
+ "pip_frio_ms": [
+  21975,
+  21180,
+  21077
+ ],
+ "uv_frio_ms": [
+  8618,
+  8347,
+  9609
+ ],
+ "pip_caliente_ms": 13149,
+ "uv_caliente_ms": 249,
+ "paquetes": 49,
+ "venv_mb": 524
+}

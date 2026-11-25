@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Extrae de FILE (un log de acceso de nginx en formato combinado) las 5 IP con más peticiones e imprímelas en el formato 'N IP', de mayor a menor.\nUso: script.sh FILE\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ -z \"$1\" ]; then\n    echo \"Usage: $0 FILE\"\n    exit 1\nfi\n\nif [ ! -f \"$1\" ]; then\n    echo \"File not found: $1\"\n    exit 1\nfi\n\nawk '{print $1}' \"$1\" | sort | uniq -c | sort -rn | tail -n 5 | awk '{print $2}' | sort | awk -v n=5 -f <(awk 'NR==1{for(i=1;i<=n;i++)printf \"%s \",i}1' | tac) | awk '{print NF-1 \" \" $0}'\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 146
+}

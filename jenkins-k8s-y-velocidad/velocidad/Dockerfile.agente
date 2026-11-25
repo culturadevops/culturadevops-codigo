@@ -1,0 +1,5 @@
+# 878 · Imagen de agente preparada: la oficial de Maven + todas las dependencias de PetClinic ya en /root/.m2.
+# Se calientan con un build completo (con pruebas) de la misma versión del pom; las fuentes se borran al final.
+FROM maven:3.9.11-eclipse-temurin-21
+COPY petclinic-src/ /tmp/pc/
+RUN cd /tmp/pc && mvn -B -ntp package && cd / && rm -rf /tmp/pc

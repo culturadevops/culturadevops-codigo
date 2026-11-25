@@ -1,0 +1,19 @@
+{
+ "app": "g1-net-http",
+ "dockerfile": "muestras/qwen/g1-net-http/r1.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "golang:1.24",
+  "alpine:3.19"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 2.7,
+ "error_build": "",
+ "bytes": 8080817,
+ "disco_mb": 24.4,
+ "usuario": "",
+ "root": true,
+ "arranca": false,
+ "error_arranque": "Error response from daemon: No such container: v711-run\n"
+}

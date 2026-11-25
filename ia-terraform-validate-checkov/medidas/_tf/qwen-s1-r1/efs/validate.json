@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Invalid block definition",
+      "detail": "The equals sign \"=\" indicates an argument definition, and must not be used when defining a block.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 92,
+          "column": 27,
+          "byte": 2112
+        },
+        "end": {
+          "line": 92,
+          "column": 28,
+          "byte": 2113
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"example\"",
+        "code": "  disable_api Termination = true",
+        "start_line": 92,
+        "highlight_start_offset": 26,
+        "highlight_end_offset": 27,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid block definition",
+      "detail": "The equals sign \"=\" indicates an argument definition, and must not be used when defining a block.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 93,
+          "column": 26,
+          "byte": 2145
+        },
+        "end": {
+          "line": 93,
+          "column": 27,
+          "byte": 2146
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_instance\" \"example\"",
+        "code": "  enable_api Termination = false",
+        "start_line": 93,
+        "highlight_start_offset": 25,
+        "highlight_end_offset": 26,
+        "values": []
+      }
+    }
+  ]
+}

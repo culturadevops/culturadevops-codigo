@@ -1,0 +1,8 @@
+groups:
+  - name: basicas
+    rules:
+      - alert: ServicioCaido
+        expr: up == 0
+        for: 20s
+        labels: {severidad: critica}
+        annotations: {resumen: "{{ $labels.job }} no responde"}

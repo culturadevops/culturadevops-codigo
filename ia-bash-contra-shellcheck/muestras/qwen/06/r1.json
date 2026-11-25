@@ -1,0 +1,6 @@
+{
+ "prompt": "Este es tu script:\n```bash\n#!/bin/bash\n\nif [ -z \"$1\" ]; then\n    echo \"Debes proporcionar el directorio como argumento.\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\ntotal_lines=$(find \"$DIR\" -type f -name \"*.log\" -exec grep -c ERROR {} \\; | awk '{sum += $1} END {print sum}')\n\necho $total_lines\n```\nShellCheck 0.11.0 da estos avisos:\nscript.sh:17:6: info: Double quote to prevent globbing and word splitting. [SC2086]\nCorrige el script para que ShellCheck no dé avisos. Responde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ -z \"$1\" ]; then\n    echo \"Debes proporcionar el directorio como argumento.\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\ntotal_lines=$(find \"$DIR\" -type f -name \"*.log\" -exec grep -c ERROR {} \\; | awk '{sum += $1} END {print sum}')\n\necho \"$total_lines\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 115
+}

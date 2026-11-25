@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Comprueba si hay un proceso llamado NOMBRE; si no lo hay, ejecuta el COMANDO dado (con sus argumentos) en segundo plano y escribe la línea 'reiniciado' en LOGFILE.\nUso: script.sh NOMBRE LOGFILE COMANDO [ARGUMENTOS...]\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nNOMBRE=$1\nLOGFILE=$2\nCOMANDO=$3\n\nif ! pgrep -x \"$NOMBRE\" > /dev/null\nthen\n    $COMANDO &>> \"$LOGFILE\" &\n    echo \"reiniciado\" >> \"$LOGFILE\"\nfi\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 69
+}

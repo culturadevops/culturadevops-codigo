@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Junta en un solo archivo DEST/todo.log el contenido de todos los .log de DIR (incluidas las subcarpetas), ordenados por nombre de archivo.\nUso: script.sh DIR DEST\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/usr/bin/env bash\n# Uso: script.sh DIR DEST\n# Concatena en DEST/todo.log todos los .log de DIR (recursivo), ordenados por nombre de archivo.\n\nset -euo pipefail\n\nusage() {\n    echo \"Uso: $(basename \"$0\") DIR DEST\" >&2\n    exit 1\n}\n\n[[ $# -eq 2 ]] || usage\n\nDIR=$1\nDEST=$2\n\nif [[ ! -d \"$DIR\" ]]; then\n    echo \"Error: '$DIR' no es un directorio\" >&2\n    exit 1\nfi\n\nmkdir -p -- \"$DEST\"\n\nDIR_ABS=$(realpath -- \"$DIR\")\nDEST_ABS=$(realpath -- \"$DEST\")\nOUT=\"$DEST_ABS/todo.log\"\n\n# Archivo temporal en DEST para no incluir la salida en la búsqueda\nTMP=$(mktemp -- \"$DEST_ABS/.todo.log.XXXXXX\")\ntrap 'rm -f -- \"$TMP\"' EXIT\n\ncount=0\n\n# Formato: \"basename/ruta\\0\"; el basename no contiene '/', así que se\n# ordena por nombre de archivo y, a igualdad, por ruta completa.\nwhile IFS= read -r -d '' entry; do\n    file=${entry#*/}\n    file_abs=$(realpath -- \"$file\")\n\n    # Saltar la salida y el temporal si DEST está dentro de DIR\n    [[ \"$file_abs\" == \"$OUT\" || \"$file_abs\" == \"$TMP\" ]] && continue\n\n    if [[ -r \"$file\" ]]; then\n        cat -- \"$file\" >> \"$TMP\"\n        count=$((count + 1))\n    else\n        echo \"Aviso: no se puede leer '$file', se omite\" >&2\n    fi\ndone < <(find \"$DIR_ABS\" -type f -name '*.log' -printf '%f/%p\\0' | LC_ALL=C sort -z)\n\nmv -f -- \"$TMP\" \"$OUT\"\ntrap - EXIT\n\necho \"Concatenados $count archivo(s) .log en '$OUT'\"\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.030852900000000003,
+ "segundos": 10.6,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v704-rpn9_hmz"
+}

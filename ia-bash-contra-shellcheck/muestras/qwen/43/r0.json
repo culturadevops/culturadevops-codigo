@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Copia a DEST solo los archivos .txt de DIR y sus subcarpetas, conservando la estructura de carpetas.\nUso: script.sh DIR DEST\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Verificar si se proporcionaron dos argumentos\nif [ \"$#\" -ne 2 ]; then\n    echo \"Uso: $0 DIR DEST\"\n    exit 1\nfi\n\nDIR=$1\nDEST=$2\n\n# Verificar si DIR existe\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio $DIR no existe.\"\n    exit 1\nfi\n\n# Copiar solo archivos .txt de DIR y sus subdirectorios a DEST\nfind \"$DIR\" -type f -name \"*.txt\" -print0 | xargs -0 -I {} cp --parents {} \"$DEST\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 140
+}

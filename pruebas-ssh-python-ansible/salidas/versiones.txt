@@ -1,0 +1,8 @@
+$ python --version; python -c 'import asyncssh; print("asyncssh", asyncssh.__version__)'; ansible --version | head -1; ssh -V
+Python 3.13.17
+asyncssh 2.24.1
+ansible [core 2.22.0]
+OpenSSH_10.0p2 Debian-7+deb13u4, OpenSSL 3.5.7 9 Jun 2026
+$ grep -vc '^#' /root/.ssh/known_hosts; wc -l < hosts-50.txt
+150
+50

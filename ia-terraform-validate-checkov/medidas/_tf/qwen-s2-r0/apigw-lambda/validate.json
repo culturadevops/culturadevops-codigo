@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Invalid reference",
+      "detail": "A reference to a resource type must be followed by at least one attribute access, specifying the resource name.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 71,
+          "column": 5,
+          "byte": 1796
+        },
+        "end": {
+          "line": 71,
+          "column": 11,
+          "byte": 1802
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_api_gateway_integration\" \"example\"",
+        "code": "    region,",
+        "start_line": 71,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid reference",
+      "detail": "A reference to a resource type must be followed by at least one attribute access, specifying the resource name.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 72,
+          "column": 5,
+          "byte": 1809
+        },
+        "end": {
+          "line": 72,
+          "column": 11,
+          "byte": 1815
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_api_gateway_integration\" \"example\"",
+        "code": "    region,",
+        "start_line": 72,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    }
+  ]
+}

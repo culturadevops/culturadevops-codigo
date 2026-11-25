@@ -1,0 +1,12 @@
+# El paso de seguridad del pipeline (el mismo script que se ejecutó en la demo).
+name: seguridad
+on: [push, pull_request]
+jobs:
+  seguridad:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: { python-version: '3.13' }
+      - run: pip install bandit==1.9.4 pip-audit==2.10.1 semgrep==1.182.1
+      - run: sh ci-seguridad.sh .

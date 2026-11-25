@@ -1,0 +1,18 @@
+{
+ "app": "p4-pyproject",
+ "dockerfile": "referencia/p4-pyproject.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "python:3.12.8-slim-bookworm"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 5.1,
+ "error_build": "",
+ "bytes": 51568149,
+ "disco_mb": 209.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

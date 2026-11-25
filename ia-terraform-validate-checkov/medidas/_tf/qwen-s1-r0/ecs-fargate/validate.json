@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"listener\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 103,
+          "column": 3,
+          "byte": 2286
+        },
+        "end": {
+          "line": 103,
+          "column": 11,
+          "byte": 2294
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_lb\" \"example\"",
+        "code": "  listener {",
+        "start_line": 103,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"network_configuration\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 50,
+          "column": 3,
+          "byte": 941
+        },
+        "end": {
+          "line": 50,
+          "column": 24,
+          "byte": 962
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_ecs_task_definition\" \"example\"",
+        "code": "  network_configuration {",
+        "start_line": 50,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 23,
+        "values": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# Un pod que usa la MISMA configuración de tres formas: variable, volumen y volumen con subPath.
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lector
+spec:
+  containers:
+    - name: app
+      image: busybox:1.37
+      env:
+        - name: MENSAJE                 # como variable de entorno
+          valueFrom:
+            configMapKeyRef: {name: app-config, key: MENSAJE}
+        - name: CLAVE
+          valueFrom:
+            secretKeyRef: {name: db-cred, key: CLAVE}
+      volumeMounts:
+        - {name: config, mountPath: /config}                     # como archivos
+        - {name: config, mountPath: /fijo/MENSAJE, subPath: MENSAJE}  # un solo archivo con subPath
+        - {name: secretos, mountPath: /secretos, readOnly: true}
+      # vigila el archivo montado y anota la hora (ms) cada vez que cambia
+      command: ["sh", "-c", "v=''; while true; do n=$(cat /config/MENSAJE); if [ \"$n\" != \"$v\" ]; then echo \"cambio $(date +%s) $n\"; v=$n; fi; sleep 0.2; done"]
+  volumes:
+    - name: config
+      configMap: {name: app-config}
+    - name: secretos
+      secret: {secretName: db-cred}

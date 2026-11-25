@@ -1,0 +1,242 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 9,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"destination_name\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 40,
+          "column": 60,
+          "byte": 898
+        },
+        "end": {
+          "line": 40,
+          "column": 61,
+          "byte": 899
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination_policy\" \"example\" {",
+        "start_line": 40,
+        "highlight_start_offset": 59,
+        "highlight_end_offset": 60,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"access_policy\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 40,
+          "column": 60,
+          "byte": 898
+        },
+        "end": {
+          "line": 40,
+          "column": 61,
+          "byte": 899
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination_policy\" \"example\" {",
+        "start_line": 40,
+        "highlight_start_offset": 59,
+        "highlight_end_offset": 60,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"destination_arn\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 41,
+          "column": 3,
+          "byte": 903
+        },
+        "end": {
+          "line": 41,
+          "column": 18,
+          "byte": 918
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "  destination_arn = aws_cloudwatch_log_destination.example.arn",
+        "start_line": 41,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 17,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"policy_document\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 42,
+          "column": 3,
+          "byte": 967
+        },
+        "end": {
+          "line": 42,
+          "column": 18,
+          "byte": 982
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination_policy\" \"example\"",
+        "code": "  policy_document = jsonencode({",
+        "start_line": 42,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 17,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"role_arn\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 31,
+          "column": 53,
+          "byte": 658
+        },
+        "end": {
+          "line": 31,
+          "column": 54,
+          "byte": 659
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination\" \"example\" {",
+        "start_line": 31,
+        "highlight_start_offset": 52,
+        "highlight_end_offset": 53,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Missing required argument",
+      "detail": "The argument \"target_arn\" is required, but no definition was found.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 31,
+          "column": 53,
+          "byte": 658
+        },
+        "end": {
+          "line": 31,
+          "column": 54,
+          "byte": 659
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "resource \"aws_cloudwatch_log_destination\" \"example\" {",
+        "start_line": 31,
+        "highlight_start_offset": 52,
+        "highlight_end_offset": 53,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"destination_type\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 3,
+          "byte": 706
+        },
+        "end": {
+          "line": 33,
+          "column": 19,
+          "byte": 722
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "  destination_type = \"kinesis-firehose\"",
+        "start_line": 33,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"kinesis_firehose\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 35,
+          "column": 3,
+          "byte": 749
+        },
+        "end": {
+          "line": 35,
+          "column": 19,
+          "byte": 765
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_cloudwatch_log_destination\" \"example\"",
+        "code": "  kinesis_firehose {",
+        "start_line": 35,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 18,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"lambda_function_destination_configuration\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 68,
+          "column": 3,
+          "byte": 1648
+        },
+        "end": {
+          "line": 68,
+          "column": 44,
+          "byte": 1689
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kinesis_firehose_delivery_stream\" \"example\"",
+        "code": "  lambda_function_destination_configuration {",
+        "start_line": 68,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 43,
+        "values": []
+      }
+    }
+  ]
+}

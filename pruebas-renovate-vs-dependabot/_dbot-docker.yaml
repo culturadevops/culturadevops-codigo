@@ -1,0 +1,77 @@
+input:
+    job:
+        command: update
+        package-manager: docker
+        allowed-updates:
+            - update-type: all
+        ignore-conditions:
+            - dependency-name: python
+              source: <repo>\pruebas-renovate-vs-dependabot\_dbot-docker.yaml
+              version-requirement: '>3.14-slim'
+        source:
+            provider: github
+            repo: lab/app
+            directories:
+                - /
+            commit: b905b5efe90009c65cab1643ba65f173da5e85b2
+            hostname: github.com
+            api-endpoint: https://api.github.com
+output:
+    - type: update_dependency_list
+      expect:
+        data:
+            dependencies:
+                - name: python
+                  requirements:
+                    - file: Dockerfile
+                      groups: []
+                      requirement: null
+                      source:
+                        tag: 3.9-slim
+                  version: 3.9-slim
+            dependency_files:
+                - /Dockerfile
+    - type: create_pull_request
+      expect:
+        data:
+            base-commit-sha: b905b5efe90009c65cab1643ba65f173da5e85b2
+            dependencies:
+                - name: python
+                  previous-requirements:
+                    - file: Dockerfile
+                      groups: []
+                      requirement: null
+                      source:
+                        tag: 3.9-slim
+                  previous-version: 3.9-slim
+                  requirements:
+                    - file: Dockerfile
+                      groups: []
+                      requirement: null
+                      source:
+                        tag: 3.14-slim
+                  version: 3.14-slim
+                  directory: /
+            updated-dependency-files:
+                - content: |
+                    FROM python:3.14-slim
+                    COPY . /app
+                    CMD ["python", "/app/main.py"]
+                  content_encoding: utf-8
+                  deleted: false
+                  directory: /
+                  name: Dockerfile
+                  operation: update
+                  support_file: false
+                  type: file
+            pr-title: Bump python from 3.9-slim to 3.14-slim
+            pr-body: |
+                Bumps python from 3.9-slim to 3.14-slim.
+            commit-message: |-
+                Bump python from 3.9-slim to 3.14-slim
+
+                Bumps python from 3.9-slim to 3.14-slim.
+    - type: mark_as_processed
+      expect:
+        data:
+            base-commit-sha: b905b5efe90009c65cab1643ba65f173da5e85b2

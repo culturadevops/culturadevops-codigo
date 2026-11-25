@@ -1,0 +1,52 @@
+== 1 · LINEAS DE CONFIGURACION para lo mismo ==
+   Caddy (Caddyfile):  7
+   nginx (nginx.conf): 16
+
+== 2 · el backend al que los dos hacen de proxy ==
+   levantado
+
+== 3 · CADDY: de cero a HTTPS con certificado ==
+   responde por HTTPS en 666 ms
+   pasos humanos: 1 (escribir 7 lineas). No hay paso 2.
+
+== 4 · NGINX: de cero a HTTPS con certificado ==
+   4a · generar el certificado a mano (el paso que Caddy no tiene)
+      tardo 402 ms
+   4b · levantar nginx con ese certificado
+      tardo 719 ms
+   total nginx: 1121 ms
+   pasos humanos: 4 (clave, certificado, 16 lineas, y renovarlo en 365 dias)
+
+== 5 · ⛔ ¿SIRVEN LOS DOS LO MISMO? (mismo cliente, contenedor neutral) ==
+   Caddy, la pagina:      <h1>hola</h1>
+   nginx, la pagina:      <h1>hola</h1>
+   Caddy, el proxy /api/: <title>Welcome to nginx!</title>
+   nginx, el proxy /api/: <title>Welcome to nginx!</title>
+
+== 6 · ¿QUIEN EMITIO CADA CERTIFICADO, Y CUANTO DURA? ==
+   Caddy:
+     issuer=CN=Caddy Local Authority - ECC Intermediate
+     notBefore=Sep  9 21:14:50 2026 GMT
+     notAfter=Sep 10 09:14:50 2026 GMT
+   nginx:
+     issuer=CN=sitio.local
+     notBefore=Sep  9 21:14:51 2026 GMT
+     notAfter=Sep  9 21:14:51 2027 GMT
+
+== 6b · MEMORIA EN REPOSO, con los dos vivos ==
+caddy: 17.45MiB / 15.36GiB
+nginx: 2.93MiB / 15.36GiB
+
+== 7 · 🥇 EL QUE NO SALE EN NINGUNA COMPARACION ==
+   tiro el backend y REINICIO los dos. ¿Cual vuelve a arrancar?
+   Caddy: Up 6 seconds
+          y sigue sirviendo la pagina: <h1>hola</h1>
+   nginx: Exited (1) 2 seconds ago
+          y su ultimo mensaje:
+            nginx: [emerg] host not found in upstream "backend" in /etc/nginx/nginx.conf:15
+
+== 9 · TAMANO DE LA IMAGEN ==
+   caddy:2-alpine: 88.7MB
+   nginx:alpine:   103MB
+
+== limpio ==

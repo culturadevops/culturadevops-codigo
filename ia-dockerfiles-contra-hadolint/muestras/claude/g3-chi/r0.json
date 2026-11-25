@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- go.mod ---\nmodule ejemplo.com/api-chi\n\ngo 1.24\n\nrequire github.com/go-chi/chi/v5 v5.2.0\n\n--- go.sum --- (existe; no se muestra: 2 líneas)\n\n--- main.go ---\npackage main\n\nimport (\n\t\"net/http\"\n\n\t\"github.com/go-chi/chi/v5\"\n)\n\nfunc main() {\n\tr := chi.NewRouter()\n\tr.Get(\"/\", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte(\"ok\")) })\n\thttp.ListenAndServe(\":8080\", r)\n}\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# syntax=docker/dockerfile:1\n\nFROM golang:1.24-alpine AS build\nWORKDIR /src\n\nCOPY go.mod go.sum ./\nRUN --mount=type=cache,target=/go/pkg/mod \\\n    go mod download\n\nCOPY . .\nRUN --mount=type=cache,target=/go/pkg/mod \\\n    --mount=type=cache,target=/root/.cache/go-build \\\n    CGO_ENABLED=0 GOOS=linux go build -trimpath -ldflags=\"-s -w\" -o /out/app .\n\nFROM gcr.io/distroless/static-debian12:nonroot\nWORKDIR /app\nCOPY --from=build /out/app /app/app\nUSER nonroot:nonroot\nEXPOSE 8080\nENTRYPOINT [\"/app/app\"]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0190671,
+ "segundos": 4.3,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v711-wxvepwd4"
+}

@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Crea un respaldo comprimido de DIR dentro de DEST, con el nombre respaldo-AAAAMMDD.tar.gz (fecha de hoy).\nUso: script.sh DIR DEST\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\n# Verificar si se proporcionaron dos argumentos\nif [ \"$#\" -ne 2 ]; then\n    echo \"Uso: $0 DIR DEST\"\n    exit 1\nfi\n\nDIR=$1\nDEST=$2\n\n# Verificar si el directorio de origen existe\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio de origen no existe.\"\n    exit 1\nfi\n\n# Verificar si el directorio de destino existe, si no, crearlo\nif [ ! -d \"$DEST\" ]; then\n    mkdir -p \"$DEST\"\nfi\n\n# Obtener la fecha actual en formato AAAAMMDD\nDATE=$(date +%Y%m%d)\n\n# Crear el archivo de respaldo comprimido\ntar -czf \"$DEST/respaldo-$DATE.tar.gz\" -C \"$DIR\" .\n\necho \"Respaldo creado: $DEST/respaldo-$DATE.tar.gz\"\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 203
+}

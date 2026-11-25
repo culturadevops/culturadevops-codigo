@@ -1,0 +1,21 @@
+// El mismo pipeline que pipelineEstandar v1.0, escrito entero en el proyecto (sin librería)
+pipeline {
+  agent any
+  stages {
+    stage('Compilar') {
+      steps { sh './compilar.sh' }
+    }
+    stage('Pruebas') {
+      steps { sh './probar.sh' }
+    }
+    stage('Empaquetar') {
+      steps {
+        sh "tar czf tienda-web-${env.BUILD_NUMBER}.tgz build"
+        echo "paquete: tienda-web-${env.BUILD_NUMBER}.tgz"
+      }
+    }
+  }
+  post {
+    always { echo "[aviso] ${env.JOB_NAME} #${env.BUILD_NUMBER}: ${currentBuild.currentResult}" }
+  }
+}

@@ -1,0 +1,24 @@
+# Traefik 3.7 — rutas: /api a backend:9000 en HTTP (8080) y HTTPS (8443) con el MISMO certificado que los demás.
+# Traefik no sirve archivos estáticos: por eso en «¿Traefik o Nginx?» solo se mide el proxy.
+http:
+  routers:
+    api:
+      rule: "PathPrefix(`/api`)"
+      entryPoints: [web]
+      service: backend
+    api-tls:
+      rule: "PathPrefix(`/api`)"
+      entryPoints: [websecure]
+      service: backend
+      tls: {}
+  services:
+    backend:
+      loadBalancer:
+        servers:
+          - url: "http://backend:9000"
+tls:
+  stores:
+    default:
+      defaultCertificate:
+        certFile: /etc/certs/cert.pem
+        keyFile: /etc/certs/key.pem

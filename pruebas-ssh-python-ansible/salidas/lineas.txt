@@ -1,0 +1,3 @@
+$ grep -cv '^\s*$' flota.py; grep -cv '^\s*$' revisar.yml
+76
+7

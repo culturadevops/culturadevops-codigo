@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_s3_bucket\" \"static_website\" {\n  bucket = \"my-static-website-bucket\"\n}\n\nresource \"aws_s3_bucket_website\" \"static_website\" {\n  bucket = aws_s3_bucket.static_website.bucket\n\n  index_document {\n    suffix = \"index.html\"\n  }\n}\n\nresource \"aws_s3_object\" \"index_html\" {\n  bucket = aws_s3_bucket.static_website.bucket\n  key    = \"index.html\"\n  content = \"<h1>Welcome to My Static Website!</h1>\"\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 2,
+ "s": 3.8,
+ "tokens": 166,
+ "prompt": "Escribe el código de Terraform para un bucket de S3 para hospedar un sitio web estático en AWS (región us-east-1). Responde solo con el archivo main.tf completo, incluidos los bloques terraform/required_providers y provider, en un único bloque ```hcl."
+}

@@ -1,0 +1,13 @@
+### borro el recurso del codigo SIN removed:
+  # docker_container.a_mano will be destroyed
+  # (because docker_container.a_mano is not in configuration)
+Plan: 0 to add, 0 to change, 1 to destroy.
+### con bloque removed { destroy = false }:
+ # docker_container.a_mano will no longer be managed by Terraform, but will not be destroyed
+Plan: 0 to add, 0 to change, 0 to destroy.
+Warning: Some objects will no longer be managed by Terraform
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+state list:
+docker_container.tienda
+docker_image.web
+docker ps: a-mano Up About a minute

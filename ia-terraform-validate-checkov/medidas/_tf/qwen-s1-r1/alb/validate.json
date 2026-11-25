@@ -1,0 +1,86 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 3,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Attribute redefined",
+      "detail": "The argument \"description\" was already set at main.tf:63,3-14. Each argument may be set only once.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 73,
+          "column": 3,
+          "byte": 1488
+        },
+        "end": {
+          "line": 73,
+          "column": 14,
+          "byte": 1499
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_security_group\" \"example\"",
+        "code": "  description = \"Allow HTTP traffic\"",
+        "start_line": 73,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 13,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Attribute redefined",
+      "detail": "The argument \"description\" was already set at main.tf:156,3-14. Each argument may be set only once.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 166,
+          "column": 3,
+          "byte": 3391
+        },
+        "end": {
+          "line": 166,
+          "column": 14,
+          "byte": 3402
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_security_group\" \"example\"",
+        "code": "  description = \"Allow HTTP traffic\"",
+        "start_line": 166,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 13,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Duplicate resource \"aws_security_group\" configuration",
+      "detail": "A aws_security_group resource named \"example\" was already declared at main.tf:61,1-40. Resource names must be unique per type in each module.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 154,
+          "column": 1,
+          "byte": 3118
+        },
+        "end": {
+          "line": 154,
+          "column": 40,
+          "byte": 3157
+        }
+      },
+      "snippet": {
+        "context": null,
+        "code": "resource \"aws_security_group\" \"example\" {",
+        "start_line": 154,
+        "highlight_start_offset": 0,
+        "highlight_end_offset": 39,
+        "values": []
+      }
+    }
+  ]
+}

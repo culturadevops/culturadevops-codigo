@@ -1,0 +1,6 @@
+{
+ "prompt": "Este es tu script:\n```bash\n#!/bin/bash\n\nFILE=$1\nSEGUNDOS=$2\n\nfor ((i=0; i<${SEGUNDOS}; i++)); do\n  if [ -e \"$FILE\" ]; then\n    exit 0\n  fi\n  sleep 1\ndone\n\nexit 1\n```\nShellCheck 0.11.0 da estos avisos:\nscript.sh:6:14: style: $/${} is unnecessary on arithmetic variables. [SC2004]\nCorrige el script para que ShellCheck no dé avisos. Responde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nFILE=$1\nSEGUNDOS=$2\n\nfor ((i=0; i<SEGUNDOS; i++)); do\n  if [ -e \"$FILE\" ]; then\n    exit 0\n  fi\n  sleep 1\ndone\n\nexit 1\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 66
+}

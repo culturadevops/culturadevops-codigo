@@ -1,0 +1,4 @@
+FROM traefik:v3.7.17
+COPY traefik.yml /etc/traefik/traefik.yml
+COPY dinamica.yml /etc/traefik/dinamica.yml
+COPY certs /etc/certs

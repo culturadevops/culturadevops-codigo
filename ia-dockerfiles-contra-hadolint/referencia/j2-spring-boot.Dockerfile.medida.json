@@ -1,0 +1,19 @@
+{
+ "app": "j2-spring-boot",
+ "dockerfile": "referencia/j2-spring-boot.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "maven:3.9.9-eclipse-temurin-21",
+  "eclipse-temurin:21.0.5_11-jre"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 8.8,
+ "error_build": "",
+ "bytes": 118235490,
+ "disco_mb": 441.0,
+ "usuario": "1000",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

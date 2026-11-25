@@ -1,0 +1,7 @@
+# TRAMPA 5: la misma app con la imagen de una sola etapa (docker/Dockerfile.gorda).
+services:
+  app:
+    build:
+      dockerfile: docker/Dockerfile.gorda
+      target: runtime
+    image: v697-app:gorda

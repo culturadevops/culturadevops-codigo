@@ -1,0 +1,190 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 7,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_kms_key_rotation_policy\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 147,
+          "column": 10,
+          "byte": 3249
+        },
+        "end": {
+          "line": 147,
+          "column": 39,
+          "byte": 3278
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kms_key_rotation_policy\" \"static_website\"",
+        "code": "resource \"aws_kms_key_rotation_policy\" \"static_website\" {",
+        "start_line": 147,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 38,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enabled\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 77,
+          "column": 5,
+          "byte": 1714
+        },
+        "end": {
+          "line": 77,
+          "column": 12,
+          "byte": 1721
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "    enabled = true",
+        "start_line": 77,
+        "highlight_start_offset": 4,
+        "highlight_end_offset": 11,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"transition\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 81,
+          "column": 7,
+          "byte": 1793
+        },
+        "end": {
+          "line": 81,
+          "column": 17,
+          "byte": 1803
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "      transition    = \"30 days\"",
+        "start_line": 81,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 16,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"days\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 94,
+          "column": 7,
+          "byte": 2033
+        },
+        "end": {
+          "line": 94,
+          "column": 11,
+          "byte": 2037
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "      days = 365",
+        "start_line": 94,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"transition\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 86,
+          "column": 7,
+          "byte": 1909
+        },
+        "end": {
+          "line": 86,
+          "column": 17,
+          "byte": 1919
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_lifecycle_configuration\" \"static_website\"",
+        "code": "      transition    = \"30 days\"",
+        "start_line": 86,
+        "highlight_start_offset": 6,
+        "highlight_end_offset": 16,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_s3_bucket_website\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 18,
+          "column": 10,
+          "byte": 271
+        },
+        "end": {
+          "line": 18,
+          "column": 33,
+          "byte": 294
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_s3_bucket_website\" \"static_website\"",
+        "code": "resource \"aws_s3_bucket_website\" \"static_website\" {",
+        "start_line": 18,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_kms_key_grant\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 118,
+          "column": 10,
+          "byte": 2514
+        },
+        "end": {
+          "line": 118,
+          "column": 29,
+          "byte": 2533
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_kms_key_grant\" \"static_website\"",
+        "code": "resource \"aws_kms_key_grant\" \"static_website\" {",
+        "start_line": 118,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 28,
+        "values": []
+      }
+    }
+  ]
+}

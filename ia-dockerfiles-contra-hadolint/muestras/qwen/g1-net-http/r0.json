@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- go.mod ---\nmodule ejemplo.com/servidor\n\ngo 1.24\n\n--- main.go ---\npackage main\n\nimport (\n\t\"log\"\n\t\"net/http\"\n)\n\nfunc main() {\n\thttp.HandleFunc(\"/\", func(w http.ResponseWriter, r *http.Request) { w.Write([]byte(\"ok\")) })\n\tlog.Fatal(http.ListenAndServe(\":8080\", nil))\n}\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# Use la imagen base de Go\nFROM golang:1.24 AS builder\n\n# Establece el trabajo de directorio de trabajo\nWORKDIR /app\n\n# Copia el archivo go.mod y ejecuta mod tidy\nCOPY go.mod .\nRUN go mod download\n\n# Copia el código fuente y compila la aplicación\nCOPY . .\nRUN go build -o servidor .\n\n# Crea una nueva imagen de producción\nFROM alpine:latest\n\n# Establece el trabajo de directorio de trabajo\nWORKDIR /root/\n\n# Copia la aplicación compilada desde la imagen de construcción\nCOPY --from=builder /app/servidor .\n\n# Exponga el puerto 8080\nEXPOSE 8080\n\n# Ejecuta la aplicación\nCMD [\"./servidor\"]\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 176
+}

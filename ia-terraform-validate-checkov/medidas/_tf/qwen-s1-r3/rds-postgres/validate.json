@@ -1,0 +1,502 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 19,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"encryption_key\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 69,
+          "column": 3,
+          "byte": 2092
+        },
+        "end": {
+          "line": 69,
+          "column": 17,
+          "byte": 2106
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_backup_vault\" \"postgres\"",
+        "code": "  encryption_key = aws_kms_key.postgres.key_id",
+        "start_line": 69,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 16,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_rds_cluster_tag\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 84,
+          "column": 10,
+          "byte": 2486
+        },
+        "end": {
+          "line": 84,
+          "column": 31,
+          "byte": 2507
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster_tag\" \"postgres\"",
+        "code": "resource \"aws_rds_cluster_tag\" \"postgres\" {",
+        "start_line": 84,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 30,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"backup_plan\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 55,
+          "column": 3,
+          "byte": 1728
+        },
+        "end": {
+          "line": 55,
+          "column": 14,
+          "byte": 1739
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_backup_plan\" \"postgres\"",
+        "code": "  backup_plan {",
+        "start_line": 55,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 13,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Insufficient rule blocks",
+      "detail": "At least 1 \"rule\" blocks are required.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 53,
+          "column": 39,
+          "byte": 1673
+        },
+        "end": {
+          "line": 53,
+          "column": 40,
+          "byte": 1674
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_backup_plan\" \"postgres\"",
+        "code": "resource \"aws_backup_plan\" \"postgres\" {",
+        "start_line": 53,
+        "highlight_start_offset": 38,
+        "highlight_end_offset": 39,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_rds_cluster_parameter\".",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 44,
+          "column": 10,
+          "byte": 1374
+        },
+        "end": {
+          "line": 44,
+          "column": 37,
+          "byte": 1401
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster_parameter\" \"postgres\"",
+        "code": "resource \"aws_rds_cluster_parameter\" \"postgres\" {",
+        "start_line": 44,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 36,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Invalid resource type",
+      "detail": "The provider hashicorp/aws does not support resource type \"aws_rds_cluster_snapshot\". Did you mean \"aws_db_cluster_snapshot\"?",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 76,
+          "column": 10,
+          "byte": 2280
+        },
+        "end": {
+          "line": 76,
+          "column": 36,
+          "byte": 2306
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster_snapshot\" \"postgres\"",
+        "code": "resource \"aws_rds_cluster_snapshot\" \"postgres\" {",
+        "start_line": 76,
+        "highlight_start_offset": 9,
+        "highlight_end_offset": 35,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"name\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 21,
+          "column": 3,
+          "byte": 469
+        },
+        "end": {
+          "line": 21,
+          "column": 7,
+          "byte": 473
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  name                   = \"my-postgres-db\"",
+        "start_line": 21,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 6,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"parameter_group_name\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 27,
+          "column": 3,
+          "byte": 698
+        },
+        "end": {
+          "line": 27,
+          "column": 23,
+          "byte": 718
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  parameter_group_name   = \"default.postgres14\"",
+        "start_line": 27,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 22,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"identifier\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 15,
+          "column": 3,
+          "byte": 216
+        },
+        "end": {
+          "line": 15,
+          "column": 13,
+          "byte": 226
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  identifier             = \"terraform-postgres\"",
+        "start_line": 15,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 12,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"backup_window\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 25,
+          "column": 3,
+          "byte": 609
+        },
+        "end": {
+          "line": 25,
+          "column": 16,
+          "byte": 622
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  backup_window           = \"07:00-09:00\"",
+        "start_line": 25,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 15,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"publicly_accessible\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 29,
+          "column": 3,
+          "byte": 843
+        },
+        "end": {
+          "line": 29,
+          "column": 22,
+          "byte": 862
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  publicly_accessible    = false",
+        "start_line": 29,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 21,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enable_performance_insights\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 33,
+          "column": 3,
+          "byte": 969
+        },
+        "end": {
+          "line": 33,
+          "column": 30,
+          "byte": 996
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  enable_performance_insights        = true",
+        "start_line": 33,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 29,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"password\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 20,
+          "column": 3,
+          "byte": 417
+        },
+        "end": {
+          "line": 20,
+          "column": 11,
+          "byte": 425
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  password               = \"YourStrongPassword123\"",
+        "start_line": 20,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enable_cloudwatch_logs_exports\" is not expected here. Did you mean \"enabled_cloudwatch_logs_exports\"?",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 35,
+          "column": 3,
+          "byte": 1067
+        },
+        "end": {
+          "line": 35,
+          "column": 33,
+          "byte": 1097
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  enable_cloudwatch_logs_exports     = [\"query\", \"error\", \"slowquery\"]",
+        "start_line": 35,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 32,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"instance_class\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 16,
+          "column": 3,
+          "byte": 265
+        },
+        "end": {
+          "line": 16,
+          "column": 17,
+          "byte": 279
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  instance_class         = \"db.t3.micro\"",
+        "start_line": 16,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 16,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"username\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 19,
+          "column": 3,
+          "byte": 381
+        },
+        "end": {
+          "line": 19,
+          "column": 11,
+          "byte": 389
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  username               = \"admin\"",
+        "start_line": 19,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"maintenance_window\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 26,
+          "column": 3,
+          "byte": 652
+        },
+        "end": {
+          "line": 26,
+          "column": 21,
+          "byte": 670
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  maintenance_window     = \"mon:07:00-09:00\"",
+        "start_line": 26,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 20,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enable_iam_database_authentication\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 31,
+          "column": 3,
+          "byte": 879
+        },
+        "end": {
+          "line": 31,
+          "column": 37,
+          "byte": 913
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  enable_iam_database_authentication = true",
+        "start_line": 31,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 36,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Unsupported argument",
+      "detail": "An argument named \"enable_performance_insights_retention_period\" is not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 34,
+          "column": 3,
+          "byte": 1014
+        },
+        "end": {
+          "line": 34,
+          "column": 47,
+          "byte": 1058
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_rds_cluster\" \"postgres\"",
+        "code": "  enable_performance_insights_retention_period = 30",
+        "start_line": 34,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 46,
+        "values": []
+      }
+    }
+  ]
+}

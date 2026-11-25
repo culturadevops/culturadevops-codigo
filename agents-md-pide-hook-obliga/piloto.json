@@ -1,0 +1,38 @@
+{
+  "tarea": "T05",
+  "lang": "py",
+  "cond": "B",
+  "segundos": 15,
+  "tocados": [
+    "py/inventario.py"
+  ],
+  "archivos": {
+    "py/inventario.py": {
+      "pasa": true,
+      "compila": true,
+      "salida": "All checks passed!"
+    }
+  },
+  "tarea_hecha": true,
+  "supresiones_nuevas": 0,
+  "exito": true,
+  "hook_disparos": 2,
+  "hook_bloqueos": 1,
+  "deuda_en_no_tocados": [
+    "go/calc.go",
+    "sh/respaldo.sh"
+  ],
+  "llamadas": [
+    "Read",
+    "Edit",
+    "Edit",
+    "Bash: cd py && ruff check inventario.py"
+  ],
+  "verif_por_claude": 1,
+  "modelo": "claude-sonnet-5-5",
+  "costo": 0.0661262,
+  "turnos": 5,
+  "final": "Agregué `valor_total(items)` en `py/inventario.py`, que suma `cantidad * precio` de todos los artículos. También quité el `import os` sin usar, para que `ruff check` quede sin avisos. El aviso del hook se refería al estado anterior a esa limpieza, y `ruff check` ahora pasa.",
+  "avisos_hook_en_stream": 0,
+  "dir": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v708-xkdtwez5"
+}

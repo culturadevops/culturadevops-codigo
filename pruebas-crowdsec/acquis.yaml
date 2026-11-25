@@ -1,0 +1,10 @@
+filenames:
+  - /logs/auth.log
+labels:
+  type: syslog
+---
+source: docker
+container_name:
+  - web
+labels:
+  type: nginx

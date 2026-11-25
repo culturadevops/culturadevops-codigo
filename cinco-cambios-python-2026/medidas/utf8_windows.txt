@@ -1,0 +1,6 @@
+Python 3.14.10 · utf8_mode=0 · open() usa cp1252
+bytes escritos: b'a\xf1o=2026\r\n'
+leído como UTF-8: UnicodeDecodeError: invalid continuation byte
+Python 3.15.2 · utf8_mode=1 · open() usa utf-8
+bytes escritos: b'a\xc3\xb1o=2026\r\n'
+leído como UTF-8: año=2026

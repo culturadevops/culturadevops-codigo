@@ -1,0 +1,6 @@
+{
+ "prompt": "Escribe un script de Bash para esta tarea de administración de sistemas.\nTarea: Añade al principio del nombre de cada archivo .txt de DIR (sin subcarpetas) su fecha de modificación en formato AAAA-MM-DD_ (ejemplo: notas.txt pasa a 2026-10-29_notas.txt).\nUso: script.sh DIR\nSolo puedes usar bash y las herramientas de un Debian básico (coreutils, findutils, grep, sed, awk, tar, gzip, procps, util-linux).\nResponde solo con el script completo dentro de un bloque ```bash, sin explicaciones.",
+ "respuesta": "```bash\n#!/bin/bash\n\nif [ \"$#\" -ne 1 ]; then\n    echo \"Uso: $0 DIR\"\n    exit 1\nfi\n\nDIR=$1\n\nif [ ! -d \"$DIR\" ]; then\n    echo \"El directorio especificado no existe.\"\n    exit 1\nfi\n\nfind \"$DIR\" -maxdepth 1 -type f -name \"*.txt\" | while read -r file; do\n    mod_date=$(stat -c %y \"$file\" | awk '{print $1}' | sed 's/\\/\\///;s/ /-/g')\n    new_name=\"${mod_date}_$(basename \"$file\")\"\n    mv \"$file\" \"$new_name\"\ndone\n```",
+ "modelo": "qwen2.5:7b",
+ "eval_count": 154
+}

@@ -1,0 +1,11 @@
+groups:
+  - name: tienda
+    rules:
+      - alert: ErroresAltos
+        expr: sum(rate(tienda_peticiones_total{codigo=~"5.."}[1m])) / sum(rate(tienda_peticiones_total[1m])) > 0.05
+        for: 1m
+        annotations: {resumen: "Más del 5% de las peticiones fallan"}
+      - alert: TiendaCaida
+        expr: up{job="tienda"} == 0
+        for: 30s
+        annotations: {resumen: "Una réplica de la tienda no contesta"}

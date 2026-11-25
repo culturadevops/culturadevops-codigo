@@ -1,0 +1,19 @@
+{
+ "app": "j5-javalin",
+ "dockerfile": "muestras/claude/j5-javalin/r0.Dockerfile",
+ "hadolint": [],
+ "bases": [
+  "maven:3.9-eclipse-temurin-21",
+  "eclipse-temurin:21-jre-alpine"
+ ],
+ "latest": false,
+ "construye": true,
+ "segundos_build": 19.8,
+ "error_build": "",
+ "bytes": 79439092,
+ "disco_mb": 297.0,
+ "usuario": "app",
+ "root": false,
+ "arranca": true,
+ "error_arranque": ""
+}

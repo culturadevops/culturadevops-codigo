@@ -1,0 +1,6 @@
+# TRAMPA 3: la misma imagen, sin el chown de storage y bootstrap/cache.
+services:
+  app:
+    build:
+      target: sin-permisos
+    image: v697-app:sin-permisos

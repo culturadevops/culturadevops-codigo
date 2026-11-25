@@ -1,0 +1,7 @@
+### variable ephemeral usada en env del contenedor
+Error: Invalid use of ephemeral value
+  with docker_container.web,
+  on main.tf line 44, in resource "docker_container" "web":
+  44:   env   = ["CLAVE_BD=${var.clave_bd}"]
+Ephemeral values are not valid for "env", because it is not a write-only
+attribute and must be persisted to state.

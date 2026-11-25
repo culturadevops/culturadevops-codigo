@@ -1,0 +1,8 @@
+{
+ "texto": "```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_kms_key\" \"example\" {\n  description = \"KMS Key for data encryption\"\n\n  enable_key_rotation = true\n\n  policy = jsonencode({\n    Version = \"2012-10-17\"\n    Statement = [\n      {\n        Sid     = \"EnableKeyRotation\"\n        Effect  = \"Allow\"\n        Principal = \"*\"\n        Action = [\n          \"kms:DescribeKey\",\n          \"kms:GetKeyRotationStatus\",\n          \"kms:EnableKeyRotation\",\n          \"kms:DisableKeyRotation\"\n        ]\n        Resource = aws_kms_key.example.arn\n      }\n    ]\n  })\n}\n```",
+ "modelo": "qwen2.5:7b",
+ "seed": 1,
+ "s": 6.0,
+ "tokens": 193,
+ "prompt": "Este es tu main.tf:\n\n```hcl\nterraform {\n  required_providers {\n    aws = {\n      source  = \"hashicorp/aws\"\n      version = \"~> 4.0\"\n    }\n  }\n}\n\nprovider \"aws\" {\n  region = \"us-east-1\"\n}\n\nresource \"aws_kms_key\" \"example\" {\n  description = \"KMS Key for data encryption\"\n}\n\n```\n\nCheckov reporta estas fallas:\n- CKV_AWS_7 Ensure rotation for customer created CMKs is enabled (aws_kms_key.example)\n- CKV2_AWS_64 Ensure KMS key Policy is defined (aws_kms_key.example)\n\nCorrige el código para que Checkov no reporte fallas. Responde solo con el main.tf completo en un único bloque ```hcl."
+}

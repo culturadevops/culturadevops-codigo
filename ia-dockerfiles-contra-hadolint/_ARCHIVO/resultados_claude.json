@@ -1,0 +1,647 @@
+{
+ "claude": {
+  "n1-express": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "n1-express",
+     "dockerfile": "muestras/claude/n1-express/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "node:22-alpine",
+      "node:22-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 16.5,
+     "error_build": "",
+     "bytes": 62042601,
+     "disco_mb": 244.0,
+     "usuario": "node",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "n2-http-sin-dependencias": [
+   {
+    "k": 0,
+    "hadolint": [
+     {
+      "code": "DL3018",
+      "column": 1,
+      "file": "-",
+      "level": "warning",
+      "line": 5,
+      "message": "Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`"
+     }
+    ],
+    "supr": 0,
+    "medida": {
+     "app": "n2-http-sin-dependencias",
+     "dockerfile": "muestras/claude/n2-http-sin-dependencias/r0.Dockerfile",
+     "hadolint": [
+      {
+       "code": "DL3018",
+       "column": 1,
+       "file": "-",
+       "level": "warning",
+       "line": 5,
+       "message": "Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`"
+      }
+     ],
+     "bases": [
+      "node:22-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 6.6,
+     "error_build": "",
+     "bytes": 61368467,
+     "disco_mb": 239.0,
+     "usuario": "node",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   },
+   {
+    "k": 1,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "n2-http-sin-dependencias",
+     "dockerfile": "muestras/claude/n2-http-sin-dependencias/r1.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "node:22-alpine3.22"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 11.0,
+     "error_build": "",
+     "bytes": 57391328,
+     "disco_mb": 230.0,
+     "usuario": "node",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "n3-fastify": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "n3-fastify",
+     "dockerfile": "muestras/claude/n3-fastify/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "node:22-alpine",
+      "node:22-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 9.5,
+     "error_build": "",
+     "bytes": 62995301,
+     "disco_mb": 256.0,
+     "usuario": "node",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "n4-typescript": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "n4-typescript",
+     "dockerfile": "muestras/claude/n4-typescript/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "node:22-alpine",
+      "node:22-alpine",
+      "node:22-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 9.8,
+     "error_build": "",
+     "bytes": 62043372,
+     "disco_mb": 244.0,
+     "usuario": "node",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "n5-koa": [
+   {
+    "k": 0,
+    "hadolint": [
+     {
+      "code": "DL3018",
+      "column": 1,
+      "file": "-",
+      "level": "warning",
+      "line": 11,
+      "message": "Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`"
+     }
+    ],
+    "supr": 0,
+    "medida": {
+     "app": "n5-koa",
+     "dockerfile": "muestras/claude/n5-koa/r0.Dockerfile",
+     "hadolint": [
+      {
+       "code": "DL3018",
+       "column": 1,
+       "file": "-",
+       "level": "warning",
+       "line": 11,
+       "message": "Pin versions in apk add. Instead of `apk add <package>` use `apk add <package>=<version>`"
+      }
+     ],
+     "bases": [
+      "node:22-alpine",
+      "node:22-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 7.5,
+     "error_build": "",
+     "bytes": 61655951,
+     "disco_mb": 243.0,
+     "usuario": "node",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   },
+   {
+    "k": 1,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "n5-koa",
+     "dockerfile": "muestras/claude/n5-koa/r1.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "node:22-alpine3.22",
+      "node:22-alpine3.22"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 7.3,
+     "error_build": "",
+     "bytes": 57678821,
+     "disco_mb": 233.0,
+     "usuario": "node",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "p1-flask-gunicorn": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "p1-flask-gunicorn",
+     "dockerfile": "muestras/claude/p1-flask-gunicorn/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "python:3.12-slim"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 9.9,
+     "error_build": "",
+     "bytes": 45425261,
+     "disco_mb": 187.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "p2-fastapi": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "p2-fastapi",
+     "dockerfile": "muestras/claude/p2-fastapi/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "python:3.12-slim",
+      "python:3.12-slim"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 9.7,
+     "error_build": "",
+     "bytes": 52312994,
+     "disco_mb": 217.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "p3-sin-dependencias": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "p3-sin-dependencias",
+     "dockerfile": "muestras/claude/p3-sin-dependencias/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "python:3.12-slim"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 4.2,
+     "error_build": "",
+     "bytes": 43277961,
+     "disco_mb": 177.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "p4-pyproject": [
+   {
+    "k": 0,
+    "hadolint": [
+     {
+      "code": "DL3013",
+      "column": 1,
+      "file": "-",
+      "level": "warning",
+      "line": 19,
+      "message": "Pin versions in pip. Instead of `pip install <package>` use `pip install <package>==<version>` or `pip install --requirement <requirements file>`"
+     }
+    ],
+    "supr": 0,
+    "medida": {
+     "app": "p4-pyproject",
+     "dockerfile": "muestras/claude/p4-pyproject/r0.Dockerfile",
+     "hadolint": [
+      {
+       "code": "DL3013",
+       "column": 1,
+       "file": "-",
+       "level": "warning",
+       "line": 19,
+       "message": "Pin versions in pip. Instead of `pip install <package>` use `pip install <package>==<version>` or `pip install --requirement <requirements file>`"
+      }
+     ],
+     "bases": [
+      "python:${PYTHON_VERSION}-slim",
+      "python:${PYTHON_VERSION}-slim"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 13.9,
+     "error_build": "",
+     "bytes": 48597216,
+     "disco_mb": 201.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   },
+   {
+    "k": 1,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "p4-pyproject",
+     "dockerfile": "muestras/claude/p4-pyproject/r1.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "python:${PYTHON_VERSION}-slim",
+      "python:${PYTHON_VERSION}-slim"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 9.5,
+     "error_build": "",
+     "bytes": 48597220,
+     "disco_mb": 201.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "p5-aiohttp": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "p5-aiohttp",
+     "dockerfile": "muestras/claude/p5-aiohttp/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "python:3.12-slim",
+      "python:3.12-slim"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 7.7,
+     "error_build": "",
+     "bytes": 50771535,
+     "disco_mb": 211.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "g1-net-http": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "g1-net-http",
+     "dockerfile": "muestras/claude/g1-net-http/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "golang:1.24-alpine",
+      "gcr.io/distroless/static-debian12:nonroot"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 15.1,
+     "error_build": "",
+     "bytes": 3075933,
+     "disco_mb": 14.1,
+     "usuario": "nonroot:nonroot",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "g2-gin": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "g2-gin",
+     "dockerfile": "muestras/claude/g2-gin/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "golang:1.24-alpine",
+      "gcr.io/distroless/static-debian12:nonroot"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 16.7,
+     "error_build": "",
+     "bytes": 4004092,
+     "disco_mb": 17.6,
+     "usuario": "nonroot:nonroot",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "g3-chi": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "g3-chi",
+     "dockerfile": "muestras/claude/g3-chi/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "golang:1.24-alpine",
+      "gcr.io/distroless/static-debian12:nonroot"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 3.0,
+     "error_build": "",
+     "bytes": 3175882,
+     "disco_mb": 14.4,
+     "usuario": "nonroot:nonroot",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "g4-cmd-internal": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "g4-cmd-internal",
+     "dockerfile": "muestras/claude/g4-cmd-internal/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "golang:1.24",
+      "gcr.io/distroless/static-debian12:nonroot"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 17.6,
+     "error_build": "",
+     "bytes": 3075974,
+     "disco_mb": 14.1,
+     "usuario": "nonroot:nonroot",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "g5-embed": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "g5-embed",
+     "dockerfile": "muestras/claude/g5-embed/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "golang:1.24-alpine",
+      "gcr.io/distroless/static-debian12:nonroot"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 7.5,
+     "error_build": "",
+     "bytes": 3122805,
+     "disco_mb": 14.2,
+     "usuario": "nonroot:nonroot",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "j1-maven-sin-dependencias": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "j1-maven-sin-dependencias",
+     "dockerfile": "muestras/claude/j1-maven-sin-dependencias/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "maven:3.9-eclipse-temurin-21",
+      "eclipse-temurin:21-jre"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 71.0,
+     "error_build": "",
+     "bytes": 115392358,
+     "disco_mb": 456.0,
+     "usuario": "10001:10001",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "j2-spring-boot": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "j2-spring-boot",
+     "dockerfile": "muestras/claude/j2-spring-boot/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "maven:3.9-eclipse-temurin-21",
+      "eclipse-temurin:21-jre-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 35.3,
+     "error_build": "",
+     "bytes": 92681159,
+     "disco_mb": 326.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "j3-un-archivo": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "j3-un-archivo",
+     "dockerfile": "muestras/claude/j3-un-archivo/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "eclipse-temurin:21-jdk-alpine",
+      "eclipse-temurin:21-jre-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 20.3,
+     "error_build": "",
+     "bytes": 74089793,
+     "disco_mb": 286.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "j4-maven-gson-shade": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "j4-maven-gson-shade",
+     "dockerfile": "muestras/claude/j4-maven-gson-shade/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "maven:3.9-eclipse-temurin-21",
+      "eclipse-temurin:21-jre"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 18.3,
+     "error_build": "",
+     "bytes": 115667390,
+     "disco_mb": 457.0,
+     "usuario": "10001:10001",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ],
+  "j5-javalin": [
+   {
+    "k": 0,
+    "hadolint": [],
+    "supr": 0,
+    "medida": {
+     "app": "j5-javalin",
+     "dockerfile": "muestras/claude/j5-javalin/r0.Dockerfile",
+     "hadolint": [],
+     "bases": [
+      "maven:3.9-eclipse-temurin-21",
+      "eclipse-temurin:21-jre-alpine"
+     ],
+     "latest": false,
+     "construye": true,
+     "segundos_build": 19.8,
+     "error_build": "",
+     "bytes": 79439092,
+     "disco_mb": 297.0,
+     "usuario": "app",
+     "root": false,
+     "arranca": true,
+     "error_arranque": ""
+    }
+   }
+  ]
+ }
+}

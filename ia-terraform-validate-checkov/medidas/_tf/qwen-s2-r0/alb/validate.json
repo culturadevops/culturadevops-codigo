@@ -1,0 +1,60 @@
+{
+  "format_version": "1.0",
+  "valid": false,
+  "error_count": 2,
+  "warning_count": 0,
+  "diagnostics": [
+    {
+      "severity": "error",
+      "summary": "Unsupported block type",
+      "detail": "Blocks of type \"listener\" are not expected here.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 42,
+          "column": 3,
+          "byte": 934
+        },
+        "end": {
+          "line": 42,
+          "column": 11,
+          "byte": 942
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_alb\" \"example\"",
+        "code": "  listener {",
+        "start_line": 42,
+        "highlight_start_offset": 2,
+        "highlight_end_offset": 10,
+        "values": []
+      }
+    },
+    {
+      "severity": "error",
+      "summary": "Reference to \"count\" in non-counted context",
+      "detail": "The \"count\" object can only be used in \"module\", \"resource\", and \"data\" blocks, and only when the \"count\" argument is set.",
+      "range": {
+        "filename": "main.tf",
+        "start": {
+          "line": 86,
+          "column": 39,
+          "byte": 2096
+        },
+        "end": {
+          "line": 86,
+          "column": 50,
+          "byte": 2107
+        }
+      },
+      "snippet": {
+        "context": "resource \"aws_lb_target_group_attachment\" \"example\"",
+        "code": "  target_id        = aws_instance.web[count.index].id",
+        "start_line": 86,
+        "highlight_start_offset": 38,
+        "highlight_end_offset": 49,
+        "values": []
+      }
+    }
+  ]
+}

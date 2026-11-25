@@ -1,0 +1,13 @@
+job:
+  package-manager: npm_and_yarn
+  allowed-updates:
+    - update-type: all
+  source:
+    provider: github
+    repo: lab/app
+    directory: /
+  dependency-groups:
+    - name: todo-npm
+      rules:
+        patterns:
+          - "*"

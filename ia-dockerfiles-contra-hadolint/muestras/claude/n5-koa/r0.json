@@ -1,0 +1,11 @@
+{
+ "prompt": "Escribe un Dockerfile de producción para esta aplicación. La aplicación tiene que escuchar en el puerto 8080.\nEl contexto de construcción es la carpeta del proyecto. Estos son sus archivos:\n\n--- package-lock.json --- (existe; no se muestra: 673 líneas)\n\n--- package.json ---\n{\n  \"name\": \"api-koa\",\n  \"version\": \"1.0.0\",\n  \"main\": \"server.js\",\n  \"scripts\": {\n    \"start\": \"node server.js\"\n  },\n  \"dependencies\": {\n    \"koa\": \"^2.15.3\"\n  }\n}\n\n--- server.js ---\nconst Koa = require('koa');\nconst app = new Koa();\napp.use(ctx => { ctx.body = 'ok'; });\napp.listen(8080, () => console.log('escuchando en 8080'));\n\nResponde solo con el Dockerfile completo dentro de un bloque ```dockerfile, sin explicaciones.",
+ "respuesta": "```dockerfile\n# syntax=docker/dockerfile:1\n\nFROM node:22-alpine AS deps\nWORKDIR /app\nCOPY package.json package-lock.json ./\nRUN npm ci --omit=dev && npm cache clean --force\n\nFROM node:22-alpine\nENV NODE_ENV=production\nWORKDIR /app\nRUN apk add --no-cache tini\nCOPY --from=deps --chown=node:node /app/node_modules ./node_modules\nCOPY --chown=node:node package.json server.js ./\nUSER node\nEXPOSE 8080\nENTRYPOINT [\"/sbin/tini\", \"--\"]\nCMD [\"node\", \"server.js\"]\n```",
+ "modelos": [
+  "claude-haiku-5-5",
+  "claude-opus-5-5"
+ ],
+ "costo_usd": 0.0179947,
+ "segundos": 4.0,
+ "tmp": "C:\\Users\\tu-usuario\\AppData\\Local\\Temp\\v711-hkw3ztbt"
+}
